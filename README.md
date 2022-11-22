@@ -1,2 +1,2 @@
-# Telos Assistant
-Helps spenk Telos
+# Buff Tracker
+Keeps track of buffs and stuff
