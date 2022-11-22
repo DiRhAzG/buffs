@@ -1,2 +1,2 @@
-# buffs
-Keep track of buff timers
+# Telos Assistant
+Helps spenk Telos

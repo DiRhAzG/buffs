@@ -1,0 +1,45 @@
+.buff-item {
+    color: #ffffff;
+    background-color: transparent;
+    border-color: #ffffff;
+    width: 180px;
+}
+
+.setting-item {
+    color: #ffffff;
+    background-color: transparent;
+    border-color: #ffffff;
+}
+
+.form-check {
+    margin-bottom: 0;
+    min-height: 0;
+}
+
+.form-check-label {
+    font-size: 15px;
+    font-weight: bold;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.table-buffs {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-settings {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-range {
+    vertical-align: middle;
+}
