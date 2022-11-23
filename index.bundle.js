@@ -26996,9 +26996,19 @@ let checkLowStats = () => {
 let displayWarnings = () => {
 
     if (expiredBuffs.length > 0) {
-        if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(expiredBuffs[0].name.replace("_Buff", "").replace("_", " "));
+        let expired = warnings.filter(w => {
+            return expiredBuffs.some((e) => {
+                return w.name == e.name;
+            });
+        });
 
-        console.log(expiredBuffs);
+        let topWarning = expired.reduce(function(res, obj) {
+            return (obj.id < res.id) ? obj : res;
+        });
+
+        if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(topWarning.friendlyName);
+
+        // console.log(expiredBuffs);
     } else {
         if (window.alt1) alt1.setTooltip("");
     }
