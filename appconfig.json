@@ -3,7 +3,7 @@
 	"description": "Keeps track of buffs and stuff",
 	"appUrl": "./index.html",
 	"configUrl": "./appconfig.json",
-	"iconUrl": "./images/buffs.png",
+	"iconUrl": "./src/images/buffs.png",
 	"defaultWidth": 410,
 	"defaultHeight": 240,
 	"minWidth": 250,
