@@ -12,15 +12,15 @@ let expiredBuffs = [];
 let lowStats = [];
 
 let warnings = [
-    { id: 1, name: "lowHealthBar", friendlyName: "Low Health" },
-    { id: 2, name: "animateDeadBuff", friendlyName: "Animate Dead" },
-    { id: 3, name: "antifireBuff", friendlyName: "Antifire" },
-    { id: 4, name: "lowPrayerBar", friendlyName: "Low Prayer" },
-    { id: 5, name: "overloadBuff", friendlyName: "Overload" },
-    { id: 6, name: "prayerRenewalBuff", friendlyName: "Prayer Renewal" },
-    { id: 7, name: "excaliburBuff", friendlyName: "Excalibur" },
-    { id: 8, name: "ritualShardBuff", friendlyName: "Ritual Shard" },
-    { id: 9, name: "weaponPoisonBuff", friendlyName: "Weapon Poison" }
+    { id: 1, name: "lowHealthBar", friendlyName: "Low Health", timeBuffer: false },
+    { id: 2, name: "animateDeadBuff", friendlyName: "Animate Dead", timeBuffer: true },
+    { id: 3, name: "antifireBuff", friendlyName: "Antifire", timeBuffer: true },
+    { id: 4, name: "lowPrayerBar", friendlyName: "Low Prayer", timeBuffer: false },
+    { id: 5, name: "overloadBuff", friendlyName: "Overload", timeBuffer: true },
+    { id: 6, name: "prayerRenewalBuff", friendlyName: "Prayer Renewal", timeBuffer: true },
+    { id: 7, name: "excaliburBuff", friendlyName: "Excalibur", timeBuffer: false },
+    { id: 8, name: "ritualShardBuff", friendlyName: "Ritual Shard", timeBuffer: false },
+    { id: 9, name: "weaponPoisonBuff", friendlyName: "Weapon Poison", timeBuffer: true }
 ];
 
 export function startCountdown() {
@@ -148,7 +148,10 @@ let checkWarnings = () => {
 };
 
 let checkBuffTime = () => {
-    expiredBuffs = buffTimers.filter(bt => (bt.expireTime < moment.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds')) || bt.expireTime == undefined);
+    expiredBuffs = buffTimers.filter(bt => 
+        (bt.expireTime < bt.timeBuffer? moment.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds') : moment.utc(new Date()))
+        || bt.expireTime == undefined
+    );
 
     console.log(expiredBuffs);
     displayWarnings();
