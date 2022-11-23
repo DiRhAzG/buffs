@@ -130,10 +130,10 @@ let checkBuff = (img) => {
 
 let checkBuffTime = () => {
     let currentTime = moment.utc(new Date());
-    let expiredBuffs = buffTimers.filter(bt => bt.expireTime < currentTime);
+    let expiredBuffs = buffTimers.filter(bt => (bt.expireTime < currentTime) || bt.expireTime == undefined);
     
     if (expiredBuffs.length > 0) {
-        if (window.alt1) alt1.setTooltip(expiredBuffs[0].name);
+        if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(expiredBuffs[0].name.replace("_Buff", "").replace("_", " "));
 
         console.log(expiredBuffs);
     } else {
