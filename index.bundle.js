@@ -26984,7 +26984,7 @@ let checkWarnings = () => {
 
 let checkBuffTime = () => {
     expiredBuffs = buffTimers.filter(bt => 
-        (bt.expireTime < bt.timeBuffer? moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds') : moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date()))
+        (bt.expireTime < (bt.timeBuffer? moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds') : moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date())))
         || bt.expireTime == undefined
     );
 

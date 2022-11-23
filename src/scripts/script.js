@@ -136,7 +136,7 @@ let checkBuff = (img) => {
             foundBuff.expireTime = expireTime;
         }
 
-        // console.log(`${selectedBuffs[b]}: ${buffTime}`);
+        console.log(`${selectedBuffs[b]}: ${buffTime}`);
     }
 
     // console.log(buffTimers);
@@ -149,7 +149,7 @@ let checkWarnings = () => {
 
 let checkBuffTime = () => {
     expiredBuffs = buffTimers.filter(bt => 
-        (bt.expireTime < bt.timeBuffer? moment.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds') : moment.utc(new Date()))
+        (bt.expireTime < (bt.timeBuffer? moment.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds') : moment.utc(new Date())))
         || bt.expireTime == undefined
     );
 
