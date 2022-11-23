@@ -5,7 +5,7 @@
 	"configUrl": "./appconfig.json",
 	"iconUrl": "./images/buffs.png",
 	"defaultWidth": 410,
-	"defaultHeight": 410,
+	"defaultHeight": 240,
 	"minWidth": 250,
 	"minHeight": 180,
 	"maxWidth": 1000,

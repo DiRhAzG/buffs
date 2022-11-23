@@ -8,10 +8,24 @@ let foundChat = false;
 let chatLines;
 let selectedBuffs = [];
 let buffTimers = [];
+let expiredBuffs = [];
+let lowStats = [];
+
+let warnings = [
+    { id: 1, name: "lowHealthBar", friendlyName: "Low Health" },
+    { id: 2, name: "animateDeadBuff", friendlyName: "Animate Dead" },
+    { id: 3, name: "antifireBuff", friendlyName: "Antifire" },
+    { id: 4, name: "lowPrayerBar", friendlyName: "Low Prayer" },
+    { id: 5, name: "overloadBuff", friendlyName: "Overload" },
+    { id: 6, name: "prayerRenewalBuff", friendlyName: "Prayer Renewal" },
+    { id: 7, name: "excaliburBuff", friendlyName: "Excalibur" },
+    { id: 8, name: "ritualShardBuff", friendlyName: "Ritual Shard" },
+    { id: 9, name: "weaponPoisonBuff", friendlyName: "Weapon Poison" }
+];
 
 export function startCountdown() {
     setInterval(countdown, 1000);
-}
+};
 
 let countdown = () => {
     for (let bt = 0; bt < buffTimers.length; bt++) {
@@ -21,7 +35,7 @@ let countdown = () => {
     }
 
     console.log(buffTimers[1]);
-}
+};
 
 /* Main function to run everything else */
 export async function start() {
@@ -46,7 +60,7 @@ function loopChecks() {
     }
 
     checkBuff(img);
-    checkBuffTime();
+    checkWarnings();
 
     setTimeout(loopChecks, localStorage.refreshRate);
 }
@@ -60,7 +74,7 @@ export async function test(img) {
         findChatBox(img);
         readChatBox(img);
         checkBuff(img);
-        setInterval(checkBuffTime, 1000);
+        setInterval(checkWarnings, 1000);
     } catch (ex) {
         console.log(ex);
     }
@@ -122,16 +136,30 @@ let checkBuff = (img) => {
             foundBuff.expireTime = expireTime;
         }
 
-        // console.log(`${selectedBuffs[b]}: ${buff}`);
+        // console.log(`${selectedBuffs[b]}: ${buffTime}`);
     }
 
-    console.log(buffTimers);
+    // console.log(buffTimers);
+};
+
+let checkWarnings = () => {
+    checkBuffTime();
+    checkLowStats();
 };
 
 let checkBuffTime = () => {
     let currentTime = moment.utc(new Date());
-    let expiredBuffs = buffTimers.filter(bt => (bt.expireTime < currentTime) || bt.expireTime == undefined);
-    
+    expiredBuffs = buffTimers.filter(bt => (bt.expireTime - localStorage.timeBufferSlider < currentTime) || bt.expireTime == undefined);
+
+    displayWarnings();
+};
+
+let checkLowStats = () => {
+
+};
+
+let displayWarnings = () => {
+
     if (expiredBuffs.length > 0) {
         if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(expiredBuffs[0].name.replace("_Buff", "").replace("_", " "));
 
@@ -139,7 +167,7 @@ let checkBuffTime = () => {
     } else {
         if (window.alt1) alt1.setTooltip("");
     }
-};
+}
 
 /* Find the Chat Box */
 let findChatBox = (img) => {

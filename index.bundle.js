@@ -26419,12 +26419,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let imageData = [
-    { id: 1, name: "Overload_Buff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAQCAMAAADQzfSkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA8UExURVqWGTBWDkBlCkp2DFmEDAAAAWRDB5ByNGheN2mTEqqLN46IWEhXW0BHTUxCN2RkXDM+NmNwbi8uMA8ODDmabGMAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB4SURBVChTnc7BEoMgDEVRUWIbKrXW//9X30uIZdVxvCvImTAMf0sjm/pskmAhOQvLc6iZAeiBnoKTazOSSikvmKqpG0mRgMwadiYLqvUdSDvXVrTUDw0YxpvKttG+ZorvdqayMycu0vzJ2+YUpr01+i1es5MC8zQciooLfHgKMhsAAAAASUVORK5CYII=" },
-    { id: 2, name: "Animate_Dead_Buff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAGCAYAAAAynOUQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACCSURBVChTY4yaJvmfgV6AXpaB7GGCsukCqGJZ54RFRIUOC5RGAbfO1P//85eZQcu8jhEqhAJqGif95+HjZ2BiZmJgYmRi+PH9B1QGP8BqWX/fHoaKqgCGx9d6wS6+e/8Tw4GLogxsbJwMTCwsQAsYGRiBGAz+/2eoKUvG6ihUwMAAAH5rIrjERxiMAAAAAElFTkSuQmCC" },
-    { id: 3, name: "Prayer_Renewal_Buff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAMAAABvheXhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABmUExURVqWGZzF44q63JLD5Ov4/+L0/o3D5d3y/oW63I610HOkxZvB3FmGqZO82prK6rXa9HeYtMnn+oa/4m6buJG10Ljc9PP7//3+/6fQ7Zi82YGfuWKXt5bJ6c3o+r3h+Hyy11N+mAAAAK721FgAAAAidFJOU////////////////////////////////////////////wAN0MNxAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAZklEQVQoU32MWQ6AIAwFQUBccd9X7n9JIxQDITgfzeubtOgXGcJzOILgO0JZDNF3jCcQ/Z8k/NPGuFRNF3BZXqjVQbtSVKTWhYVymeC0aTuoPl7X42Gc+Lys0BnU3bYf/LxuqAwSPW0bI1NZHQ5WAAAAAElFTkSuQmCC" },
-    { id: 4, name: "Antifire_Buff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAIAAADXOYKEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN5SURBVDhPrdNJbxtlHAbwd5n3nd0z48SeeImzODRJrVSEEtI2KmI7UFUCVUVUqqpyKQcunLn1W3DgihCIA5dKlSjlguDCVjUkIXXbLLXdOInHHtvjmfFsL7WUfgOeD/CTnr/+D7z+ZQ78rxmJv3xxwFMwjEDPA2MaECBwAqIhcsEwK+P6FFQVRBCEAYxDBp463X8d++Gg+cwNMQsVETAAhiFQKGSMnbmdw0uX1d37ThQDPwQRA26ETSp/XJz+dPL0xZSZJbITBU3mtFngsJhHcEFKr6iZ1/WJNCEH4XAAYwJYzMChAwQK8m+pI3HrjoMwQBBIlKzp5q3CwptG4dDzn4idB+rh3cY+m/KHY/066f4U2Vvdo+dBfwJLF/TcKVm3w9AKfZEmCgWDEJTeUdGoOQZuCFhC3tbzn5cWZkTle6t6u/r3s2Jn7g3ajBw7gstF/tYKOXua29H8Tdr8ylr/zqpmqXAze+qsnOu5ZBgDDEd3HIlpCcQRWFb1m4U5iOHXre177k4k+/VWsPPIlgXSj7j1UIM8/9ksWC1nMoZ8RHo/27Wa7+SpeDU7syhkLAe5wUvRi8FCWrkxOcdx6Jtm9UHQMERcNmURs43tXtYQM6bAGwpO0DiJlyalIeCKaf1GZrFElX+8jkTItfx0VpCS5KWIAL1qzswr+p2j/Xvt5yrPISJf/2jsvWWe1+RCwdDGJs4pvSnOSkzR5gc8x94PZ1elzGZgfTvYvO/sL6aMK7liEnMn4nQKz0t6wxv8Zh9JMur7ZLmifbgc/rohn5ktzJvZ1Tn7fGqXm8SPFXVri1zulacjpWe425MHQdqrJq1dz15JZSRETsRFOlESlb+8phXbCgayRkplFfHOB2te/lUzBwcruIFEEhn6+mN4rqZwe8TVwpl39y5VRJ0rWJ7ze//AJNKl3GgsIzEvCsMkedjpvnhWksAsD5weH4fa+flj0qixxiBuR1Eeb7cA/BGl62K7bBeu1IuzDq8BDoLuEP7Z6QxZsqBoJ2JZ0ve9fsN3JYoEikMmHPbF3UD3rWDsSS+ruKFC9hp67YdxeU/lltzKJ9ZrpbYf44YvZUUwLqEERMf+wKTiiahSWg/dw6GvyjSXT11cQ5V51N7H9T9S+hQQc+zYTT29m7I3WFJ2XrlWWzJaScge9TIIi1oqEiQkUs/yB/jFHgH4D/6Ng7gJaXbcAAAAAElFTkSuQmCC" },
-    { id: 5, name: "Excalibur_Buff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAYAAABYWxXTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACtSURBVDhPYzzDwPCfgV6AXpaB7GGCsqkKopOT/7v7+WF4giaWff70mWHnpk2MUC4CUDsYIxISsJoHtodalkWnJP8Pj4/HaRZV4+z3z18MKxcuxAw6ZEANn0XiCDpkQBWfRSUm/r926TKUhx9QZBnIoru3bzNcPHcWf/BBAdmWhQETAxAwfP3yBSpCBCAnziKTkv6HExFPyICsOItKTvr/798/hpfPn0NFiAUMDAAO2EmensYEVgAAAABJRU5ErkJggg==" },
-    { id: 6, name: "Ritual_Shard_Buff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAYAAABYWxXTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFuSURBVDhPvZJPToNAFMY/GMqfQqWtFKNGd4qbmph06aJnaLyFR/AYrnqHHsOlu57C2KDUP7UMBWeGIaGW2q74JS/vzQPmy/seyjOQoS7qEuM6qqxroVYxsbMBy/L8L6PR/V6Wq6qKyeRx7c69bez3b7Ph8C5TFAVqOdRyqCJ8/wy6bskv19k5GRdqaARe18VVcA1N0+UTgBAiK6DZdJDCwFv0BUp/MB4/7D8ZF+Fh6A10XQe2ZSKhCyFQRIFtO/B7x6zK7/8rVFApFgQDsRujoeHAyS1ZLmNE85moyzQtGz3vCDRJ2FSfsltNpZiumyDM/xYT4rvhxJQiDN8xj17EmdPu+PA8n+2KwGQOcLid29gQ49bxfNh2hGAZShMWS1Gfnpyj47psh7lI8S4hmshVbIhNp09ilJAtuorXWQjTIDAME/zv5BR5F5U2pukKWZYhWaWyk2NZLVxc3jCrWojjhewy6wwd0ce3sHO7MPALjjBfufZq7OYAAAAASUVORK5CYII=" },
+    { id: 1, name: "overloadBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAQCAMAAADQzfSkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA8UExURVqWGTBWDkBlCkp2DFmEDAAAAWRDB5ByNGheN2mTEqqLN46IWEhXW0BHTUxCN2RkXDM+NmNwbi8uMA8ODDmabGMAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB4SURBVChTnc7BEoMgDEVRUWIbKrXW//9X30uIZdVxvCvImTAMf0sjm/pskmAhOQvLc6iZAeiBnoKTazOSSikvmKqpG0mRgMwadiYLqvUdSDvXVrTUDw0YxpvKttG+ZorvdqayMycu0vzJ2+YUpr01+i1es5MC8zQciooLfHgKMhsAAAAASUVORK5CYII=" },
+    { id: 2, name: "animateDeadBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAGCAYAAAAynOUQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACCSURBVChTY4yaJvmfgV6AXpaB7GGCsukCqGJZ54RFRIUOC5RGAbfO1P//85eZQcu8jhEqhAJqGif95+HjZ2BiZmJgYmRi+PH9B1QGP8BqWX/fHoaKqgCGx9d6wS6+e/8Tw4GLogxsbJwMTCwsQAsYGRiBGAz+/2eoKUvG6ihUwMAAAH5rIrjERxiMAAAAAElFTkSuQmCC" },
+    { id: 3, name: "prayerRenewalBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAMAAABvheXhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABmUExURVqWGZzF44q63JLD5Ov4/+L0/o3D5d3y/oW63I610HOkxZvB3FmGqZO82prK6rXa9HeYtMnn+oa/4m6buJG10Ljc9PP7//3+/6fQ7Zi82YGfuWKXt5bJ6c3o+r3h+Hyy11N+mAAAAK721FgAAAAidFJOU////////////////////////////////////////////wAN0MNxAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAZklEQVQoU32MWQ6AIAwFQUBccd9X7n9JIxQDITgfzeubtOgXGcJzOILgO0JZDNF3jCcQ/Z8k/NPGuFRNF3BZXqjVQbtSVKTWhYVymeC0aTuoPl7X42Gc+Lys0BnU3bYf/LxuqAwSPW0bI1NZHQ5WAAAAAElFTkSuQmCC" },
+    { id: 4, name: "antifireBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAIAAADXOYKEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN5SURBVDhPrdNJbxtlHAbwd5n3nd0z48SeeImzODRJrVSEEtI2KmI7UFUCVUVUqqpyKQcunLn1W3DgihCIA5dKlSjlguDCVjUkIXXbLLXdOInHHtvjmfFsL7WUfgOeD/CTnr/+D7z+ZQ78rxmJv3xxwFMwjEDPA2MaECBwAqIhcsEwK+P6FFQVRBCEAYxDBp463X8d++Gg+cwNMQsVETAAhiFQKGSMnbmdw0uX1d37ThQDPwQRA26ETSp/XJz+dPL0xZSZJbITBU3mtFngsJhHcEFKr6iZ1/WJNCEH4XAAYwJYzMChAwQK8m+pI3HrjoMwQBBIlKzp5q3CwptG4dDzn4idB+rh3cY+m/KHY/066f4U2Vvdo+dBfwJLF/TcKVm3w9AKfZEmCgWDEJTeUdGoOQZuCFhC3tbzn5cWZkTle6t6u/r3s2Jn7g3ajBw7gstF/tYKOXua29H8Tdr8ylr/zqpmqXAze+qsnOu5ZBgDDEd3HIlpCcQRWFb1m4U5iOHXre177k4k+/VWsPPIlgXSj7j1UIM8/9ksWC1nMoZ8RHo/27Wa7+SpeDU7syhkLAe5wUvRi8FCWrkxOcdx6Jtm9UHQMERcNmURs43tXtYQM6bAGwpO0DiJlyalIeCKaf1GZrFElX+8jkTItfx0VpCS5KWIAL1qzswr+p2j/Xvt5yrPISJf/2jsvWWe1+RCwdDGJs4pvSnOSkzR5gc8x94PZ1elzGZgfTvYvO/sL6aMK7liEnMn4nQKz0t6wxv8Zh9JMur7ZLmifbgc/rohn5ktzJvZ1Tn7fGqXm8SPFXVri1zulacjpWe425MHQdqrJq1dz15JZSRETsRFOlESlb+8phXbCgayRkplFfHOB2te/lUzBwcruIFEEhn6+mN4rqZwe8TVwpl39y5VRJ0rWJ7ze//AJNKl3GgsIzEvCsMkedjpvnhWksAsD5weH4fa+flj0qixxiBuR1Eeb7cA/BGl62K7bBeu1IuzDq8BDoLuEP7Z6QxZsqBoJ2JZ0ve9fsN3JYoEikMmHPbF3UD3rWDsSS+ruKFC9hp67YdxeU/lltzKJ9ZrpbYf44YvZUUwLqEERMf+wKTiiahSWg/dw6GvyjSXT11cQ5V51N7H9T9S+hQQc+zYTT29m7I3WFJ2XrlWWzJaScge9TIIi1oqEiQkUs/yB/jFHgH4D/6Ng7gJaXbcAAAAAElFTkSuQmCC" },
+    { id: 5, name: "excaliburBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAYAAABYWxXTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACtSURBVDhPYzzDwPCfgV6AXpaB7GGCsqkKopOT/7v7+WF4giaWff70mWHnpk2MUC4CUDsYIxISsJoHtodalkWnJP8Pj4/HaRZV4+z3z18MKxcuxAw6ZEANn0XiCDpkQBWfRSUm/r926TKUhx9QZBnIoru3bzNcPHcWf/BBAdmWhQETAxAwfP3yBSpCBCAnziKTkv6HExFPyICsOItKTvr/798/hpfPn0NFiAUMDAAO2EmensYEVgAAAABJRU5ErkJggg==" },
+    { id: 6, name: "ritualShardBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAYAAABYWxXTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFuSURBVDhPvZJPToNAFMY/GMqfQqWtFKNGd4qbmph06aJnaLyFR/AYrnqHHsOlu57C2KDUP7UMBWeGIaGW2q74JS/vzQPmy/seyjOQoS7qEuM6qqxroVYxsbMBy/L8L6PR/V6Wq6qKyeRx7c69bez3b7Ph8C5TFAVqOdRyqCJ8/wy6bskv19k5GRdqaARe18VVcA1N0+UTgBAiK6DZdJDCwFv0BUp/MB4/7D8ZF+Fh6A10XQe2ZSKhCyFQRIFtO/B7x6zK7/8rVFApFgQDsRujoeHAyS1ZLmNE85moyzQtGz3vCDRJ2FSfsltNpZiumyDM/xYT4rvhxJQiDN8xj17EmdPu+PA8n+2KwGQOcLid29gQ49bxfNh2hGAZShMWS1Gfnpyj47psh7lI8S4hmshVbIhNp09ilJAtuorXWQjTIDAME/zv5BR5F5U2pukKWZYhWaWyk2NZLVxc3jCrWojjhewy6wwd0ce3sHO7MPALjjBfufZq7OYAAAAASUVORK5CYII=" },
+    { id: 7, name: "weaponPoisonBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAIAAADXOYKEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOpSURBVDhPrZPvT1tVGMef095b+uuWtrSU2wqsRWpbSnQd2wwZZiwZCyO+UJYt2RtdFk30BS9mYswWjCYasmTOvVBhM2ZZ/EF0b2BQJmJWkYIorJ1bUSch6oDaH9CW3t7b3tv7w3uz7T/w5OTJOTnf53O+5znnoJOfkPC/NoU499a/OA7FChQ5aDIjU40kSfBnBqwO1+GD+4/19FpbdsnSVKa4ufHgq9GvY7FYwM1TSRA1olYDVR4qVdDWgCRAxzskyMRmCzTWglkHBg04jNBqh10WaHJZxsfGK9Q6X0kLbPZh55g0Xdw6/dIxIw67Xchjg3YX+EmotwKhgydtCk0lb75ThjIHehxcMtegjFMUvHnm5c69LfnUClfaENm8xDNyrFAb5VLq4vlzHg+ZoSQTrhjEVeA0QZMVaE45tUIUJWCqyrzEgSACwwJpsxztOfx7fB7TGNWaWkWG1HJUYcb05lqZzh3v7ylUQK6VCgdWgkwJZJoWe0x0EPKCps7pFnUkXgMIgz3P+EGsSHzeQNThOhvLsaX8uizCsBqjXrOVzXZ3darUiOVUahyxOKk1uXO0huEfE/MM+ANtVy4P9/UeyVJI9mslm63OdofTOTT03tuDZ1cSf6g0ps+/HB0YeCW+fLuBbLLXW+T60CX5uqC7+4ic62lpY6sKUTGqw4EubEcmpro85rVgW/TnBKqWJL7w2huXYvEVCVRFSjhK0Zc/vXr33urUdGzkA63X18TzUoaRnvb59tkMS5PhbHqrCuiRR6cJ0dvrF4aHw7N3zrxwItTq/Wv9PivUzS3EKZpluTKo2caGBpPeyHJiMr39Y+wfi705W4QOv/fcqZO34ol3h0cKVLIql/ohMcdIGJJ8dn5m4YdrkelgsF0os3o9NjH+jdlM9Pf3HerqCoevn3719VCow/eUZ3DwbDIx2VhfP3Di+PVI9EZ0VmcQag1iwC49IiZ5xArAI8lmReHvowtL8ywHsamLB/YF1u4nPjz//r34Tx9/dkONid9Ojt5evFXMrAxduOoym76YnR5b/M7WgCx6yW5BSFA8qtv7COpOiWeBq4KJQJyACgwWDPbOz0Vzf0+IIK0m7j7YTLtbvd5mYie9+Nty5KORa0XBFzzw3M2ZGZejajUiTn5BAGUaXAcJhZhdKAk42tkB+ScYa8nQsz17d3tshzxjkdTqL8uhDr/P37Z/T0CNIP7r0qUr8zp35/OnXhSZMoYT+dyWCmitHrgKyLae6Cb+A6eYpzFFjVVwAAAAAElFTkSuQmCC" },
 ];
 
 let imageBuffers = [];
@@ -26445,7 +26446,7 @@ function getBuff(img, buffName) {
         // Get starting pixel for Buff image, to be used to grab the buff
         let foundBuff = imageBuffers.filter(b => b.name == buffName);
         let buffPosition = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.getPosition(img, foundBuff[0].imgBuffer, 0, 0, 27, 27);
-        let numberType = buffName == "Animate_Dead_Buff"? "animate" : "";
+        let numberType = buffName == "animateDeadBuff"? "animate" : "";
 
         if (buffPosition != undefined) {
             let buffer = img.toData(buffPosition.x, buffPosition.y, buffPosition.w, buffPosition.h);
@@ -26842,10 +26843,24 @@ let foundChat = false;
 let chatLines;
 let selectedBuffs = [];
 let buffTimers = [];
+let expiredBuffs = [];
+let lowStats = [];
+
+let warnings = [
+    { id: 1, name: "lowHealthBar", friendlyName: "Low Health" },
+    { id: 2, name: "animateDeadBuff", friendlyName: "Animate Dead" },
+    { id: 3, name: "antifireBuff", friendlyName: "Antifire" },
+    { id: 4, name: "lowPrayerBar", friendlyName: "Low Prayer" },
+    { id: 5, name: "overloadBuff", friendlyName: "Overload" },
+    { id: 6, name: "prayerRenewalBuff", friendlyName: "Prayer Renewal" },
+    { id: 7, name: "excaliburBuff", friendlyName: "Excalibur" },
+    { id: 8, name: "ritualShardBuff", friendlyName: "Ritual Shard" },
+    { id: 9, name: "weaponPoisonBuff", friendlyName: "Weapon Poison" }
+];
 
 function startCountdown() {
     setInterval(countdown, 1000);
-}
+};
 
 let countdown = () => {
     for (let bt = 0; bt < buffTimers.length; bt++) {
@@ -26855,7 +26870,7 @@ let countdown = () => {
     }
 
     console.log(buffTimers[1]);
-}
+};
 
 /* Main function to run everything else */
 async function start() {
@@ -26880,7 +26895,7 @@ function loopChecks() {
     }
 
     checkBuff(img);
-    checkBuffTime();
+    checkWarnings();
 
     setTimeout(loopChecks, localStorage.refreshRate);
 }
@@ -26894,7 +26909,7 @@ async function test(img) {
         findChatBox(img);
         readChatBox(img);
         checkBuff(img);
-        setInterval(checkBuffTime, 1000);
+        setInterval(checkWarnings, 1000);
     } catch (ex) {
         console.log(ex);
     }
@@ -26956,16 +26971,30 @@ let checkBuff = (img) => {
             foundBuff.expireTime = expireTime;
         }
 
-        // console.log(`${selectedBuffs[b]}: ${buff}`);
+        // console.log(`${selectedBuffs[b]}: ${buffTime}`);
     }
 
-    console.log(buffTimers);
+    // console.log(buffTimers);
+};
+
+let checkWarnings = () => {
+    checkBuffTime();
+    checkLowStats();
 };
 
 let checkBuffTime = () => {
     let currentTime = moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date());
-    let expiredBuffs = buffTimers.filter(bt => (bt.expireTime < currentTime) || bt.expireTime == undefined);
-    
+    expiredBuffs = buffTimers.filter(bt => (bt.expireTime - localStorage.timeBufferSlider < currentTime) || bt.expireTime == undefined);
+
+    displayWarnings();
+};
+
+let checkLowStats = () => {
+
+};
+
+let displayWarnings = () => {
+
     if (expiredBuffs.length > 0) {
         if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(expiredBuffs[0].name.replace("_Buff", "").replace("_", " "));
 
@@ -26973,7 +27002,7 @@ let checkBuffTime = () => {
     } else {
         if (window.alt1) alt1.setTooltip("");
     }
-};
+}
 
 /* Find the Chat Box */
 let findChatBox = (img) => {
@@ -27192,23 +27221,55 @@ __webpack_require__.r(__webpack_exports__);
 // Tell webpack to add index.html and appconfig.json to output
 __webpack_require__(/*! !file-loader?name=[name].[ext]!./index.html */ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./index.html");
 __webpack_require__(/*! !file-loader?name=[name].[ext]!./appconfig.json */ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./appconfig.json");
+let defaultSettings = [
+    { name: "mouseTooltip", value: "true" },
+    { name: "lowHealthSlider", value: "4000" },
+    { name: "lowPrayerSlider", value: "200" },
+    { name: "refreshRateSlider", value: "200" },
+    { name: "timeBufferSlider", value: "10" },
+    { name: "overloadBuff", value: "false" },
+    { name: "animateDeadBuff", value: "false" },
+    { name: "excaliburBuff", value: "false" },
+    { name: "prayerRenewalBuff", value: "false" },
+    { name: "ritualShardBuff", value: "false" },
+    { name: "weaponPoisonBuff", value: "false" },
+    { name: "antifireBuff", value: "false" },
+    { name: "placeholderBuff", value: "false" },
+    { name: "lowHealthBar", value: "false" },
+    { name: "lowPrayerBar", value: "false" }
+];
 window.onload = async function start() {
-    // main.startCountdown();
+    // Add defaults if missing
+    for (let d = 0; d < defaultSettings.length; d++) {
+        let foundSetting = localStorage[defaultSettings[d].name];
+        if (!foundSetting) {
+            localStorage.setItem(defaultSettings[d].name, defaultSettings[d].value);
+        }
+        ;
+    }
+    ;
     // Load localStorage into elements
-    for (var i = 0, len = localStorage.length; i < len; i++) {
-        var key = localStorage.key(i);
-        var value = localStorage[key];
+    for (let i = 0, len = localStorage.length; i < len; i++) {
+        let key = localStorage.key(i);
+        let value = localStorage[key];
         if (key.includes("Slider")) {
             _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + key).val(value);
             _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + key + "Output").val(value);
         }
-        else if (value == "true") {
-            _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + key).attr("checked", "checked");
+        else if (key.includes("Buff")) {
+            if (value == "true") {
+                _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + key).prop("checked", true);
+            }
+            else {
+                _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + key).prop("checked", false);
+            }
         }
     }
+    ;
     if (window.alt1) {
         _scripts_script_js__WEBPACK_IMPORTED_MODULE_4__.start();
     }
+    ;
     setBuffsTab();
     console.log("Ready to save your ass.");
 };
@@ -27251,7 +27312,7 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input:checkbox").on("change", async 
     }
     await _scripts_script_js__WEBPACK_IMPORTED_MODULE_4__.updateBuffSettings();
 });
-// Storage Range values in localStorage
+// Store Range values in localStorage
 _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input[type=range]").on("input", function () {
     var rangeId = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(this).attr("id");
     var rangeValue = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(this).val();

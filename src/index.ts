@@ -8,25 +8,58 @@ import * as main from "./scripts/script.js";
 require("!file-loader?name=[name].[ext]!./index.html");
 require("!file-loader?name=[name].[ext]!./appconfig.json");
 
+let defaultSettings = [
+	{ name: "mouseTooltip", value: "true" },
+	{ name: "lowHealthSlider", value: "4000" },
+	{ name: "lowPrayerSlider", value: "200" },
+	{ name: "refreshRateSlider", value: "200" },
+	{ name: "timeBufferSlider", value: "10" },
+
+	{ name: "overloadBuff", value: "false" },
+	{ name: "animateDeadBuff", value: "false" },
+	{ name: "excaliburBuff", value: "false" },
+	{ name: "prayerRenewalBuff", value: "false" },
+	{ name: "ritualShardBuff", value: "false" },
+	{ name: "weaponPoisonBuff", value: "false" },
+	{ name: "antifireBuff", value: "false" },
+	{ name: "placeholderBuff", value: "false" },
+	{ name: "lowHealthBar", value: "false" },
+	{ name: "lowPrayerBar", value: "false" }
+]
+
 window.onload = async function start() {
-	// main.startCountdown();
+	
+	// Add defaults if missing
+	for (let d = 0; d < defaultSettings.length; d++) {
+		let foundSetting = localStorage[defaultSettings[d].name];
+		
+		if (!foundSetting) {
+			localStorage.setItem(defaultSettings[d].name, defaultSettings[d].value);
+		};
+	};
 
 	// Load localStorage into elements
-	for (var i = 0, len = localStorage.length; i < len; i++) {
-		var key = localStorage.key(i);
-		var value = localStorage[key];
+	for (let i = 0, len = localStorage.length; i < len; i++) {
+		let key = localStorage.key(i);
+		let value = localStorage[key];
 
 		if (key.includes("Slider")) {
 			$("#" + key).val(value);
 			$("#" + key + "Output").val(value);
-		} else if (value == "true") {
-			$("#" + key).attr("checked", "checked");
+		} else if (key.includes("Buff")) {
+			if (value == "true") {
+				$("#" + key).prop("checked", true);
+			} else {
+				$("#" + key).prop("checked", false);
+			}
 	  	} 
-	}
+	};
+
+
 
 	if (window.alt1) {
 		main.start();
-	}
+	};
 
 	setBuffsTab();
 	console.log("Ready to save your ass.");
@@ -77,7 +110,7 @@ $("input:checkbox").on("change", async function() {
 	await main.updateBuffSettings();
 });
 
-// Storage Range values in localStorage
+// Store Range values in localStorage
 $("input[type=range]").on("input", function() {
 	var rangeId = $(this).attr("id");
 	var rangeValue = $(this).val();
