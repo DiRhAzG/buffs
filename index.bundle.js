@@ -26956,22 +26956,31 @@ let checkBuff = (img) => {
         let expireTime = buffTime != undefined? moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date()).add(buffTime, 's') : undefined;
          
         let foundBuff = buffTimers.find(bt => bt.name === selectedBuffs[b]);
-
+        
         if (!foundBuff) {
-            buffTimers.push({ name: selectedBuffs[b], expireTime: expireTime})
+            // Buff timer doesn't exist, so add it.
+            buffTimers.push({ name: selectedBuffs[b], expireTime: expireTime, buffTime: buffTime})
         } else if (foundBuff.expireTime != undefined) {
+            // Buff time does exist
+
             if (expireTime != undefined) {
-                let diff = Math.abs(foundBuff.expireTime.diff(expireTime, 'seconds'));
-            
-                if (diff > 2) {
+                if (
+                    buffTime < 60 || // Time is less than a minute, most accurate
+                    (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
+                    (buffTime > 60 && foundBuff.buffTime < buffTime) // New time is higher, buff could've been renewed
+                ) {
+                    console.log(`${selectedBuffs[b]}: ${buffTime}`);
+
+                    foundBuff.buffTime = buffTime;
                     foundBuff.expireTime = expireTime;
                 }
             }
         } else {
+            // No expire time set yet, so use the new time.
             foundBuff.expireTime = expireTime;
         }
 
-        console.log(`${selectedBuffs[b]}: ${buffTime}`);
+        // console.log(`${selectedBuffs[b]}: ${buffTime}`);
     }
 
     // console.log(buffTimers);
@@ -26983,12 +26992,19 @@ let checkWarnings = () => {
 };
 
 let checkBuffTime = () => {
-    expiredBuffs = buffTimers.filter(bt => 
-        (bt.expireTime < (bt.timeBuffer? moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds') : moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date())))
-        || bt.expireTime == undefined
-    );
 
-    // console.log(expiredBuffs);
+    expiredBuffs = buffTimers.filter((bt) => {
+        let timeBuffer = warnings.find(w => w.name == bt.name).timeBuffer;
+        let currentTime = timeBuffer? moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds') : moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date());
+
+        if (bt.expireTime == undefined || bt.expireTime < currentTime) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+
+    console.log(expiredBuffs);
     displayWarnings();
 };
 
