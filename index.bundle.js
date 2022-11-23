@@ -26924,7 +26924,7 @@ async function updateBuffSettings() {
     buffTimers = buffTimers.filter(bt => selectedBuffs.includes(bt.name));
 
     // console.log(selectedBuffs);
-    console.log(buffTimers);
+    // console.log(buffTimers);
 }
 
 /* Load the images that will be used to read the screen */
@@ -26944,11 +26944,13 @@ let checkBuff = (img) => {
 
         if (!foundBuff) {
             buffTimers.push({ name: selectedBuffs[b], expireTime: expireTime})
-        } else if (expireTime != undefined && foundBuff.expireTime != undefined) {
-            let diff = Math.abs(foundBuff.expireTime.diff(expireTime, 'seconds'));
+        } else if (foundBuff.expireTime != undefined) {
+            if (expireTime != undefined) {
+                let diff = Math.abs(foundBuff.expireTime.diff(expireTime, 'seconds'));
             
-            if (diff > 2) {
-                foundBuff.expireTime = expireTime;
+                if (diff > 2) {
+                    foundBuff.expireTime = expireTime;
+                }
             }
         } else {
             foundBuff.expireTime = expireTime;
@@ -26957,20 +26959,19 @@ let checkBuff = (img) => {
         // console.log(`${selectedBuffs[b]}: ${buff}`);
     }
 
-    // console.log(buffTimers);
+    console.log(buffTimers);
 };
 
 let checkBuffTime = () => {
     let currentTime = moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date());
     let expiredBuffs = buffTimers.filter(bt => bt.expireTime < currentTime);
-
+    
     if (expiredBuffs.length > 0) {
-        if (window.alt1) {
-            alt1.setTooltip(expiredBuffs[0].name);
-        }
-        // console.log(expiredBuffs);
+        if (window.alt1) alt1.setTooltip(expiredBuffs[0].name);
+
+        console.log(expiredBuffs);
     } else {
-        alt1.setTooltip("");
+        if (window.alt1) alt1.setTooltip("");
     }
 };
 
