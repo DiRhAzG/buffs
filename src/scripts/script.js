@@ -153,7 +153,7 @@ let checkBuffTime = () => {
         || bt.expireTime == undefined
     );
 
-    console.log(expiredBuffs);
+    // console.log(expiredBuffs);
     displayWarnings();
 };
 

@@ -26971,7 +26971,7 @@ let checkBuff = (img) => {
             foundBuff.expireTime = expireTime;
         }
 
-        // console.log(`${selectedBuffs[b]}: ${buffTime}`);
+        console.log(`${selectedBuffs[b]}: ${buffTime}`);
     }
 
     // console.log(buffTimers);
@@ -26988,7 +26988,7 @@ let checkBuffTime = () => {
         || bt.expireTime == undefined
     );
 
-    console.log(expiredBuffs);
+    // console.log(expiredBuffs);
     displayWarnings();
 };
 
