@@ -16,6 +16,14 @@ export async function loadImages() {
     
     // Split the numbers into a dataset with each individual number
     buffNumbers = ImageDataSet.fromFilmStrip(imgBuffNumbers, 6);
+
+    // The numbers used for action bar
+    imgBarNumbers = await ImageDetect.imageDataFromBase64(
+        'iVBORw0KGgoAAAANSUhEUgAAAEIAAAAICAYAAABNlyniAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJKSURBVEhLlVXNbtNAELbyYzvlDrxIiqpeEynGvACBN6DiAEIqbXmSphKIY7mUnxt2EtvpLS52wjFRnN5j9wmWnc16u+tdB/eTLM/Ofjs7O7Mzq/FYrRJERYZ4Npd0gCieSfogmCA/CJT8HF5wTeazLNvJm+F9Pd8XOJ4fIB9/ICMMosQAX8DuKlkL/Hj+t3SPZC1yBVj2C3R5+U0g3PyJkPXcVi46HwzQm6O30txyuSzdxHFcMjeZXKNarVbKA+i6gczWHuMYZguZ+AN/HHdrJ8vuyL+Juf1Xr5n/+UGbuolOzz6h88EFswOQAlGMIh9pgDscoV7PEhf9BzHO0P7+M+Ua1x1WsqUbRiVesr5F7XabcT9/+crker3B5DRNd9uDgzeazUqbPgT8QTxcMlTURmOPyY7jIAgaHRKAP2c4g2PPQ1EUK/1KCsmbTqfo6vtPQZemYumBXSqqQQk7SVAyVJSgG6Y0F4ahpDNaj4iOD0R+7flsgT+dToeMbdtGZWXWaIjJe9nvozC8EXSLxQL3rG1PouckyO625SSA1tg9SdHELOwQFSvj5OSUrAF7UF7wQeNNFfbH3n1TLPrDHwBQ9K/YtDebjTCu44AdHByS/alKu/rxS92fut2urKSAbtyzHh6Id+8/sDX5ptDkfuNyIEoOxat+fPyRjX2urHLwh4CX7vGTp2ysCnRlwJWCK6t6biADU+6qQ4YgusPRWODO59tnFp49oihBXhp5b4hn8jPs4IY6wvb53gIos52Xj+fLQYticY06UJr2D34Kq2+ZZMeaAAAAAElFTkSuQmCC'
+    );
+    
+    // Split the numbers into a dataset with each individual number
+    barNumbers = ImageDataSet.fromFilmStrip(imgBarNumbers, 6);
 }
 
 /*
@@ -68,7 +76,7 @@ export function readNumbers(buffer, type = "") {
     let numbersList;
     let foundPixel = false;
 
-    if (type == "") {
+    if (type == "buff") {
         numbersList = buffNumbers;
     } else if (type == "animate") {
         numbersList = buffNumbers;
@@ -144,7 +152,10 @@ export function readNumbers(buffer, type = "") {
         // All number images must be in this format, 0123456789
         for (let m = 0; m < numberMatch.length; m++) {
             if (numberMatch[m].num == 10) {
-                str = (str * 60) + 59;
+                if (type != "bar") {
+                    str = (str * 60) + 59;
+                }
+
                 break;
             } else if (numberMatch[m].num == 11) {
                 break;
@@ -228,14 +239,14 @@ function checkMatch(buffer, numBuffer, bw, bh, nbw, nbh) {
 
 /* Generate a new image based off two images, with only the matching pixels */
 export async function generateMatchingImage() {
-    let firstBuffer = await ImageDetect.imageDataFromBase64("iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAYAAABYWxXTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFuSURBVDhPvZJPToNAFMY/GMqfQqWtFKNGd4qbmph06aJnaLyFR/AYrnqHHsOlu57C2KDUP7UMBWeGIaGW2q74JS/vzQPmy/seyjOQoS7qEuM6qqxroVYxsbMBy/L8L6PR/V6Wq6qKyeRx7c69bez3b7Ph8C5TFAVqOdRyqCJ8/wy6bskv19k5GRdqaARe18VVcA1N0+UTgBAiK6DZdJDCwFv0BUp/MB4/7D8ZF+Fh6A10XQe2ZSKhCyFQRIFtO/B7x6zK7/8rVFApFgQDsRujoeHAyS1ZLmNE85moyzQtGz3vCDRJ2FSfsltNpZiumyDM/xYT4rvhxJQiDN8xj17EmdPu+PA8n+2KwGQOcLid29gQ49bxfNh2hGAZShMWS1Gfnpyj47psh7lI8S4hmshVbIhNp09ilJAtuorXWQjTIDAME/zv5BR5F5U2pukKWZYhWaWyk2NZLVxc3jCrWojjhewy6wwd0ce3sHO7MPALjjBfufZq7OYAAAAASUVORK5CYII=");
-    let secondBuffer = await ImageDetect.imageDataFromBase64("iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAIAAADXOYKEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJISURBVDhPrVK/b9NQEH5+frGdJg1GiluRSJE6RAIxtGJEqgQrfwAr/wQLEhsrCLExITEgJLqAGKloh05NU1FRSCsUhFigSQNJaBzb78XhOz/b9A/g0/ne3fnuu3s/jD32n0GMXzZanDMWM86FEFhZHGtR0ExRhBZKUYp+k08uElDIGBRnAsbqnfUkoMHTAmKBhxSAs7397f32NpoxLqhlUg0gOWPO2iddacbuRksnISupZCjTgd32zscPB3PGKpUK3PmcSOZY6SPbdpz1G7fASJ1oxpu04o+ei+yY+pDB2OMnDzqfj7iwTGFN/ADiTyPIdCqDQIbhDBL4cmvztc7XSBgxc05KASVn0aOH9wf93uD0p2EYPBeeC2HJq3NuTiYjDIhylQyjN0cAISLQ3e7xq5fPRsORME2Ly7p3oXHJ07JSX9ZytblyuXlFiMJi2WUG0eBKNTLGbOj27s6L50+Pjz7ZBXGxslByLCWnpsm16JxSqex5NdwB7K/fDhuNpo5bFulzjIodHrS2Nt/CswqiXHJgBGE0Hg+SjBTFYqlaXZZKDcdncDud1tq16/qXRsoIwl7/x/t3b6IoMjkvL9g4NcQjKQe/huNRX6e5rletLuHs7EIBbrFYTnacQu8zd1kQBb4/gYHNglQHASmlkiGMWq3hui7ODrZOME06PLwc6BxpJRLu3b19cvId9u8/vg7m6J0OHFvYtoN7h6t1CrzV5GHn+DcLEIbTOJ7h+c5m2U3R1habzTXoKArSiGWNz3zsPaM+NyNjfwEOOvnJOH3ICgAAAABJRU5ErkJggg==");
+    let firstBuffer = await ImageDetect.imageDataFromBase64("iVBORw0KGgoAAAANSUhEUgAAAEIAAAAICAYAAABNlyniAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMdSURBVEhLjVXNa1NBEA9tkpc0IAj2u9ZaPNVbbStF0UuLjRERb231L6gfxQ/6LagHrQgiRRCsoFbxUA/2Ew++NHl56S2teYnHlqbem9e/YNyZ7Nu83TzBH4TszPx2dnZ2Zp7PgWGmYW+vAFwkPBibAiuXJ11j6ylhSxomZK2cxB0bmwCT+UiZpqRXYZibZLdtm3HTYKS8+Tl2rpFKSTbkpjgfGEjJgLGg373CvsS38r9JxnhJ4UJhX+YKBLUwRGNXYHHxm0TY/pWF6OVYxSYtVAPv5udh5NYdYTtWWw8dHadhd3cX+vsveR6k63HSp9ObUFVVBZoW8uQhgkENQuEaYddCYQixH8ajx0t+bPuQ/gOMOzR8Q8TvXDQQDMHU9AyL9b3wg6hIhJpFd6YR8Y0EDAxE5U0uTM88IltLaxs0Hz9Ba4u9UE/P2Yo9V69dh3h8Q+jdl1QR1LR/2two7P+B7u5uwf3wcYHWWAXV1X6hLxaLkr+5N29l/3hxfyAglNgifElAeSBaWREqzl+4CLMvXlJrPHs+C+6LuH0mkoZY67oOmDQuEjCeafaCScOAbNbyPLegPF4mk4Gl5VVJVyza0NDYJHToly+9wQmC5NVP2DJHa8tOEQtfvpIcdJX24PBNuDs6CltbW9DZ2SXxtXCEZHcisCIaWbDu18J4+vr6SI7FYtRmZFDg95cf7/vSCgwODbFzt2Fk5LbQ7+zssIcpzSR+T4J9eAjY2lwsgfdYmcSGGF8SMDFRFhAXJYQjRyR9c0srtcfjJ09hcnKKbOgP2wt/OHiLin9E0igPRTUe9wUQanzq0D44OJDkapaw3t5zdD5X+ZZW1mg+cbGE5dV1Ntj6hXJl7YdEwGn8P63R1XkG2k+2E291bR3u3X8o9jiH4pD7ydqBlC6opT4+PiFk/LLwpYD7Evilq6tvELKa6Lqmtor9/wSWFJas87lxA18gw0r91es5suELYXY3EknWx+U2yufz7PNpAn72UI5ESq2gwmkNZzZYOflFETobqAnmX51Xjm8V2D4Yi5Eq8z99LrVu1pL3eFWkz+fz/QUIGSjsbhNNZgAAAABJRU5ErkJggg==");
+    let secondBuffer = await ImageDetect.imageDataFromBase64("iVBORw0KGgoAAAANSUhEUgAAAEIAAAAICAYAAABNlyniAAAEL0lEQVRIS5VVXUybVRh+v7a0oElpgZm5CFTEzUhbYo2Q2R+gWBPspkxXnSRGonhjjDMDdtGBXhWKRmdEr0Sj0cx44082LAktP4WiQCil1Au07QB/5kykpYxtOMbrOYd+/WeZ5+LL+c77nvP+Ps/LAVkTnh9Rrz3MLS+voEJRztEzfvkXA6hWKdPOqGzBv4hXNq+C9nBtliz1fubePTmFBt2jXDQaRZlMlvPume638MSzFohEI2DQ65nO5KQHdxCB/ZCPTqsFjizel/XYBpSV3gOK8rLEm/7Az6hWVuW0sbK6iuVlSd00pSbzEXyptRUsluOJ83nfAlqtVnD8MJj14McDA+jz+eGjDz9Ik4XDYayoqMjpgMs1go2NRs7jmUK9Xgc7Oztpeq++9jq2nHgOdDotJxZLUCAUwvVrV5mOJL8A6abBaISOjnZoNBpJQtdJQgu5PKJrsVjgWHMz858PNE+cj6dPd4JCoYBX2l5O2MpKxPLKKqZmEcniM02Nj4yO4dt9fTA05LjtyvtJt7S1tcHMzHTWnZGRUTQaG/Z86/yFQTx79n3SAW7Yf6AUVi8Gme7991agQJQHS78ucee++hqdzmH49JMBEvBvePyZp2F2dpbpffb5F9j64gtsLxSK8ObNbbaPRCIol8v3tMvRwPPEYti+ceO2A03ChrSeKnfriSUS/Hdri73pJm1tIBU+8mQzdrSfgvo6Azt3uVy4b99doFarErapP93db4LpcRPICmVQXa3O8muFFO/BqirYvLLBZHNzc/j7H5eAds9Rc1M88CgJPAm9zAJnQpYlIg61nIlwT3iw194LjsELOeViST4J+HqazOv1okajSTuTFNyJW9c2ubFxN/KJyC+4A2nbp1aL+mMymcDpdHJmsxn7+/uBh1kl6YrgxTBnt/dhV1cXbG8ni/d8Swt2dnSCRvNQwm4oFMI/L10GPeGk1ERE1wmcCgvT/OMxFqcggFwk1kQccgxmc8StSNFqPYM9PTZGit55H1MtKSmBUkJo8gySHHdPYJ1hlxTjmE/4kxrAAwcP4U8z00BJtlguw38iUY6SdnVKR62trWFRUVEiSKEoD2seqQFbjw2MDfXs/Pvzg3jsqaNp/MQEpAI4PDycuyMIy/fYbDDk+H+JONXeie+9+w57UyAQICXFpifM2E6g8VhjY5ot2urlcbb/kuA/sOADu72X6UwQWOkJrCoqD2E4uJR4j3QH/BIKsklXU1sLf1/+axcSJPGZib5VwXgZu+z1zmNsYwOKioshddxQbJN/CIXD8HC81WmFRsfG6eiChvq6RECBQACVSiW3SMatKse45Q3y0KCEGovFQFooBbUqyRGMOwihCgUCEIhEQLmFnt1XeRC/+/YbOPnGSZiZnoH9dx+AICFOKuOnFIWxQb+rv5vEKZRKpVCtTo7/vRL1Hz6j/BhAjO0LAAAAAElFTkSuQmCC");
 
     for (let bh = 0; bh < firstBuffer.height; bh++) {
         for (let bw = 0; bw < firstBuffer.width; bw++) {
             let bi = 4 * bw + 4 * firstBuffer.width * bh;
 
-            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 5)) {
+            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 10)) {
                 firstBuffer.data[bi] = 0;
                 firstBuffer.data[bi + 1] = 0;
                 firstBuffer.data[bi + 2] = 0;

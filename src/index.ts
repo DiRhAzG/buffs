@@ -14,7 +14,7 @@ let defaultSettings = [
 	{ name: "lowHealthSlider", value: "4000" },
 	{ name: "lowPrayerSlider", value: "200" },
 	{ name: "refreshRateSlider", value: "200" },
-	{ name: "timeBufferSlider", value: "10" },
+	{ name: "timeBufferSlider", value: "15" },
 
 	{ name: "overloadBuff", value: "false" },
 	{ name: "animateDeadBuff", value: "false" },
@@ -55,8 +55,6 @@ window.onload = async function start() {
 			}
 	  	} 
 	};
-
-
 
 	if (window.alt1) {
 		main.start();
@@ -108,7 +106,7 @@ $("input:checkbox").on("change", async function() {
 		localStorage.setItem(checkboxId, "false");
 	}
 
-	await main.updateBuffSettings();
+	await main.updateSelections();
 });
 
 // Store Range values in localStorage

@@ -1,13 +1,16 @@
 import * as a1lib from "@alt1/base";
 import * as ChatBox from "./chatbox.js";
 import * as ImageReader from "./image-reader.js";
-import { loadBuffImages, getBuff } from "./buff.js";
+import * as Buff from "./buff.js";
+import * as Bar from "./bar.js";
 import * as moment from 'moment';
 
 let foundChat = false;
 let chatLines;
 let selectedBuffs = [];
+let selectedBar = [];
 let buffTimers = [];
+let barStats = [];
 let expiredBuffs = [];
 let lowStats = [];
 
@@ -23,25 +26,11 @@ let warnings = [
     { id: 9, name: "weaponPoisonBuff", friendlyName: "Weapon Poison", timeBuffer: true }
 ];
 
-export function startCountdown() {
-    setInterval(countdown, 1000);
-};
-
-let countdown = () => {
-    for (let bt = 0; bt < buffTimers.length; bt++) {
-        if (buffTimers[bt].timeLeft > 0) {
-            buffTimers[bt].timeLeft -= 1;
-        }
-    }
-
-    console.log(buffTimers[1]);
-};
-
 /* Main function to run everything else */
 export async function start() {
     try {
         await loadImages();
-        await updateBuffSettings();
+        await updateSelections();
 
         // Main timer that will repeatedly run the other checks
         setTimeout(loopChecks, localStorage.refreshRate);
@@ -60,6 +49,7 @@ function loopChecks() {
     }
 
     checkBuff(img);
+    checkBar(img);
     checkWarnings();
 
     setTimeout(loopChecks, localStorage.refreshRate);
@@ -69,16 +59,24 @@ function loopChecks() {
 export async function test(img) {
     try {
         await loadImages();
-        await updateBuffSettings();
+        await updateSelections();
 
         findChatBox(img);
         readChatBox(img);
         checkBuff(img);
+        checkBar(img);
         setInterval(checkWarnings, 1000);
     } catch (ex) {
         console.log(ex);
     }
 }
+
+/* Load the images that will be used to read the screen */
+let loadImages = async () => {
+    await ImageReader.loadImages();
+    await Buff.loadBuffImages();
+    await Bar.loadBarImages();
+};
 
 // export function reset() {
 //     z.currentPhase = 1;
@@ -88,7 +86,12 @@ export async function test(img) {
 //     atk.resetAttacks();
 // };
 
-export async function updateBuffSettings() {
+export async function updateSelections() {
+    await updateBuffSettings();
+    await updateBarSettings();
+}
+
+let updateBuffSettings = async () => {
     selectedBuffs = [];
     // buffTimers = [];
 
@@ -107,53 +110,40 @@ export async function updateBuffSettings() {
     // console.log(buffTimers);
 }
 
-/* Load the images that will be used to read the screen */
-let loadImages = async () => {
-    await ImageReader.loadImages();
-    await loadBuffImages();
-};
+let updateBarSettings = async () => {
+    selectedBar = [];
+
+    for (let i = 0, len = localStorage.length; i < len; i++) {
+		let key = localStorage.key(i);
+		let value = localStorage[key];
+
+		if (key.includes("Bar") && value == "true") {
+            selectedBar.push(key);
+		}
+	}
+
+    barStats = barStats.filter(bs => selectedBar.includes(bs.name));
+}
 
 /* Get the buff timers */
 let checkBuff = (img) => {
+    Buff.checkBuff(img, selectedBuffs, buffTimers);
 
-    for (let b = 0; b < selectedBuffs.length; b++) {
-        let buffTime = getBuff(img, selectedBuffs[b]);
-        let expireTime = buffTime != undefined? moment.utc(new Date()).add(buffTime, 's') : undefined;
-         
-        let foundBuff = buffTimers.find(bt => bt.name === selectedBuffs[b]);
-        
-        if (!foundBuff) {
-            // Buff timer doesn't exist, so add it.
-            buffTimers.push({ name: selectedBuffs[b], expireTime: expireTime, buffTime: buffTime})
-        } else if (foundBuff.expireTime != undefined) {
-            // Buff time does exist
+    // console.log(buffTimers);
+};
 
-            if (expireTime != undefined) {
-                if (
-                    buffTime < 60 || // Time is less than a minute, most accurate
-                    (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
-                    (buffTime > 60 && foundBuff.buffTime < buffTime) // New time is higher, buff could've been renewed
-                ) {
-                    // console.log(`${selectedBuffs[b]}: ${buffTime}`);
+/* Get the buff timers */
+let checkBar = (img) => {
+    Bar.checkBar(img, selectedBar, barStats);
 
-                    foundBuff.buffTime = buffTime;
-                    foundBuff.expireTime = expireTime;
-                }
-            }
-        } else {
-            // No expire time set yet, so use the new time.
-            foundBuff.expireTime = expireTime;
-        }
-
-        // console.log(`${selectedBuffs[b]}: ${buffTime}`);
-    }
-
-    console.log(buffTimers);
+    // console.log(barStats);
 };
 
 let checkWarnings = () => {
     checkBuffTime();
     checkLowStats();
+
+    displayWarnings();
 };
 
 let checkBuffTime = () => {
@@ -170,19 +160,28 @@ let checkBuffTime = () => {
     });
 
     // console.log(expiredBuffs);
-    displayWarnings();
 };
 
 let checkLowStats = () => {
+    lowStats = barStats.filter((bs) => {
+        let foundSetting = localStorage[bs.name.replace("Bar", "Slider")];
+        
+        if (foundSetting && bs.value <= foundSetting) return true;
+        
+        return false;
+    });
 
+    // console.log(lowStats);
 };
 
 let displayWarnings = () => {
 
-    if (expiredBuffs.length > 0) {
+    if (expiredBuffs.length > 0 || lowStats.length > 0) {
         let expired = warnings.filter(w => {
-            return expiredBuffs.some((e) => {
-                return w.name == e.name;
+            let allWarnings = expiredBuffs.concat(lowStats);
+
+            return allWarnings.some((aw) => {
+                return w.name == aw.name;
             });
         });
 
@@ -193,7 +192,7 @@ let displayWarnings = () => {
         if (window.alt1 && localStorage.mouseTooltip != "true") alt1.setTooltip("");
         else if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(topWarning.friendlyName);
 
-        // console.log(topWarning.friendlyName);
+        console.log(topWarning.friendlyName);
     } else {
         if (window.alt1) alt1.setTooltip("");
     }

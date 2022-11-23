@@ -1,5 +1,6 @@
 import * as ImageReader from "./image-reader.js";
 import { ImageDetect } from "@alt1/base";
+import * as moment from 'moment';
 
 let imageData = [
     { id: 1, name: "overloadBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAQCAMAAADQzfSkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA8UExURVqWGTBWDkBlCkp2DFmEDAAAAWRDB5ByNGheN2mTEqqLN46IWEhXW0BHTUxCN2RkXDM+NmNwbi8uMA8ODDmabGMAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB4SURBVChTnc7BEoMgDEVRUWIbKrXW//9X30uIZdVxvCvImTAMf0sjm/pskmAhOQvLc6iZAeiBnoKTazOSSikvmKqpG0mRgMwadiYLqvUdSDvXVrTUDw0YxpvKttG+ZorvdqayMycu0vzJ2+YUpr01+i1es5MC8zQciooLfHgKMhsAAAAASUVORK5CYII=" },
@@ -22,14 +23,22 @@ export async function loadBuffImages() {
 
         imageBuffers.push({ id: imageData[i].id, name: imageData[i].name, imgBuffer: imgBuffer });
     }
-}
+};
 
 export function getBuff(img, buffName) {
     try {
         // Get starting pixel for Buff image, to be used to grab the buff
         let foundBuff = imageBuffers.filter(b => b.name == buffName);
-        let buffPosition = ImageReader.getPosition(img, foundBuff[0].imgBuffer, 0, 0, 27, 27);
-        let numberType = buffName == "animateDeadBuff"? "animate" : "";
+        let buffPosition;
+        let numberType = buffName == "animateDeadBuff"? "animate" : "buff";
+
+        for (let fb = 0; fb < foundBuff.length; fb++) {
+            buffPosition = ImageReader.getPosition(img, foundBuff[0].imgBuffer, 0, 0, 27, 27);
+ 
+             if (buffPosition != undefined) {
+                 break;
+             }
+         }
 
         if (buffPosition != undefined) {
             let buffer = img.toData(buffPosition.x, buffPosition.y, buffPosition.w, buffPosition.h);
@@ -50,5 +59,42 @@ export function getBuff(img, buffName) {
         console.log(ex);
         return undefined;
     }
+};
 
-}
+/* Get the buff timers */
+export function checkBuff(img, selectedBuffs, buffTimers) {
+
+    for (let b = 0; b < selectedBuffs.length; b++) {
+        let buffTime = getBuff(img, selectedBuffs[b]);
+        let expireTime = buffTime != undefined? moment.utc(new Date()).add(buffTime, 's') : undefined;
+         
+        let foundBuff = buffTimers.find(bt => bt.name === selectedBuffs[b]);
+        
+        if (!foundBuff) {
+            // Buff timer doesn't exist, so add it.
+            buffTimers.push({ name: selectedBuffs[b], expireTime: expireTime, buffTime: buffTime})
+        } else if (foundBuff.expireTime != undefined) {
+            // Buff time does exist
+
+            if (expireTime != undefined) {
+                if (
+                    buffTime < 60 || // Time is less than a minute, most accurate
+                    (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
+                    (buffTime > 60 && foundBuff.buffTime < buffTime) // New time is higher, buff could've been renewed
+                ) {
+                    // console.log(`${selectedBuffs[b]}: ${buffTime}`);
+
+                    foundBuff.buffTime = buffTime;
+                    foundBuff.expireTime = expireTime;
+                }
+            }
+        } else {
+            // No expire time set yet, so use the new time.
+            foundBuff.expireTime = expireTime;
+        }
+
+        // console.log(`${selectedBuffs[b]}: ${buffTime}`);
+    }
+
+    // console.log(buffTimers);
+};

@@ -26401,6 +26401,102 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 
 /***/ }),
 
+/***/ "./scripts/bar.js":
+/*!************************!*\
+  !*** ./scripts/bar.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "checkBar": () => (/* binding */ checkBar),
+/* harmony export */   "getBar": () => (/* binding */ getBar),
+/* harmony export */   "loadBarImages": () => (/* binding */ loadBarImages)
+/* harmony export */ });
+/* harmony import */ var _image_reader_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./image-reader.js */ "./scripts/image-reader.js");
+/* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
+
+
+
+let imageData = [
+    { id: 1, name: "lowHealthBar", imgData: "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANWSURBVDhPlZVbaxNBFMfPzmxuLU3b9ILSVjcVQe0tPqgovlRBvEAvX0CiD33Qp/okiIJUBJ/UVx80foJaUeuFUhSq+CC2ijfQZktqC9Y2vSab7GU8ZzaJabVF/zDszJz/+c2Z7MxGgXW0//CxaHpmupOvLEZwqLmzoNulwdFAzeaBV0ODsdzcKv0B3H2wvSs1+e2633Y0zhTwelTwMCZjpuNA1rTAcACEELp/6/betyPD92Qwp1XAA80777QGUlEfV2AyJSAx74DH7wWeA9oINI0sNFQwaChRIOsIGLNLYiNvPp2SBlQBeKtj153TYV8Uiyro9ayAq+/m4MeSC6wtc+B8Swj2V/82IRNuxzOxnvsfJVRGYt0tXSdrnH7qw6IpH1JBD2Rwe4eGZ6ESrf3tIdw+zq/xkO7OsO5T/e/vSaDT0xRHU/6HB7FgglLuGknjUwYsNYagzUjlZlwPqeALenR260OYx443RduCEKVSyDS/4sgf3Ug74Dexg/OhGh9sskwXguOCBxt5FD8H8PGK0traCeazjE7agoRZ7mKpjNuhMbXkrClbfkwq9siFkFFvZzqZnrHpnP3WvCEflLBRk8p589INK8IG4ykNX5RUhZrr/IfyOcR4rKc09tPicHM6u+ollKQtsJbMDRt5KhVb+in3BjJmkcUUVdVjX9LQH1+WwYpqv3z+i0RVqXxS7l1kALIYL6sc9asqXEkIeDCXkQZaOagWnfA1oli+OsqhXGIQiwWqagYcHNB97ZsSMJg05MrrQfMw8jyaM2QO5RKDWDJjX2M47rVtje5qRljQVwdwVOAhQyUFh0XLfW3FlQ0qDC59x+OnYGUIzHKuvx6Ph+UlZY07eulOMgx40XAh4cBTTCDlKy2GPcHYZdwmwShH5iKDYnjEASbHv37e0tymeZcXI1QLx4QhPLEaflW2CQEBxW2kZxi7iAuq3P0K0bRo0GIvnw9do7gEkhKJiYG6plYN5pMRWpV2Obxgw168Vpu4CxvNcjg3LUBgZV7OQWBpYks4NjLyovD5cveVEwWCu/d0m5zpKn2IFA+cSQp45/HDGLaz2AeEUYw85C2GkdY9G0dOdESXvk92pud+RModWyPngsL1QKh2tKyufuDpw/t/+QsA+AVf664qfRTSwAAAAABJRU5ErkJggg==" },
+    // Poisoned
+    { id: 2, name: "lowHealthBar", imgData: "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANWSURBVDhPlZVbaxNBFMfPzmxuLU3b9ILSVjcVQe0tPqgovlRBvEAvX0CiD33Qp/okiIJUBJ/UVx80foJaUeuFUhSq+CC2ijfQZktqC9Y2vSab7GU8ZzaJabVF/zDszJz/+c2Z7MxGgXW0//CxaHpmupOvLEZwqLmzoNulwdFAzeaBV0ODsdzcKv0B3H2wvSs1+e2633Y0zhTwelTwMCZjpuNA1rTAcACEELp/6/betyPD92Qwp1XAA80777QGUlEfV2AyJSAx74DH7wWeA9oINI0sNFQwaChRIOsIGLNLYiNvPp2SBlQBeKtj153TYV8Uiyro9ayAq+/m4MeSC6wtc+B8Swj2V/82IRNuxzOxnvsfJVRGYt0tXSdrnH7qw6IpH1JBD2Rwe4eGZ6ESrf3tIdw+zq/xkO7OsO5T/e/vSaDT0xRHU/6HB7FgglLuGknjUwYsNYagzUjlZlwPqeALenR260OYx443RduCEKVSyDS/4sgf3Ug74Dexg/OhGh9sskwXguOCBxt5FD8H8PGK0traCeazjE7agoRZ7mKpjNuhMbXkrClbfkwq9siFkFFvZzqZnrHpnP3WvCEflLBRk8p589INK8IG4ykNX5RUhZrr/IfyOcR4rKc09tPicHM6u+ollKQtsJbMDRt5KhVb+in3BjJmkcUUVdVjX9LQH1+WwYpqv3z+i0RVqXxS7l1kALIYL6sc9asqXEkIeDCXkQZaOagWnfA1oli+OsqhXGIQiwWqagYcHNB97ZsSMJg05MrrQfMw8jyaM2QO5RKDWDJjX2M47rVtje5qRljQVwdwVOAhQyUFh0XLfW3FlQ0qDC59x+OnYGUIzHKuvx6Ph+UlZY07eulOMgx40XAh4cBTTCDlKy2GPcHYZdwmwShH5iKDYnjEASbHv37e0tymeZcXI1QLx4QhPLEaflW2CQEBxW2kZxi7iAuq3P0K0bRo0GIvnw9do7gEkhKJiYG6plYN5pMRWpV2Obxgw168Vpu4CxvNcjg3LUBgZV7OQWBpYks4NjLyovD5cveVEwWCu/d0m5zpKn2IFA+cSQp45/HDGLaz2AeEUYw85C2GkdY9G0dOdESXvk92pud+RModWyPngsL1QKh2tKyufuDpw/t/+QsA+AVf664qfRTSwAAAAABJRU5ErkJggg==" },
+    // Prayer off
+    { id: 3, name: "lowPrayerBar", imgData: "iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQKSURBVDhPbZRrTFtlGMf/59orbYFS2mLhcBlDNqEyNpkJOrY4r4kmMzq8JMbF7KP7qPGD2QfDB7+gnzQmxks2xWSRDI1ZtghxMgKZDliVAINyp1zaldLLOT03z3souGX7J+2bPs//+fV53/c5h8JD9Pxrbwt3Y4n3lW2EFVk59uaHH+FC1ydgOXaAL8Gou7Tks99++n6uYN8TU1hNvfzOWY+7qLxLW7f8yGuuNivrEkpCATx1+jSio7fBiBaBlmxtUlw5568LeVo7TgxPjt0UC+X/w15664wnFlntd+hlr9itbth4lxk/+PRRBBv2Q97OYnM2BrvFBYbhQOW5tkQs9lzLifaeqfFbJpAmXwS09u9av4P1hu3WYtitHtA0B1ewFDUtTXDptLk6/cVmnOSJj/hJHaknHLMzjzvQtdNRMay8AyzDQ4WE+iebET50GJxLQZGlGOlMCpvzy+BoCxiaBUUZ5Qrj38rErMsL01eoZ069IYhziNosbjjtpYBOIa9kUd4UxKl334Ov1Er+z9R6XMSlr7/C2vgKeNYOUDrS2Thy0hasAqoZrzf0scU4bJ5zGnYdspaFv6kCr545uwfyOGmIeR0OOwvh0TAWViaRXN2ArpMsBVWTkZbiYAKl9R9wtF1QVBm2Mica2w/hhdc77wMRWXlqB2hjUdXQjKyaRSKxDnFrG6quIC/mRMbnrfnGU+FD+Hg7Dr94EuHWIw+AdrUHNDosC9XAW1cJvohHIrmG7URcoD69eF2vPNhkmsmtcUUKPKzjAdC9SqY1JJWMMS4sUpRmxhYi46CaHzuuB6r248CRo6htCaP6EQFlJQ/vjIiAiDYSIqJLc5j5exT/jAwhNjcDJlTReExJycLSxDTmJyeN20nDF6o1tsKZWyJb29UuaD2ew++/XMafvX24M3ILUioLlRYHmEBdVZiVbW0cZ4ecEbEyPYOF5TuoPdBqHvYu8N6OLn75OSb+GIGclsynQdNlqM5cL9PQ9PhkLiGeY40gbQwibczx5vwSFldndoCFDolIRxe+6EZ0OAKOMY6CoqAZYyHlM3D5HZ3M3NREMlBf6dFzTBttJCmaMT40EssryFMq/JX7IHMSUkkN1y7/jEj/IFjWanCM+VLzyMsiNHem+8a1X3vME/YFA+cVJj1KEsSgayp0FYgMDWJ2cda8taixjg1eN+MkvwsidcFQ8DzhmDDj3ZT07SvvIImclDInmjwNZLvTN/8yr5+sd5dWzDjJEx/xk7q+H75LEs7e3RNgsMHfwZfr3Xk5B1kRjTIdt4cHjfqdlfwmcZInPuIndQXE/S/HqciYuBidvvLEs+3fghYhiXlxO74hVDU0YqjvEhgLPeCqdPSWV3s7r/b29BB/odQQ8B/Nz+FyG3G+lwAAAABJRU5ErkJggg==" },
+    // Prayer on
+    { id: 4, name: "lowPrayerBar", imgData: "iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPzSURBVDhPbZRLbBtlEMf/+/Jz19kktmySNNgtTRpEkdVDaZWiJiqqOEUgDi0SFy5IlRAtF05IpQiJI4mEVIkLD3EgKmqlIhUISgkioVCpZYG2VgqJ46Su4yR21rvrx2a9u3zfEudROof95Jn//L7xzuwweIy9dvxqUjdnz4pBK+0w5aHBM6cxc/ErsG7HlFEXFMnfP/blTyMLm/It2wV74+S0XNRunO/bI54TgzIYhoHq1/Dcm6fw28fjkM0IXNeFUVdxf8kYjUeOXvhk4pi6mb4Ne/3EhGy5t39MPfFUuj0cgS/QBr1aAfMMg9SJw8hO3gSfYRAISNhoVLBe1ZAt/KMIzKHhTydPekCWPmhFLVCb2AtJ2gMfJ8NpZxAd6EXEZb2zLjqen8apjuppHs2nHI4+emIDH/b2DLwUlbohhhIQWAmauQ7stbH/YB8EqYmw0IY1tYRGgYPoj4Hjg2AZDq4QTCwVlcDsgx++Z04/fykZ7bCyMXkvxLY4wpxE3kkJWjyLoy8PItbhp/d5tlo2cePKDCLFFMRgJ6q2DqNSxKo6j7WykOKejB8+H4v2HQmR23hWQKW+BiO+hMFXtkGyyKKx4SIc5NGR6sL93J8wSwCPAJo2D9NxUVjLgPX5hLTbZKFWy1i2F8A+XcExCmrfBu08qZ/GqW7VfeDlwWVAOdyB1NBnXNRG/FAYyePdOPDs/l0V7bSAj9mqsC1B/km3C0soY6W0hLqmJpmxccVNDKQ8Me0afdkyH/4faKephgO1WYWl89AYx/MtZ7Lg2Icd7xXu5bGh6XCDHCS/7N1MK6CVPGoURE2vuFjM5zE3cwe3rvyCvyZmwO1LvDAUZqJJPddAYa6Air6K9q7uxwJboBXS1V8npjE7OQ81U4NbY6HrxhRbr5mKY5PJ9ovgKiEs/lzEtS8uY3Xd9BJbgNZJ/TROdVRP8xymAcrh0vtGZh3OOMfzAliOIeMRhJbXsPAwg57+/q0Kqa2UG/jm80uo3N1AyN9OmmjBsmuokrn0scFXOTK5alfnQZlj/UdYloELG4IQgFYsQ7dURHt6ScdMaKqD6WvXUbi1Ah8f8nRN20S1Rr5TLT/67c33x72WRQLJC5XaomKQgbXsOmy7QdaND7k/5rGQX/S6lssvIfv7HPELZDuQkSA6qi9rOYXmU44Huzz9liqF4sN6rajUyUZomFWyfhwYBR055Z7X/pySQW3F8Pw0TnWqtqzIkcQwzd+CUfv6+jseUGtkRw2zCNP+b7L/vn2XnCDnHe839dN4rVkYpSCat4nYvRxbdurFD5J6rXTWsuppy2kMjbx9Blc/uki2SWBKEIKKFOocG//u3Uc2LfAvqIvt+unighIAAAAASUVORK5CYII=" },
+];
+
+let imageBuffers = [];
+
+async function loadBarImages() {
+    imageBuffers = [];
+
+    // Top left corner of Bar box
+    for (let i = 0; i < imageData.length; i++) {
+        let imgBuffer = await _alt1_base__WEBPACK_IMPORTED_MODULE_1__.ImageDetect.imageDataFromBase64(imageData[i].imgData);
+
+        imageBuffers.push({ id: imageData[i].id, name: imageData[i].name, imgBuffer: imgBuffer });
+    }
+};
+
+function getBar(img, barName) {
+    try {
+        // Get starting pixel for Bar image, to be used to grab the bar
+        let foundBar = imageBuffers.filter(b => b.name == barName);
+        let barPosition;
+
+        for (let fb = 0; fb < foundBar.length; fb++) {
+           barPosition = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.getPosition(img, foundBar[fb].imgBuffer, 20, -5, 90, 27);
+
+            if (barPosition != undefined) {
+                break;
+            }
+        }
+
+        if (barPosition != undefined) {
+            let buffer = img.toData(barPosition.x, barPosition.y, barPosition.w, barPosition.h);
+
+            // ImageReader.outputImage(buffer);
+            let bar = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.readNumbers(buffer, "bar");
+            
+            if (bar == undefined || bar == "") {
+                return undefined;
+            } else {
+                return Number(bar);
+            }
+        }
+        
+        // throw 'Bar not found.'
+    }
+    catch (ex) {
+        console.log(ex);
+        return undefined;
+    }
+};
+
+/* Get the bar stats */
+function checkBar(img, selectedBar, barStats) {
+
+    for (let b = 0; b < selectedBar.length; b++) {
+        let barValue = getBar(img, selectedBar[b]);
+        let foundBar = barStats.find(bt => bt.name === selectedBar[b]);
+
+        if (!foundBar) {
+            // Bar stat doesn't exist, so add it.
+            barStats.push({ name: selectedBar[b], value: barValue })
+        } else if (barValue != undefined && barValue != "") {
+            foundBar.value = barValue;
+        }
+        // console.log(barValue);
+    }
+
+};
+
+/***/ }),
+
 /***/ "./scripts/buff.js":
 /*!*************************!*\
   !*** ./scripts/buff.js ***!
@@ -26410,11 +26506,15 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "checkBuff": () => (/* binding */ checkBuff),
 /* harmony export */   "getBuff": () => (/* binding */ getBuff),
 /* harmony export */   "loadBuffImages": () => (/* binding */ loadBuffImages)
 /* harmony export */ });
 /* harmony import */ var _image_reader_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./image-reader.js */ "./scripts/image-reader.js");
 /* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "../node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -26439,14 +26539,22 @@ async function loadBuffImages() {
 
         imageBuffers.push({ id: imageData[i].id, name: imageData[i].name, imgBuffer: imgBuffer });
     }
-}
+};
 
 function getBuff(img, buffName) {
     try {
         // Get starting pixel for Buff image, to be used to grab the buff
         let foundBuff = imageBuffers.filter(b => b.name == buffName);
-        let buffPosition = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.getPosition(img, foundBuff[0].imgBuffer, 0, 0, 27, 27);
-        let numberType = buffName == "animateDeadBuff"? "animate" : "";
+        let buffPosition;
+        let numberType = buffName == "animateDeadBuff"? "animate" : "buff";
+
+        for (let fb = 0; fb < foundBuff.length; fb++) {
+            buffPosition = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.getPosition(img, foundBuff[0].imgBuffer, 0, 0, 27, 27);
+ 
+             if (buffPosition != undefined) {
+                 break;
+             }
+         }
 
         if (buffPosition != undefined) {
             let buffer = img.toData(buffPosition.x, buffPosition.y, buffPosition.w, buffPosition.h);
@@ -26467,8 +26575,45 @@ function getBuff(img, buffName) {
         console.log(ex);
         return undefined;
     }
+};
 
-}
+/* Get the buff timers */
+function checkBuff(img, selectedBuffs, buffTimers) {
+
+    for (let b = 0; b < selectedBuffs.length; b++) {
+        let buffTime = getBuff(img, selectedBuffs[b]);
+        let expireTime = buffTime != undefined? moment__WEBPACK_IMPORTED_MODULE_2__.utc(new Date()).add(buffTime, 's') : undefined;
+         
+        let foundBuff = buffTimers.find(bt => bt.name === selectedBuffs[b]);
+        
+        if (!foundBuff) {
+            // Buff timer doesn't exist, so add it.
+            buffTimers.push({ name: selectedBuffs[b], expireTime: expireTime, buffTime: buffTime})
+        } else if (foundBuff.expireTime != undefined) {
+            // Buff time does exist
+
+            if (expireTime != undefined) {
+                if (
+                    buffTime < 60 || // Time is less than a minute, most accurate
+                    (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
+                    (buffTime > 60 && foundBuff.buffTime < buffTime) // New time is higher, buff could've been renewed
+                ) {
+                    // console.log(`${selectedBuffs[b]}: ${buffTime}`);
+
+                    foundBuff.buffTime = buffTime;
+                    foundBuff.expireTime = expireTime;
+                }
+            }
+        } else {
+            // No expire time set yet, so use the new time.
+            foundBuff.expireTime = expireTime;
+        }
+
+        // console.log(`${selectedBuffs[b]}: ${buffTime}`);
+    }
+
+    // console.log(buffTimers);
+};
 
 /***/ }),
 
@@ -26588,6 +26733,14 @@ async function loadImages() {
     
     // Split the numbers into a dataset with each individual number
     buffNumbers = _alt1_base_dist_imagedetect__WEBPACK_IMPORTED_MODULE_1__.ImageDataSet.fromFilmStrip(imgBuffNumbers, 6);
+
+    // The numbers used for action bar
+    imgBarNumbers = await _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.imageDataFromBase64(
+        'iVBORw0KGgoAAAANSUhEUgAAAEIAAAAICAYAAABNlyniAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJKSURBVEhLlVXNbtNAELbyYzvlDrxIiqpeEynGvACBN6DiAEIqbXmSphKIY7mUnxt2EtvpLS52wjFRnN5j9wmWnc16u+tdB/eTLM/Ofjs7O7Mzq/FYrRJERYZ4Npd0gCieSfogmCA/CJT8HF5wTeazLNvJm+F9Pd8XOJ4fIB9/ICMMosQAX8DuKlkL/Hj+t3SPZC1yBVj2C3R5+U0g3PyJkPXcVi46HwzQm6O30txyuSzdxHFcMjeZXKNarVbKA+i6gczWHuMYZguZ+AN/HHdrJ8vuyL+Juf1Xr5n/+UGbuolOzz6h88EFswOQAlGMIh9pgDscoV7PEhf9BzHO0P7+M+Ua1x1WsqUbRiVesr5F7XabcT9/+crker3B5DRNd9uDgzeazUqbPgT8QTxcMlTURmOPyY7jIAgaHRKAP2c4g2PPQ1EUK/1KCsmbTqfo6vtPQZemYumBXSqqQQk7SVAyVJSgG6Y0F4ahpDNaj4iOD0R+7flsgT+dToeMbdtGZWXWaIjJe9nvozC8EXSLxQL3rG1PouckyO625SSA1tg9SdHELOwQFSvj5OSUrAF7UF7wQeNNFfbH3n1TLPrDHwBQ9K/YtDebjTCu44AdHByS/alKu/rxS92fut2urKSAbtyzHh6Id+8/sDX5ptDkfuNyIEoOxat+fPyRjX2urHLwh4CX7vGTp2ysCnRlwJWCK6t6biADU+6qQ4YgusPRWODO59tnFp49oihBXhp5b4hn8jPs4IY6wvb53gIos52Xj+fLQYticY06UJr2D34Kq2+ZZMeaAAAAAElFTkSuQmCC'
+    );
+    
+    // Split the numbers into a dataset with each individual number
+    barNumbers = _alt1_base_dist_imagedetect__WEBPACK_IMPORTED_MODULE_1__.ImageDataSet.fromFilmStrip(imgBarNumbers, 6);
 }
 
 /*
@@ -26640,7 +26793,7 @@ function readNumbers(buffer, type = "") {
     let numbersList;
     let foundPixel = false;
 
-    if (type == "") {
+    if (type == "buff") {
         numbersList = buffNumbers;
     } else if (type == "animate") {
         numbersList = buffNumbers;
@@ -26716,7 +26869,10 @@ function readNumbers(buffer, type = "") {
         // All number images must be in this format, 0123456789
         for (let m = 0; m < numberMatch.length; m++) {
             if (numberMatch[m].num == 10) {
-                str = (str * 60) + 59;
+                if (type != "bar") {
+                    str = (str * 60) + 59;
+                }
+
                 break;
             } else if (numberMatch[m].num == 11) {
                 break;
@@ -26800,14 +26956,14 @@ function checkMatch(buffer, numBuffer, bw, bh, nbw, nbh) {
 
 /* Generate a new image based off two images, with only the matching pixels */
 async function generateMatchingImage() {
-    let firstBuffer = await _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.imageDataFromBase64("iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAYAAABYWxXTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFuSURBVDhPvZJPToNAFMY/GMqfQqWtFKNGd4qbmph06aJnaLyFR/AYrnqHHsOlu57C2KDUP7UMBWeGIaGW2q74JS/vzQPmy/seyjOQoS7qEuM6qqxroVYxsbMBy/L8L6PR/V6Wq6qKyeRx7c69bez3b7Ph8C5TFAVqOdRyqCJ8/wy6bskv19k5GRdqaARe18VVcA1N0+UTgBAiK6DZdJDCwFv0BUp/MB4/7D8ZF+Fh6A10XQe2ZSKhCyFQRIFtO/B7x6zK7/8rVFApFgQDsRujoeHAyS1ZLmNE85moyzQtGz3vCDRJ2FSfsltNpZiumyDM/xYT4rvhxJQiDN8xj17EmdPu+PA8n+2KwGQOcLid29gQ49bxfNh2hGAZShMWS1Gfnpyj47psh7lI8S4hmshVbIhNp09ilJAtuorXWQjTIDAME/zv5BR5F5U2pukKWZYhWaWyk2NZLVxc3jCrWojjhewy6wwd0ce3sHO7MPALjjBfufZq7OYAAAAASUVORK5CYII=");
-    let secondBuffer = await _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.imageDataFromBase64("iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAIAAADXOYKEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJISURBVDhPrVK/b9NQEH5+frGdJg1GiluRSJE6RAIxtGJEqgQrfwAr/wQLEhsrCLExITEgJLqAGKloh05NU1FRSCsUhFigSQNJaBzb78XhOz/b9A/g0/ne3fnuu3s/jD32n0GMXzZanDMWM86FEFhZHGtR0ExRhBZKUYp+k08uElDIGBRnAsbqnfUkoMHTAmKBhxSAs7397f32NpoxLqhlUg0gOWPO2iddacbuRksnISupZCjTgd32zscPB3PGKpUK3PmcSOZY6SPbdpz1G7fASJ1oxpu04o+ei+yY+pDB2OMnDzqfj7iwTGFN/ADiTyPIdCqDQIbhDBL4cmvztc7XSBgxc05KASVn0aOH9wf93uD0p2EYPBeeC2HJq3NuTiYjDIhylQyjN0cAISLQ3e7xq5fPRsORME2Ly7p3oXHJ07JSX9ZytblyuXlFiMJi2WUG0eBKNTLGbOj27s6L50+Pjz7ZBXGxslByLCWnpsm16JxSqex5NdwB7K/fDhuNpo5bFulzjIodHrS2Nt/CswqiXHJgBGE0Hg+SjBTFYqlaXZZKDcdncDud1tq16/qXRsoIwl7/x/t3b6IoMjkvL9g4NcQjKQe/huNRX6e5rletLuHs7EIBbrFYTnacQu8zd1kQBb4/gYHNglQHASmlkiGMWq3hui7ODrZOME06PLwc6BxpJRLu3b19cvId9u8/vg7m6J0OHFvYtoN7h6t1CrzV5GHn+DcLEIbTOJ7h+c5m2U3R1habzTXoKArSiGWNz3zsPaM+NyNjfwEOOvnJOH3ICgAAAABJRU5ErkJggg==");
+    let firstBuffer = await _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.imageDataFromBase64("iVBORw0KGgoAAAANSUhEUgAAAEIAAAAICAYAAABNlyniAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMdSURBVEhLjVXNa1NBEA9tkpc0IAj2u9ZaPNVbbStF0UuLjRERb231L6gfxQ/6LagHrQgiRRCsoFbxUA/2Ew++NHl56S2teYnHlqbem9e/YNyZ7Nu83TzBH4TszPx2dnZ2Zp7PgWGmYW+vAFwkPBibAiuXJ11j6ylhSxomZK2cxB0bmwCT+UiZpqRXYZibZLdtm3HTYKS8+Tl2rpFKSTbkpjgfGEjJgLGg373CvsS38r9JxnhJ4UJhX+YKBLUwRGNXYHHxm0TY/pWF6OVYxSYtVAPv5udh5NYdYTtWWw8dHadhd3cX+vsveR6k63HSp9ObUFVVBZoW8uQhgkENQuEaYddCYQixH8ajx0t+bPuQ/gOMOzR8Q8TvXDQQDMHU9AyL9b3wg6hIhJpFd6YR8Y0EDAxE5U0uTM88IltLaxs0Hz9Ba4u9UE/P2Yo9V69dh3h8Q+jdl1QR1LR/2two7P+B7u5uwf3wcYHWWAXV1X6hLxaLkr+5N29l/3hxfyAglNgifElAeSBaWREqzl+4CLMvXlJrPHs+C+6LuH0mkoZY67oOmDQuEjCeafaCScOAbNbyPLegPF4mk4Gl5VVJVyza0NDYJHToly+9wQmC5NVP2DJHa8tOEQtfvpIcdJX24PBNuDs6CltbW9DZ2SXxtXCEZHcisCIaWbDu18J4+vr6SI7FYtRmZFDg95cf7/vSCgwODbFzt2Fk5LbQ7+zssIcpzSR+T4J9eAjY2lwsgfdYmcSGGF8SMDFRFhAXJYQjRyR9c0srtcfjJ09hcnKKbOgP2wt/OHiLin9E0igPRTUe9wUQanzq0D44OJDkapaw3t5zdD5X+ZZW1mg+cbGE5dV1Ntj6hXJl7YdEwGn8P63R1XkG2k+2E291bR3u3X8o9jiH4pD7ydqBlC6opT4+PiFk/LLwpYD7Evilq6tvELKa6Lqmtor9/wSWFJas87lxA18gw0r91es5suELYXY3EknWx+U2yufz7PNpAn72UI5ESq2gwmkNZzZYOflFETobqAnmX51Xjm8V2D4Yi5Eq8z99LrVu1pL3eFWkz+fz/QUIGSjsbhNNZgAAAABJRU5ErkJggg==");
+    let secondBuffer = await _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.imageDataFromBase64("iVBORw0KGgoAAAANSUhEUgAAAEIAAAAICAYAAABNlyniAAAEL0lEQVRIS5VVXUybVRh+v7a0oElpgZm5CFTEzUhbYo2Q2R+gWBPspkxXnSRGonhjjDMDdtGBXhWKRmdEr0Sj0cx44082LAktP4WiQCil1Au07QB/5kykpYxtOMbrOYd+/WeZ5+LL+c77nvP+Ps/LAVkTnh9Rrz3MLS+voEJRztEzfvkXA6hWKdPOqGzBv4hXNq+C9nBtliz1fubePTmFBt2jXDQaRZlMlvPume638MSzFohEI2DQ65nO5KQHdxCB/ZCPTqsFjizel/XYBpSV3gOK8rLEm/7Az6hWVuW0sbK6iuVlSd00pSbzEXyptRUsluOJ83nfAlqtVnD8MJj14McDA+jz+eGjDz9Ik4XDYayoqMjpgMs1go2NRs7jmUK9Xgc7Oztpeq++9jq2nHgOdDotJxZLUCAUwvVrV5mOJL8A6abBaISOjnZoNBpJQtdJQgu5PKJrsVjgWHMz858PNE+cj6dPd4JCoYBX2l5O2MpKxPLKKqZmEcniM02Nj4yO4dt9fTA05LjtyvtJt7S1tcHMzHTWnZGRUTQaG/Z86/yFQTx79n3SAW7Yf6AUVi8Gme7991agQJQHS78ucee++hqdzmH49JMBEvBvePyZp2F2dpbpffb5F9j64gtsLxSK8ObNbbaPRCIol8v3tMvRwPPEYti+ceO2A03ChrSeKnfriSUS/Hdri73pJm1tIBU+8mQzdrSfgvo6Azt3uVy4b99doFarErapP93db4LpcRPICmVQXa3O8muFFO/BqirYvLLBZHNzc/j7H5eAds9Rc1M88CgJPAm9zAJnQpYlIg61nIlwT3iw194LjsELOeViST4J+HqazOv1okajSTuTFNyJW9c2ubFxN/KJyC+4A2nbp1aL+mMymcDpdHJmsxn7+/uBh1kl6YrgxTBnt/dhV1cXbG8ni/d8Swt2dnSCRvNQwm4oFMI/L10GPeGk1ERE1wmcCgvT/OMxFqcggFwk1kQccgxmc8StSNFqPYM9PTZGit55H1MtKSmBUkJo8gySHHdPYJ1hlxTjmE/4kxrAAwcP4U8z00BJtlguw38iUY6SdnVKR62trWFRUVEiSKEoD2seqQFbjw2MDfXs/Pvzg3jsqaNp/MQEpAI4PDycuyMIy/fYbDDk+H+JONXeie+9+w57UyAQICXFpifM2E6g8VhjY5ot2urlcbb/kuA/sOADu72X6UwQWOkJrCoqD2E4uJR4j3QH/BIKsklXU1sLf1/+axcSJPGZib5VwXgZu+z1zmNsYwOKioshddxQbJN/CIXD8HC81WmFRsfG6eiChvq6RECBQACVSiW3SMatKse45Q3y0KCEGovFQFooBbUqyRGMOwihCgUCEIhEQLmFnt1XeRC/+/YbOPnGSZiZnoH9dx+AICFOKuOnFIWxQb+rv5vEKZRKpVCtTo7/vRL1Hz6j/BhAjO0LAAAAAElFTkSuQmCC");
 
     for (let bh = 0; bh < firstBuffer.height; bh++) {
         for (let bw = 0; bw < firstBuffer.width; bw++) {
             let bi = 4 * bw + 4 * firstBuffer.width * bh;
 
-            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 5)) {
+            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 10)) {
                 firstBuffer.data[bi] = 0;
                 firstBuffer.data[bi + 1] = 0;
                 firstBuffer.data[bi + 2] = 0;
@@ -26843,16 +26999,17 @@ function showPixel(buffer, i) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "start": () => (/* binding */ start),
-/* harmony export */   "startCountdown": () => (/* binding */ startCountdown),
 /* harmony export */   "test": () => (/* binding */ test),
-/* harmony export */   "updateBuffSettings": () => (/* binding */ updateBuffSettings)
+/* harmony export */   "updateSelections": () => (/* binding */ updateSelections)
 /* harmony export */ });
 /* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
 /* harmony import */ var _chatbox_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chatbox.js */ "./scripts/chatbox.js");
 /* harmony import */ var _image_reader_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./image-reader.js */ "./scripts/image-reader.js");
 /* harmony import */ var _buff_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./buff.js */ "./scripts/buff.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment */ "../node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _bar_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./bar.js */ "./scripts/bar.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! moment */ "../node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -26862,7 +27019,9 @@ __webpack_require__.r(__webpack_exports__);
 let foundChat = false;
 let chatLines;
 let selectedBuffs = [];
+let selectedBar = [];
 let buffTimers = [];
+let barStats = [];
 let expiredBuffs = [];
 let lowStats = [];
 
@@ -26878,25 +27037,11 @@ let warnings = [
     { id: 9, name: "weaponPoisonBuff", friendlyName: "Weapon Poison", timeBuffer: true }
 ];
 
-function startCountdown() {
-    setInterval(countdown, 1000);
-};
-
-let countdown = () => {
-    for (let bt = 0; bt < buffTimers.length; bt++) {
-        if (buffTimers[bt].timeLeft > 0) {
-            buffTimers[bt].timeLeft -= 1;
-        }
-    }
-
-    console.log(buffTimers[1]);
-};
-
 /* Main function to run everything else */
 async function start() {
     try {
         await loadImages();
-        await updateBuffSettings();
+        await updateSelections();
 
         // Main timer that will repeatedly run the other checks
         setTimeout(loopChecks, localStorage.refreshRate);
@@ -26915,6 +27060,7 @@ function loopChecks() {
     }
 
     checkBuff(img);
+    checkBar(img);
     checkWarnings();
 
     setTimeout(loopChecks, localStorage.refreshRate);
@@ -26924,16 +27070,24 @@ function loopChecks() {
 async function test(img) {
     try {
         await loadImages();
-        await updateBuffSettings();
+        await updateSelections();
 
         findChatBox(img);
         readChatBox(img);
         checkBuff(img);
+        checkBar(img);
         setInterval(checkWarnings, 1000);
     } catch (ex) {
         console.log(ex);
     }
 }
+
+/* Load the images that will be used to read the screen */
+let loadImages = async () => {
+    await _image_reader_js__WEBPACK_IMPORTED_MODULE_2__.loadImages();
+    await _buff_js__WEBPACK_IMPORTED_MODULE_3__.loadBuffImages();
+    await _bar_js__WEBPACK_IMPORTED_MODULE_4__.loadBarImages();
+};
 
 // export function reset() {
 //     z.currentPhase = 1;
@@ -26943,7 +27097,12 @@ async function test(img) {
 //     atk.resetAttacks();
 // };
 
-async function updateBuffSettings() {
+async function updateSelections() {
+    await updateBuffSettings();
+    await updateBarSettings();
+}
+
+let updateBuffSettings = async () => {
     selectedBuffs = [];
     // buffTimers = [];
 
@@ -26962,60 +27121,47 @@ async function updateBuffSettings() {
     // console.log(buffTimers);
 }
 
-/* Load the images that will be used to read the screen */
-let loadImages = async () => {
-    await _image_reader_js__WEBPACK_IMPORTED_MODULE_2__.loadImages();
-    await (0,_buff_js__WEBPACK_IMPORTED_MODULE_3__.loadBuffImages)();
-};
+let updateBarSettings = async () => {
+    selectedBar = [];
+
+    for (let i = 0, len = localStorage.length; i < len; i++) {
+		let key = localStorage.key(i);
+		let value = localStorage[key];
+
+		if (key.includes("Bar") && value == "true") {
+            selectedBar.push(key);
+		}
+	}
+
+    barStats = barStats.filter(bs => selectedBar.includes(bs.name));
+}
 
 /* Get the buff timers */
 let checkBuff = (img) => {
+    _buff_js__WEBPACK_IMPORTED_MODULE_3__.checkBuff(img, selectedBuffs, buffTimers);
 
-    for (let b = 0; b < selectedBuffs.length; b++) {
-        let buffTime = (0,_buff_js__WEBPACK_IMPORTED_MODULE_3__.getBuff)(img, selectedBuffs[b]);
-        let expireTime = buffTime != undefined? moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date()).add(buffTime, 's') : undefined;
-         
-        let foundBuff = buffTimers.find(bt => bt.name === selectedBuffs[b]);
-        
-        if (!foundBuff) {
-            // Buff timer doesn't exist, so add it.
-            buffTimers.push({ name: selectedBuffs[b], expireTime: expireTime, buffTime: buffTime})
-        } else if (foundBuff.expireTime != undefined) {
-            // Buff time does exist
+    // console.log(buffTimers);
+};
 
-            if (expireTime != undefined) {
-                if (
-                    buffTime < 60 || // Time is less than a minute, most accurate
-                    (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
-                    (buffTime > 60 && foundBuff.buffTime < buffTime) // New time is higher, buff could've been renewed
-                ) {
-                    // console.log(`${selectedBuffs[b]}: ${buffTime}`);
+/* Get the buff timers */
+let checkBar = (img) => {
+    _bar_js__WEBPACK_IMPORTED_MODULE_4__.checkBar(img, selectedBar, barStats);
 
-                    foundBuff.buffTime = buffTime;
-                    foundBuff.expireTime = expireTime;
-                }
-            }
-        } else {
-            // No expire time set yet, so use the new time.
-            foundBuff.expireTime = expireTime;
-        }
-
-        // console.log(`${selectedBuffs[b]}: ${buffTime}`);
-    }
-
-    console.log(buffTimers);
+    // console.log(barStats);
 };
 
 let checkWarnings = () => {
     checkBuffTime();
     checkLowStats();
+
+    displayWarnings();
 };
 
 let checkBuffTime = () => {
 
     expiredBuffs = buffTimers.filter((bt) => {
         let timeBuffer = warnings.find(w => w.name == bt.name).timeBuffer;
-        let currentTime = timeBuffer? moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds') : moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date());
+        let currentTime = timeBuffer? moment__WEBPACK_IMPORTED_MODULE_5__.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds') : moment__WEBPACK_IMPORTED_MODULE_5__.utc(new Date());
 
         if (bt.expireTime == undefined || bt.expireTime < currentTime) {
             return true;
@@ -27025,19 +27171,28 @@ let checkBuffTime = () => {
     });
 
     // console.log(expiredBuffs);
-    displayWarnings();
 };
 
 let checkLowStats = () => {
+    lowStats = barStats.filter((bs) => {
+        let foundSetting = localStorage[bs.name.replace("Bar", "Slider")];
+        
+        if (foundSetting && bs.value <= foundSetting) return true;
+        
+        return false;
+    });
 
+    // console.log(lowStats);
 };
 
 let displayWarnings = () => {
 
-    if (expiredBuffs.length > 0) {
+    if (expiredBuffs.length > 0 || lowStats.length > 0) {
         let expired = warnings.filter(w => {
-            return expiredBuffs.some((e) => {
-                return w.name == e.name;
+            let allWarnings = expiredBuffs.concat(lowStats);
+
+            return allWarnings.some((aw) => {
+                return w.name == aw.name;
             });
         });
 
@@ -27048,7 +27203,7 @@ let displayWarnings = () => {
         if (window.alt1 && localStorage.mouseTooltip != "true") alt1.setTooltip("");
         else if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(topWarning.friendlyName);
 
-        // console.log(topWarning.friendlyName);
+        console.log(topWarning.friendlyName);
     } else {
         if (window.alt1) alt1.setTooltip("");
     }
@@ -27276,7 +27431,7 @@ let defaultSettings = [
     { name: "lowHealthSlider", value: "4000" },
     { name: "lowPrayerSlider", value: "200" },
     { name: "refreshRateSlider", value: "200" },
-    { name: "timeBufferSlider", value: "10" },
+    { name: "timeBufferSlider", value: "15" },
     { name: "overloadBuff", value: "false" },
     { name: "animateDeadBuff", value: "false" },
     { name: "excaliburBuff", value: "false" },
@@ -27361,7 +27516,7 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input:checkbox").on("change", async 
     else {
         localStorage.setItem(checkboxId, "false");
     }
-    await _scripts_script_js__WEBPACK_IMPORTED_MODULE_4__.updateBuffSettings();
+    await _scripts_script_js__WEBPACK_IMPORTED_MODULE_4__.updateSelections();
 });
 // Store Range values in localStorage
 _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input[type=range]").on("input", function () {
