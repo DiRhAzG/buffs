@@ -27256,7 +27256,7 @@ window.onload = async function start() {
             _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + key).val(value);
             _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + key + "Output").val(value);
         }
-        else if (key.includes("Buff")) {
+        else if (key.includes("Buff") || key == "mouseTooltip") {
             if (value == "true") {
                 _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + key).prop("checked", true);
             }
