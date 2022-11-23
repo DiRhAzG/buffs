@@ -26424,7 +26424,7 @@ let imageData = [
     { id: 3, name: "prayerRenewalBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAMAAABvheXhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABmUExURVqWGZzF44q63JLD5Ov4/+L0/o3D5d3y/oW63I610HOkxZvB3FmGqZO82prK6rXa9HeYtMnn+oa/4m6buJG10Ljc9PP7//3+/6fQ7Zi82YGfuWKXt5bJ6c3o+r3h+Hyy11N+mAAAAK721FgAAAAidFJOU////////////////////////////////////////////wAN0MNxAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAZklEQVQoU32MWQ6AIAwFQUBccd9X7n9JIxQDITgfzeubtOgXGcJzOILgO0JZDNF3jCcQ/Z8k/NPGuFRNF3BZXqjVQbtSVKTWhYVymeC0aTuoPl7X42Gc+Lys0BnU3bYf/LxuqAwSPW0bI1NZHQ5WAAAAAElFTkSuQmCC" },
     { id: 4, name: "antifireBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAIAAADXOYKEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN5SURBVDhPrdNJbxtlHAbwd5n3nd0z48SeeImzODRJrVSEEtI2KmI7UFUCVUVUqqpyKQcunLn1W3DgihCIA5dKlSjlguDCVjUkIXXbLLXdOInHHtvjmfFsL7WUfgOeD/CTnr/+D7z+ZQ78rxmJv3xxwFMwjEDPA2MaECBwAqIhcsEwK+P6FFQVRBCEAYxDBp463X8d++Gg+cwNMQsVETAAhiFQKGSMnbmdw0uX1d37ThQDPwQRA26ETSp/XJz+dPL0xZSZJbITBU3mtFngsJhHcEFKr6iZ1/WJNCEH4XAAYwJYzMChAwQK8m+pI3HrjoMwQBBIlKzp5q3CwptG4dDzn4idB+rh3cY+m/KHY/066f4U2Vvdo+dBfwJLF/TcKVm3w9AKfZEmCgWDEJTeUdGoOQZuCFhC3tbzn5cWZkTle6t6u/r3s2Jn7g3ajBw7gstF/tYKOXua29H8Tdr8ylr/zqpmqXAze+qsnOu5ZBgDDEd3HIlpCcQRWFb1m4U5iOHXre177k4k+/VWsPPIlgXSj7j1UIM8/9ksWC1nMoZ8RHo/27Wa7+SpeDU7syhkLAe5wUvRi8FCWrkxOcdx6Jtm9UHQMERcNmURs43tXtYQM6bAGwpO0DiJlyalIeCKaf1GZrFElX+8jkTItfx0VpCS5KWIAL1qzswr+p2j/Xvt5yrPISJf/2jsvWWe1+RCwdDGJs4pvSnOSkzR5gc8x94PZ1elzGZgfTvYvO/sL6aMK7liEnMn4nQKz0t6wxv8Zh9JMur7ZLmifbgc/rohn5ktzJvZ1Tn7fGqXm8SPFXVri1zulacjpWe425MHQdqrJq1dz15JZSRETsRFOlESlb+8phXbCgayRkplFfHOB2te/lUzBwcruIFEEhn6+mN4rqZwe8TVwpl39y5VRJ0rWJ7ze//AJNKl3GgsIzEvCsMkedjpvnhWksAsD5weH4fa+flj0qixxiBuR1Eeb7cA/BGl62K7bBeu1IuzDq8BDoLuEP7Z6QxZsqBoJ2JZ0ve9fsN3JYoEikMmHPbF3UD3rWDsSS+ruKFC9hp67YdxeU/lltzKJ9ZrpbYf44YvZUUwLqEERMf+wKTiiahSWg/dw6GvyjSXT11cQ5V51N7H9T9S+hQQc+zYTT29m7I3WFJ2XrlWWzJaScge9TIIi1oqEiQkUs/yB/jFHgH4D/6Ng7gJaXbcAAAAAElFTkSuQmCC" },
     { id: 5, name: "excaliburBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAYAAABYWxXTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACtSURBVDhPYzzDwPCfgV6AXpaB7GGCsqkKopOT/7v7+WF4giaWff70mWHnpk2MUC4CUDsYIxISsJoHtodalkWnJP8Pj4/HaRZV4+z3z18MKxcuxAw6ZEANn0XiCDpkQBWfRSUm/r926TKUhx9QZBnIoru3bzNcPHcWf/BBAdmWhQETAxAwfP3yBSpCBCAnziKTkv6HExFPyICsOItKTvr/798/hpfPn0NFiAUMDAAO2EmensYEVgAAAABJRU5ErkJggg==" },
-    { id: 6, name: "ritualShardBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAYAAABYWxXTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFuSURBVDhPvZJPToNAFMY/GMqfQqWtFKNGd4qbmph06aJnaLyFR/AYrnqHHsOlu57C2KDUP7UMBWeGIaGW2q74JS/vzQPmy/seyjOQoS7qEuM6qqxroVYxsbMBy/L8L6PR/V6Wq6qKyeRx7c69bez3b7Ph8C5TFAVqOdRyqCJ8/wy6bskv19k5GRdqaARe18VVcA1N0+UTgBAiK6DZdJDCwFv0BUp/MB4/7D8ZF+Fh6A10XQe2ZSKhCyFQRIFtO/B7x6zK7/8rVFApFgQDsRujoeHAyS1ZLmNE85moyzQtGz3vCDRJ2FSfsltNpZiumyDM/xYT4rvhxJQiDN8xj17EmdPu+PA8n+2KwGQOcLid29gQ49bxfNh2hGAZShMWS1Gfnpyj47psh7lI8S4hmshVbIhNp09ilJAtuorXWQjTIDAME/zv5BR5F5U2pukKWZYhWaWyk2NZLVxc3jCrWojjhewy6wwd0ce3sHO7MPALjjBfufZq7OYAAAAASUVORK5CYII=" },
+    { id: 6, name: "ritualShardBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAYAAABYWxXTAAABg0lEQVQ4T+2SS0sCURiG37k399EZJy85LSILRAtqE/Qr/Am1aNGyZXsFt7nxD7jqp7QJWkS0EDdGYaIUBIb2nQEnTIkxqFUfHOZyDt9z3vf9uCtggj8qjsH2Ae63eYzzDwtdrlROY+XL8zwuLy9mooltY6l0OHHdNNia6bDgw/NyGA6f0WrVl4cxkCQK8JI2trfKEEU5miVBEKJ3TTMwhoL+4BWj0RuazfP4MAZhnRRZgmNqMA0dmUweupGcG1xdN5DyMnh46hPsBY3G2dx0f2sjgymSCItAPMdBliQkSF02W5iBaaoO309j9D7Gfbsb7i0FYyCBQk7YOthzWhLBg/w6LHs1/OUkfFikWBSlMMubuw6YnfX6STxlU/v8pAWOFH2tIL8G1wuQywaQZSU6I9Klrm/bME0HtdpxPBhrzoAihe86xhxMVTXs7uyRnRvRHruUQOtHsGLxgCaQBsMii4RPG1XVxGahjJRrk10mKVNDoL6i4LE3QKfbg2FYqFaPFir7AH8oeF0tJ8aQAAAAAElFTkSuQmCC" },
     { id: 7, name: "weaponPoisonBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAIAAADXOYKEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOpSURBVDhPrZPvT1tVGMef095b+uuWtrSU2wqsRWpbSnQd2wwZZiwZCyO+UJYt2RtdFk30BS9mYswWjCYasmTOvVBhM2ZZ/EF0b2BQJmJWkYIorJ1bUSch6oDaH9CW3t7b3tv7w3uz7T/w5OTJOTnf53O+5znnoJOfkPC/NoU499a/OA7FChQ5aDIjU40kSfBnBqwO1+GD+4/19FpbdsnSVKa4ufHgq9GvY7FYwM1TSRA1olYDVR4qVdDWgCRAxzskyMRmCzTWglkHBg04jNBqh10WaHJZxsfGK9Q6X0kLbPZh55g0Xdw6/dIxIw67Xchjg3YX+EmotwKhgydtCk0lb75ThjIHehxcMtegjFMUvHnm5c69LfnUClfaENm8xDNyrFAb5VLq4vlzHg+ZoSQTrhjEVeA0QZMVaE45tUIUJWCqyrzEgSACwwJpsxztOfx7fB7TGNWaWkWG1HJUYcb05lqZzh3v7ylUQK6VCgdWgkwJZJoWe0x0EPKCps7pFnUkXgMIgz3P+EGsSHzeQNThOhvLsaX8uizCsBqjXrOVzXZ3darUiOVUahyxOKk1uXO0huEfE/MM+ANtVy4P9/UeyVJI9mslm63OdofTOTT03tuDZ1cSf6g0ps+/HB0YeCW+fLuBbLLXW+T60CX5uqC7+4ic62lpY6sKUTGqw4EubEcmpro85rVgW/TnBKqWJL7w2huXYvEVCVRFSjhK0Zc/vXr33urUdGzkA63X18TzUoaRnvb59tkMS5PhbHqrCuiRR6cJ0dvrF4aHw7N3zrxwItTq/Wv9PivUzS3EKZpluTKo2caGBpPeyHJiMr39Y+wfi705W4QOv/fcqZO34ol3h0cKVLIql/ohMcdIGJJ8dn5m4YdrkelgsF0os3o9NjH+jdlM9Pf3HerqCoevn3719VCow/eUZ3DwbDIx2VhfP3Di+PVI9EZ0VmcQag1iwC49IiZ5xArAI8lmReHvowtL8ywHsamLB/YF1u4nPjz//r34Tx9/dkONid9Ojt5evFXMrAxduOoym76YnR5b/M7WgCx6yW5BSFA8qtv7COpOiWeBq4KJQJyACgwWDPbOz0Vzf0+IIK0m7j7YTLtbvd5mYie9+Nty5KORa0XBFzzw3M2ZGZejajUiTn5BAGUaXAcJhZhdKAk42tkB+ScYa8nQsz17d3tshzxjkdTqL8uhDr/P37Z/T0CNIP7r0qUr8zp35/OnXhSZMoYT+dyWCmitHrgKyLae6Cb+A6eYpzFFjVVwAAAAAElFTkSuQmCC" },
 ];
 
@@ -26454,8 +26454,8 @@ function getBuff(img, buffName) {
             // ImageReader.outputImage(buffer);
             let buff = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.readNumbers(buffer, numberType);
             
-            if (buff == undefined) {
-                return buff;
+            if (buff == undefined || buff == "") {
+                return undefined;
             } else {
                 return Number(buff);
             }
@@ -26562,6 +26562,7 @@ function readChatBox (img) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "checkPixelMatch": () => (/* binding */ checkPixelMatch),
+/* harmony export */   "generateMatchingImage": () => (/* binding */ generateMatchingImage),
 /* harmony export */   "getPosition": () => (/* binding */ getPosition),
 /* harmony export */   "loadImages": () => (/* binding */ loadImages),
 /* harmony export */   "outputImage": () => (/* binding */ outputImage),
@@ -26738,9 +26739,7 @@ function readNumbers(buffer, type = "") {
 }
 
 /* Check if two pixels match, within reasonable bounds */
-function checkPixelMatch(buffer, numBuffer, bi, i) {
-    let variance = 15;
-
+function checkPixelMatch(buffer, numBuffer, bi, i, variance = 15) {
     if (
         buffer.data[bi] > numBuffer.data[i] - variance && buffer.data[bi] < numBuffer.data[i] + variance
         && buffer.data[bi + 1] > numBuffer.data[i + 1] - variance && buffer.data[bi + 1] < numBuffer.data[i + 1] + variance
@@ -26797,7 +26796,28 @@ function checkMatch(buffer, numBuffer, bw, bh, nbw, nbh) {
     }
 
     return true;
-}
+};
+
+/* Generate a new image based off two images, with only the matching pixels */
+async function generateMatchingImage() {
+    let firstBuffer = await _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.imageDataFromBase64("iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAYAAABYWxXTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFuSURBVDhPvZJPToNAFMY/GMqfQqWtFKNGd4qbmph06aJnaLyFR/AYrnqHHsOlu57C2KDUP7UMBWeGIaGW2q74JS/vzQPmy/seyjOQoS7qEuM6qqxroVYxsbMBy/L8L6PR/V6Wq6qKyeRx7c69bez3b7Ph8C5TFAVqOdRyqCJ8/wy6bskv19k5GRdqaARe18VVcA1N0+UTgBAiK6DZdJDCwFv0BUp/MB4/7D8ZF+Fh6A10XQe2ZSKhCyFQRIFtO/B7x6zK7/8rVFApFgQDsRujoeHAyS1ZLmNE85moyzQtGz3vCDRJ2FSfsltNpZiumyDM/xYT4rvhxJQiDN8xj17EmdPu+PA8n+2KwGQOcLid29gQ49bxfNh2hGAZShMWS1Gfnpyj47psh7lI8S4hmshVbIhNp09ilJAtuorXWQjTIDAME/zv5BR5F5U2pukKWZYhWaWyk2NZLVxc3jCrWojjhewy6wwd0ce3sHO7MPALjjBfufZq7OYAAAAASUVORK5CYII=");
+    let secondBuffer = await _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.imageDataFromBase64("iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAIAAADXOYKEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJISURBVDhPrVK/b9NQEH5+frGdJg1GiluRSJE6RAIxtGJEqgQrfwAr/wQLEhsrCLExITEgJLqAGKloh05NU1FRSCsUhFigSQNJaBzb78XhOz/b9A/g0/ne3fnuu3s/jD32n0GMXzZanDMWM86FEFhZHGtR0ExRhBZKUYp+k08uElDIGBRnAsbqnfUkoMHTAmKBhxSAs7397f32NpoxLqhlUg0gOWPO2iddacbuRksnISupZCjTgd32zscPB3PGKpUK3PmcSOZY6SPbdpz1G7fASJ1oxpu04o+ei+yY+pDB2OMnDzqfj7iwTGFN/ADiTyPIdCqDQIbhDBL4cmvztc7XSBgxc05KASVn0aOH9wf93uD0p2EYPBeeC2HJq3NuTiYjDIhylQyjN0cAISLQ3e7xq5fPRsORME2Ly7p3oXHJ07JSX9ZytblyuXlFiMJi2WUG0eBKNTLGbOj27s6L50+Pjz7ZBXGxslByLCWnpsm16JxSqex5NdwB7K/fDhuNpo5bFulzjIodHrS2Nt/CswqiXHJgBGE0Hg+SjBTFYqlaXZZKDcdncDud1tq16/qXRsoIwl7/x/t3b6IoMjkvL9g4NcQjKQe/huNRX6e5rletLuHs7EIBbrFYTnacQu8zd1kQBb4/gYHNglQHASmlkiGMWq3hui7ODrZOME06PLwc6BxpJRLu3b19cvId9u8/vg7m6J0OHFvYtoN7h6t1CrzV5GHn+DcLEIbTOJ7h+c5m2U3R1habzTXoKArSiGWNz3zsPaM+NyNjfwEOOvnJOH3ICgAAAABJRU5ErkJggg==");
+
+    for (let bh = 0; bh < firstBuffer.height; bh++) {
+        for (let bw = 0; bw < firstBuffer.width; bw++) {
+            let bi = 4 * bw + 4 * firstBuffer.width * bh;
+
+            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 5)) {
+                firstBuffer.data[bi] = 0;
+                firstBuffer.data[bi + 1] = 0;
+                firstBuffer.data[bi + 2] = 0;
+                firstBuffer.data[bi + 3] = 0;
+            }
+        }
+    }
+
+    outputImage(firstBuffer);
+};
 
 /* Show the pixel being compared on the actual image, for easier debugging */
 function showPixel(buffer, i) {
@@ -26809,7 +26829,7 @@ function showPixel(buffer, i) {
     newBuffer.data[i + 3] = 255;
 
     outputImage(newBuffer);
-}
+};
 
 /***/ }),
 
@@ -26969,7 +26989,7 @@ let checkBuff = (img) => {
                     (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
                     (buffTime > 60 && foundBuff.buffTime < buffTime) // New time is higher, buff could've been renewed
                 ) {
-                    console.log(`${selectedBuffs[b]}: ${buffTime}`);
+                    // console.log(`${selectedBuffs[b]}: ${buffTime}`);
 
                     foundBuff.buffTime = buffTime;
                     foundBuff.expireTime = expireTime;
@@ -26983,7 +27003,7 @@ let checkBuff = (img) => {
         // console.log(`${selectedBuffs[b]}: ${buffTime}`);
     }
 
-    // console.log(buffTimers);
+    console.log(buffTimers);
 };
 
 let checkWarnings = () => {
@@ -27004,7 +27024,7 @@ let checkBuffTime = () => {
         }
     });
 
-    console.log(expiredBuffs);
+    // console.log(expiredBuffs);
     displayWarnings();
 };
 
@@ -27269,6 +27289,7 @@ let defaultSettings = [
     { name: "lowPrayerBar", value: "false" }
 ];
 window.onload = async function start() {
+    // ImageReader.generateMatchingImage();
     // Add defaults if missing
     for (let d = 0; d < defaultSettings.length; d++) {
         let foundSetting = localStorage[defaultSettings[d].name];

@@ -134,7 +134,7 @@ let checkBuff = (img) => {
                     (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
                     (buffTime > 60 && foundBuff.buffTime < buffTime) // New time is higher, buff could've been renewed
                 ) {
-                    console.log(`${selectedBuffs[b]}: ${buffTime}`);
+                    // console.log(`${selectedBuffs[b]}: ${buffTime}`);
 
                     foundBuff.buffTime = buffTime;
                     foundBuff.expireTime = expireTime;
@@ -148,7 +148,7 @@ let checkBuff = (img) => {
         // console.log(`${selectedBuffs[b]}: ${buffTime}`);
     }
 
-    // console.log(buffTimers);
+    console.log(buffTimers);
 };
 
 let checkWarnings = () => {
@@ -169,7 +169,7 @@ let checkBuffTime = () => {
         }
     });
 
-    console.log(expiredBuffs);
+    // console.log(expiredBuffs);
     displayWarnings();
 };
 

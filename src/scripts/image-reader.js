@@ -167,9 +167,7 @@ export function readNumbers(buffer, type = "") {
 }
 
 /* Check if two pixels match, within reasonable bounds */
-export function checkPixelMatch(buffer, numBuffer, bi, i) {
-    let variance = 15;
-
+export function checkPixelMatch(buffer, numBuffer, bi, i, variance = 15) {
     if (
         buffer.data[bi] > numBuffer.data[i] - variance && buffer.data[bi] < numBuffer.data[i] + variance
         && buffer.data[bi + 1] > numBuffer.data[i + 1] - variance && buffer.data[bi + 1] < numBuffer.data[i + 1] + variance
@@ -226,7 +224,28 @@ function checkMatch(buffer, numBuffer, bw, bh, nbw, nbh) {
     }
 
     return true;
-}
+};
+
+/* Generate a new image based off two images, with only the matching pixels */
+export async function generateMatchingImage() {
+    let firstBuffer = await ImageDetect.imageDataFromBase64("iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAYAAABYWxXTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFuSURBVDhPvZJPToNAFMY/GMqfQqWtFKNGd4qbmph06aJnaLyFR/AYrnqHHsOlu57C2KDUP7UMBWeGIaGW2q74JS/vzQPmy/seyjOQoS7qEuM6qqxroVYxsbMBy/L8L6PR/V6Wq6qKyeRx7c69bez3b7Ph8C5TFAVqOdRyqCJ8/wy6bskv19k5GRdqaARe18VVcA1N0+UTgBAiK6DZdJDCwFv0BUp/MB4/7D8ZF+Fh6A10XQe2ZSKhCyFQRIFtO/B7x6zK7/8rVFApFgQDsRujoeHAyS1ZLmNE85moyzQtGz3vCDRJ2FSfsltNpZiumyDM/xYT4rvhxJQiDN8xj17EmdPu+PA8n+2KwGQOcLid29gQ49bxfNh2hGAZShMWS1Gfnpyj47psh7lI8S4hmshVbIhNp09ilJAtuorXWQjTIDAME/zv5BR5F5U2pukKWZYhWaWyk2NZLVxc3jCrWojjhewy6wwd0ce3sHO7MPALjjBfufZq7OYAAAAASUVORK5CYII=");
+    let secondBuffer = await ImageDetect.imageDataFromBase64("iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAIAAADXOYKEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJISURBVDhPrVK/b9NQEH5+frGdJg1GiluRSJE6RAIxtGJEqgQrfwAr/wQLEhsrCLExITEgJLqAGKloh05NU1FRSCsUhFigSQNJaBzb78XhOz/b9A/g0/ne3fnuu3s/jD32n0GMXzZanDMWM86FEFhZHGtR0ExRhBZKUYp+k08uElDIGBRnAsbqnfUkoMHTAmKBhxSAs7397f32NpoxLqhlUg0gOWPO2iddacbuRksnISupZCjTgd32zscPB3PGKpUK3PmcSOZY6SPbdpz1G7fASJ1oxpu04o+ei+yY+pDB2OMnDzqfj7iwTGFN/ADiTyPIdCqDQIbhDBL4cmvztc7XSBgxc05KASVn0aOH9wf93uD0p2EYPBeeC2HJq3NuTiYjDIhylQyjN0cAISLQ3e7xq5fPRsORME2Ly7p3oXHJ07JSX9ZytblyuXlFiMJi2WUG0eBKNTLGbOj27s6L50+Pjz7ZBXGxslByLCWnpsm16JxSqex5NdwB7K/fDhuNpo5bFulzjIodHrS2Nt/CswqiXHJgBGE0Hg+SjBTFYqlaXZZKDcdncDud1tq16/qXRsoIwl7/x/t3b6IoMjkvL9g4NcQjKQe/huNRX6e5rletLuHs7EIBbrFYTnacQu8zd1kQBb4/gYHNglQHASmlkiGMWq3hui7ODrZOME06PLwc6BxpJRLu3b19cvId9u8/vg7m6J0OHFvYtoN7h6t1CrzV5GHn+DcLEIbTOJ7h+c5m2U3R1habzTXoKArSiGWNz3zsPaM+NyNjfwEOOvnJOH3ICgAAAABJRU5ErkJggg==");
+
+    for (let bh = 0; bh < firstBuffer.height; bh++) {
+        for (let bw = 0; bw < firstBuffer.width; bw++) {
+            let bi = 4 * bw + 4 * firstBuffer.width * bh;
+
+            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 5)) {
+                firstBuffer.data[bi] = 0;
+                firstBuffer.data[bi + 1] = 0;
+                firstBuffer.data[bi + 2] = 0;
+                firstBuffer.data[bi + 3] = 0;
+            }
+        }
+    }
+
+    outputImage(firstBuffer);
+};
 
 /* Show the pixel being compared on the actual image, for easier debugging */
 function showPixel(buffer, i) {
@@ -238,4 +257,4 @@ function showPixel(buffer, i) {
     newBuffer.data[i + 3] = 255;
 
     outputImage(newBuffer);
-}
+};

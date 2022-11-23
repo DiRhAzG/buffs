@@ -3,6 +3,7 @@ import "./css/nis.css";
 import "./css/styles.css";
 import * as $ from "./js/jquery.js";
 import * as main from "./scripts/script.js";
+import * as ImageReader from "./scripts/image-reader.js";
 
 // Tell webpack to add index.html and appconfig.json to output
 require("!file-loader?name=[name].[ext]!./index.html");
@@ -28,7 +29,7 @@ let defaultSettings = [
 ]
 
 window.onload = async function start() {
-	
+	// ImageReader.generateMatchingImage();
 	// Add defaults if missing
 	for (let d = 0; d < defaultSettings.length; d++) {
 		let foundSetting = localStorage[defaultSettings[d].name];
