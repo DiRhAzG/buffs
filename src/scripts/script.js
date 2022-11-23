@@ -190,7 +190,8 @@ let displayWarnings = () => {
             return (obj.id < res.id) ? obj : res;
         });
 
-        if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(topWarning.friendlyName);
+        if (window.alt1 && localStorage.mouseTooltip != "true") alt1.setTooltip("");
+        else if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(topWarning.friendlyName);
 
         // console.log(topWarning.friendlyName);
     } else {

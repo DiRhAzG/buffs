@@ -126,7 +126,7 @@
 								<div>
 									<label class="form-check-label" for="lowPrayerSlider" title="Threshold to trigger Low Prayer warning.">
 										Prayer Threshold
-										<input id="lowPrayerSlider" class="input-range" type="range" min="100" max="1200" step="10" value="200">
+										<input id="lowPrayerSlider" class="input-range" type="range" min="100" max="800" step="10" value="200">
 										<output id="lowPrayerSliderOutput">200</output>
 									</label>
 								</div>
@@ -134,7 +134,7 @@
 							<label class="list-group-item setting-item">
 								<div>
 									<label class="form-check-label" for="refreshRateSlider" title="Rate at which checks are done. The higher the refresh rate, the less accurate the app.">
-										Refresh Rate
+										Refresh Rate(ms)
 										<input id="refreshRateSlider" class="input-range" type="range" min="100" max="2000" step="100" value="200">
 										<output id="refreshRateSliderOutput">200</output>
 									</label>
@@ -143,8 +143,8 @@
 							<label class="list-group-item setting-item">
 								<div>
 									<label class="form-check-label" for="timeBufferSlider" title="Buffer time for warnings to be displayed.">
-										Time Buffer
-										<input id="timeBufferSlider" class="input-range" type="range" min="1" max="120" step="1" value="10">
+										Time Buffer(s)
+										<input id="timeBufferSlider" class="input-range" type="range" min="1" max="60" step="1" value="10">
 										<output id="timeBufferSliderOutput">10</output>
 									</label>
 								</div>
