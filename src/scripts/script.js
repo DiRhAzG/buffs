@@ -148,9 +148,9 @@ let checkWarnings = () => {
 };
 
 let checkBuffTime = () => {
-    let currentTime = moment.utc(new Date());
-    expiredBuffs = buffTimers.filter(bt => (bt.expireTime - localStorage.timeBufferSlider < currentTime) || bt.expireTime == undefined);
+    expiredBuffs = buffTimers.filter(bt => (bt.expireTime < moment.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds')) || bt.expireTime == undefined);
 
+    console.log(expiredBuffs);
     displayWarnings();
 };
 

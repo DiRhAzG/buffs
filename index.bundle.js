@@ -26983,9 +26983,9 @@ let checkWarnings = () => {
 };
 
 let checkBuffTime = () => {
-    let currentTime = moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date());
-    expiredBuffs = buffTimers.filter(bt => (bt.expireTime - localStorage.timeBufferSlider < currentTime) || bt.expireTime == undefined);
+    expiredBuffs = buffTimers.filter(bt => (bt.expireTime < moment__WEBPACK_IMPORTED_MODULE_4__.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds')) || bt.expireTime == undefined);
 
+    console.log(expiredBuffs);
     displayWarnings();
 };
 
@@ -27008,7 +27008,7 @@ let displayWarnings = () => {
 
         if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(topWarning.friendlyName);
 
-        // console.log(expiredBuffs);
+        // console.log(topWarning.friendlyName);
     } else {
         if (window.alt1) alt1.setTooltip("");
     }
