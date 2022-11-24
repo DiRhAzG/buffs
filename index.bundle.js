@@ -27156,14 +27156,14 @@ let updateBarSettings = async () => {
 let checkBuff = (img) => {
     _buff_js__WEBPACK_IMPORTED_MODULE_3__.checkBuff(img, selectedBuffs, buffTimers);
 
-    console.log(buffTimers);
+    // console.log(buffTimers);
 };
 
 /* Get the buff timers */
 let checkBar = (img) => {
     _bar_js__WEBPACK_IMPORTED_MODULE_4__.checkBar(img, selectedBar, barStats);
 
-    console.log(barStats);
+    // console.log(barStats);
 };
 
 let checkWarnings = () => {
