@@ -27147,7 +27147,7 @@ let updateBarSettings = async () => {
 let checkBuff = (img) => {
     _buff_js__WEBPACK_IMPORTED_MODULE_3__.checkBuff(img, selectedBuffs, buffTimers);
 
-    // console.log(buffTimers);
+    console.log(buffTimers);
 };
 
 /* Get the buff timers */

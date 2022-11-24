@@ -133,7 +133,7 @@ let updateBarSettings = async () => {
 let checkBuff = (img) => {
     Buff.checkBuff(img, selectedBuffs, buffTimers);
 
-    // console.log(buffTimers);
+    console.log(buffTimers);
 };
 
 /* Get the buff timers */
