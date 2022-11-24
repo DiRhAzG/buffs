@@ -11,7 +11,8 @@ require("!file-loader?name=[name].[ext]!./appconfig.json");
 
 let defaultSettings = [
 	{ name: "mouseTooltip", value: "true" },
-	{ name: "lowHealthSlider", value: "4000" },
+	{ name: "buffColor", value: "true" },
+	{ name: "lowHealthSlider", value: "5000" },
 	{ name: "lowPrayerSlider", value: "200" },
 	{ name: "refreshRateSlider", value: "200" },
 	{ name: "timeBufferSlider", value: "15" },

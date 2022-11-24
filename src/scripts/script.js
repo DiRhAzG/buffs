@@ -203,7 +203,8 @@ let displayWarnings = () => {
         else if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(topWarning.friendlyName);
 
         for (let w = 0; w < needsWarning.length; w++) {
-            $("label#" + needsWarning[w].name).addClass("warning");
+            if (localStorage.buffColor != "true") $("label#" + noWarning[nw].name).removeClass("warning");
+            else if (localStorage.buffColor == "true") $("label#" + needsWarning[w].name).addClass("warning");
         }
 
         for (let nw = 0; nw < noWarning.length; nw++) {

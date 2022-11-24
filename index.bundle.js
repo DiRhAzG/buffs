@@ -27217,7 +27217,8 @@ let displayWarnings = () => {
         else if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(topWarning.friendlyName);
 
         for (let w = 0; w < needsWarning.length; w++) {
-            _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + needsWarning[w].name).addClass("warning");
+            if (localStorage.buffColor != "true") _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + noWarning[nw].name).removeClass("warning");
+            else if (localStorage.buffColor == "true") _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + needsWarning[w].name).addClass("warning");
         }
 
         for (let nw = 0; nw < noWarning.length; nw++) {
@@ -27452,7 +27453,8 @@ __webpack_require__(/*! !file-loader?name=[name].[ext]!./index.html */ "../node_
 __webpack_require__(/*! !file-loader?name=[name].[ext]!./appconfig.json */ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./appconfig.json");
 let defaultSettings = [
     { name: "mouseTooltip", value: "true" },
-    { name: "lowHealthSlider", value: "4000" },
+    { name: "buffColor", value: "true" },
+    { name: "lowHealthSlider", value: "5000" },
     { name: "lowPrayerSlider", value: "200" },
     { name: "refreshRateSlider", value: "200" },
     { name: "timeBufferSlider", value: "15" },
