@@ -4172,7 +4172,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".buff-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 180px;\r\n}\r\n\r\n.setting-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n}\r\n\r\n.form-check {\r\n    margin-bottom: 0;\r\n    min-height: 0;\r\n}\r\n\r\n.form-check-label {\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    -webkit-touch-callout: none; /* iOS Safari */\r\n    -webkit-user-select: none; /* Safari */\r\n     -khtml-user-select: none; /* Konqueror HTML */\r\n       -moz-user-select: none; /* Old versions of Firefox */\r\n        -ms-user-select: none; /* Internet Explorer/Edge */\r\n            user-select: none; /* Non-prefixed version, currently\r\n                                  supported by Chrome, Edge, Opera and Firefox */\r\n}\r\n\r\n.table-buffs {\r\n    margin-top: 10px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.table-settings {\r\n    margin-top: 10px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.input-range {\r\n    vertical-align: middle;\r\n}\r\n\r\n.warning {\r\n    background-color: #e60808c5;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".buff-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 180px;\r\n}\r\n\r\n.setting-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n}\r\n\r\n.form-check {\r\n    margin-bottom: 0;\r\n    min-height: 0;\r\n}\r\n\r\n.form-check-label {\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    -webkit-touch-callout: none; /* iOS Safari */\r\n    -webkit-user-select: none; /* Safari */\r\n     -khtml-user-select: none; /* Konqueror HTML */\r\n       -moz-user-select: none; /* Old versions of Firefox */\r\n        -ms-user-select: none; /* Internet Explorer/Edge */\r\n            user-select: none; /* Non-prefixed version, currently\r\n                                  supported by Chrome, Edge, Opera and Firefox */\r\n}\r\n\r\ninput[type=\"checkbox\"]:focus {\r\n    outline: none !important;\r\n    box-shadow: 0 0 0 rgb(255, 255, 255) !important;\r\n}\r\n\r\n.table-buffs {\r\n    margin-top: 10px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.table-settings {\r\n    margin-top: 10px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.input-range {\r\n    vertical-align: middle;\r\n}\r\n\r\n.warning {\r\n    background-color: #e60808c5;\r\n}\r\n\r\n#onOffSwitch {\r\n    width: 4.5em;\r\n    height: 2em;\r\n    margin-left: -34px;\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n\r\n.form-check-label {\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n.slider:after {\r\n    content:'OFF';\r\n    color: gray;\r\n    display: block;\r\n    position: absolute;\r\n    transform: translate(-50%,-50%);\r\n    top: 54%;\r\n    left: 35%;\r\n    font-size: 15px;\r\n}\r\n\r\ninput:checked + .slider:after {  \r\n    content:'ON';\r\n    color: white;\r\n    left: -37%;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27114,7 +27114,7 @@ let loadImages = async () => {
 async function updateSelections() {
     await updateBuffSettings();
     await updateBarSettings();
-}
+};
 
 let updateBuffSettings = async () => {
     selectedBuffs = [];
@@ -27134,7 +27134,7 @@ let updateBuffSettings = async () => {
 
     // console.log(selectedBuffs);
     // console.log(buffTimers);
-}
+};
 
 let updateBarSettings = async () => {
     selectedBar = [];
@@ -27150,7 +27150,7 @@ let updateBarSettings = async () => {
 
     // Remove options that are no longer selected
     barStats = barStats.filter(bs => selectedBar.includes(bs.name));
-}
+};
 
 /* Get the buff timers */
 let checkBuff = (img) => {
@@ -27203,46 +27203,51 @@ let checkLowStats = () => {
 
 let displayWarnings = () => {
 
-    if (expiredBuffs.length > 0 || lowStats.length > 0) {
-        let needsWarning = warnings.filter(w => {
-            let allWarnings = expiredBuffs.concat(lowStats);
-
-            return allWarnings.some((aw) => {
-                return w.name == aw.name;
+    try {
+        if (localStorage.onOffSwitch == "true" && (expiredBuffs.length > 0 || lowStats.length > 0)) {
+            let needsWarning = warnings.filter(w => {
+                let allWarnings = expiredBuffs.concat(lowStats);
+    
+                return allWarnings.some((aw) => {
+                    return w.name == aw.name;
+                });
             });
-        });
-        
-        console.log(needsWarning);
-
-        let noWarning = warnings.filter(w => {
-            return !needsWarning.some((nw) => {
-                return w.name == nw.name;
+            
+            // console.log(needsWarning);
+    
+            let noWarning = warnings.filter(w => {
+                return !needsWarning.some((nw) => {
+                    return w.name == nw.name;
+                });
             });
-        });
-
-        let topWarning = needsWarning.reduce(function(res, obj) {
-            return (obj.id < res.id) ? obj : res;
-        });
-
-        if (window.alt1 && localStorage.mouseTooltip != "true") alt1.setTooltip("");
-        else if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(topWarning.friendlyName);
-
-        for (let w = 0; w < needsWarning.length; w++) {
-            if (localStorage.buffColor != "true") _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + needsWarning[w].name).removeClass("warning");
-            else if (localStorage.buffColor == "true") _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + needsWarning[w].name).addClass("warning");
+    
+            let topWarning = needsWarning.reduce(function(res, obj) {
+                return (obj.id < res.id) ? obj : res;
+            });
+    
+            if (window.alt1 && localStorage.mouseTooltip != "true") alt1.setTooltip("");
+            else if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(topWarning.friendlyName);
+    
+            for (let w = 0; w < needsWarning.length; w++) {
+                if (localStorage.buffColor != "true") _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + needsWarning[w].name).removeClass("warning");
+                else if (localStorage.buffColor == "true") _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + needsWarning[w].name).addClass("warning");
+            }
+    
+            for (let nw = 0; nw < noWarning.length; nw++) {
+                _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + noWarning[nw].name).removeClass("warning");
+            }
+            // console.log(topWarning.friendlyName);
+        } else {
+            if (window.alt1) alt1.setTooltip("");
+    
+            for (let w = 0; w < warnings.length; w++) {
+                _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + warnings[w].name).removeClass("warning");
+            }
         }
-
-        for (let nw = 0; nw < noWarning.length; nw++) {
-            _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + noWarning[nw].name).removeClass("warning");
-        }
-        // console.log(topWarning.friendlyName);
-    } else {
-        if (window.alt1) alt1.setTooltip("");
-
-        for (let w = 0; w < warnings.length; w++) {
-            _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + warnings[w].name).removeClass("warning");
-        }
+    } catch (ex) {
+        console.log(ex);
     }
+    
 }
 
 /* Find the Chat Box */
@@ -27463,6 +27468,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! !file-loader?name=[name].[ext]!./index.html */ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./index.html");
 __webpack_require__(/*! !file-loader?name=[name].[ext]!./appconfig.json */ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./appconfig.json");
 let defaultSettings = [
+    { name: "onOffSwitch", value: "true" },
     { name: "mouseTooltip", value: "true" },
     { name: "buffColor", value: "true" },
     { name: "lowHealthSlider", value: "5000" },

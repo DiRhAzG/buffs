@@ -28,6 +28,11 @@
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+input[type="checkbox"]:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 rgb(255, 255, 255) !important;
+}
+
 .table-buffs {
     margin-top: 10px;
     margin-left: auto;
@@ -46,4 +51,35 @@
 
 .warning {
     background-color: #e60808c5;
+}
+
+#onOffSwitch {
+    width: 4.5em;
+    height: 2em;
+    margin-left: -34px;
+    position: relative;
+    display: inline-block;
+}
+
+
+.form-check-label {
+    position: relative;
+    display: inline-block;
+}
+
+.slider:after {
+    content:'OFF';
+    color: gray;
+    display: block;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 54%;
+    left: 35%;
+    font-size: 15px;
+}
+
+input:checked + .slider:after {  
+    content:'ON';
+    color: white;
+    left: -37%;
 }

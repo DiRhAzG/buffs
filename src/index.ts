@@ -10,6 +10,7 @@ require("!file-loader?name=[name].[ext]!./index.html");
 require("!file-loader?name=[name].[ext]!./appconfig.json");
 
 let defaultSettings = [
+	{ name: "onOffSwitch", value: "true" },
 	{ name: "mouseTooltip", value: "true" },
 	{ name: "buffColor", value: "true" },
 	{ name: "lowHealthSlider", value: "5000" },
