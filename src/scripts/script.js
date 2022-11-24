@@ -190,7 +190,7 @@ let displayWarnings = () => {
         });
         
         console.log(needsWarning);
-        
+
         let noWarning = warnings.filter(w => {
             return !needsWarning.some((nw) => {
                 return w.name == nw.name;
@@ -205,7 +205,7 @@ let displayWarnings = () => {
         else if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(topWarning.friendlyName);
 
         for (let w = 0; w < needsWarning.length; w++) {
-            if (localStorage.buffColor != "true") $("label#" + needsWarning[nw].name).removeClass("warning");
+            if (localStorage.buffColor != "true") $("label#" + needsWarning[w].name).removeClass("warning");
             else if (localStorage.buffColor == "true") $("label#" + needsWarning[w].name).addClass("warning");
         }
 
