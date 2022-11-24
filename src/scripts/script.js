@@ -140,7 +140,7 @@ let checkBuff = (img) => {
 let checkBar = (img) => {
     Bar.checkBar(img, selectedBar, barStats);
 
-    // console.log(barStats);
+    console.log(barStats);
 };
 
 let checkWarnings = () => {

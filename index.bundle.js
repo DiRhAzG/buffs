@@ -26892,6 +26892,15 @@ function readNumbers(buffer, type = "") {
         }
     }
 
+    // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.
+    if (type == "bar") {
+        let foundSlash = numberMatch.filter(m => m.num == 10);
+
+        if (foundSlash.length == 0) {
+            return undefined;
+        }
+    }
+
     return str;
 }
 
@@ -27154,7 +27163,7 @@ let checkBuff = (img) => {
 let checkBar = (img) => {
     _bar_js__WEBPACK_IMPORTED_MODULE_4__.checkBar(img, selectedBar, barStats);
 
-    // console.log(barStats);
+    console.log(barStats);
 };
 
 let checkWarnings = () => {

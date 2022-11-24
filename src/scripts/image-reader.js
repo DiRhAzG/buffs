@@ -174,6 +174,15 @@ export function readNumbers(buffer, type = "") {
         }
     }
 
+    // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.
+    if (type == "bar") {
+        let foundSlash = numberMatch.filter(m => m.num == 10);
+
+        if (foundSlash.length == 0) {
+            return undefined;
+        }
+    }
+
     return str;
 }
 
