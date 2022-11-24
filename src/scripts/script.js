@@ -189,6 +189,8 @@ let displayWarnings = () => {
             });
         });
         
+        console.log(needsWarning);
+        
         let noWarning = warnings.filter(w => {
             return !needsWarning.some((nw) => {
                 return w.name == nw.name;
