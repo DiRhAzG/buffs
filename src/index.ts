@@ -45,13 +45,13 @@ window.onload = async function start() {
 		let value = localStorage[key];
 
 		if (key.includes("Slider")) {
-			$("#" + key).val(value);
-			$("#" + key + "Output").val(value);
+			$("input#" + key).val(value);
+			$("input#" + key + "Output").val(value);
 		} else if (key.includes("Buff") || key.includes("Bar") || key == "mouseTooltip") {
 			if (value == "true") {
-				$("#" + key).prop("checked", true);
+				$("input#" + key).prop("checked", true);
 			} else {
-				$("#" + key).prop("checked", false);
+				$("input#" + key).prop("checked", false);
 			}
 	  	} 
 	};
