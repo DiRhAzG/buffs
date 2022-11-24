@@ -27497,7 +27497,7 @@ window.onload = async function start() {
             _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input#" + key).val(value);
             _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input#" + key + "Output").val(value);
         }
-        else if (key.includes("Buff") || key.includes("Bar") || key == "mouseTooltip") {
+        else if (value == "false") {
             if (value == "true") {
                 _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input#" + key).prop("checked", true);
             }
