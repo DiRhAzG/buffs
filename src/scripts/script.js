@@ -4,6 +4,7 @@ import * as ImageReader from "./image-reader.js";
 import * as Buff from "./buff.js";
 import * as Bar from "./bar.js";
 import * as moment from 'moment';
+import * as $ from "../js/jquery.js";
 
 let foundChat = false;
 let chatLines;
@@ -29,6 +30,7 @@ let warnings = [
 /* Main function to run everything else */
 export async function start() {
     try {
+        
         await loadImages();
         await updateSelections();
 
@@ -104,6 +106,7 @@ let updateBuffSettings = async () => {
 		}
 	}
 
+    // Remove options that are no longer selected
     buffTimers = buffTimers.filter(bt => selectedBuffs.includes(bt.name));
 
     // console.log(selectedBuffs);
@@ -122,6 +125,7 @@ let updateBarSettings = async () => {
 		}
 	}
 
+    // Remove options that are no longer selected
     barStats = barStats.filter(bs => selectedBar.includes(bs.name));
 }
 
@@ -177,24 +181,41 @@ let checkLowStats = () => {
 let displayWarnings = () => {
 
     if (expiredBuffs.length > 0 || lowStats.length > 0) {
-        let expired = warnings.filter(w => {
+        let needsWarning = warnings.filter(w => {
             let allWarnings = expiredBuffs.concat(lowStats);
 
             return allWarnings.some((aw) => {
                 return w.name == aw.name;
             });
         });
+        
+        let noWarning = warnings.filter(w => {
+            return !needsWarning.some((nw) => {
+                return w.name == nw.name;
+            });
+        });
 
-        let topWarning = expired.reduce(function(res, obj) {
+        let topWarning = needsWarning.reduce(function(res, obj) {
             return (obj.id < res.id) ? obj : res;
         });
 
         if (window.alt1 && localStorage.mouseTooltip != "true") alt1.setTooltip("");
         else if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(topWarning.friendlyName);
 
-        console.log(topWarning.friendlyName);
+        for (let w = 0; w < needsWarning.length; w++) {
+            $("label#" + needsWarning[w].name).addClass("warning");
+        }
+
+        for (let nw = 0; nw < noWarning.length; nw++) {
+            $("label#" + noWarning[nw].name).removeClass("warning");
+        }
+        // console.log(topWarning.friendlyName);
     } else {
         if (window.alt1) alt1.setTooltip("");
+
+        for (let w = 0; w < warnings.length; w++) {
+            $("label#" + warnings[w].name).removeClass("warning");
+        }
     }
 }
 
