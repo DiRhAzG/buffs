@@ -73,7 +73,7 @@ input[type="checkbox"]:focus {
     display: block;
     position: absolute;
     transform: translate(-50%,-50%);
-    top: 54%;
+    top: 55%;
     left: 35%;
     font-size: 15px;
 }
