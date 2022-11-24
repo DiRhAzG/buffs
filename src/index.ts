@@ -48,7 +48,7 @@ window.onload = async function start() {
 		if (key.includes("Slider")) {
 			$("input#" + key).val(value);
 			$("input#" + key + "Output").val(value);
-		} else if (value == "false") {
+		} else if (value == "true" || value == "false") {
 			if (value == "true") {
 				$("input#" + key).prop("checked", true);
 			} else {

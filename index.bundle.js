@@ -27497,7 +27497,7 @@ window.onload = async function start() {
             _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input#" + key).val(value);
             _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input#" + key + "Output").val(value);
         }
-        else if (value == "false") {
+        else if (value == "true" || value == "false") {
             if (value == "true") {
                 _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input#" + key).prop("checked", true);
             }
