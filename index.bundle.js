@@ -4172,7 +4172,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".buff-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 180px;\r\n}\r\n\r\n.setting-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n}\r\n\r\n.form-check {\r\n    margin-bottom: 0;\r\n    min-height: 0;\r\n}\r\n\r\n.form-check-label {\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    -webkit-touch-callout: none; /* iOS Safari */\r\n    -webkit-user-select: none; /* Safari */\r\n     -khtml-user-select: none; /* Konqueror HTML */\r\n       -moz-user-select: none; /* Old versions of Firefox */\r\n        -ms-user-select: none; /* Internet Explorer/Edge */\r\n            user-select: none; /* Non-prefixed version, currently\r\n                                  supported by Chrome, Edge, Opera and Firefox */\r\n}\r\n\r\n.table-buffs {\r\n    margin-top: 10px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.table-settings {\r\n    margin-top: 10px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.input-range {\r\n    vertical-align: middle;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".buff-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 180px;\r\n}\r\n\r\n.setting-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n}\r\n\r\n.form-check {\r\n    margin-bottom: 0;\r\n    min-height: 0;\r\n}\r\n\r\n.form-check-label {\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    -webkit-touch-callout: none; /* iOS Safari */\r\n    -webkit-user-select: none; /* Safari */\r\n     -khtml-user-select: none; /* Konqueror HTML */\r\n       -moz-user-select: none; /* Old versions of Firefox */\r\n        -ms-user-select: none; /* Internet Explorer/Edge */\r\n            user-select: none; /* Non-prefixed version, currently\r\n                                  supported by Chrome, Edge, Opera and Firefox */\r\n}\r\n\r\n.table-buffs {\r\n    margin-top: 10px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.table-settings {\r\n    margin-top: 10px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.input-range {\r\n    vertical-align: middle;\r\n}\r\n\r\n.warning {\r\n    background-color: #e60808c5;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27009,6 +27009,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bar_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./bar.js */ "./scripts/bar.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! moment */ "../node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../js/jquery.js */ "./js/jquery.js");
+/* harmony import */ var _js_jquery_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_jquery_js__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -27040,6 +27043,7 @@ let warnings = [
 /* Main function to run everything else */
 async function start() {
     try {
+        
         await loadImages();
         await updateSelections();
 
@@ -27115,6 +27119,7 @@ let updateBuffSettings = async () => {
 		}
 	}
 
+    // Remove options that are no longer selected
     buffTimers = buffTimers.filter(bt => selectedBuffs.includes(bt.name));
 
     // console.log(selectedBuffs);
@@ -27133,6 +27138,7 @@ let updateBarSettings = async () => {
 		}
 	}
 
+    // Remove options that are no longer selected
     barStats = barStats.filter(bs => selectedBar.includes(bs.name));
 }
 
@@ -27188,24 +27194,41 @@ let checkLowStats = () => {
 let displayWarnings = () => {
 
     if (expiredBuffs.length > 0 || lowStats.length > 0) {
-        let expired = warnings.filter(w => {
+        let needsWarning = warnings.filter(w => {
             let allWarnings = expiredBuffs.concat(lowStats);
 
             return allWarnings.some((aw) => {
                 return w.name == aw.name;
             });
         });
+        
+        let noWarning = warnings.filter(w => {
+            return !needsWarning.some((nw) => {
+                return w.name == nw.name;
+            });
+        });
 
-        let topWarning = expired.reduce(function(res, obj) {
+        let topWarning = needsWarning.reduce(function(res, obj) {
             return (obj.id < res.id) ? obj : res;
         });
 
         if (window.alt1 && localStorage.mouseTooltip != "true") alt1.setTooltip("");
         else if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(topWarning.friendlyName);
 
-        console.log(topWarning.friendlyName);
+        for (let w = 0; w < needsWarning.length; w++) {
+            _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + needsWarning[w].name).addClass("warning");
+        }
+
+        for (let nw = 0; nw < noWarning.length; nw++) {
+            _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + noWarning[nw].name).removeClass("warning");
+        }
+        // console.log(topWarning.friendlyName);
     } else {
         if (window.alt1) alt1.setTooltip("");
+
+        for (let w = 0; w < warnings.length; w++) {
+            _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + warnings[w].name).removeClass("warning");
+        }
     }
 }
 

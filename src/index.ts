@@ -38,7 +38,7 @@ window.onload = async function start() {
 			localStorage.setItem(defaultSettings[d].name, defaultSettings[d].value);
 		};
 	};
-
+	
 	// Load localStorage into elements
 	for (let i = 0, len = localStorage.length; i < len; i++) {
 		let key = localStorage.key(i);

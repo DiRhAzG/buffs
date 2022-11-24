@@ -43,3 +43,7 @@
 .input-range {
     vertical-align: middle;
 }
+
+.warning {
+    background-color: #e60808c5;
+}
