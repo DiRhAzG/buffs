@@ -26420,13 +26420,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let imageData = [
-    { id: 1, name: "lowHealthBar", imgData: "iVBORw0KGgoAAAANSUhEUgAAAHEAAAAYCAMAAAD6W+JwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxUExURVZgY2p3fXeEi3WDimZyeVReY0xWWXB+hGNze1Vmb1Jia01cY1Vnb01XWmFwdlRjakhXYDlDSTAuMDMjIklXYGJwd1dlbERRWTE8QScgHi8dHDIfHTgkIT0mIyodHSkcHDE7QURRWFdlbVNgZz1JUDosKWg1H284IFMuHzYeHTsmIz4oJXA4IGo2HzszKTxIT0lWXDtGSppOKvxvMf5wMcddME0vHjciIMVcMDM8PTtHTqBRLf5mK/5YJvdkKzkjGEojGflkK59RLTI8P0JPV1dHPv1JIdw+Hs9gMD9LUqBKK+1FIYpJKzQ9QDpFSqdGI+M+HaZGJDpFSzI8QTtHTIc/IO01GYY+IDtHTTxITUJOUj1ITT4eFv1YJj1JTkJOU0FOVTxITioaGY4/IN8xGP42Fo0/ICsaGTtGTEBNUyseHS4YF603GjtGTlx4hTE8QENQVy4rLjYcGzEaGbE3GjE9Qys4PBsiJERPVTc+QzQgHzQdGbQ4GbM3GURSWSs3PD5LUkdUWTciIT0fHjodHDMcGLY3GLU3GFNsdyoxNDlESTseHjwfHjkdHDEaFrg3GLc3GDYaF0hVWjs7PkEhIDUaFrk4GLk3GD0eHkVTWkldZiYxNCYwNDsdHTQbGs8wGc4wGTUaFzZCSElOUjgbGzUbGzkfGNA7Hs87HjI8QFFbX0ZLTjkwMjAeHD8cGT8dGTE7QCctLzVBR0VRVlFZXlNcYVFZXyctMCozOC02OwAAACmxuuAAAAC7dFJOU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wBh8v5oAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACNklEQVRIS7WVB1MTQRiGV1FBUBHsAjYsFAslEsU7K6xi9ETBs4GCcirFCAGJgEqAoBgulsSoBAGlqRQLiMD+Or/dWx1/wO4zc3fffu/OPbNzs7eI/AUtWBixaDEfSIQbl0RGLY2OiYleFhW53OpIwzKuiF0ZF78KiI9bHbuGtaTBjGvXrd+wMSExKSkxYdPmLVu3sUQW1Ji8fcfOXSmpaenpaakpu/fs3ZdsZXIAY0ZmVrbNZtufY7fnHIAiOyszg6cyQORg7iFFUVVVOXzk6DFWKMdzT/BYAojk5VMNhuvkKVpApeTn8VgCiBScVlTscDioCrNCVc4U8FgC6Kx2jgoLQcWAAqvnLxTxXDyouPgiGPXCf+hgvHT5Cs/Fg65eKynF+H8jxqUl12/wXDyorPzmLRXregVHN7B6+055Gc/Fg+5WVlXXwCK5sAKWWFNdVXmPpU7hgPF+bZ2rvgEbXAlLbKh31dU+YMJGt2AanbA7HjY1u1oecSUIH7e4mpueWEJ6F0urExFPW3uHt/OpQZW6YTzr9Ha0t3lo2uVmk4Ti7kLkucfXbfpfvAQlCF+99prdPiaUZiS+QPCN6Q+9NYB3Ib/5PtjjY2m4lz2E8iFMTystEOwz+0MDhvHxU7/ZFwxoVgpK/sGF0RumpxUhgz1D9uGR0c9fRkeG7UOBQaajhIUDu4O9+as2Nj4x+e375MT4mPaDtaRhGcnPoqnpXzMzv6en5P3COdwIzM7Nz8/N8oE0CPkDeEC5NqCQy3gAAAAASUVORK5CYII=" },
+    { id: 1, name: "lowHealthBar", imgData: "iVBORw0KGgoAAAANSUhEUgAAAFoAAAAUCAYAAAAN+ioeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQKSURBVFhH7ZjfT1tVHMC/5572tkBWSjcazSi74I84y4AZkzm3LJlLjKiB4rOa4gNL9sbbEqOOGE18mj6Z8CD1HxBGVHQLWVyChgcVcagPSO+g2wysXYFRbnt/HL/n3NuuHW2Dr3I/yUnv+d7vPQ+fe/q95xwCNTh5ri++s353gG5v9mJXsaOgmk2B+YbWx6/8NDOdcGIue2CX6OOnz8Zyqb8v+01LoRIB2esBrySJe7plQUE3QLMAGGOq/8hTI7/OXp8UN13qUiH6xa6j490NubiPEkjlGKxmLfD6ZaCOaBNF61oBIkEJIo0EChaD38zGxOzPfw6JBJealESP9T87/k6HL46TuMRcmsHHCxlY27JFhw9YcPFYCE4eepiEruGLZD4xPPWHK7sOwlhi8Fjs7VZrQkQ2dfEjCHghj2XipetpaMHUibMhLCMYfySH8+W6NDg08btbRmogRFvD0STKK37wgG3oQJptgZzlOxpsdYagR8s5ETuHU8oLeFVpbLHD7rg8Ck28Go33BCDOpy6Xl922xMdO27HAr+MFxkOtPnjM0G252C/lYOM5xE8BfDTYFA7fura0Pu+M7VKG5DO0AV4KhGTDDuby9gXv83Y/rYtW7HPKc8QLwDHazPyACLrsQlLzJl8nPySriR8usl4TOLlFVM2oHMulhDSdzCm4cBAEPc7Ff6D4DB/jOzVXqvMulUj3DAqf3S1UfPwadwwwtvS6jee0EFPk82c/xTHSOJZLdUi0PZKkhYLywREKsZBPBLP3NNg0ivO8OgEPgeAhv7iezORh9JYJpiyriyurNVceb178qP6g/2NId7R7wr+RjvHt9aUIgddRNklvw31Ga8rmkvlsZgeb4GuUfGmViW261nxwcmFxYdBJ20X0hdMsu/aP09tfkBNnzsXNlaVxyTDAIij7MEBfi7+m7HLJ32Y0GL2D9YdJYHk8QNufHJq7MeMeNlVBbFhOdHYkZdNU+FlGnhnwIcp+heEiGSmXXZTMmSYSvH8bl88EBeNsLlCqzi0n3Q1LDcQhhtT5zAg/s5BQmIzi3l214CqK5HCxXHC55O/x3iiWCy6ZPyOexTHETZeqiGVCannpr/auHkV+sNnL5y5FkTO4E1GCEjzBGDQQu3Gu4b338EV4qH2qx8MsoiR+/GHmE5HgUpWyszqAU6fOjMNKMk4kAhrWbIJlZCxMoUe2Z/J8gcL5NdyqEwp+rMmMT+X2jsTs7I09ndw9ffx5tr2RdXr7iwrRnL7+N2KZm79cJnld4Xo9HhM+b5PFhuRCqgAGrpX534D5vGqo67mR6amv9nxi1/fWsP232IfsEl3k5df641u3UwM7mbXeZstUeOYGoWpDKDx/4HDblavfTLmriz0D8C9CWtsBi6eacwAAAABJRU5ErkJggg==" },
     // Poisoned
-    { id: 2, name: "lowHealthBar", imgData: "iVBORw0KGgoAAAANSUhEUgAAAHEAAAAYCAMAAAD6W+JwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxUExURVZgY2p3fXeEi3WDimZyeVReY0xWWXB+hGNze1Vmb1Jia01cY1Vnb01XWmFwdlRjakhXYDlDSTAuMDMjIklXYGJwd1dlbERRWTE8QScgHi8dHDIfHTgkIT0mIyodHSkcHDE7QURRWFdlbVNgZz1JUDosKWg1H284IFMuHzYeHTsmIz4oJXA4IGo2HzszKTxIT0lWXDtGSppOKvxvMf5wMcddME0vHjciIMVcMDM8PTtHTqBRLf5mK/5YJvdkKzkjGEojGflkK59RLTI8P0JPV1dHPv1JIdw+Hs9gMD9LUqBKK+1FIYpJKzQ9QDpFSqdGI+M+HaZGJDpFSzI8QTtHTIc/IO01GYY+IDtHTTxITUJOUj1ITT4eFv1YJj1JTkJOU0FOVTxITioaGY4/IN8xGP42Fo0/ICsaGTtGTEBNUyseHS4YF603GjtGTlx4hTE8QENQVy4rLjYcGzEaGbE3GjE9Qys4PBsiJERPVTc+QzQgHzQdGbQ4GbM3GURSWSs3PD5LUkdUWTciIT0fHjodHDMcGLY3GLU3GFNsdyoxNDlESTseHjwfHjkdHDEaFrg3GLc3GDYaF0hVWjs7PkEhIDUaFrk4GLk3GD0eHkVTWkldZiYxNCYwNDsdHTQbGs8wGc4wGTUaFzZCSElOUjgbGzUbGzkfGNA7Hs87HjI8QFFbX0ZLTjkwMjAeHD8cGT8dGTE7QCctLzVBR0VRVlFZXlNcYVFZXyctMCozOC02OwAAACmxuuAAAAC7dFJOU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wBh8v5oAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACNklEQVRIS7WVB1MTQRiGV1FBUBHsAjYsFAslEsU7K6xi9ETBs4GCcirFCAGJgEqAoBgulsSoBAGlqRQLiMD+Or/dWx1/wO4zc3fffu/OPbNzs7eI/AUtWBixaDEfSIQbl0RGLY2OiYleFhW53OpIwzKuiF0ZF78KiI9bHbuGtaTBjGvXrd+wMSExKSkxYdPmLVu3sUQW1Ji8fcfOXSmpaenpaakpu/fs3ZdsZXIAY0ZmVrbNZtufY7fnHIAiOyszg6cyQORg7iFFUVVVOXzk6DFWKMdzT/BYAojk5VMNhuvkKVpApeTn8VgCiBScVlTscDioCrNCVc4U8FgC6Kx2jgoLQcWAAqvnLxTxXDyouPgiGPXCf+hgvHT5Cs/Fg65eKynF+H8jxqUl12/wXDyorPzmLRXregVHN7B6+055Gc/Fg+5WVlXXwCK5sAKWWFNdVXmPpU7hgPF+bZ2rvgEbXAlLbKh31dU+YMJGt2AanbA7HjY1u1oecSUIH7e4mpueWEJ6F0urExFPW3uHt/OpQZW6YTzr9Ha0t3lo2uVmk4Ti7kLkucfXbfpfvAQlCF+99prdPiaUZiS+QPCN6Q+9NYB3Ib/5PtjjY2m4lz2E8iFMTystEOwz+0MDhvHxU7/ZFwxoVgpK/sGF0RumpxUhgz1D9uGR0c9fRkeG7UOBQaajhIUDu4O9+as2Nj4x+e375MT4mPaDtaRhGcnPoqnpXzMzv6en5P3COdwIzM7Nz8/N8oE0CPkDeEC5NqCQy3gAAAAASUVORK5CYII=" },
+    { id: 2, name: "lowHealthBar", imgData: "iVBORw0KGgoAAAANSUhEUgAAAFoAAAAUCAYAAAAN+ioeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQKSURBVFhH7ZjfT1tVHMC/5572tkBWSjcazSi74I84y4AZkzm3LJlLjKiB4rOa4gNL9sbbEqOOGE18mj6Z8CD1HxBGVHQLWVyChgcVcagPSO+g2wysXYFRbnt/HL/n3NuuHW2Dr3I/yUnv+d7vPQ+fe/q95xwCNTh5ri++s353gG5v9mJXsaOgmk2B+YbWx6/8NDOdcGIue2CX6OOnz8Zyqb8v+01LoRIB2esBrySJe7plQUE3QLMAGGOq/8hTI7/OXp8UN13qUiH6xa6j490NubiPEkjlGKxmLfD6ZaCOaBNF61oBIkEJIo0EChaD38zGxOzPfw6JBJealESP9T87/k6HL46TuMRcmsHHCxlY27JFhw9YcPFYCE4eepiEruGLZD4xPPWHK7sOwlhi8Fjs7VZrQkQ2dfEjCHghj2XipetpaMHUibMhLCMYfySH8+W6NDg08btbRmogRFvD0STKK37wgG3oQJptgZzlOxpsdYagR8s5ETuHU8oLeFVpbLHD7rg8Ck28Go33BCDOpy6Xl922xMdO27HAr+MFxkOtPnjM0G252C/lYOM5xE8BfDTYFA7fura0Pu+M7VKG5DO0AV4KhGTDDuby9gXv83Y/rYtW7HPKc8QLwDHazPyACLrsQlLzJl8nPySriR8usl4TOLlFVM2oHMulhDSdzCm4cBAEPc7Ff6D4DB/jOzVXqvMulUj3DAqf3S1UfPwadwwwtvS6jee0EFPk82c/xTHSOJZLdUi0PZKkhYLywREKsZBPBLP3NNg0ivO8OgEPgeAhv7iezORh9JYJpiyriyurNVceb178qP6g/2NId7R7wr+RjvHt9aUIgddRNklvw31Ga8rmkvlsZgeb4GuUfGmViW261nxwcmFxYdBJ20X0hdMsu/aP09tfkBNnzsXNlaVxyTDAIij7MEBfi7+m7HLJ32Y0GL2D9YdJYHk8QNufHJq7MeMeNlVBbFhOdHYkZdNU+FlGnhnwIcp+heEiGSmXXZTMmSYSvH8bl88EBeNsLlCqzi0n3Q1LDcQhhtT5zAg/s5BQmIzi3l214CqK5HCxXHC55O/x3iiWCy6ZPyOexTHETZeqiGVCannpr/auHkV+sNnL5y5FkTO4E1GCEjzBGDQQu3Gu4b338EV4qH2qx8MsoiR+/GHmE5HgUpWyszqAU6fOjMNKMk4kAhrWbIJlZCxMoUe2Z/J8gcL5NdyqEwp+rMmMT+X2jsTs7I09ndw9ffx5tr2RdXr7iwrRnL7+N2KZm79cJnld4Xo9HhM+b5PFhuRCqgAGrpX534D5vGqo67mR6amv9nxi1/fWsP232IfsEl3k5df641u3UwM7mbXeZstUeOYGoWpDKDx/4HDblavfTLmriz0D8C9CWtsBi6eacwAAAABJRU5ErkJggg==" },
     // Prayer off
-    { id: 3, name: "lowPrayerBar", imgData: "iVBORw0KGgoAAAANSUhEUgAAAHAAAAAXCAMAAADkzzubAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAG2UExURVpnbXB+hXWDiltpb1xqcGx7glxtdVNjbEtWXGBtc0lZYElWXTg+SzQxSzAsR4ulwjpDS0ZPVE9gZzY9Sj0zWkA2YEI3Y0tObqnR8E9faExcYzUyTEg8bE0/dEc7a3WDpanS8Uc7bEo+cVJEfE9BeVVVfpe107fR81NTfUZRVlZHgk9EdniGqbfQ87ze77bQ8lVGgD80YUVTWkY6aVJDfUw/c2NtjbbP8szi+kk9cE1AdUo/b2NtjNzu/DtITj81X0A2Yk9Qd3aEpkQ3ZjtHTkBOVUdWXEdLaXOCopa00kFOVUdUWl9vfIumw1xte0BNVC8tQkhMabfQ8jAsRkBMUlx4hTE5QTowVTowVklLbXSDo7bP8TIwRTM7Qys4PBsiJDM8RDoxVT81Xj83XVxogys3PEFMUzQsTEE2YVtngVNsdzA3QjcuUj41XTozVXKCoHKBoC86PzxJTzMxRjkwVUZJZZWz0ENGY01ZXkldZiYxNCYwNDkwVDIqSXB/nSMrMDEqSENIYiIrLzVBRkRQVlFdY0JGTy0pPoqlwSYvNFVfZGh3hCYwNSMrLykyNyo0OCcwNQAAAPu6xdkAAACSdFJOU/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AJsmhUgAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAhpJREFUSEu1lX1X0zAUh4OyVp2dlaaABaRuyETYpuVl5WVOUGADEZlOBpusA2wBBypD3JBXYaKIaL6xSRv9BM3zR3vP/fX0OfckOQHoH6DmUs1lWjOECms9HH/l6jWe89Q6DWY4Qg/vvS74bvgE0ct77A4ziPAmVydBub6hsaFehtItzkkYQYSc0iQ3t9xuVVvvtDTLTQpTIxYSnz/Qdrc92H6vLeBnbASog5ew735nVygc6ep8EPA/lPgOmjIAIF6D3YGe3r6oruvRvt6eQDfUeJoyACBFkvsHBodCuh7T9dDQ4EC/LNXRlAHgkSLEHw+P4PliMWyMjgw/iQvKUxq7Dxgd840nkhHbR4yRZGLcNzZBY/cBk8+mVDUYdnzYGA6q6tTzSRq7D5iYfjGTSKb+T5hKJmZeTr+yw7TrYOFrTZjNzM1n6Rpm5+cyszntje1byLvMQhrvUs0oxBeXlsmMeL7lpcV4wdAcH3m6y9s0QKZpQXkls4pn1LOrmRUZWqZJwrW8/Y2r5NcAeqcZRSivb7xPhSMfNtZlWDS0jyRkJUSb3lIRwq1P28Htz1sQFkvlTTus7NgvV/lSIbeF6C1Zhd29fXV/b7dglbyOjxjpWrvGToXcFuhALIuWdXjUeHRoWbj+6viw0XXwsbD/fHxS/ZY7/X6aM6snx3aHGY4Q/TDE6tnPs7JonDsNZlAh5tfF74s/tGYGQn8BSs/wNyit6koAAAAASUVORK5CYII=" },
+    { id: 3, name: "lowPrayerBar", imgData: "iVBORw0KGgoAAAANSUhEUgAAAFoAAAATCAYAAAAQ/xqmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAASTSURBVFhH7ZlrbJNVGMf/77Vdu7Vvu2sHGwVl06yMAhM6AriBRIl4CxMRmDEuGX7bNDFq0JBFyTQmsn3SkPhBBwqIIUENQYkjIg6IQmFDwpDuAhttYaMb69b76zmHbg7sZN/3/pL27JzzPM+Hf/455zkdhxSs21htv+0drIvdgTMWjVVseXc79jbuhCiJx2Ur3OZMa/ORAy3dyXCNaSAkR8Zzr25TzBm5jQm/bp+cMLn0osluLbBh1aZN6HK3Qwjp7Hw4zRUeiNXnPVyglFWuOX35/B+hZLrG/zAh9PqtNYq340arUc1+3qA3I002sXXH4+XIf6QY0TujuOXxwqAzQRAkcBHJNej1PrV4zcr9nRfOaWI/AJ5+UZF9f/lajWKW06C3wKBXwPMSTPmZmLe4FCaVZ2N6noWt030aR+NpHs1n1TSmhDlaMdsa7zrZAr1shCjIiCOMouUL4VzyGCRTDBk6C0aCw7jV0weJ10HgRXAcSY8JeUNBr76v98pRVlEjJcLaDZvtuKnfp5fTiUvNgMohFBlBjsNGLsWXkJOph56XYUwTkTVrLnquX0agf4AILUMUJSQSUaghzlW8fMGXnkvtgWRdjfsQsrIKdujIxSdL6WSqIpoYRV7pLFTVbGMiU5R0noivwmgQYX/Uid5+IvaNm1BVusshTsQeCQ9Ac/XU8IkRzqkSxcbCw+AVHo61y7DhtVpkW3UsgIo8eaTrdJ/G0fhoZJQIroLWYQEaKeGcjifV3Dnz4FhWjocWO2GfbUeO9V8n309gJMFG/2AI3de7cfWsGx2n2+Dr8cDdcTRlX65BhP7k6xNqoaOUTWh3IWXEoIjGlCKPQ8UOxIKk5RMxzN0VvrfjAt7avFITegq4hQtWq7Y5xShZetfRc4mjs6fh6JvE0V1JR1880wZv91Xi6J+mFHrrOzvZiT4T2fPRdo4rW/R0q6waKuilZp6VixLXUqxe/yy5CNNY0GSxJ46NgTH88sNhXDx1BkN9PrKiIoTA8bPunytZQApKXCvUgN+bnM0s+jx/c9ySFU/s0gUt9ZJoIEvEdLyKgkVF2PJ63T3OnuzkvZ8349q5TiBBDcwhGhtF2Hi76c/fjr3BgjT+A29SzM2R6BjrhzmOJzqL8Jxqx57PdjHnUiY7ma7TfRpH42kezad1WJBGSoTuzksBW1Ghoo4JLp7jwPEC+fAY7OtHhIsjr3A+olIYw4EEjh0+hI7Wk+Shoicik/45HiEih5AwB5t+P/bj/mRNjRSwAzgn39YQE0bcVDQqnpqIQ40DHW0n4bnmYd1FFxnPnzzB1un+uMg0L78gv4FV05iSiS5h3cZqxX/F18pFZacspbFHSDgSxKoXq1C+oQpt3x3Er98ehE42MjfT40KVIu6c+bmVRw60PPDpXbSoTA0OzcwXOrsMk38znnn5FWXAP7Aj4uPq6TyeiMFamI/ajz/F7rffxGBvP/sxiSLnqk2ZOZkN33/z1bTUW1ddO2PbuyMtu+8VepwXqmvsQ75bdQH/qDMaDldUv/cBWj58H5JOd9w82+RWLErzoZYvtP+wTBvgH7U52Md6auvBAAAAAElFTkSuQmCC" },
     // Prayer on
-    { id: 4, name: "lowPrayerBar", imgData: "iVBORw0KGgoAAAANSUhEUgAAAHAAAAAXCAMAAADkzzubAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIEUExURWtWq4Rn0Y9s54Rn0mxYrW5YsINj5HVS3G1L0V9BtnFeslw/sk84i1tBhllCdJSrzIRi22ZGxHVVl4Fep4JfqHJmmqnS8XNT02FDulxCiH1brI5mupRuyYdjuoiPu4xmvIxnyptz15px2YV0u5y42bfR84NyulU+nHNZsphx4p506Y5r0ImRwrze77fQ84mRw4lo0VM7n1g9q2xPpoFfyI1u35hx7Ixo2X5/uMzi+ks1i3BWvoJh2Itp4IJk0nt9uNzu/EcyilE7kG9SwHJWxnNmwISOw3ZoxHBVv0cyiVI5oFY7plA+iGJcoYGLvpq32mJdoVM5oGZdrZGp0Ew1kk41mEo6emBcmn6JuJm22Es8elx4hTsqdFQ5o0g1gV9JoWFKpGRdpX6Kt7bQ8z0sdis4PBsiJFE4nD8rel1GomlRsGdOr2BNoGxyoV1KmSs3PE01lFRCimJNomZQqWdQrVtGmWlxnbbQ8lNsdzcoa1I8kkQ0clZCkWBLnmNOpVhIj3qHsHqGsFhIkF9LnjcnakQug0c4c2BLnVpHlVtYjpe11VlVjUldZiYxNCYwNFhEkltIk08/gXiFq3iFrEY6aUw9e1RFgU8+glNTgKnR8Uo+cTsoc0k2g1dIhEU5aEA3YI6oySseVFZEi2xpnVRGfzgmbyweVSYbTC4fWzAfXSgdTgAAAABqDagAAACsdFJOU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAFlRWxAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACLklEQVRIS7WVeVMTMRiH40FbZEGXY7stiAVZBbSrci9nQcSjCMohYOWWsnLUphzFFjwpIBYBlcOWw1s0X9LdbPwGyfNHNvP+dvJM5k0mAP0HHDt+4iSZM4QIE0xmS+KpRIvZlGAUmGEITZYkLjnldEoyl2Q5gyvMwEIzz6WmpWcIGelpqRxvxgErdKFVtNkzs85mC9nnsjLtNtFqRGzQhFbeZnfk5J7Pk/Iu5OY47DaepRGgizyX7ygovHRZcspXrhYWOPI5/hpJGQAQX1RcUlpWXiEriiJXlJeVlhQX8SRlAEBiZVV1TW2dpCguRZHqamuqqypFkjIA1IsN1xtvNGn7c7k0o9x0s/FWg3ibxPQBd9zNd1taDR82trbca3bfJzF9gLutXRAkp+HTjE5JENrb3CSmD+jofNDV3aN3EPsUqae762FnBw491NGEj3r7+gcGh4ZJD4eHBgf6+3ofY9+IlzIjHu2UjqpPxsYnJskpnZwYH/Opo4ZPH+ny1AOQn4OBqemZ2aB2D4OzM9NTAcj59XDOi/+hincOoGeh8PxC4PmLl7Iz+Or1m8DCfNi/qIeshCgSWoK+5ZW3q9Lqu5VlHwyHIjiMruEPVd5H9dciApfg+sbmB+Hj5sY6DEPDpxtJr6mxFtVfC4RU+Glre2f38+7O9lYMqtimE6WOdi3wyvG9/djB4ZfDg9j+XhxXmGEI0de4Cr99/wHVn7+MAjOIUOP30Z+jv2TODIT+AXKDzVCTyNQkAAAAAElFTkSuQmCC" },
+    { id: 4, name: "lowPrayerBar", imgData: "iVBORw0KGgoAAAANSUhEUgAAAFkAAAATCAYAAAD7yKGlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAQjSURBVFhH7ZhfaFtVHMe/59zc3iS9SdrYpO2yhSVudV2ptNOwuhUHe4i6ocMJqw8T34SCMEoVZA+KgkPYtAjCXtUn0wfBSevYxkCpbFLBP3UUFdq0Xbus7ZKbNGlumuQe7zlLZ2dSrc+9n4fcnHO+v9/D9/7yO+eEYBNO9JwPqY5ixCDJ2OH+l/H9xS9Ambcvm5fHv7r55nRFZrEFqkzm5rbtUqdURwMIIdCUDA6+3ocfPomhoeAGYwzZvIY/5rJhy+ytIVWegtNHPxjcF3x0xOduhUttRalMoXY0ojEcQHFlFUqqHm61BU7ZCY/qPBP0Hcj+On3tRiXcYhMemMwNDrXuueBRg3C7fJCIAzlnBv6DQfhUN8p2itScBg9pgWJ3mxEOOBQpahn93wiTeYsI7mwfaXIFoDpbIFMXMoUUEC5jb2cbZFcJ9bIHy9o96HckqIr5EmwOUCKByY6oXz3w+e+3r2oio0UVlH/sag5Muev8IKZ5gBPJrAatKYHHj3TD16igwVYPn1cxx13INd8R61zH9TyOx/M8FrWhxyPnQzalBYQ2wCgSLK4sIOWbxlMnDwtjOQ2qeBdizOf5OtdxPY/j8TyPEFlUQevq5AgrUWi5JBLlOOj+NHpfMg02K5izbvADo815vs51S+y2iAMj4HmEwKIKyiQ9tuKcgSei47EXd+CJo11VFbzOxormuj0n/CIuY58FzyMWLaogH8d+Zi3t93/pbkbFJsd78D8N3oiWNaCVcuaxzoYMMcRcYnIaZ/q6Nr3cbGfIsUNnmT+8G8HOIAKd5jMQqGoVG+EGc5ZSBczOz2N+Io7ZiVksxeMYGTu3qcmn33qfVb5uO8izkXdPNTftjvHjmPQIwY5OL3qivfDXaBnrBi8mC7h5ZQwLE0mU7zEYrIy7y/G+y+PvDAtBDTp6epm2mKiMthfkSMfZUDCwb0qtd8MoMxRYGupeguOvnnyoojdW8MhnXyL7J4NCPKASQbZwF7MzM+Fvb52zrtk1oNyYfCmBQikDRtegSC6kftNx6dNhs2J1Ifq7gu/P83Wu43oel9fTsAzeHNELtEwinM2lsFY0N7NyDna7itRkBmPfXMeS2Rr4JscNHhu9bs6vwCbLQsf1PI7Hi2wWNRHX6qmFG9rO5o4sITRKJXOKGTAMhnR6Ge6QeauzN2Jmfg6/XB4HLSiwURtKxhpW9RRSmfk3rv340ajIZlGTh04Dz/QMDrqczRds1A7JZvbafBLt0f3ofj6Kn76+iskrt6A6vCiXmGmyziuYG/xhJfxfaet+kuXS2/PvjaojV/RQf6hO8k7Z7XUoFghsPgOn3h7A8HtDKC2Z52iFQdfXYJDV8Oh3Q1vuw8+98tr2PcJVnlUce3ogVCzmI0VDj70w0I9LQxchU3ufLDvG/4+5FsBfp5WsPuCZsY4AAAAASUVORK5CYII=" },
 ];
 
 let imageBuffers = [];
@@ -26724,9 +26724,11 @@ __webpack_require__.r(__webpack_exports__);
 
 let imgBuffNumbers;
 let buffNumbers = new _alt1_base_dist_imagedetect__WEBPACK_IMPORTED_MODULE_1__.ImageDataSet();
+let buffValues = "0123456789m(";
 
 let imgBarNumbers;
 let barNumbers = new _alt1_base_dist_imagedetect__WEBPACK_IMPORTED_MODULE_1__.ImageDataSet();
+let barValues = "0123456789/K";
 
 /* Load the images that will be used to search the screen */
 async function loadImages() {
@@ -26740,7 +26742,7 @@ async function loadImages() {
 
     // The numbers used for action bar
     imgBarNumbers = await _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.imageDataFromBase64(
-        'iVBORw0KGgoAAAANSUhEUgAAAEIAAAAICAYAAABNlyniAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJKSURBVEhLlVXNbtNAELbyYzvlDrxIiqpeEynGvACBN6DiAEIqbXmSphKIY7mUnxt2EtvpLS52wjFRnN5j9wmWnc16u+tdB/eTLM/Ofjs7O7Mzq/FYrRJERYZ4Npd0gCieSfogmCA/CJT8HF5wTeazLNvJm+F9Pd8XOJ4fIB9/ICMMosQAX8DuKlkL/Hj+t3SPZC1yBVj2C3R5+U0g3PyJkPXcVi46HwzQm6O30txyuSzdxHFcMjeZXKNarVbKA+i6gczWHuMYZguZ+AN/HHdrJ8vuyL+Juf1Xr5n/+UGbuolOzz6h88EFswOQAlGMIh9pgDscoV7PEhf9BzHO0P7+M+Ua1x1WsqUbRiVesr5F7XabcT9/+crker3B5DRNd9uDgzeazUqbPgT8QTxcMlTURmOPyY7jIAgaHRKAP2c4g2PPQ1EUK/1KCsmbTqfo6vtPQZemYumBXSqqQQk7SVAyVJSgG6Y0F4ahpDNaj4iOD0R+7flsgT+dToeMbdtGZWXWaIjJe9nvozC8EXSLxQL3rG1PouckyO625SSA1tg9SdHELOwQFSvj5OSUrAF7UF7wQeNNFfbH3n1TLPrDHwBQ9K/YtDebjTCu44AdHByS/alKu/rxS92fut2urKSAbtyzHh6Id+8/sDX5ptDkfuNyIEoOxat+fPyRjX2urHLwh4CX7vGTp2ysCnRlwJWCK6t6biADU+6qQ4YgusPRWODO59tnFp49oihBXhp5b4hn8jPs4IY6wvb53gIos52Xj+fLQYticY06UJr2D34Kq2+ZZMeaAAAAAElFTkSuQmCC'
+        'iVBORw0KGgoAAAANSUhEUgAAAEgAAAAICAYAAABatbkrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ8SURBVEhLnVbNbtNAEI7yZwfuwIukVcU1kWLCCxB4AxAHUKXSlnt5hgYJxC3lUn5uOD+201uc2gnHJHa4x+4TLDvr9WbXu44Cn2RldnZmdjzjbzYFHkEQIioy+LO5pAN4/kzSO84Y2Y6jtE9hOTdkP47jnXYzfK5l24KNZTvIxg/ICIMoMSAXiBuEa8Hen//OPSNci7bu9FZYT2892ddoP0VXV18lQ+NJW3nQZbeLXr56Le0tl0ulPcA0+2RvPL5BxWIx1w5QrWpIr91jNppeQzp+IB+zn8SJ4zvyW8G2necvWP5pASpVHZ2dv0eX3Y8sDiBboFUQCGuGbNX5zgD6gyFqtQy1cw583NGDg0OlT78/2CtWVdP2sgvXf1C9Xme2nz5/YXKpVGZyFEU74/EFWq24YkFBypXKTuf/Af+CFqYeFQvDkcVk0zQRFJMuCSCfc9zxkWUhz/OVeYWZpk4mE3T97YegiyKRwhCXikpAUVJQVQKq2OkM1KOihKqmS3uu60o6rXaf6PgCpfThuwv5NBoNsm632yiPruWy2NRnnQ5y3amgWywWeCYmM4++J0F8l9CSx4qbv71eb7tPObx1VgxPAydKxb1xenpGfCAe0BQeGPiRIv7I2g7jbD78iwGy+WUvi81mI6xLuJBHR4/J+VRVuP7+U5p/PK3cqVjoQrPZFBUc4HZoGf9eoDdvj5lPmgwM11+YVkTJIUuZk5N3bG1z9EzBvxzcvA8ePmJrVQP2Af8FAYRCw6cJn77qWoSOTTjKQEehG4PhSLCdz5O/A3A9E0UOUoqls8efyX8XTDzIhzg+P7sAebFTGlq2XEzPF33yCqi61i8uPqC/Q0njy/uQJBYAAAAASUVORK5CYII='
     );
     
     // Split the numbers into a dataset with each individual number
@@ -26796,12 +26798,15 @@ function readNumbers(buffer, type = "") {
     let str = "";
     let numberMatch = [];
     let numbersList;
+    let numberValues = "";
     let foundPixel = false;
 
     if (type == "buff" || type == "animate") {
         numbersList = buffNumbers;
+        numberValues = buffValues;
     } else if (type == "health" || type == "prayer") {
         numbersList = barNumbers;
+        numberValues = barValues;
     }
 
     // Loop through each number in our list
@@ -26844,7 +26849,7 @@ function readNumbers(buffer, type = "") {
                             
                             // Not a match, so continue to the next match attempt
                             if (!match) continue;
-
+                
                             // All pixels in number match, so add it to our number array
                             numberMatch.push({ startWidth: bw, startHeight: bh, num: a });
                         }
@@ -26865,28 +26870,38 @@ function readNumbers(buffer, type = "") {
         match = false;
     }
 
+    // console.log(numberMatch);
+
     if (numberMatch.length > 0) {
         numberMatch.sort((a, b) => a.startWidth - b.startWidth).sort((a, b) => a.startHeight - b.startHeight);
         
-        // console.log(numberMatch);
-        // All number images must be in this format, 0123456789
         for (let m = 0; m < numberMatch.length; m++) {
             if (numberMatch[m].num == 10) {
                 if (type == "buff" || type == "animate") {
                     str = (str * 60) + 59;
                 } else if (type == "health") {
+                    // Legacy has less HP, so scale by 10
                     let isLegacy = checkLegacy(numberMatch, m + 1);
 
                     if (isLegacy) {
                         str *= 10;
+                    } else if (str.includes("K")) {
+                        str = str.replace("K", "");
+
+                        // Can't track the dot, because it's only two pixels. Assume if 3 digits, then has dot. If 2 digits, then no dot.
+                        if (str >= 100) {
+                            str *= 100;
+                        } else {
+                            str *= 1000;
+                        }
                     }
                 }
 
                 break;
-            } else if (numberMatch[m].num == 11) {
+            } else if (numberMatch[m].num == 11 && type == "animate") {
                 break;
             } else {
-                str += "0123456789"[numberMatch[m].num];
+                str += numberValues[numberMatch[m].num];
             }
         }
     }
