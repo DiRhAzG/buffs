@@ -84,6 +84,8 @@ $(".contenttab").click(function() {
 	
 	if (this.id == "buffs-tab") {
 		setBuffsTab();
+	} else if (this.id == "compare-tab") {
+		setCompareTab();
 	} else if (this.id == "settings-tab") {
 		setSettingsTab();
 	}
@@ -91,11 +93,19 @@ $(".contenttab").click(function() {
 
 export function setBuffsTab() {
 	$('#buffs-content').show();
+	$('#compare-content').hide();
+	$('#settings-content').hide();
+};
+
+export function setCompareTab() {
+	$('#buffs-content').hide();
+	$('#compare-content').show();
 	$('#settings-content').hide();
 };
 
 export function setSettingsTab() {
 	$('#buffs-content').hide();
+	$('#compare-content').hide();
 	$('#settings-content').show();
 };
 
@@ -119,4 +129,15 @@ $("input[type=range]").on("input", function() {
 
 	localStorage.setItem(rangeId, rangeValue);
 	$("#" + rangeId + "Output").val(rangeValue);
+});
+
+$("input[type=file]").on("change", async function() {
+	if (this.files.length == 2) {
+		ImageReader.imageToBase64(this.files[0], (firstImage) => {
+			ImageReader.imageToBase64(this.files[1], async (secondImage) => {
+				let url = await ImageReader.generateMatchingImage(firstImage, secondImage);
+				window.open(url, '_blank');
+			});
+		});
+	}
 });
