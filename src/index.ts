@@ -15,7 +15,7 @@ let defaultSettings = [
 	{ name: "buffColor", value: "true" },
 	{ name: "lowHealthSlider", value: "5000" },
 	{ name: "lowPrayerSlider", value: "200" },
-	{ name: "refreshRateSlider", value: "200" },
+	{ name: "refreshRateSlider", value: "1000" },
 	{ name: "timeBufferSlider", value: "15" },
 
 	{ name: "overloadBuff", value: "false" },
@@ -49,7 +49,7 @@ window.onload = async function start() {
 
 		if (key.includes("Slider")) {
 			$("input#" + key).val(value);
-			$("input#" + key + "Output").val(value);
+			$("output#" + key + "Output").val(value);
 		} else if (value == "true" || value == "false") {
 			if (value == "true") {
 				$("input#" + key).prop("checked", true);

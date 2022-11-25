@@ -27537,7 +27537,7 @@ let defaultSettings = [
     { name: "buffColor", value: "true" },
     { name: "lowHealthSlider", value: "5000" },
     { name: "lowPrayerSlider", value: "200" },
-    { name: "refreshRateSlider", value: "200" },
+    { name: "refreshRateSlider", value: "1000" },
     { name: "timeBufferSlider", value: "15" },
     { name: "overloadBuff", value: "false" },
     { name: "animateDeadBuff", value: "false" },
@@ -27567,7 +27567,7 @@ window.onload = async function start() {
         let value = localStorage[key];
         if (key.includes("Slider")) {
             _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input#" + key).val(value);
-            _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input#" + key + "Output").val(value);
+            _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("output#" + key + "Output").val(value);
         }
         else if (value == "true" || value == "false") {
             if (value == "true") {
