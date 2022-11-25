@@ -26463,7 +26463,7 @@ function getBar(img, barName) {
             // ImageReader.outputImage(buffer);
             let bar = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.readNumbers(buffer, numberType);
             
-            console.log(bar);
+            // console.log(bar);
             if (bar == undefined || bar == "") {
                 return undefined;
             } else {
@@ -26877,6 +26877,7 @@ function readNumbers(buffer, type = "") {
         
         for (let m = 0; m < numberMatch.length; m++) {
             if (numberMatch[m].num == 10) {
+                // Th
                 if (type == "buff" || type == "animate") {
                     str = (str * 60) + 59;
                 } else if (type == "health") {
