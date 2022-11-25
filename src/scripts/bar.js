@@ -29,6 +29,7 @@ export function getBar(img, barName) {
         // Get starting pixel for Bar image, to be used to grab the bar
         let foundBar = imageBuffers.filter(b => b.name == barName);
         let barPosition;
+        let numberType = barName == "lowHealthBar"? "health" : "prayer";
 
         for (let fb = 0; fb < foundBar.length; fb++) {
            barPosition = ImageReader.getPosition(img, foundBar[fb].imgBuffer, 20, -5, 90, 27);
@@ -42,7 +43,7 @@ export function getBar(img, barName) {
             let buffer = img.toData(barPosition.x, barPosition.y, barPosition.w, barPosition.h);
 
             // ImageReader.outputImage(buffer);
-            let bar = ImageReader.readNumbers(buffer, "bar");
+            let bar = ImageReader.readNumbers(buffer, numberType);
             
             if (bar == undefined || bar == "") {
                 return undefined;

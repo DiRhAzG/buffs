@@ -31,7 +31,8 @@ let defaultSettings = [
 ]
 
 window.onload = async function start() {
-	// ImageReader.generateMatchingImage();
+	// ImageReader.generateMatchingImage("./images/compare_1.png", "./images/compare_2.png");
+
 	// Add defaults if missing
 	for (let d = 0; d < defaultSettings.length; d++) {
 		let foundSetting = localStorage[defaultSettings[d].name];
