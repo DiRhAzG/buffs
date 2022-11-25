@@ -3,9 +3,11 @@ import { ImageDataSet } from "@alt1/base/dist/imagedetect";
 
 let imgBuffNumbers;
 let buffNumbers = new ImageDataSet();
+let buffValues = "0123456789m(";
 
 let imgBarNumbers;
 let barNumbers = new ImageDataSet();
+let barValues = "0123456789/K";
 
 /* Load the images that will be used to search the screen */
 export async function loadImages() {
@@ -19,7 +21,7 @@ export async function loadImages() {
 
     // The numbers used for action bar
     imgBarNumbers = await ImageDetect.imageDataFromBase64(
-        'iVBORw0KGgoAAAANSUhEUgAAAEIAAAAICAYAAABNlyniAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJKSURBVEhLlVXNbtNAELbyYzvlDrxIiqpeEynGvACBN6DiAEIqbXmSphKIY7mUnxt2EtvpLS52wjFRnN5j9wmWnc16u+tdB/eTLM/Ofjs7O7Mzq/FYrRJERYZ4Npd0gCieSfogmCA/CJT8HF5wTeazLNvJm+F9Pd8XOJ4fIB9/ICMMosQAX8DuKlkL/Hj+t3SPZC1yBVj2C3R5+U0g3PyJkPXcVi46HwzQm6O30txyuSzdxHFcMjeZXKNarVbKA+i6gczWHuMYZguZ+AN/HHdrJ8vuyL+Juf1Xr5n/+UGbuolOzz6h88EFswOQAlGMIh9pgDscoV7PEhf9BzHO0P7+M+Ua1x1WsqUbRiVesr5F7XabcT9/+crker3B5DRNd9uDgzeazUqbPgT8QTxcMlTURmOPyY7jIAgaHRKAP2c4g2PPQ1EUK/1KCsmbTqfo6vtPQZemYumBXSqqQQk7SVAyVJSgG6Y0F4ahpDNaj4iOD0R+7flsgT+dToeMbdtGZWXWaIjJe9nvozC8EXSLxQL3rG1PouckyO625SSA1tg9SdHELOwQFSvj5OSUrAF7UF7wQeNNFfbH3n1TLPrDHwBQ9K/YtDebjTCu44AdHByS/alKu/rxS92fut2urKSAbtyzHh6Id+8/sDX5ptDkfuNyIEoOxat+fPyRjX2urHLwh4CX7vGTp2ysCnRlwJWCK6t6biADU+6qQ4YgusPRWODO59tnFp49oihBXhp5b4hn8jPs4IY6wvb53gIos52Xj+fLQYticY06UJr2D34Kq2+ZZMeaAAAAAElFTkSuQmCC'
+        'iVBORw0KGgoAAAANSUhEUgAAAEgAAAAICAYAAABatbkrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ8SURBVEhLnVbNbtNAEI7yZwfuwIukVcU1kWLCCxB4AxAHUKXSlnt5hgYJxC3lUn5uOD+201uc2gnHJHa4x+4TLDvr9WbXu44Cn2RldnZmdjzjbzYFHkEQIioy+LO5pAN4/kzSO84Y2Y6jtE9hOTdkP47jnXYzfK5l24KNZTvIxg/ICIMoMSAXiBuEa8Hen//OPSNci7bu9FZYT2892ddoP0VXV18lQ+NJW3nQZbeLXr56Le0tl0ulPcA0+2RvPL5BxWIx1w5QrWpIr91jNppeQzp+IB+zn8SJ4zvyW8G2necvWP5pASpVHZ2dv0eX3Y8sDiBboFUQCGuGbNX5zgD6gyFqtQy1cw583NGDg0OlT78/2CtWVdP2sgvXf1C9Xme2nz5/YXKpVGZyFEU74/EFWq24YkFBypXKTuf/Af+CFqYeFQvDkcVk0zQRFJMuCSCfc9zxkWUhz/OVeYWZpk4mE3T97YegiyKRwhCXikpAUVJQVQKq2OkM1KOihKqmS3uu60o6rXaf6PgCpfThuwv5NBoNsm632yiPruWy2NRnnQ5y3amgWywWeCYmM4++J0F8l9CSx4qbv71eb7tPObx1VgxPAydKxb1xenpGfCAe0BQeGPiRIv7I2g7jbD78iwGy+WUvi81mI6xLuJBHR4/J+VRVuP7+U5p/PK3cqVjoQrPZFBUc4HZoGf9eoDdvj5lPmgwM11+YVkTJIUuZk5N3bG1z9EzBvxzcvA8ePmJrVQP2Af8FAYRCw6cJn77qWoSOTTjKQEehG4PhSLCdz5O/A3A9E0UOUoqls8efyX8XTDzIhzg+P7sAebFTGlq2XEzPF33yCqi61i8uPqC/Q0njy/uQJBYAAAAASUVORK5CYII='
     );
     
     // Split the numbers into a dataset with each individual number
@@ -75,12 +77,15 @@ export function readNumbers(buffer, type = "") {
     let str = "";
     let numberMatch = [];
     let numbersList;
+    let numberValues = "";
     let foundPixel = false;
 
     if (type == "buff" || type == "animate") {
         numbersList = buffNumbers;
+        numberValues = buffValues;
     } else if (type == "health" || type == "prayer") {
         numbersList = barNumbers;
+        numberValues = barValues;
     }
 
     // Loop through each number in our list
@@ -123,7 +128,7 @@ export function readNumbers(buffer, type = "") {
                             
                             // Not a match, so continue to the next match attempt
                             if (!match) continue;
-
+                
                             // All pixels in number match, so add it to our number array
                             numberMatch.push({ startWidth: bw, startHeight: bh, num: a });
                         }
@@ -144,28 +149,39 @@ export function readNumbers(buffer, type = "") {
         match = false;
     }
 
+    // console.log(numberMatch);
+
     if (numberMatch.length > 0) {
         numberMatch.sort((a, b) => a.startWidth - b.startWidth).sort((a, b) => a.startHeight - b.startHeight);
         
-        // console.log(numberMatch);
-        // All number images must be in this format, 0123456789
         for (let m = 0; m < numberMatch.length; m++) {
             if (numberMatch[m].num == 10) {
+                // Th
                 if (type == "buff" || type == "animate") {
                     str = (str * 60) + 59;
                 } else if (type == "health") {
+                    // Legacy has less HP, so scale by 10
                     let isLegacy = checkLegacy(numberMatch, m + 1);
 
                     if (isLegacy) {
                         str *= 10;
+                    } else if (str.includes("K")) {
+                        str = str.replace("K", "");
+
+                        // Can't track the dot, because it's only two pixels. Assume if 3 digits, then has dot. If 2 digits, then no dot.
+                        if (str >= 100) {
+                            str *= 100;
+                        } else {
+                            str *= 1000;
+                        }
                     }
                 }
 
                 break;
-            } else if (numberMatch[m].num == 11) {
+            } else if (numberMatch[m].num == 11 && type == "animate") {
                 break;
             } else {
-                str += "0123456789"[numberMatch[m].num];
+                str += numberValues[numberMatch[m].num];
             }
         }
     }
