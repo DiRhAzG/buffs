@@ -26463,7 +26463,7 @@ function getBar(img, barName) {
             // ImageReader.outputImage(buffer);
             let bar = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.readNumbers(buffer, numberType);
             
-            // console.log(bar);
+            console.log(bar);
             if (bar == undefined || bar == "") {
                 return undefined;
             } else {

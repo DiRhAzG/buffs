@@ -45,7 +45,7 @@ export function getBar(img, barName) {
             // ImageReader.outputImage(buffer);
             let bar = ImageReader.readNumbers(buffer, numberType);
             
-            // console.log(bar);
+            console.log(bar);
             if (bar == undefined || bar == "") {
                 return undefined;
             } else {
