@@ -27114,17 +27114,21 @@ async function start() {
 };
 
 function loopChecks() {
-    let img = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.captureHoldFullRs();
+    if (localStorage.onOffSwitch == "true") {
+        let img = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.captureHoldFullRs();
 
-    if (!foundChat) {
-        findChatBox(img);
+        if (!foundChat) {
+            findChatBox(img);
+        } else {
+            readChatBox(img);
+        }
+
+        checkBuff(img);
+        checkBar(img);
+        checkWarnings();
     } else {
-        readChatBox(img);
+        clearWarnings();
     }
-
-    checkBuff(img);
-    checkBar(img);
-    checkWarnings();
 
     setTimeout(loopChecks, localStorage.refreshRate);
 }
@@ -27287,16 +27291,24 @@ let displayWarnings = () => {
             }
             // console.log(topWarning.friendlyName);
         } else {
-            if (window.alt1) alt1.setTooltip("");
-    
-            for (let w = 0; w < warnings.length; w++) {
-                _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + warnings[w].name).removeClass("warning");
-            }
+            clearWarnings();
         }
     } catch (ex) {
         console.log(ex);
     }
     
+}
+
+let clearWarnings = () => {
+    try {
+        if (window.alt1) alt1.setTooltip("");
+        
+        for (let w = 0; w < warnings.length; w++) {
+            _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + warnings[w].name).removeClass("warning");
+        }
+    } catch (ex) {
+        console.log(ex);
+    }
 }
 
 /* Find the Chat Box */
