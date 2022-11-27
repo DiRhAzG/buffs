@@ -27317,7 +27317,8 @@ let displayWarnings = () => {
             // console.log(topWarning.friendlyName);
 
             if (topWarning.name == "lowHealthBar") {
-                console.log(barStats);
+                let time = new Date();
+                console.log(`${time} - ${barStats[0].value}`);
             }
         } else {
             clearWarnings();
