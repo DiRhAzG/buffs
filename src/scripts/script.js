@@ -161,7 +161,27 @@ let checkBuffTime = () => {
         let currentTime = timeBuffer? moment.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds') : moment.utc(new Date());
 
         if (bt.expireTime == undefined || bt.expireTime < currentTime) {
-            return true;
+            if (bt.name == "excaliburBuff") {
+                let health = barStats.find(bs => bs.name == "lowHealthBar");
+                let excaliburThreshold = localStorage["excaliburSlider"];
+        
+                if (health.value <= excaliburThreshold) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else if (bt.name == "ritualShardBuff") {
+                let prayer = barStats.find(bs => bs.name == "lowPrayerBar");
+                let ritualShardThreshold = localStorage["ritualShardSlider"];
+
+                if (prayer.value <= ritualShardThreshold) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return true;
+            }
         } else {
             return false;
         }

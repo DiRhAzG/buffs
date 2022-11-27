@@ -131,17 +131,20 @@
 				<tr>
 					<td>
 						<div class="list-group">
+							<div class="list-group-item setting-item settings-container">
+								<label class="form-check-label form-check form-switch col-settings border-right" for="mouseTooltip" title="Display warnings on mouse.">
+									<input class="form-check-input input-padding" type="checkbox" role="switch" id="mouseTooltip" />Mouse Tooltip
+								</label>
+								<label class="form-check-label form-check form-switch col-settings" for="buffColor" title="Change color of buff box for warnings.">
+									<input class="form-check-input input-padding" type="checkbox" role="switch" id="buffColor" />Buff Colors
+								</label>
+							</div>
 							<label class="list-group-item setting-item">
-								<div class="form-check form-switch">
-									<label class="form-check-label" for="mouseTooltip" title="Display warnings on mouse.">
-										<input class="form-check-input" type="checkbox" role="switch" id="mouseTooltip" />Mouse Tooltip
-									</label>
-								</div>
-							</label>
-							<label class="list-group-item setting-item">
-								<div class="form-check form-switch">
-									<label class="form-check-label" for="buffColor" title="Change color of buff box for warnings.">
-										<input class="form-check-input" type="checkbox" role="switch" id="buffColor" />Buff Colors
+								<div>
+									<label class="form-check-label" for="timeBufferSlider" title="Buffer time for warnings to be displayed.">
+										Time Buffer(s)
+										<input id="timeBufferSlider" class="input-range" type="range" min="1" max="60" step="1" value="15">
+										<output id="timeBufferSliderOutput">15</output>
 									</label>
 								</div>
 							</label>
@@ -165,19 +168,28 @@
 							</label>
 							<label class="list-group-item setting-item">
 								<div>
-									<label class="form-check-label" for="refreshRateSlider" title="Rate at which checks are done. The higher the refresh rate, the less accurate the app.">
-										Refresh Rate(ms)
-										<input id="refreshRateSlider" class="input-range" type="range" min="100" max="5000" step="100" value="1000">
-										<output id="refreshRateSliderOutput">1000</output>
+									<label class="form-check-label" for="excaliburSlider" title="Threshold to trigger Excalibur warning.">
+										Excalibur Threshold
+										<input id="excaliburSlider" class="input-range" type="range" min="1000" max="15000" step="500" value="8000">
+										<output id="excaliburSliderOutput">8000</output>
 									</label>
 								</div>
 							</label>
 							<label class="list-group-item setting-item">
 								<div>
-									<label class="form-check-label" for="timeBufferSlider" title="Buffer time for warnings to be displayed.">
-										Time Buffer(s)
-										<input id="timeBufferSlider" class="input-range" type="range" min="1" max="60" step="1" value="15">
-										<output id="timeBufferSliderOutput">15</output>
+									<label class="form-check-label" for="ritualShardSlider" title="Threshold to trigger Ritual Shard warning.">
+										Shard Threshold
+										<input id="ritualShardSlider" class="input-range" type="range" min="0" max="1100" step="50" value="700">
+										<output id="ritualShardSliderOutput">700</output>
+									</label>
+								</div>
+							</label>
+							<label class="list-group-item setting-item">
+								<div>
+									<label class="form-check-label" for="refreshRateSlider" title="Rate at which checks are done. The higher the refresh rate, the less accurate the app.">
+										Refresh Rate(ms)
+										<input id="refreshRateSlider" class="input-range" type="range" min="100" max="5000" step="100" value="1000">
+										<output id="refreshRateSliderOutput">1000</output>
 									</label>
 								</div>
 							</label>

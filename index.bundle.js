@@ -4172,7 +4172,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".buff-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 180px;\r\n}\r\n\r\n.setting-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n}\r\n\r\n.form-check {\r\n    margin-bottom: 0;\r\n    min-height: 0;\r\n}\r\n\r\n.form-check-label {\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    -webkit-touch-callout: none; /* iOS Safari */\r\n    -webkit-user-select: none; /* Safari */\r\n     -khtml-user-select: none; /* Konqueror HTML */\r\n       -moz-user-select: none; /* Old versions of Firefox */\r\n        -ms-user-select: none; /* Internet Explorer/Edge */\r\n            user-select: none; /* Non-prefixed version, currently\r\n                                  supported by Chrome, Edge, Opera and Firefox */\r\n}\r\n\r\ninput[type=\"checkbox\"]:focus {\r\n    outline: none !important;\r\n    box-shadow: 0 0 0 rgb(255, 255, 255) !important;\r\n}\r\n\r\n.table-buffs, .table-compare, .table-settings{\r\n    margin-top: 10px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.input-range {\r\n    vertical-align: middle;\r\n}\r\n\r\n.warning {\r\n    background-color: #e60808c5;\r\n}\r\n\r\n#onOffSwitch {\r\n    width: 4.5em;\r\n    height: 2em;\r\n    margin-left: -34px;\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n\r\n.form-check-label {\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n.slider:after {\r\n    content:'OFF';\r\n    color: gray;\r\n    display: block;\r\n    position: absolute;\r\n    transform: translate(-50%,-50%);\r\n    top: 55%;\r\n    left: 35%;\r\n    font-size: 15px;\r\n}\r\n\r\ninput:checked + .slider:after {  \r\n    content:'ON';\r\n    color: white;\r\n    left: -37%;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".buff-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 170px;\r\n}\r\n\r\n.setting-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n}\r\n\r\n.form-check {\r\n    margin-bottom: 0;\r\n    min-height: 0;\r\n}\r\n\r\n.list-group-item {\r\n    padding: .3rem .7rem;\r\n}\r\n\r\n.form-check-label {\r\n    font-size: 14px;\r\n    font-weight: bold;\r\n    -webkit-touch-callout: none; /* iOS Safari */\r\n    -webkit-user-select: none; /* Safari */\r\n     -khtml-user-select: none; /* Konqueror HTML */\r\n       -moz-user-select: none; /* Old versions of Firefox */\r\n        -ms-user-select: none; /* Internet Explorer/Edge */\r\n            user-select: none; /* Non-prefixed version, currently\r\n                                  supported by Chrome, Edge, Opera and Firefox */\r\n}\r\n\r\ninput[type=\"checkbox\"]:focus {\r\n    outline: none !important;\r\n    box-shadow: 0 0 0 rgb(255, 255, 255) !important;\r\n}\r\n\r\n.table-buffs, .table-compare, .table-settings{\r\n    margin-top: 10px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.input-range {\r\n    vertical-align: middle;\r\n}\r\n\r\n.warning {\r\n    background-color: #e60808c5;\r\n}\r\n\r\n#onOffSwitch {\r\n    width: 4.5em;\r\n    height: 2em;\r\n    margin-left: -34px;\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n\r\n.form-check-label {\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n.slider:after {\r\n    content:'OFF';\r\n    color: gray;\r\n    display: block;\r\n    position: absolute;\r\n    transform: translate(-50%,-50%);\r\n    top: 55%;\r\n    left: 35%;\r\n    font-size: 15px;\r\n}\r\n\r\ninput:checked + .slider:after {  \r\n    content:'ON';\r\n    color: white;\r\n    left: -37%;\r\n}\r\n\r\n.settings-container {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    padding: 0rem 0rem;\r\n}\r\n  \r\n.col-settings {\r\n    width: 50%;\r\n    /* padding: .3rem .7rem; */\r\n}\r\n\r\n.border-right {\r\n    border-right: 1px solid white;\r\n}\r\n\r\nlabel.form-switch {\r\n    padding: .3rem 0rem .3rem 2.9rem;\r\n}\r\n\r\ninput[type=\"range\"] {\r\n    width: 140px;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -26482,13 +26482,16 @@ function getBar(img, barName) {
 /* Get the bar stats */
 function checkBar(img, selectedBar, barStats) {
 
-    for (let b = 0; b < selectedBar.length; b++) {
-        let barValue = getBar(img, selectedBar[b]);
-        let foundBar = barStats.find(bt => bt.name === selectedBar[b]);
+    // Changing to read health and prayer at all times, for buffs like excalibur and ritual shard.
+    let checkStats = ["lowHealthBar", "lowPrayerBar"];
+
+    for (let b = 0; b < checkStats.length; b++) {
+        let barValue = getBar(img, checkStats[b]);
+        let foundBar = barStats.find(bt => bt.name === checkStats[b]);
 
         if (!foundBar) {
             // Bar stat doesn't exist, so add it.
-            barStats.push({ name: selectedBar[b], value: barValue })
+            barStats.push({ name: checkStats[b], value: barValue })
         } else if (barValue != undefined && barValue != "") {
             foundBar.value = barValue;
         }
@@ -27233,7 +27236,27 @@ let checkBuffTime = () => {
         let currentTime = timeBuffer? moment__WEBPACK_IMPORTED_MODULE_5__.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds') : moment__WEBPACK_IMPORTED_MODULE_5__.utc(new Date());
 
         if (bt.expireTime == undefined || bt.expireTime < currentTime) {
-            return true;
+            if (bt.name == "excaliburBuff") {
+                let health = barStats.find(bs => bs.name == "lowHealthBar");
+                let excaliburThreshold = localStorage["excaliburSlider"];
+        
+                if (health.value <= excaliburThreshold) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else if (bt.name == "ritualShardBuff") {
+                let prayer = barStats.find(bs => bs.name == "lowPrayerBar");
+                let ritualShardThreshold = localStorage["ritualShardSlider"];
+
+                if (prayer.value <= ritualShardThreshold) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return true;
+            }
         } else {
             return false;
         }
@@ -27539,6 +27562,8 @@ let defaultSettings = [
     { name: "lowPrayerSlider", value: "200" },
     { name: "refreshRateSlider", value: "1000" },
     { name: "timeBufferSlider", value: "15" },
+    { name: "excaliburSlider", value: "8000" },
+    { name: "ritualShardSlider", value: "700" },
     { name: "overloadBuff", value: "false" },
     { name: "animateDeadBuff", value: "false" },
     { name: "excaliburBuff", value: "false" },

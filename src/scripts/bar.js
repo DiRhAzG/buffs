@@ -64,13 +64,16 @@ export function getBar(img, barName) {
 /* Get the bar stats */
 export function checkBar(img, selectedBar, barStats) {
 
-    for (let b = 0; b < selectedBar.length; b++) {
-        let barValue = getBar(img, selectedBar[b]);
-        let foundBar = barStats.find(bt => bt.name === selectedBar[b]);
+    // Changing to read health and prayer at all times, for buffs like excalibur and ritual shard.
+    let checkStats = ["lowHealthBar", "lowPrayerBar"];
+
+    for (let b = 0; b < checkStats.length; b++) {
+        let barValue = getBar(img, checkStats[b]);
+        let foundBar = barStats.find(bt => bt.name === checkStats[b]);
 
         if (!foundBar) {
             // Bar stat doesn't exist, so add it.
-            barStats.push({ name: selectedBar[b], value: barValue })
+            barStats.push({ name: checkStats[b], value: barValue })
         } else if (barValue != undefined && barValue != "") {
             foundBar.value = barValue;
         }
