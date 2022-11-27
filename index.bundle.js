@@ -26464,9 +26464,16 @@ function getBar(img, barName) {
             let bar = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.readNumbers(buffer, numberType);
             
             // console.log(bar);
+
             if (bar == undefined || bar == "") {
                 return undefined;
             } else {
+                if (barName == "lowHealthBar" && bar < localStorage.lowHealthSlider) {
+                    let time = new Date();
+                    console.log(`${time} - ${barStats[0].value}`);
+                    _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
+                }
+
                 return Number(bar);
             }
         }
@@ -27315,11 +27322,6 @@ let displayWarnings = () => {
                 _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + noWarning[nw].name).removeClass("warning");
             }
             // console.log(topWarning.friendlyName);
-
-            if (topWarning.name == "lowHealthBar") {
-                let time = new Date();
-                console.log(`${time} - ${barStats[0].value}`);
-            }
         } else {
             clearWarnings();
         }

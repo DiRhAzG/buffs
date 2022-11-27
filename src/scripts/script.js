@@ -239,11 +239,6 @@ let displayWarnings = () => {
                 $("label#" + noWarning[nw].name).removeClass("warning");
             }
             // console.log(topWarning.friendlyName);
-
-            if (topWarning.name == "lowHealthBar") {
-                let time = new Date();
-                console.log(`${time} - ${barStats[0].value}`);
-            }
         } else {
             clearWarnings();
         }
