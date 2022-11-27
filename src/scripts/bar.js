@@ -50,9 +50,9 @@ export function getBar(img, barName) {
             if (bar == undefined || bar == "") {
                 return undefined;
             } else {
-                if (barName == "lowHealthBar" && bar < localStorage.lowHealthSlider) {
+                if (barName == "lowHealthBar" && Number(bar) <= localStorage.lowHealthSlider) {
                     let time = new Date();
-                    console.log(`${time} - ${barStats[0].value}`);
+                    console.log(`${time} - ${bar}`);
                     ImageReader.outputImage(buffer);
                 }
 

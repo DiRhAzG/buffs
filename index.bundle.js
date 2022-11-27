@@ -26468,9 +26468,9 @@ function getBar(img, barName) {
             if (bar == undefined || bar == "") {
                 return undefined;
             } else {
-                if (barName == "lowHealthBar" && bar < localStorage.lowHealthSlider) {
+                if (barName == "lowHealthBar" && Number(bar) <= localStorage.lowHealthSlider) {
                     let time = new Date();
-                    console.log(`${time} - ${barStats[0].value}`);
+                    console.log(`${time} - ${bar}`);
                     _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
                 }
 
@@ -27119,7 +27119,7 @@ async function start() {
         await updateSelections();
 
         // Main timer that will repeatedly run the other checks
-        setTimeout(loopChecks, localStorage.refreshRate);
+        setTimeout(loopChecks, localStorage.refreshRateSlider);
     } catch (ex) {
         console.log(ex);
     }
@@ -27142,7 +27142,7 @@ function loopChecks() {
         clearWarnings();
     }
 
-    setTimeout(loopChecks, localStorage.refreshRate);
+    setTimeout(loopChecks, localStorage.refreshRateSlider);
 }
 
 /* Used for testing, using pasted screenshots */

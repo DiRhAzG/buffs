@@ -36,7 +36,7 @@ export async function start() {
         await updateSelections();
 
         // Main timer that will repeatedly run the other checks
-        setTimeout(loopChecks, localStorage.refreshRate);
+        setTimeout(loopChecks, localStorage.refreshRateSlider);
     } catch (ex) {
         console.log(ex);
     }
@@ -59,7 +59,7 @@ function loopChecks() {
         clearWarnings();
     }
 
-    setTimeout(loopChecks, localStorage.refreshRate);
+    setTimeout(loopChecks, localStorage.refreshRateSlider);
 }
 
 /* Used for testing, using pasted screenshots */
