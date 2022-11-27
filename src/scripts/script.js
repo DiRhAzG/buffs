@@ -45,16 +45,21 @@ export async function start() {
 function loopChecks() {
     try {
         if (localStorage.onOffSwitch == "true") {
-            let img = a1lib.captureHoldFullRs();
+            try {
+                let img = a1lib.captureHoldFullRs();
     
-            if (!foundChat) {
-                findChatBox(img);
-            } else {
-                readChatBox(img);
+                if (!foundChat) {
+                    findChatBox(img);
+                } else {
+                    readChatBox(img);
+                }
+        
+                checkBuff(img);
+                checkBar(img);
+            } catch (ex) {
+                console.log(ex);
             }
-    
-            checkBuff(img);
-            checkBar(img);
+
             checkWarnings();
         } else {
             clearWarnings();

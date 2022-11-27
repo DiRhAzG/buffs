@@ -27134,16 +27134,21 @@ async function start() {
 function loopChecks() {
     try {
         if (localStorage.onOffSwitch == "true") {
-            let img = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.captureHoldFullRs();
+            try {
+                let img = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.captureHoldFullRs();
     
-            if (!foundChat) {
-                findChatBox(img);
-            } else {
-                readChatBox(img);
+                if (!foundChat) {
+                    findChatBox(img);
+                } else {
+                    readChatBox(img);
+                }
+        
+                checkBuff(img);
+                checkBar(img);
+            } catch (ex) {
+                console.log(ex);
             }
-    
-            checkBuff(img);
-            checkBar(img);
+
             checkWarnings();
         } else {
             clearWarnings();
