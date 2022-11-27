@@ -7,7 +7,6 @@ import * as moment from 'moment';
 import * as $ from "../js/jquery.js";
 
 let foundChat = false;
-let chatLines;
 let selectedBuffs = [];
 let selectedBar = [];
 let buffTimers = [];
@@ -239,6 +238,10 @@ let displayWarnings = () => {
                 $("label#" + noWarning[nw].name).removeClass("warning");
             }
             // console.log(topWarning.friendlyName);
+
+            if (topWarning.name == "lowHealthBar") {
+                console.log(barStats);
+            }
         } else {
             clearWarnings();
         }

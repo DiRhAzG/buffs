@@ -27083,7 +27083,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let foundChat = false;
-let chatLines;
 let selectedBuffs = [];
 let selectedBar = [];
 let buffTimers = [];
@@ -27315,6 +27314,10 @@ let displayWarnings = () => {
                 _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + noWarning[nw].name).removeClass("warning");
             }
             // console.log(topWarning.friendlyName);
+
+            if (topWarning.name == "lowHealthBar") {
+                console.log(barStats);
+            }
         } else {
             clearWarnings();
         }
