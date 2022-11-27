@@ -56,6 +56,12 @@ export function getBar(img, barName) {
                     ImageReader.outputImage(buffer);
                 }
 
+                if (barName == "lowPrayerBar" && Number(bar) <= localStorage.lowPrayerSlider) {
+                    let time = new Date();
+                    console.log(`${time} - ${bar}`);
+                    ImageReader.outputImage(buffer);
+                }
+
                 return Number(bar);
             }
         }

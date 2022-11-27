@@ -26474,6 +26474,12 @@ function getBar(img, barName) {
                     _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
                 }
 
+                if (barName == "lowPrayerBar" && Number(bar) <= localStorage.lowPrayerSlider) {
+                    let time = new Date();
+                    console.log(`${time} - ${bar}`);
+                    _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
+                }
+
                 return Number(bar);
             }
         }
