@@ -27083,6 +27083,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let foundChat = false;
+let chatLines;
 let selectedBuffs = [];
 let selectedBar = [];
 let buffTimers = [];
