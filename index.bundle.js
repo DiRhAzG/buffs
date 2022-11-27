@@ -26470,13 +26470,13 @@ function getBar(img, barName) {
             } else {
                 if (barName == "lowHealthBar" && Number(bar) <= localStorage.lowHealthSlider) {
                     let time = new Date();
-                    console.log(`${time} - ${bar}`);
+                    console.log(`${time} - Health ${bar}`);
                     _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
                 }
 
                 if (barName == "lowPrayerBar" && Number(bar) <= localStorage.lowPrayerSlider) {
                     let time = new Date();
-                    console.log(`${time} - ${bar}`);
+                    console.log(`${time} - Prayer ${bar}`);
                     _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
                 }
 
