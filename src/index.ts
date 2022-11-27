@@ -17,6 +17,8 @@ let defaultSettings = [
 	{ name: "lowPrayerSlider", value: "200" },
 	{ name: "refreshRateSlider", value: "1000" },
 	{ name: "timeBufferSlider", value: "15" },
+	{ name: "excaliburSlider", value: "8000" },
+	{ name: "ritualShardSlider", value: "700" },
 
 	{ name: "overloadBuff", value: "false" },
 	{ name: "animateDeadBuff", value: "false" },
