@@ -18,7 +18,7 @@ let defaultSettings = [
 	{ name: "refreshRateSlider", value: "1000" },
 	{ name: "timeBufferSlider", value: "15" },
 	{ name: "excaliburSlider", value: "8000" },
-	{ name: "ritualShardSlider", value: "700" },
+	{ name: "ritualShardSlider", value: "650" },
 
 	{ name: "overloadBuff", value: "false" },
 	{ name: "animateDeadBuff", value: "false" },
@@ -27,7 +27,7 @@ let defaultSettings = [
 	{ name: "ritualShardBuff", value: "false" },
 	{ name: "weaponPoisonBuff", value: "false" },
 	{ name: "antifireBuff", value: "false" },
-	{ name: "placeholderBuff", value: "false" },
+	{ name: "aggressionBuff", value: "false" },
 	{ name: "lowHealthBar", value: "false" },
 	{ name: "lowPrayerBar", value: "false" }
 ]

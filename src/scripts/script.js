@@ -21,10 +21,11 @@ let warnings = [
     { id: 3, name: "antifireBuff", friendlyName: "Antifire", timeBuffer: true },
     { id: 4, name: "lowPrayerBar", friendlyName: "Low Prayer", timeBuffer: false },
     { id: 5, name: "overloadBuff", friendlyName: "Overload", timeBuffer: true },
-    { id: 6, name: "prayerRenewalBuff", friendlyName: "Prayer Renewal", timeBuffer: true },
-    { id: 7, name: "excaliburBuff", friendlyName: "Excalibur", timeBuffer: false },
-    { id: 8, name: "ritualShardBuff", friendlyName: "Ritual Shard", timeBuffer: false },
-    { id: 9, name: "weaponPoisonBuff", friendlyName: "Weapon Poison", timeBuffer: true }
+    { id: 6, name: "aggressionBuff", friendlyName: "Aggression", timeBuffer: true },
+    { id: 7, name: "prayerRenewalBuff", friendlyName: "Prayer Renewal", timeBuffer: true },
+    { id: 8, name: "excaliburBuff", friendlyName: "Excalibur", timeBuffer: false },
+    { id: 9, name: "ritualShardBuff", friendlyName: "Ritual Shard", timeBuffer: false },
+    { id: 10, name: "weaponPoisonBuff", friendlyName: "Weapon Poison", timeBuffer: true }
 ];
 
 /* Main function to run everything else */
