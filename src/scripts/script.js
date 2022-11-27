@@ -7,6 +7,7 @@ import * as moment from 'moment';
 import * as $ from "../js/jquery.js";
 
 let foundChat = false;
+let chatLines;
 let selectedBuffs = [];
 let selectedBar = [];
 let buffTimers = [];
