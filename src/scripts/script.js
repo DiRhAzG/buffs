@@ -43,20 +43,24 @@ export async function start() {
 };
 
 function loopChecks() {
-    if (localStorage.onOffSwitch == "true") {
-        let img = a1lib.captureHoldFullRs();
-
-        if (!foundChat) {
-            findChatBox(img);
+    try {
+        if (localStorage.onOffSwitch == "true") {
+            let img = a1lib.captureHoldFullRs();
+    
+            if (!foundChat) {
+                findChatBox(img);
+            } else {
+                readChatBox(img);
+            }
+    
+            checkBuff(img);
+            checkBar(img);
+            checkWarnings();
         } else {
-            readChatBox(img);
+            clearWarnings();
         }
-
-        checkBuff(img);
-        checkBar(img);
-        checkWarnings();
-    } else {
-        clearWarnings();
+    } catch (ex) {
+        console.log(ex);
     }
 
     setTimeout(loopChecks, localStorage.refreshRateSlider);
