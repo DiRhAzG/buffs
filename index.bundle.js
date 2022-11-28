@@ -27273,7 +27273,7 @@ let checkBuffTime = () => {
                 let prayer = barStats.find(bs => bs.name == "lowPrayerBar");
                 let ritualShardThreshold = localStorage["ritualShardSlider"];
 
-                console.log(prayer);
+                console.log(prayer.value);
                 console.log(ritualShardThreshold);
                 if (prayer.value <= ritualShardThreshold) {
                     return true;
