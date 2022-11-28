@@ -50,18 +50,6 @@ export function getBar(img, barName) {
             if (bar == undefined || bar == "") {
                 return undefined;
             } else {
-                if (barName == "lowHealthBar" && Number(bar) <= localStorage.lowHealthSlider) {
-                    let time = new Date();
-                    console.log(`${time} - Health ${bar}`);
-                    ImageReader.outputImage(buffer);
-                }
-
-                if (barName == "lowPrayerBar" && Number(bar) <= localStorage.lowPrayerSlider) {
-                    let time = new Date();
-                    console.log(`${time} - Prayer ${bar}`);
-                    ImageReader.outputImage(buffer);
-                }
-
                 return Number(bar);
             }
         }

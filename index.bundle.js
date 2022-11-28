@@ -26468,18 +26468,6 @@ function getBar(img, barName) {
             if (bar == undefined || bar == "") {
                 return undefined;
             } else {
-                if (barName == "lowHealthBar" && Number(bar) <= localStorage.lowHealthSlider) {
-                    let time = new Date();
-                    console.log(`${time} - Health ${bar}`);
-                    _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
-                }
-
-                if (barName == "lowPrayerBar" && Number(bar) <= localStorage.lowPrayerSlider) {
-                    let time = new Date();
-                    console.log(`${time} - Prayer ${bar}`);
-                    _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
-                }
-
                 return Number(bar);
             }
         }
@@ -27273,8 +27261,6 @@ let checkBuffTime = () => {
                 let prayer = barStats.find(bs => bs.name == "lowPrayerBar");
                 let ritualShardThreshold = localStorage["ritualShardSlider"];
 
-                console.log(prayer.value);
-                console.log(ritualShardThreshold);
                 if (prayer.value <= ritualShardThreshold) {
                     return true;
                 } else {
