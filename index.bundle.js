@@ -26561,7 +26561,7 @@ function getBuff(img, buffName) {
         let numberType = buffName == "animateDeadBuff"? "animate" : "buff";
 
         for (let fb = 0; fb < foundBuff.length; fb++) {
-            buffPosition = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.getPosition(img, foundBuff[0].imgBuffer, 0, 0, 27, 27);
+            buffPosition = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.getPosition(img, foundBuff[fb].imgBuffer, 0, 0, 27, 27);
  
              if (buffPosition != undefined) {
                  break;
