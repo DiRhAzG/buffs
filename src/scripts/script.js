@@ -19,12 +19,12 @@ let warnings = [
     { id: 1, name: "lowHealthBar", friendlyName: "Low Health", timeBuffer: false },
     { id: 2, name: "animateDeadBuff", friendlyName: "Animate Dead", timeBuffer: true },
     { id: 3, name: "antifireBuff", friendlyName: "Antifire", timeBuffer: true },
-    { id: 4, name: "lowPrayerBar", friendlyName: "Low Prayer", timeBuffer: false },
-    { id: 5, name: "overloadBuff", friendlyName: "Overload", timeBuffer: true },
-    { id: 6, name: "aggressionBuff", friendlyName: "Aggression", timeBuffer: true },
-    { id: 7, name: "prayerRenewalBuff", friendlyName: "Prayer Renewal", timeBuffer: true },
-    { id: 8, name: "excaliburBuff", friendlyName: "Excalibur", timeBuffer: false },
-    { id: 9, name: "ritualShardBuff", friendlyName: "Ritual Shard", timeBuffer: false },
+    { id: 4, name: "ritualShardBuff", friendlyName: "Ritual Shard", timeBuffer: false },
+    { id: 5, name: "lowPrayerBar", friendlyName: "Low Prayer", timeBuffer: false },
+    { id: 6, name: "overloadBuff", friendlyName: "Overload", timeBuffer: true },
+    { id: 7, name: "aggressionBuff", friendlyName: "Aggression", timeBuffer: true },
+    { id: 8, name: "prayerRenewalBuff", friendlyName: "Prayer Renewal", timeBuffer: true },
+    { id: 9, name: "excaliburBuff", friendlyName: "Excalibur", timeBuffer: false },
     { id: 10, name: "weaponPoisonBuff", friendlyName: "Weapon Poison", timeBuffer: true }
 ];
 
@@ -93,14 +93,6 @@ let loadImages = async () => {
     await Buff.loadBuffImages();
     await Bar.loadBarImages();
 };
-
-// export function reset() {
-//     z.currentPhase = 1;
-//     z.currentEnrage = -1;
-//     attack = { currentAttack: 'N/A', nextAttack: 'Tendrils' };
-//     atk.setAttacks(z.currentEnrage);
-//     atk.resetAttacks();
-// };
 
 export async function updateSelections() {
     await updateBuffSettings();
@@ -293,20 +285,3 @@ let readChatBox = (img) => {
 let numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-
-// let debug = () => {
-//     for (let l = 0; l < chatLines.length; l++) {
-//         let line = chatLines[l].toLowerCase();
-
-//         if (line.includes("zhi")) {
-//             if (line.includes("enrage")) {
-//                 setEnrage(Number(line.slice(10).replace(/\D/g, "")));
-//             } else if (line.includes("clear")) {
-//                 reset();
-//             } else if (line.includes("smp")) {
-//                 setSpecPercent(0);
-//             }
-//         }
-
-//     }
-// }
