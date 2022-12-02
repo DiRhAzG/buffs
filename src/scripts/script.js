@@ -195,7 +195,7 @@ let checkBuffTime = () => {
 let checkLowStats = () => {
     lowStats = barStats.filter((bs) => {
         let foundSetting = localStorage[bs.name.replace("Bar", "Slider")];
-        let selected = selectedBar.find(s => s.name == bs.name);
+        let selected = selectedBar.find(s => s == bs.name);
 
         if (foundSetting && bs.value <= foundSetting && selected) return true;
         
