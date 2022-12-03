@@ -13,6 +13,7 @@ let defaultSettings = [
 	{ name: "onOffSwitch", value: "true" },
 	{ name: "mouseTooltip", value: "true" },
 	{ name: "buffColor", value: "true" },
+	{ name: "soundsOn", value: "false" },
 	{ name: "lowHealthSlider", value: "5000" },
 	{ name: "lowPrayerSlider", value: "200" },
 	{ name: "refreshRateSlider", value: "1000" },
@@ -86,6 +87,8 @@ $(".contenttab").click(function() {
 		setBuffsTab();
 	} else if (this.id == "compare-tab") {
 		setCompareTab();
+	} else if (this.id == "alerts-tab") {
+		setAlertsTab();
 	} else if (this.id == "settings-tab") {
 		setSettingsTab();
 	}
@@ -94,18 +97,28 @@ $(".contenttab").click(function() {
 export function setBuffsTab() {
 	$('#buffs-content').show();
 	$('#compare-content').hide();
+	$('#alerts-content').hide();
 	$('#settings-content').hide();
 };
 
 export function setCompareTab() {
 	$('#buffs-content').hide();
 	$('#compare-content').show();
+	$('#alerts-content').hide();
+	$('#settings-content').hide();
+};
+
+export function setAlertsTab() {
+	$('#buffs-content').hide();
+	$('#compare-content').hide();
+	$('#alerts-content').show();
 	$('#settings-content').hide();
 };
 
 export function setSettingsTab() {
 	$('#buffs-content').hide();
 	$('#compare-content').hide();
+	$('#alerts-content').hide();
 	$('#settings-content').show();
 };
 

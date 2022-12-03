@@ -4172,7 +4172,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".buff-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 170px;\r\n}\r\n\r\n.setting-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n}\r\n\r\n.form-check {\r\n    margin-bottom: 0;\r\n    min-height: 0;\r\n}\r\n\r\n.list-group-item {\r\n    padding: .3rem .7rem;\r\n}\r\n\r\n.form-check-label {\r\n    font-size: 14px;\r\n    font-weight: bold;\r\n    -webkit-touch-callout: none; /* iOS Safari */\r\n    -webkit-user-select: none; /* Safari */\r\n     -khtml-user-select: none; /* Konqueror HTML */\r\n       -moz-user-select: none; /* Old versions of Firefox */\r\n        -ms-user-select: none; /* Internet Explorer/Edge */\r\n            user-select: none; /* Non-prefixed version, currently\r\n                                  supported by Chrome, Edge, Opera and Firefox */\r\n}\r\n\r\ninput[type=\"checkbox\"]:focus {\r\n    outline: none !important;\r\n    box-shadow: 0 0 0 rgb(255, 255, 255) !important;\r\n}\r\n\r\n.table-buffs, .table-compare, .table-settings{\r\n    margin-top: 10px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.input-range {\r\n    vertical-align: middle;\r\n}\r\n\r\n.warning {\r\n    background-color: #e60808c5;\r\n}\r\n\r\n#onOffSwitch {\r\n    width: 4.5em;\r\n    height: 2em;\r\n    margin-left: -34px;\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n\r\n.form-check-label {\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n.slider:after {\r\n    content:'OFF';\r\n    color: gray;\r\n    display: block;\r\n    position: absolute;\r\n    transform: translate(-50%,-50%);\r\n    top: 56%;\r\n    left: 35%;\r\n    font-size: 15px;\r\n}\r\n\r\ninput:checked + .slider:after {  \r\n    content:'ON';\r\n    color: white;\r\n    left: -37%;\r\n}\r\n\r\n.settings-container {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    padding: 0rem 0rem;\r\n}\r\n  \r\n.col-settings {\r\n    width: 50%;\r\n    /* padding: .3rem .7rem; */\r\n}\r\n\r\n.border-right {\r\n    border-right: 1px solid white;\r\n}\r\n\r\nlabel.form-switch {\r\n    padding: .3rem 0rem .3rem 2.9rem;\r\n}\r\n\r\ninput[type=\"range\"] {\r\n    width: 140px;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".table-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 170px;\r\n}\r\n\r\n.setting-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n}\r\n\r\n.form-check {\r\n    margin-bottom: 0;\r\n    min-height: 0;\r\n}\r\n\r\n.list-group-item {\r\n    padding: .3rem .7rem;\r\n}\r\n\r\n.form-check-label {\r\n    font-size: 14px;\r\n    font-weight: bold;\r\n    -webkit-touch-callout: none; /* iOS Safari */\r\n    -webkit-user-select: none; /* Safari */\r\n     -khtml-user-select: none; /* Konqueror HTML */\r\n       -moz-user-select: none; /* Old versions of Firefox */\r\n        -ms-user-select: none; /* Internet Explorer/Edge */\r\n            user-select: none; /* Non-prefixed version, currently\r\n                                  supported by Chrome, Edge, Opera and Firefox */\r\n}\r\n\r\ninput[type=\"checkbox\"]:focus {\r\n    outline: none !important;\r\n    box-shadow: 0 0 0 rgb(255, 255, 255) !important;\r\n}\r\n\r\n.table-buffs, .table-compare, .table-alerts, .table-settings{\r\n    margin-top: 10px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.input-range {\r\n    vertical-align: middle;\r\n}\r\n\r\n.warning {\r\n    background-color: #e60808c5;\r\n}\r\n\r\n#onOffSwitch {\r\n    width: 4.5em;\r\n    height: 2em;\r\n    margin-left: -34px;\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n\r\n.form-check-label {\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n.slider:after {\r\n    content:'OFF';\r\n    color: gray;\r\n    display: block;\r\n    position: absolute;\r\n    transform: translate(-50%,-50%);\r\n    top: 56%;\r\n    left: 35%;\r\n    font-size: 15px;\r\n}\r\n\r\ninput:checked + .slider:after {  \r\n    content:'ON';\r\n    color: white;\r\n    left: -37%;\r\n}\r\n\r\n.settings-container {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    padding: 0rem 0rem;\r\n}\r\n  \r\n.col-settings {\r\n    width: 50%;\r\n    /* padding: .3rem .7rem; */\r\n}\r\n\r\n.border-right {\r\n    border-right: 1px solid white;\r\n}\r\n\r\nlabel.form-switch {\r\n    padding: .3rem 0rem .3rem 2.9rem;\r\n}\r\n\r\ninput[type=\"range\"] {\r\n    width: 140px;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27096,6 +27096,8 @@ let buffTimers = [];
 let barStats = [];
 let expiredBuffs = [];
 let lowStats = [];
+let alert = new Audio("src/sounds/alert_1.mp3");
+let alertPlayed = false;
 
 let warnings = [
     { id: 1, name: "lowHealthBar", friendlyName: "Low Health", timeBuffer: false },
@@ -27322,6 +27324,13 @@ let displayWarnings = () => {
             for (let nw = 0; nw < noWarning.length; nw++) {
                 _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + noWarning[nw].name).removeClass("warning");
             }
+
+            if (!alertPlayed && localStorage.soundsOn == "true") {
+                alert.play();
+
+                alertPlayed = true;
+            }
+
             // console.log(topWarning.friendlyName);
         } else {
             clearWarnings();
@@ -27339,6 +27348,8 @@ let clearWarnings = () => {
         for (let w = 0; w < warnings.length; w++) {
             _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("label#" + warnings[w].name).removeClass("warning");
         }
+
+        alertPlayed = false;
     } catch (ex) {
         console.log(ex);
     }
@@ -27527,6 +27538,7 @@ var __webpack_exports__ = {};
   \******************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "setAlertsTab": () => (/* binding */ setAlertsTab),
 /* harmony export */   "setBuffsTab": () => (/* binding */ setBuffsTab),
 /* harmony export */   "setCompareTab": () => (/* binding */ setCompareTab),
 /* harmony export */   "setSettingsTab": () => (/* binding */ setSettingsTab)
@@ -27551,6 +27563,7 @@ let defaultSettings = [
     { name: "onOffSwitch", value: "true" },
     { name: "mouseTooltip", value: "true" },
     { name: "buffColor", value: "true" },
+    { name: "soundsOn", value: "false" },
     { name: "lowHealthSlider", value: "5000" },
     { name: "lowPrayerSlider", value: "200" },
     { name: "refreshRateSlider", value: "1000" },
@@ -27620,6 +27633,9 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".contenttab").click(function () {
     else if (this.id == "compare-tab") {
         setCompareTab();
     }
+    else if (this.id == "alerts-tab") {
+        setAlertsTab();
+    }
     else if (this.id == "settings-tab") {
         setSettingsTab();
     }
@@ -27627,18 +27643,28 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".contenttab").click(function () {
 function setBuffsTab() {
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#buffs-content').show();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#compare-content').hide();
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#alerts-content').hide();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#settings-content').hide();
 }
 ;
 function setCompareTab() {
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#buffs-content').hide();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#compare-content').show();
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#alerts-content').hide();
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#settings-content').hide();
+}
+;
+function setAlertsTab() {
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#buffs-content').hide();
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#compare-content').hide();
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#alerts-content').show();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#settings-content').hide();
 }
 ;
 function setSettingsTab() {
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#buffs-content').hide();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#compare-content').hide();
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#alerts-content').hide();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#settings-content').show();
 }
 ;

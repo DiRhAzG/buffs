@@ -14,6 +14,8 @@ let buffTimers = [];
 let barStats = [];
 let expiredBuffs = [];
 let lowStats = [];
+let alert = new Audio("src/sounds/alert_1.mp3");
+let alertPlayed = false;
 
 let warnings = [
     { id: 1, name: "lowHealthBar", friendlyName: "Low Health", timeBuffer: false },
@@ -240,6 +242,13 @@ let displayWarnings = () => {
             for (let nw = 0; nw < noWarning.length; nw++) {
                 $("label#" + noWarning[nw].name).removeClass("warning");
             }
+
+            if (!alertPlayed && localStorage.soundsOn == "true") {
+                alert.play();
+
+                alertPlayed = true;
+            }
+
             // console.log(topWarning.friendlyName);
         } else {
             clearWarnings();
@@ -257,6 +266,8 @@ let clearWarnings = () => {
         for (let w = 0; w < warnings.length; w++) {
             $("label#" + warnings[w].name).removeClass("warning");
         }
+
+        alertPlayed = false;
     } catch (ex) {
         console.log(ex);
     }

@@ -11,6 +11,7 @@
 					<div id="tabcontainer">
 						<div id="buffs-tab" class="contenttab lefttab activetab">Buffs</div>
 						<div id="compare-tab" class="contenttab lefttab" hidden>Compare</div>
+						<div id="alerts-tab" class="contenttab lefttab">Alerts</div>
 						<div id="settings-tab" class="contenttab lefttab">Settings</div>
 					</div>
 				</div>
@@ -32,35 +33,35 @@
 				<tr>
 					<td>
 						<div class="list-group">
-							<label class="list-group-item buff-item"  id="lowHealthBar">
+							<label class="list-group-item table-item"  id="lowHealthBar">
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="lowHealthBar">
 										<input class="form-check-input" type="checkbox" role="switch" id="lowHealthBar" >Low Health
 									</label>
 								</div>
 							</label>
-							<label class="list-group-item buff-item" id="overloadBuff">
+							<label class="list-group-item table-item" id="overloadBuff">
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="overloadBuff">
 										<input class="form-check-input" type="checkbox" role="switch" id="overloadBuff" />Overload
 									</label>
 								</div>
 							</label>
-							<label class="list-group-item buff-item" id="animateDeadBuff">
+							<label class="list-group-item table-item" id="animateDeadBuff">
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="animateDeadBuff">
 										<input class="form-check-input" type="checkbox" role="switch" id="animateDeadBuff" />Animate Dead
 									</label>
 								</div>
 							</label>
-							<label class="list-group-item buff-item" id="excaliburBuff">
+							<label class="list-group-item table-item" id="excaliburBuff">
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="excaliburBuff">
 										<input class="form-check-input" type="checkbox" role="switch" id="excaliburBuff" />Excalibur
 									</label>
 								</div>
 							</label>
-							<label class="list-group-item buff-item" id="antifireBuff">
+							<label class="list-group-item table-item" id="antifireBuff">
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="antifireBuff">
 										<input class="form-check-input" type="checkbox" role="switch" id="antifireBuff" />Antifire
@@ -71,35 +72,35 @@
 					</td>
 					<td>
 						<div class="list-group">
-							<label class="list-group-item buff-item" id="lowPrayerBar">
+							<label class="list-group-item table-item" id="lowPrayerBar">
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="lowPrayerBar">
 										<input class="form-check-input" type="checkbox" role="switch" id="lowPrayerBar" />Low Prayer
 									</label>
 								</div>
 							</label>
-							<label class="list-group-item buff-item" id="weaponPoisonBuff">
+							<label class="list-group-item table-item" id="weaponPoisonBuff">
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="weaponPoisonBuff">
 										<input class="form-check-input" type="checkbox" role="switch" id="weaponPoisonBuff" />Weapon Poison
 									</label>
 								</div>
 							</label>
-							<label class="list-group-item buff-item" id="prayerRenewalBuff">
+							<label class="list-group-item table-item" id="prayerRenewalBuff">
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="prayerRenewalBuff">
 										<input class="form-check-input" type="checkbox" role="switch" id="prayerRenewalBuff" />Prayer Renewal
 									</label>
 								</div>
 							</label>
-							<label class="list-group-item buff-item" id="ritualShardBuff">
+							<label class="list-group-item table-item" id="ritualShardBuff">
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="ritualShardBuff">
 										<input class="form-check-input" type="checkbox" role="switch" id="ritualShardBuff" />Ritual Shard
 									</label>
 								</div>
 							</label>
-							<label class="list-group-item buff-item" id="aggressionBuff">
+							<label class="list-group-item table-item" id="aggressionBuff">
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="aggressionBuff">
 										<input class="form-check-input" type="checkbox" role="switch" id="aggressionBuff" />Aggression
@@ -126,19 +127,43 @@
 			</table>
 		</div>
 
+		<div class="container tabcontent" id="alerts-content" style="display:none;">
+			<table class="table-alerts">
+				<tr>
+					<td>
+						<div class="list-group">
+							<label class="list-group-item table-item" id="mouseTooltip">
+								<div class="form-check form-switch">
+									<label class="form-check-label" for="mouseTooltip" title="Display warnings on mouse.">
+										<input class="form-check-input" type="checkbox" role="switch" id="mouseTooltip" />Mouse Tooltip
+									</label>
+								</div>
+							</label>
+							<label class="list-group-item table-item" id="buffColor">
+								<div class="form-check form-switch">
+									<label class="form-check-label" for="buffColor" title="Change color of buff box for warnings.">
+										<input class="form-check-input" type="checkbox" role="switch" id="buffColor" />Buff Colors
+									</label>
+								</div>
+							</label>
+							<label class="list-group-item table-item" id="soundsOn">
+								<div class="form-check form-switch">
+									<label class="form-check-label" for="soundsOn" title="Play sound for warnings.">
+										<input class="form-check-input" type="checkbox" role="switch" id="soundsOn" />Sounds On
+									</label>
+								</div>
+							</label>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
 		<div class="container tabcontent" id="settings-content" style="display:none;">
 			<table class="table-settings">
 				<tr>
 					<td>
 						<div class="list-group">
-							<div class="list-group-item setting-item settings-container">
-								<label class="form-check-label form-check form-switch col-settings border-right" for="mouseTooltip" title="Display warnings on mouse.">
-									<input class="form-check-input input-padding" type="checkbox" role="switch" id="mouseTooltip" />Mouse Tooltip
-								</label>
-								<label class="form-check-label form-check form-switch col-settings" for="buffColor" title="Change color of buff box for warnings.">
-									<input class="form-check-input input-padding" type="checkbox" role="switch" id="buffColor" />Buff Colors
-								</label>
-							</div>
 							<label class="list-group-item setting-item">
 								<div>
 									<label class="form-check-label" for="timeBufferSlider" title="Buffer time for warnings to be displayed.">
