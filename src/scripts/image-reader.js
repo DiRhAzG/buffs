@@ -198,7 +198,7 @@ export function readNumbers(buffer, type = "") {
     // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.
     if (type == "health" || type == "prayer") {
         let foundSlash = numberMatch.filter(m => m.num == 10);
-        
+
         if (foundSlash.length == 0) {
             return undefined;
         }
@@ -303,7 +303,7 @@ export async function generateMatchingImage(firstImage, secondImage) {
         for (let bw = 0; bw < firstBuffer.width; bw++) {
             let bi = 4 * bw + 4 * firstBuffer.width * bh;
 
-            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 10)) {
+            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 5)) {
                 firstBuffer.data[bi] = 0;
                 firstBuffer.data[bi + 1] = 0;
                 firstBuffer.data[bi + 2] = 0;

@@ -26528,7 +26528,7 @@ let imageData = [
     // Overload
     { id: 1, name: "overloadBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA/UExURVqWGTBWDkBlCkp2DFmEDAAAAWRDB5ByNGheN2mTEqqLN46IWEhXW0BHTUxCN2RkXDM+NmNwbi8uMA8ODAAAAGxC8qMAAAAVdFJOU///////////////////////////ACvZfeoAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACASURBVChT5c7BEoIwDEXRoo0QoCro/3+r7yUNdgPjuOWu2pxJp+mw7sKubTbpYCE5C8u3UDMDUI8Gwcm1GkllHCeYqqkbSZGAzCo2JjMq5R5I29YeaC5PGjCMN5Vloa1miu82pvJiTlyk+ZN/m1OYtlbpu/ibbRRo9t7r5LZXSh8ujx8ERRrlEwAAAABJRU5ErkJggg==" },
     // Elder Overload
-    { id: 2, name: "overloadBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE7SURBVEhLY4yaJvmfgV6AFMv2LQj+75qXTpbjQPYwQdlEAaeEtYxBwucZDM3VyLKQJMtAYM0DeYa7H3mgPNIASZYZpjf9v/mBH8ojHZBk2TdePiD5n4FPywwiQCIgzbJ71xl+vX3F8Pf7ZwaZYNITCkmW/fn1g+HLmYMMXO8+MDD8/c0gIqpAkoVEW6aUUv2fmZmJgYmTh+Huya2Mf//8gcoQD4i27N6cVkaGv38YBJ18GRRiC/9/OH+E4c3rB4xQaaIAScHILqnIwCYkzvD+7CGG70/vkWQRCJAWZ98+M/x8/QyoiwUqQhog2jLZiJz/P968YHi5dz0Dj4oOVJQ0QJRlConl///9/Mbw9/MHBkZmFgYWLl4GGc8Y0ossepX6JBfElIJRy6gCRi2jChi1jCqArpbRsUXMwAAAUgBjkSRuoY4AAAAASUVORK5CYII=" },
+    { id: 2, name: "overloadBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAABPklEQVRIS2OMmib5n4FOgBFk2bKs54zE2ueal/5/96SZRKuHmQuyh2TLpjea/Z+17QPD+ZO3SLKQLMucE0P/nz5+l+HTjXO0t0wmMOX/p+vnaG+ZesmE/1/vXmZgYGRleLJuBm19JhuU/v/nm2cMzNx8DMxcPAxP1hKfUEiOM0mf+P/PtywE+0gmIOn/kw3ziPYdSZYppVT///X6GcOTjfPBFkj6xAEtXkQby8C+8Yn9z8jJxcDMwcXwct9Ghu9P79HOMuXUuv8MTAwMbw5vZfh47SzRFoEcSlIwgjTIRxf+//v9M8PnW5cZPl45STvLZCNy/v96/5bh3YldDGKOAQxPN8ylnWXSgUn/f758DsrMDJIekQwPl02gnWXEFtS41JEcZ5RYOGoZJaEH1zsajKPBiDcERkACoUoKIMIQACK+AQN7f9x/AAAAAElFTkSuQmCC" },
     // Supreme Overload
     { id: 3, name: "overloadBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE3SURBVEhLY4yaJvmfgV6AVMuyp3eS5TiQPUxQNtEgS/EMg7uvGVkWkmxZz2UVhnNveKE80gBJlll3TP5/8qUQkEWyG8GANF2yCkCCkUHI1hfCJxGQZNm783cYvj59yPDv03sG7fKJJMcbSZb9+fGD4cX6uQy3Z9Qz/v39GypKPCDaMqPeef+ZWJgYWPj4wfx/f34zCImKk+Q7oi07V5zE+P/vbwaZlDIGnZbZ/5/vXMXw7vVLRqg0UYCkYORS1WPgllJmeLljLcPnm+dJsggESLLs98f3DF8f3mFgYGaFipAGiLZMq3ba/++P7zM8WNjLIGBsDxUlDRBlmV7Xyv9/v39n+P3uJQMTCwsDm4Agg0pmM2lJH6SaXqV+1FQyCmJKwKhlVAGjllEFjFpGFUBXy+jYImZgAAD+P2BYz1a/0wAAAABJRU5ErkJggg==" },
     { id: 4, name: "animateDeadBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACiSURBVEhLY4yaJvmfgV6AXpaB7GGCsukCqGJZ54RFRIUOC5RGAbfO1P//85eZQcu8jhEqhAJqGif95+HjZ2BiZmJgYmRi+PH9B1QGP8BqWX/fHoaKqgCGx9d6wS6+e/8Tw4GLogxsbJwMTCwsQAsYGRiBGAz+/2eoKUvG6igMMJpAqAFGLaMKGLWMKmDUMqqAUcuoAkYtowoYvpbRsUXMwAAAAD8o94sPe5QAAAAASUVORK5CYII=" },
@@ -26929,7 +26929,7 @@ function readNumbers(buffer, type = "") {
     // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.
     if (type == "health" || type == "prayer") {
         let foundSlash = numberMatch.filter(m => m.num == 10);
-        
+
         if (foundSlash.length == 0) {
             return undefined;
         }
@@ -27034,7 +27034,7 @@ async function generateMatchingImage(firstImage, secondImage) {
         for (let bw = 0; bw < firstBuffer.width; bw++) {
             let bi = 4 * bw + 4 * firstBuffer.width * bh;
 
-            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 10)) {
+            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 5)) {
                 firstBuffer.data[bi] = 0;
                 firstBuffer.data[bi + 1] = 0;
                 firstBuffer.data[bi + 2] = 0;
