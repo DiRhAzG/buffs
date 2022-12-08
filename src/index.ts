@@ -14,6 +14,7 @@ let defaultSettings = [
 	{ name: "mouseTooltip", value: "true" },
 	{ name: "buffColor", value: "true" },
 	{ name: "soundsOn", value: "false" },
+	{ name: "audioVolumeSlider", value: "1" },
 	{ name: "lowHealthSlider", value: "5000" },
 	{ name: "lowPrayerSlider", value: "200" },
 	{ name: "refreshRateSlider", value: "1000" },

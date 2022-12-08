@@ -244,6 +244,7 @@ let displayWarnings = () => {
             }
 
             if (!alertPlayed && localStorage.soundsOn == "true") {
+                alert.volume = localStorage.soundVolumeSlider;
                 alert.play();
 
                 alertPlayed = true;
