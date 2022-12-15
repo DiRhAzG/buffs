@@ -289,10 +289,23 @@ let findChatBox = (img) => {
 let readChatBox = (img) => {
 	chatLines = ChatBox.readChatBox(img);
 
-	// if (chatLines?.length > 0) {
-    //     debug();
-	// 	// console.log(chatLines);
-	// }
+	if (chatLines?.length > 0) {
+        // debug();
+        handleChatLines();
+		// console.log(chatLines);
+	}
+};
+
+let handleChatLines = () => {
+    for (let l = 0; l < chatLines.length; l++) {
+        if (chatLines[l].includes('Your control of the dead is wavering')) {
+            Buff.setBuffTime('animateDeadBuff', 30, buffTimers);
+        }
+
+        if (chatLines[l].includes('Your control of the dead fades')) {
+            Buff.setBuffTime('animateDeadBuff', 15, buffTimers);
+        }
+    }
 };
 
 let numberWithCommas = (x) => {

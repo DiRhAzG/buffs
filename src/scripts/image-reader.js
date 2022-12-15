@@ -191,7 +191,7 @@ export function readNumbers(buffer, type = "") {
         let foundParentheses = numberMatch.filter(m => m.num == 11);
 
         if (foundParentheses.length == 0) {
-            return undefined;
+            return 720;
         }
     }
 

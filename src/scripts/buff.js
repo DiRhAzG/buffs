@@ -72,36 +72,41 @@ export function checkBuff(img, selectedBuffs, buffTimers) {
 
     for (let b = 0; b < selectedBuffs.length; b++) {
         let buffTime = getBuff(img, selectedBuffs[b]);
-        let expireTime = buffTime != undefined? moment.utc(new Date()).add(buffTime, 's') : undefined;
-         
-        let foundBuff = buffTimers.find(bt => bt.name === selectedBuffs[b]);
         
-        if (!foundBuff) {
-            // Buff timer doesn't exist, so add it.
-            buffTimers.push({ name: selectedBuffs[b], expireTime: expireTime, buffTime: buffTime})
-        } else if (foundBuff.expireTime != undefined) {
-            // Buff time does exist
-
-            if (expireTime != undefined) {
-                if (
-                    buffTime < 60 || // Time is less than a minute, most accurate
-                    (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
-                    (buffTime > 60 && foundBuff.buffTime < buffTime) || // New time is higher, buff could've been renewed
-                    foundBuff.expireTime < moment.utc(new Date()) // Time has expired, but there's still a time being read
-                ) {
-                    // console.log(`${selectedBuffs[b]}: ${buffTime}`);
-
-                    foundBuff.buffTime = buffTime;
-                    foundBuff.expireTime = expireTime;
-                }
-            }
-        } else {
-            // No expire time set yet, so use the new time.
-            foundBuff.expireTime = expireTime;
-        }
-
-        // console.log(`${selectedBuffs[b]}: ${buffTime}`);
+        setBuffTime(selectedBuffs[b], buffTime, buffTimers);
     }
 
-    // console.log(buffTimers);
+    console.log(buffTimers);
 };
+
+export function setBuffTime(selectedBuff, buffTime, buffTimers) {
+    let expireTime = buffTime != undefined? moment.utc(new Date()).add(buffTime, 's') : undefined;
+     
+    let foundBuff = buffTimers.find(bt => bt.name === selectedBuff);
+    
+    if (!foundBuff) {
+        // Buff timer doesn't exist, so add it.
+        buffTimers.push({ name: selectedBuff, expireTime: expireTime, buffTime: buffTime})
+    } else if (foundBuff.expireTime != undefined) {
+        // Buff time does exist
+
+        if (expireTime != undefined) {
+            if (
+                buffTime < 60 || // Time is less than a minute, most accurate
+                (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
+                (buffTime > 60 && foundBuff.buffTime < buffTime && buffTime != 720) || // New time is higher, buff could've been renewed
+                foundBuff.expireTime < moment.utc(new Date()) // Time has expired, but there's still a time being read
+            ) {
+                // console.log(`${selectedBuff}: ${buffTime}`);
+
+                foundBuff.buffTime = buffTime;
+                foundBuff.expireTime = expireTime;
+            }
+        }
+    } else {
+        // No expire time set yet, so use the new time.
+        foundBuff.expireTime = expireTime;
+    }
+
+    // console.log(`${selectedBuff}: ${buffTime}`);
+}
