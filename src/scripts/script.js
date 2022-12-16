@@ -298,12 +298,16 @@ let readChatBox = (img) => {
 
 let handleChatLines = () => {
     for (let l = 0; l < chatLines.length; l++) {
-        if (chatLines[l].includes('Your control of the dead is wavering')) {
-            Buff.setBuffTime('animateDeadBuff', 30, buffTimers);
-        }
+        let trackAnimate = selectedBuffs.find(sb => sb.name == "animateDeadBuff");
 
-        if (chatLines[l].includes('Your control of the dead fades')) {
-            Buff.setBuffTime('animateDeadBuff', 15, buffTimers);
+        if (trackAnimate) {
+            if (chatLines[l].includes('Your control of the dead is wavering')) {
+                Buff.setBuffTime('animateDeadBuff', 30, buffTimers);
+            }
+    
+            if (chatLines[l].includes('Your control of the dead fades')) {
+                Buff.setBuffTime('animateDeadBuff', 15, buffTimers);
+            }
         }
     }
 };
