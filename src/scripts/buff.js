@@ -76,7 +76,7 @@ export function checkBuff(img, selectedBuffs, buffTimers) {
         setBuffTime(selectedBuffs[b], buffTime, buffTimers);
     }
 
-    console.log(buffTimers);
+    // console.log(buffTimers);
 };
 
 export function setBuffTime(selectedBuff, buffTime, buffTimers) {
@@ -95,9 +95,10 @@ export function setBuffTime(selectedBuff, buffTime, buffTimers) {
                 buffTime < 60 || // Time is less than a minute, most accurate
                 (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
                 (buffTime > 60 && foundBuff.buffTime < buffTime && buffTime != 720) || // New time is higher, buff could've been renewed
-                foundBuff.expireTime < moment.utc(new Date()) // Time has expired, but there's still a buff on screen
+                foundBuff.expireTime < moment.utc(new Date()) || // Time has expired, but there's still a buff on screen
+                foundBuff.buffTime == 720 // Fuzzy logic for Animate Dead. Overwrite it if an actual value is found
             ) {
-                console.log(`${selectedBuff}: ${buffTime}`);
+                // console.log(`${selectedBuff}: ${buffTime}`);
 
                 foundBuff.buffTime = buffTime;
                 foundBuff.expireTime = expireTime;
@@ -108,8 +109,5 @@ export function setBuffTime(selectedBuff, buffTime, buffTimers) {
         foundBuff.expireTime = expireTime;
     }
 
-    if (selectedBuff == "animateDeadBuff") {
-        console.log(`${selectedBuff}: ${buffTime}`);
-    }
     // console.log(`${selectedBuff}: ${buffTime}`);
 }
