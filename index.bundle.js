@@ -26618,9 +26618,9 @@ function setBuffTime(selectedBuff, buffTime, buffTimers) {
                 buffTime < 60 || // Time is less than a minute, most accurate
                 (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
                 (buffTime > 60 && foundBuff.buffTime < buffTime && buffTime != 720) || // New time is higher, buff could've been renewed
-                foundBuff.expireTime < moment__WEBPACK_IMPORTED_MODULE_2__.utc(new Date()) // Time has expired, but there's still a time being read
+                foundBuff.expireTime < moment__WEBPACK_IMPORTED_MODULE_2__.utc(new Date()) // Time has expired, but there's still a buff on screen
             ) {
-                // console.log(`${selectedBuff}: ${buffTime}`);
+                console.log(`${selectedBuff}: ${buffTime}`);
 
                 foundBuff.buffTime = buffTime;
                 foundBuff.expireTime = expireTime;
@@ -26631,6 +26631,9 @@ function setBuffTime(selectedBuff, buffTime, buffTimers) {
         foundBuff.expireTime = expireTime;
     }
 
+    if (selectedBuff == "animateDeadBuff") {
+        console.log(`${selectedBuff}: ${buffTime}`);
+    }
     // console.log(`${selectedBuff}: ${buffTime}`);
 }
 
