@@ -141,7 +141,7 @@ let updateBarSettings = async () => {
 let checkBuff = (img) => {
     Buff.checkBuff(img, selectedBuffs, buffTimers);
 
-    if (localStorage.debugOn == "true") {
+    if (localStorage.debug == "true") {
         console.log(buffTimers);
     }
 };
@@ -150,7 +150,7 @@ let checkBuff = (img) => {
 let checkBar = (img) => {
     Bar.checkBar(img, selectedBar, barStats);
 
-    if (localStorage.debugOn == "true") {
+    if (localStorage.debug == "true") {
         console.log(barStats);
     } 
 };

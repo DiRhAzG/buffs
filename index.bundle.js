@@ -26599,7 +26599,7 @@ function checkBuff(img, selectedBuffs, buffTimers) {
         setBuffTime(selectedBuffs[b], buffTime, buffTimers);
     }
 
-    // if (localStorage.debugOn == "true") {
+    // if (localStorage.debug == "true") {
     //     console.log(buffTimers);
     // }
 };
@@ -26634,7 +26634,7 @@ function setBuffTime(selectedBuff, buffTime, buffTimers) {
         foundBuff.expireTime = expireTime;
     }
 
-    if (localStorage.debugOn == "true") {
+    if (localStorage.debug == "true") {
         console.log(`${selectedBuff}: ${buffTime}`);
     }
 }
@@ -27234,7 +27234,7 @@ let updateBarSettings = async () => {
 let checkBuff = (img) => {
     _buff_js__WEBPACK_IMPORTED_MODULE_3__.checkBuff(img, selectedBuffs, buffTimers);
 
-    if (localStorage.debugOn == "true") {
+    if (localStorage.debug == "true") {
         console.log(buffTimers);
     }
 };
@@ -27243,7 +27243,7 @@ let checkBuff = (img) => {
 let checkBar = (img) => {
     _bar_js__WEBPACK_IMPORTED_MODULE_4__.checkBar(img, selectedBar, barStats);
 
-    if (localStorage.debugOn == "true") {
+    if (localStorage.debug == "true") {
         console.log(barStats);
     } 
 };

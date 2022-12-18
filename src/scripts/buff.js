@@ -76,7 +76,7 @@ export function checkBuff(img, selectedBuffs, buffTimers) {
         setBuffTime(selectedBuffs[b], buffTime, buffTimers);
     }
 
-    // if (localStorage.debugOn == "true") {
+    // if (localStorage.debug == "true") {
     //     console.log(buffTimers);
     // }
 };
@@ -111,7 +111,7 @@ export function setBuffTime(selectedBuff, buffTime, buffTimers) {
         foundBuff.expireTime = expireTime;
     }
 
-    if (localStorage.debugOn == "true") {
+    if (localStorage.debug == "true") {
         console.log(`${selectedBuff}: ${buffTime}`);
     }
 }
