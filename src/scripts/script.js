@@ -309,9 +309,8 @@ let handleChatLines = () => {
                 Buff.setBuffTime('animateDeadBuff', 30, buffTimers);
             }
             
-            // Supposed to be 15 seconds, but buff icon doesn't disappear right away
             if (chatLines[l].includes('Your control of the dead fades')) {
-                Buff.setBuffTime('animateDeadBuff', 17, buffTimers);
+                Buff.setBuffTime('animateDeadBuff', 0, buffTimers);
             }
         }
     }
