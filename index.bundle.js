@@ -26632,7 +26632,9 @@ function setBuffTime(selectedBuff, buffTime, buffTimers) {
         foundBuff.expireTime = expireTime;
     }
 
-    // console.log(`${selectedBuff}: ${buffTime}`);
+    if (selectedBuff == "animateDeadBuff") {
+        console.log(`${selectedBuff}: ${buffTime}`);
+    }
 }
 
 /***/ }),
