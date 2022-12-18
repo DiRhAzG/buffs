@@ -76,7 +76,7 @@ export function checkBuff(img, selectedBuffs, buffTimers) {
         setBuffTime(selectedBuffs[b], buffTime, buffTimers);
     }
 
-    // console.log(buffTimers);
+    console.log(buffTimers);
 };
 
 export function setBuffTime(selectedBuff, buffTime, buffTimers) {

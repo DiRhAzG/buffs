@@ -26599,7 +26599,7 @@ function checkBuff(img, selectedBuffs, buffTimers) {
         setBuffTime(selectedBuffs[b], buffTime, buffTimers);
     }
 
-    // console.log(buffTimers);
+    console.log(buffTimers);
 };
 
 function setBuffTime(selectedBuff, buffTime, buffTimers) {
