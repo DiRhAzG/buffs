@@ -27401,9 +27401,10 @@ let handleChatLines = () => {
             if (chatLines[l].includes('Your control of the dead is wavering')) {
                 _buff_js__WEBPACK_IMPORTED_MODULE_3__.setBuffTime('animateDeadBuff', 30, buffTimers);
             }
-    
+            
+            // Supposed to be 15 seconds, but buff icon doesn't disappear right away
             if (chatLines[l].includes('Your control of the dead fades')) {
-                _buff_js__WEBPACK_IMPORTED_MODULE_3__.setBuffTime('animateDeadBuff', 15, buffTimers);
+                _buff_js__WEBPACK_IMPORTED_MODULE_3__.setBuffTime('animateDeadBuff', 17, buffTimers);
             }
         }
     }
