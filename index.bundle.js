@@ -27398,12 +27398,13 @@ let handleChatLines = () => {
         let trackAnimate = selectedBuffs.find(sb => sb.name == "animateDeadBuff");
 
         if (trackAnimate) {
+            // Buffer in an extra second for buff icon to go away
             if (chatLines[l].includes('Your control of the dead is wavering')) {
-                _buff_js__WEBPACK_IMPORTED_MODULE_3__.setBuffTime('animateDeadBuff', 30, buffTimers);
+                _buff_js__WEBPACK_IMPORTED_MODULE_3__.setBuffTime('animateDeadBuff', 31, buffTimers);
             }
             
             if (chatLines[l].includes('Your control of the dead fades')) {
-                _buff_js__WEBPACK_IMPORTED_MODULE_3__.setBuffTime('animateDeadBuff', 0, buffTimers);
+                _buff_js__WEBPACK_IMPORTED_MODULE_3__.setBuffTime('animateDeadBuff', 1, buffTimers);
             }
         }
     }

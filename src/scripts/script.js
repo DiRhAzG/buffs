@@ -305,12 +305,13 @@ let handleChatLines = () => {
         let trackAnimate = selectedBuffs.find(sb => sb.name == "animateDeadBuff");
 
         if (trackAnimate) {
+            // Buffer in an extra second for buff icon to go away
             if (chatLines[l].includes('Your control of the dead is wavering')) {
-                Buff.setBuffTime('animateDeadBuff', 30, buffTimers);
+                Buff.setBuffTime('animateDeadBuff', 31, buffTimers);
             }
             
             if (chatLines[l].includes('Your control of the dead fades')) {
-                Buff.setBuffTime('animateDeadBuff', 0, buffTimers);
+                Buff.setBuffTime('animateDeadBuff', 1, buffTimers);
             }
         }
     }
