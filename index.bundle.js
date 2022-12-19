@@ -26665,8 +26665,6 @@ const createNewReader = () => {
 
     reader.readargs = {
         colors: [
-            (0,_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor)(132,212,119), // Telos name green
-            (0,_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor)(195,16,16), // Tendril damage red
             (0,_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor)(45, 186, 21), // Completion time green
             (0,_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor)(45, 184, 20), // Completion time green
             (0,_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor)(44, 179, 21), // Completion time green
@@ -26679,6 +26677,7 @@ const createNewReader = () => {
             (0,_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor)(0, 255, 255), //
             (0,_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor)(255, 0, 0), // Red
             (0,_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor)(255, 255, 255), // White
+            (0,_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor)(3, 83, 199), // Blue
             (0,_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor)(127, 169, 255) // Clock blue
         ]
     }
@@ -26690,6 +26689,8 @@ const reader = createNewReader();
 
 function findChatBox (img) {
     let found = reader.find(img);
+
+    console.log(found);
 
     if (found != null) {
         console.log("Found chatbox.");
@@ -27385,7 +27386,7 @@ let findChatBox = (img) => {
 /* Read the Chat Box */
 let readChatBox = (img) => {
 	chatLines = _chatbox_js__WEBPACK_IMPORTED_MODULE_1__.readChatBox(img);
-
+    console.log(chatLines);
 	if (chatLines?.length > 0) {
         // debug();
         handleChatLines();

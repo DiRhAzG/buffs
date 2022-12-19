@@ -8,8 +8,6 @@ const createNewReader = () => {
 
     reader.readargs = {
         colors: [
-            mixColor(132,212,119), // Telos name green
-            mixColor(195,16,16), // Tendril damage red
             mixColor(45, 186, 21), // Completion time green
             mixColor(45, 184, 20), // Completion time green
             mixColor(44, 179, 21), // Completion time green
@@ -22,6 +20,7 @@ const createNewReader = () => {
             mixColor(0, 255, 255), //
             mixColor(255, 0, 0), // Red
             mixColor(255, 255, 255), // White
+            mixColor(3, 83, 199), // Blue
             mixColor(127, 169, 255) // Clock blue
         ]
     }
@@ -33,6 +32,8 @@ const reader = createNewReader();
 
 export function findChatBox (img) {
     let found = reader.find(img);
+
+    console.log(found);
 
     if (found != null) {
         console.log("Found chatbox.");
