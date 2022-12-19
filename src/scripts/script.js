@@ -292,7 +292,7 @@ let findChatBox = (img) => {
 /* Read the Chat Box */
 let readChatBox = (img) => {
 	chatLines = ChatBox.readChatBox(img);
-    console.log(chatLines);
+
 	if (chatLines?.length > 0) {
         // debug();
         handleChatLines();
@@ -304,6 +304,7 @@ let handleChatLines = () => {
     for (let l = 0; l < chatLines.length; l++) {
         let trackAnimate = selectedBuffs.find(sb => sb.name == "animateDeadBuff");
 
+        // Not accurate, because the built-in alt1 chat reader is not accurate
         if (trackAnimate) {
             // Buffer in an extra second for buff icon to go away
             if (chatLines[l].includes('Your control of the dead is wavering')) {

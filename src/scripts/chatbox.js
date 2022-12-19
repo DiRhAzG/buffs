@@ -33,8 +33,6 @@ const reader = createNewReader();
 export function findChatBox (img) {
     let found = reader.find(img);
 
-    console.log(found);
-
     if (found != null) {
         console.log("Found chatbox.");
         return true;
