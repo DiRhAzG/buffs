@@ -293,8 +293,8 @@ let findChatBox = (img) => {
 let readChatBox = (img) => {
 	chatLines = ChatBox.readChatBox(img);
 
-    console.log(chatLines);
-    
+    // console.log(chatLines);
+
 	if (chatLines?.length > 0) {
         // debug();
         handleChatLines();
