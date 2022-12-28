@@ -2380,6 +2380,30 @@ class ChatBoxReader {
         this.font = null;
         this.lastReadBuffer = null;
     }
+
+    outputImage(buffer) {
+        // create off-screen canvas element
+        let canvas = document.createElement('canvas'),
+        ctx = canvas.getContext('2d');
+    
+        canvas.width = buffer.width;
+        canvas.height = buffer.height;
+    
+        // create imageData object
+        let idata = ctx.createImageData(buffer.width, buffer.height);
+    
+        // set our buffer as source
+        idata.data.set(buffer.data);
+    
+        // update canvas with new data
+        ctx.putImageData(idata, 0, 0);
+        let dataUri = canvas.toDataURL(); // produces a PNG file
+    
+        console.log(dataUri);
+        return dataUri;
+        // console.log(buffer.data.toString());
+    }
+
     readChatLine(box, imgdata, imgx, imgy, font, ocrcolors, linenr) {
         var liney = box.line0y - linenr * font.lineheight + font.dy;
         let ctx = {
@@ -2394,6 +2418,7 @@ class ChatBoxReader {
             text: "",
             fragments: [],
             addfrag(frag) {
+                // console.log(frag);
                 if (this.forward) {
                     this.fragments.push(frag);
                     this.text += frag.text;
@@ -2406,8 +2431,12 @@ class ChatBoxReader {
                 }
             }
         };
+        // this.outputImage(imgdata);
+
         if (!box.leftfound) {
+            
             let col = _alt1_ocr__WEBPACK_IMPORTED_MODULE_1__.getChatColor(imgdata, { x: ctx.rightx - 5, y: ctx.baseliney - 10, width: 10, height: 10 }, ocrcolors);
+
             if (!col) {
                 return { text: "", fragments: [], basey: liney };
             }
@@ -2426,6 +2455,7 @@ class ChatBoxReader {
             let nudges = (dirforward ? this.forwardnudges : this.backwardnudges);
             retryloop: while (true) {
                 for (let nudge of nudges) {
+                    
                     let m = ctx.text.match(nudge.match);
                     if (m) {
                         if (nudge.fn(ctx, m)) {
@@ -2803,6 +2833,7 @@ let defaultforwardnudges = [
     {
         match: /.*/,
         name: "body", fn: ctx => {
+            // console.log(ctx.rightx);
             var data = _alt1_ocr__WEBPACK_IMPORTED_MODULE_1__.readLine(ctx.imgdata, ctx.font, ctx.colors, ctx.rightx, ctx.baseliney, true, false);
             if (data.text) {
                 data.fragments.forEach(f => ctx.addfrag(f));
@@ -2912,6 +2943,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "findReadLine": () => (/* binding */ findReadLine),
 /* harmony export */   "generatefont": () => (/* binding */ generatefont),
 /* harmony export */   "getChatColor": () => (/* binding */ getChatColor),
+/* harmony export */   "outputImage": () => (/* binding */ outputImage),
 /* harmony export */   "readChar": () => (/* binding */ readChar),
 /* harmony export */   "readLine": () => (/* binding */ readLine),
 /* harmony export */   "readSmallCapsBackwards": () => (/* binding */ readSmallCapsBackwards),
@@ -2923,7 +2955,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var debug = {
     printcharscores: false,
-    trackread: false
+    trackread: true
 };
 var debugout = {};
 /**
@@ -3220,10 +3252,36 @@ function getChatColor(buf, rect, colors) {
     //bestscore /= rect.width * rect.height;
     return best;
 }
+
+function outputImage(buffer) {
+    // create off-screen canvas element
+    let canvas = document.createElement('canvas'),
+    ctx = canvas.getContext('2d');
+
+    canvas.width = buffer.width;
+    canvas.height = buffer.height;
+
+    // create imageData object
+    let idata = ctx.createImageData(buffer.width, buffer.height);
+
+    // set our buffer as source
+    idata.data.set(buffer.data);
+
+    // update canvas with new data
+    ctx.putImageData(idata, 0, 0);
+    let dataUri = canvas.toDataURL(); // produces a PNG file
+
+    console.log(dataUri);
+    return dataUri;
+    // console.log(buffer.data.toString());
+}
+
 /**
  * reads a line of text with exactly known position and color. y should be the y coord of the text base line, x should be the first pixel of a new character
  */
 function readLine(buffer, font, colors, x, y, forward, backward = false) {
+    // outputImage(buffer);
+    // console.log(colors)
     if (typeof colors[0] != "number" && colors.length == 1) {
         colors = colors[0];
     }
@@ -3280,7 +3338,9 @@ function readLine(buffer, font, colors, x, y, forward, backward = false) {
         var triedrecol = false;
         var col = multicol ? null : colors;
         while (true) {
+            // outputImage(buffer);
             col = col || detectcolor(x + dx, y, !dirforward);
+            // console.log(dx);
             var chr = (col ? readChar(buffer, font, col, x + dx, y, !dirforward, true) : null);
             if (col == null || chr == null) {
                 if (triedspaces < maxspaces) {
@@ -3385,6 +3445,11 @@ function readSmallCapsBackwards(buffer, font, cols, x, y, w = -1, h = -1) {
  */
 function readChar(buffer, font, col, x, y, backwards, allowSecondary) {
     y -= font.basey;
+
+    if (x == 58 && y == 166) { 
+        x = 60;
+        console.log('text', x);
+    }
     var shiftx = 0;
     var shifty = font.basey;
     var shadow = font.shadow;
@@ -3420,6 +3485,7 @@ function readChar(buffer, font, col, x, y, backwards, allowSecondary) {
         }
         scores[chr] = { score: 0, sizescore: 0, chr: chrobj };
         var chrx = (backwards ? x - chrobj.width : x);
+
         if (debug.trackread) {
             debugimg = new _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageData(font.width, font.height);
         }
@@ -3438,19 +3504,31 @@ function readChar(buffer, font, col, x, y, backwards, allowSecondary) {
             scores[chr].score += Math.max(0, penalty);
             //TODO add compiler flag to this to remove it for performance
             if (debugimg) {
-                debugimg.setPixel(chrobj.pixels[a], chrobj.pixels[a + 1], [penalty, penalty, penalty, 255]);
+                debugimg.setPixel(chrobj.pixels[a], chrobj.pixels[a + 1], [buffer.data[i], buffer.data[i + 1], buffer.data[i + 2], 255]);
             }
         }
         scores[chr].sizescore = scores[chr].score - chrobj.bonus;
         if (debugobj) {
             debugobj.push({ chr: chrobj.chr, score: scores[chr].sizescore, rawscore: scores[chr].score, img: debugimg });
         }
+        // console.log(debugobj)
+
+        if (y == 166 && x == 60 && chrobj.chr == "Y") {
+            // if (scores[chr].sizescore < 400) {
+            console.log(chrobj.chr)
+            console.log(x, y)
+            outputImage(debugimg);
+        }
     }
+
     scores.sort((a, b) => a.sizescore - b.sizescore);
+
+    // console.log(scores)
     if (debug.printcharscores) {
         scores.slice(0, 5).forEach(q => console.log(q.chr.chr, q.score.toFixed(3), q.sizescore.toFixed(3)));
     }
     var winchr = scores[0];
+    
     if (!winchr || winchr.score > 400) {
         return null;
     }
@@ -26927,9 +27005,9 @@ function readNumbers(buffer, type = "") {
         }
     }
 
-    // Animate Dead has two timers, so we have to make sure both are showing.
+    // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
     if (type == "animate") {
-        let foundParentheses = numberMatch.filter(m => m.num == 11);
+        let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
 
         if (foundParentheses.length == 0) {
             return 720;
