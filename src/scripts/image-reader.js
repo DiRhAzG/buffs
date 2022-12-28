@@ -186,9 +186,9 @@ export function readNumbers(buffer, type = "") {
         }
     }
 
-    // Animate Dead has two timers, so we have to make sure both are showing.
+    // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
     if (type == "animate") {
-        let foundParentheses = numberMatch.filter(m => m.num == 11);
+        let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
 
         if (foundParentheses.length == 0) {
             return 720;
