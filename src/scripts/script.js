@@ -230,13 +230,23 @@ let displayWarnings = () => {
                     return w.name == nw.name;
                 });
             });
-    
-            let topWarning = needsWarning.reduce(function(res, obj) {
-                return (obj.id < res.id) ? obj : res;
-            });
-    
-            if (window.alt1 && localStorage.mouseTooltip != "true") alt1.setTooltip("");
-            else if (window.alt1 && localStorage.mouseTooltip == "true") alt1.setTooltip(topWarning.friendlyName);
+            
+            if (window.alt1 && localStorage.mouseTooltip != "true") {
+                alt1.setTooltip("");
+            } else if (window.alt1 && localStorage.mouseTooltip == "true") {
+                let topWarning = needsWarning.sort((a, b) => a.id - b.id);
+                let warningText = "";
+
+                for (let w = 0; w < topWarning.length; w++) {
+                    if (w > 0) {
+                        warningText += "\n";
+                    }
+
+                    warningText += topWarning[w].friendlyName;
+                }
+
+                alt1.setTooltip(warningText);
+            }
     
             for (let w = 0; w < needsWarning.length; w++) {
                 if (localStorage.buffColor != "true") $("label#" + needsWarning[w].name).removeClass("warning");
