@@ -27395,7 +27395,7 @@ let findChatBox = (img) => {
 let readChatBox = (img) => {
 	chatLines = _chatbox_js__WEBPACK_IMPORTED_MODULE_1__.readChatBox(img);
 
-    console.log(chatLines);
+    // console.log(chatLines);
 
 	if (chatLines?.length > 0) {
         // debug();
