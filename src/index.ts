@@ -101,6 +101,8 @@ let loadPresetDropdown = () => {
 }
 
 let loadDropdown = (dropdownName) => {
+	let orderedPresets = savedPresets.sort((a, b) => a.presetName.localeCompare(b.presetName));
+
 	$("#" + dropdownName).empty();
 
 	if (dropdownName == "presets") {
@@ -115,10 +117,10 @@ let loadDropdown = (dropdownName) => {
 		}))
 	}
 
-	for (let p = 0; p < savedPresets.length; p++) {
+	for (let p = 0; p < orderedPresets.length; p++) {
 		$("#" + dropdownName).append($("<option>", {
-			value: savedPresets[p].id,
-			text: savedPresets[p].presetName
+			value: orderedPresets[p].id,
+			text: orderedPresets[p].presetName
 		}))
 	}
 }

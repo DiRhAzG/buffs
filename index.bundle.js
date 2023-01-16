@@ -27872,6 +27872,7 @@ let loadPresetDropdown = () => {
     loadDropdown("savedPresets");
 };
 let loadDropdown = (dropdownName) => {
+    let orderedPresets = savedPresets.sort((a, b) => a.presetName.localeCompare(b.presetName));
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + dropdownName).empty();
     if (dropdownName == "presets") {
         _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + dropdownName).append(_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("<option>", {
@@ -27885,10 +27886,10 @@ let loadDropdown = (dropdownName) => {
             text: "---Select Preset---"
         }));
     }
-    for (let p = 0; p < savedPresets.length; p++) {
+    for (let p = 0; p < orderedPresets.length; p++) {
         _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + dropdownName).append(_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("<option>", {
-            value: savedPresets[p].id,
-            text: savedPresets[p].presetName
+            value: orderedPresets[p].id,
+            text: orderedPresets[p].presetName
         }));
     }
 };
