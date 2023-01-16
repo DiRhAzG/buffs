@@ -50,7 +50,7 @@ window.onload = async function start() {
 	};
 	
 	// Load localStorage into elements
-	loadLocalStorageItems();
+	await loadLocalStorageItems();
 
 	if (window.alt1) {
 		main.start();
@@ -61,7 +61,7 @@ window.onload = async function start() {
 	console.log("Ready to save your ass.");
 }
 
-let loadLocalStorageItems = () => {
+let loadLocalStorageItems = async () => {
 	for (let i = 0, len = localStorage.length; i < len; i++) {
 		let key = localStorage.key(i);
 		let value = localStorage[key];
@@ -77,6 +77,8 @@ let loadLocalStorageItems = () => {
 			}
 	  	} 
 	};
+
+	await main.updateSelections();
 }
 
 // Listen for pasted (ctrl-v) images, usually used in the browser version of an app
@@ -152,8 +154,10 @@ $("#presets").change(function() {
 	}
 });
 
-$("#savedPresets").change(function() {
-	presetId = this.value;
+$("#savedPresets").change(function() {selectPreset(this)});
+
+let selectPreset = (selection) => {
+	presetId = selection.value;
 	let foundPreset = savedPresets.find(p => p.id == presetId);
 	
 	if (foundPreset) {
@@ -165,8 +169,7 @@ $("#savedPresets").change(function() {
 
 		loadLocalStorageItems();
 	}
-
-});
+}
 
 $("#savePreset").click(function() {
 	let foundPreset = savedPresets.find(p => p.id == presetId);

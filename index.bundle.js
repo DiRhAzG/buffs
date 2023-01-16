@@ -27828,7 +27828,7 @@ window.onload = async function start() {
     }
     ;
     // Load localStorage into elements
-    loadLocalStorageItems();
+    await loadLocalStorageItems();
     if (window.alt1) {
         _scripts_script_js__WEBPACK_IMPORTED_MODULE_4__.start();
     }
@@ -27837,7 +27837,7 @@ window.onload = async function start() {
     loadPresetDropdown();
     console.log("Ready to save your ass.");
 };
-let loadLocalStorageItems = () => {
+let loadLocalStorageItems = async () => {
     for (let i = 0, len = localStorage.length; i < len; i++) {
         let key = localStorage.key(i);
         let value = localStorage[key];
@@ -27855,6 +27855,7 @@ let loadLocalStorageItems = () => {
         }
     }
     ;
+    await _scripts_script_js__WEBPACK_IMPORTED_MODULE_4__.updateSelections();
 };
 // Listen for pasted (ctrl-v) images, usually used in the browser version of an app
 _alt1_base__WEBPACK_IMPORTED_MODULE_0__.PasteInput.listen(img => {
@@ -27917,8 +27918,9 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#presets").change(function () {
         }
     }
 });
-_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#savedPresets").change(function () {
-    presetId = this.value;
+_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#savedPresets").change(function () { selectPreset(this); });
+let selectPreset = (selection) => {
+    presetId = selection.value;
     let foundPreset = savedPresets.find(p => p.id == presetId);
     if (foundPreset) {
         for (let o = 0; o < foundPreset.options.length; o++) {
@@ -27927,7 +27929,7 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#savedPresets").change(function () {
         }
         loadLocalStorageItems();
     }
-});
+};
 _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#savePreset").click(function () {
     let foundPreset = savedPresets.find(p => p.id == presetId);
     if (foundPreset) {
