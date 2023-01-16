@@ -45,7 +45,7 @@ input[type="checkbox"]:focus {
     box-shadow: 0 0 0 rgb(255, 255, 255) !important;
 }
 
-.table-buffs, .table-compare, .table-alerts, .table-settings{
+.table-center, #presets-content {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -111,4 +111,21 @@ label.form-switch {
 
 input[type="range"] {
     width: 140px;
+}
+
+.form-presets {
+    width: 300px;
+}
+
+.form-presets-label, .presets-group {
+    width: 130px;
+}
+
+.dropdown {
+    width: 160px;
+}
+
+.center {
+    margin-top: 10px;
+    text-align: center;
 }

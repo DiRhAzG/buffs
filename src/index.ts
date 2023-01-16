@@ -4,6 +4,7 @@ import "./css/styles.css";
 import * as $ from "./js/jquery.js";
 import * as main from "./scripts/script.js";
 import * as ImageReader from "./scripts/image-reader.js";
+import { v4 as uuid } from 'uuid';
 
 // Tell webpack to add index.html and appconfig.json to output
 require("!file-loader?name=[name].[ext]!./index.html");
@@ -31,8 +32,12 @@ let defaultSettings = [
 	{ name: "antifireBuff", value: "false" },
 	{ name: "aggressionBuff", value: "false" },
 	{ name: "lowHealthBar", value: "false" },
-	{ name: "lowPrayerBar", value: "false" }
+	{ name: "lowPrayerBar", value: "false" },
+	{ name: "savedPresets", value: "[]" },
 ]
+
+let presetId = uuid();
+let savedPresets = [];
 
 window.onload = async function start() {
 	// Add defaults if missing
@@ -45,6 +50,18 @@ window.onload = async function start() {
 	};
 	
 	// Load localStorage into elements
+	loadLocalStorageItems();
+
+	if (window.alt1) {
+		main.start();
+	};
+
+	setBuffsTab();
+	loadPresetDropdown();
+	console.log("Ready to save your ass.");
+}
+
+let loadLocalStorageItems = () => {
 	for (let i = 0, len = localStorage.length; i < len; i++) {
 		let key = localStorage.key(i);
 		let value = localStorage[key];
@@ -60,13 +77,6 @@ window.onload = async function start() {
 			}
 	  	} 
 	};
-
-	if (window.alt1) {
-		main.start();
-	};
-
-	setBuffsTab();
-	console.log("Ready to save your ass.");
 }
 
 // Listen for pasted (ctrl-v) images, usually used in the browser version of an app
@@ -80,6 +90,132 @@ if (window.alt1) {
 	alt1.identifyAppUrl("./appconfig.json");
 }
 
+let loadPresetDropdown = () => {
+	newPreset();
+	loadPresetJson();
+
+	loadDropdown("presets");
+	loadDropdown("savedPresets");
+}
+
+let loadDropdown = (dropdownName) => {
+	$("#" + dropdownName).empty();
+
+	if (dropdownName == "presets") {
+		$("#" + dropdownName).append($("<option>", {
+			value: "new",
+			text: "---Create New---"
+		}))
+	} else {
+		$("#" + dropdownName).append($("<option>", {
+			value: "",
+			text: "---Select Preset---"
+		}))
+	}
+
+	for (let p = 0; p < savedPresets.length; p++) {
+		$("#" + dropdownName).append($("<option>", {
+			value: savedPresets[p].id,
+			text: savedPresets[p].presetName
+		}))
+	}
+}
+
+let loadPresetJson = () => {
+	savedPresets = JSON.parse(localStorage.getItem("savedPresets"));
+}
+
+let newPreset = () => {
+	presetId = uuid();
+	$("#presetName")[0].value = "";
+
+	let options = $(".presetOption");
+	for (let o = 0; o < options.length; o++) {
+		options[o].checked = false;
+	}
+}
+
+$("#presets").change(function() {
+	if (this.value == "new") {
+		newPreset();
+	} else {
+		presetId = this.value;
+		let foundPreset = savedPresets.find(p => p.id == presetId);
+		
+		if (foundPreset) {
+			$("#presetName")[0].value = foundPreset.presetName;
+
+			for (let o = 0; o < foundPreset.options.length; o++) {
+				$("#" + foundPreset.options[o].name)[0].checked = foundPreset.options[o].setting;
+			}
+		}
+	}
+});
+
+$("#savedPresets").change(function() {
+	presetId = this.value;
+	let foundPreset = savedPresets.find(p => p.id == presetId);
+	
+	if (foundPreset) {
+		for (let o = 0; o < foundPreset.options.length; o++) {
+			let settingName = foundPreset.options[o].name.replace("Preset", "");
+
+			localStorage.setItem(settingName, foundPreset.options[o].setting);
+		}
+
+		loadLocalStorageItems();
+	}
+
+});
+
+$("#savePreset").click(function() {
+	let foundPreset = savedPresets.find(p => p.id == presetId);
+		
+	if (foundPreset) {
+		foundPreset.presetName = $("#presetName")[0].value;
+
+		for (let o = 0; o < foundPreset.options.length; o++) {
+			foundPreset.options[o].setting = $("#" + foundPreset.options[o].name)[0].checked;
+		}
+	} else {
+		let presetName = $("#presetName")[0].value;
+
+		let preset = {
+			id: presetId,
+			presetName: presetName,
+			options: []
+		};
+
+		let options = $(".presetOption");
+
+		for (let o = 0; o < options.length; o++) {
+			preset.options.push({
+				name: options[o].id,
+				setting: options[o].checked
+			})
+		}
+
+		savedPresets.push(preset);
+	}
+
+	localStorage.setItem("savedPresets", JSON.stringify(savedPresets));
+	loadPresetDropdown();
+
+	return false;
+});
+
+$("#deletePreset").click(function() {
+	let foundPreset = savedPresets.find(p => p.id == presetId);
+		
+	if (foundPreset) {
+		savedPresets = savedPresets.filter(function(el) { return el.id != foundPreset.id; });
+		localStorage.setItem("savedPresets", JSON.stringify(savedPresets));
+		loadPresetDropdown();
+	}
+
+	return false;
+});
+
 $(".contenttab").click(function() {
 	$(".activetab").removeClass("activetab");
 	$(this).addClass("activetab");
@@ -90,6 +226,8 @@ $(".contenttab").click(function() {
 		setCompareTab();
 	} else if (this.id == "alerts-tab") {
 		setAlertsTab();
+	} else if (this.id == "presets-tab") {
+		setPresetsTab();
 	} else if (this.id == "settings-tab") {
 		setSettingsTab();
 	}
@@ -99,6 +237,7 @@ export function setBuffsTab() {
 	$('#buffs-content').show();
 	$('#compare-content').hide();
 	$('#alerts-content').hide();
+	$('#presets-content').hide();
 	$('#settings-content').hide();
 };
 
@@ -106,6 +245,7 @@ export function setCompareTab() {
 	$('#buffs-content').hide();
 	$('#compare-content').show();
 	$('#alerts-content').hide();
+	$('#presets-content').hide();
 	$('#settings-content').hide();
 };
 
@@ -113,6 +253,15 @@ export function setAlertsTab() {
 	$('#buffs-content').hide();
 	$('#compare-content').hide();
 	$('#alerts-content').show();
+	$('#presets-content').hide();
+	$('#settings-content').hide();
+};
+
+export function setPresetsTab() {
+	$('#buffs-content').hide();
+	$('#compare-content').hide();
+	$('#alerts-content').hide();
+	$('#presets-content').show();
 	$('#settings-content').hide();
 };
 
@@ -120,20 +269,23 @@ export function setSettingsTab() {
 	$('#buffs-content').hide();
 	$('#compare-content').hide();
 	$('#alerts-content').hide();
+	$('#presets-content').hide();
 	$('#settings-content').show();
 };
 
 // Store Checkbox values in localStorage
 $("input:checkbox").on("change", async function() {
-	var checkboxId = $(this).attr("id");
-
-	if ($(this).is(":checked")) {
-		localStorage.setItem(checkboxId, "true");
-	} else {
-		localStorage.setItem(checkboxId, "false");
+	let checkboxId = $(this).attr("id");
+	
+	if (!checkboxId.includes("Preset")) {
+		if ($(this).is(":checked")) {
+			localStorage.setItem(checkboxId, "true");
+		} else {
+			localStorage.setItem(checkboxId, "false");
+		}
+	
+		await main.updateSelections();
 	}
-
-	await main.updateSelections();
 });
 
 // Store Range values in localStorage
@@ -145,7 +297,7 @@ $("input[type=range]").on("input", function() {
 	$("#" + rangeId + "Output").val(rangeValue);
 });
 
-$("input[type=file]").on("change", async function() {
+$("#compareImages").on("change", async function() {
 	if (this.files.length == 2) {
 		ImageReader.imageToBase64(this.files[0], (firstImage) => {
 			ImageReader.imageToBase64(this.files[1], async (secondImage) => {
@@ -155,3 +307,30 @@ $("input[type=file]").on("change", async function() {
 		});
 	}
 });
+
+$("#exportPresets").on("click", async function() {
+	let fileContent = localStorage.getItem("savedPresets");
+	let bb = new Blob([fileContent ], { type: 'text/plain' });
+	let a = document.createElement('a');
+	a.download = 'buff_presets.txt';
+	a.href = window.URL.createObjectURL(bb);
+	a.click();
+	a.remove();
+});
+
+$("#importPresets").on("change", async function() {
+	readFile(this.files[0], (data) => {
+		localStorage.setItem("savedPresets", data);
+		loadPresetDropdown();
+	});
+});
+
+export function readFile(file, callback) {
+    let reader = new FileReader();
+
+    reader.onloadend = function() {
+      callback(reader.result);
+    }
+
+    reader.readAsText(file);
+}

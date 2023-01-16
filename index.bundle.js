@@ -4172,7 +4172,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".table-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 170px;\r\n}\r\n\r\n.setting-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 353px;\r\n}\r\n\r\n.alert-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 305px;\r\n}\r\n\r\n.form-check {\r\n    margin-bottom: 0;\r\n    min-height: 0;\r\n}\r\n\r\n.list-group-item {\r\n    padding: .3rem .7rem;\r\n}\r\n\r\n.form-check-label {\r\n    font-size: 14px;\r\n    font-weight: bold;\r\n    -webkit-touch-callout: none; /* iOS Safari */\r\n    -webkit-user-select: none; /* Safari */\r\n     -khtml-user-select: none; /* Konqueror HTML */\r\n       -moz-user-select: none; /* Old versions of Firefox */\r\n        -ms-user-select: none; /* Internet Explorer/Edge */\r\n            user-select: none; /* Non-prefixed version, currently\r\n                                  supported by Chrome, Edge, Opera and Firefox */\r\n}\r\n\r\ninput[type=\"checkbox\"]:focus {\r\n    outline: none !important;\r\n    box-shadow: 0 0 0 rgb(255, 255, 255) !important;\r\n}\r\n\r\n.table-buffs, .table-compare, .table-alerts, .table-settings{\r\n    margin-top: 10px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.input-range {\r\n    vertical-align: middle;\r\n}\r\n\r\n.warning {\r\n    background-color: #e60808c5;\r\n}\r\n\r\n#onOffSwitch {\r\n    width: 4.5em;\r\n    height: 2em;\r\n    margin-left: -34px;\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n\r\n.form-check-label {\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n.slider:after {\r\n    content:'OFF';\r\n    color: gray;\r\n    display: block;\r\n    position: absolute;\r\n    transform: translate(-50%,-50%);\r\n    top: 56%;\r\n    left: 35%;\r\n    font-size: 15px;\r\n}\r\n\r\ninput:checked + .slider:after {  \r\n    content:'ON';\r\n    color: white;\r\n    left: -37%;\r\n}\r\n\r\n.settings-container {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    padding: 0rem 0rem;\r\n}\r\n  \r\n.col-settings {\r\n    width: 50%;\r\n    /* padding: .3rem .7rem; */\r\n}\r\n\r\n.border-right {\r\n    border-right: 1px solid white;\r\n}\r\n\r\nlabel.form-switch {\r\n    padding: .3rem 0rem .3rem 2.9rem;\r\n}\r\n\r\ninput[type=\"range\"] {\r\n    width: 140px;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".table-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 170px;\r\n}\r\n\r\n.setting-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 353px;\r\n}\r\n\r\n.alert-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 305px;\r\n}\r\n\r\n.form-check {\r\n    margin-bottom: 0;\r\n    min-height: 0;\r\n}\r\n\r\n.list-group-item {\r\n    padding: .3rem .7rem;\r\n}\r\n\r\n.form-check-label {\r\n    font-size: 14px;\r\n    font-weight: bold;\r\n    -webkit-touch-callout: none; /* iOS Safari */\r\n    -webkit-user-select: none; /* Safari */\r\n     -khtml-user-select: none; /* Konqueror HTML */\r\n       -moz-user-select: none; /* Old versions of Firefox */\r\n        -ms-user-select: none; /* Internet Explorer/Edge */\r\n            user-select: none; /* Non-prefixed version, currently\r\n                                  supported by Chrome, Edge, Opera and Firefox */\r\n}\r\n\r\ninput[type=\"checkbox\"]:focus {\r\n    outline: none !important;\r\n    box-shadow: 0 0 0 rgb(255, 255, 255) !important;\r\n}\r\n\r\n.table-center, #presets-content {\r\n    margin-top: 10px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.input-range {\r\n    vertical-align: middle;\r\n}\r\n\r\n.warning {\r\n    background-color: #e60808c5;\r\n}\r\n\r\n#onOffSwitch {\r\n    width: 4.5em;\r\n    height: 2em;\r\n    margin-left: -34px;\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n\r\n.form-check-label {\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n.slider:after {\r\n    content:'OFF';\r\n    color: gray;\r\n    display: block;\r\n    position: absolute;\r\n    transform: translate(-50%,-50%);\r\n    top: 56%;\r\n    left: 35%;\r\n    font-size: 15px;\r\n}\r\n\r\ninput:checked + .slider:after {  \r\n    content:'ON';\r\n    color: white;\r\n    left: -37%;\r\n}\r\n\r\n.settings-container {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    padding: 0rem 0rem;\r\n}\r\n  \r\n.col-settings {\r\n    width: 50%;\r\n    /* padding: .3rem .7rem; */\r\n}\r\n\r\n.border-right {\r\n    border-right: 1px solid white;\r\n}\r\n\r\nlabel.form-switch {\r\n    padding: .3rem 0rem .3rem 2.9rem;\r\n}\r\n\r\ninput[type=\"range\"] {\r\n    width: 140px;\r\n}\r\n\r\n.form-presets {\r\n    width: 300px;\r\n}\r\n\r\n.form-presets-label, .presets-group {\r\n    width: 130px;\r\n}\r\n\r\n.dropdown {\r\n    width: 160px;\r\n}\r\n\r\n.center {\r\n    margin-top: 10px;\r\n    text-align: center;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -26387,6 +26387,188 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "../node_modules/uuid/dist/esm-browser/native.js":
+/*!*******************************************************!*\
+  !*** ../node_modules/uuid/dist/esm-browser/native.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const randomUUID = typeof crypto !== 'undefined' && crypto.randomUUID && crypto.randomUUID.bind(crypto);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  randomUUID
+});
+
+/***/ }),
+
+/***/ "../node_modules/uuid/dist/esm-browser/regex.js":
+/*!******************************************************!*\
+  !*** ../node_modules/uuid/dist/esm-browser/regex.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i);
+
+/***/ }),
+
+/***/ "../node_modules/uuid/dist/esm-browser/rng.js":
+/*!****************************************************!*\
+  !*** ../node_modules/uuid/dist/esm-browser/rng.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ rng)
+/* harmony export */ });
+// Unique ID creation requires a high quality random # generator. In the browser we therefore
+// require the crypto API and do not support built-in fallback to lower quality random number
+// generators (like Math.random()).
+let getRandomValues;
+const rnds8 = new Uint8Array(16);
+function rng() {
+  // lazy load so that environments that need to polyfill have a chance to do so
+  if (!getRandomValues) {
+    // getRandomValues needs to be invoked in a context where "this" is a Crypto implementation.
+    getRandomValues = typeof crypto !== 'undefined' && crypto.getRandomValues && crypto.getRandomValues.bind(crypto);
+
+    if (!getRandomValues) {
+      throw new Error('crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported');
+    }
+  }
+
+  return getRandomValues(rnds8);
+}
+
+/***/ }),
+
+/***/ "../node_modules/uuid/dist/esm-browser/stringify.js":
+/*!**********************************************************!*\
+  !*** ../node_modules/uuid/dist/esm-browser/stringify.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "unsafeStringify": () => (/* binding */ unsafeStringify)
+/* harmony export */ });
+/* harmony import */ var _validate_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validate.js */ "../node_modules/uuid/dist/esm-browser/validate.js");
+
+/**
+ * Convert array of 16 byte values to UUID string format of the form:
+ * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ */
+
+const byteToHex = [];
+
+for (let i = 0; i < 256; ++i) {
+  byteToHex.push((i + 0x100).toString(16).slice(1));
+}
+
+function unsafeStringify(arr, offset = 0) {
+  // Note: Be careful editing this code!  It's been tuned for performance
+  // and works in ways you may not expect. See https://github.com/uuidjs/uuid/pull/434
+  return (byteToHex[arr[offset + 0]] + byteToHex[arr[offset + 1]] + byteToHex[arr[offset + 2]] + byteToHex[arr[offset + 3]] + '-' + byteToHex[arr[offset + 4]] + byteToHex[arr[offset + 5]] + '-' + byteToHex[arr[offset + 6]] + byteToHex[arr[offset + 7]] + '-' + byteToHex[arr[offset + 8]] + byteToHex[arr[offset + 9]] + '-' + byteToHex[arr[offset + 10]] + byteToHex[arr[offset + 11]] + byteToHex[arr[offset + 12]] + byteToHex[arr[offset + 13]] + byteToHex[arr[offset + 14]] + byteToHex[arr[offset + 15]]).toLowerCase();
+}
+
+function stringify(arr, offset = 0) {
+  const uuid = unsafeStringify(arr, offset); // Consistency check for valid UUID.  If this throws, it's likely due to one
+  // of the following:
+  // - One or more input array values don't map to a hex octet (leading to
+  // "undefined" in the uuid)
+  // - Invalid input values for the RFC `version` or `variant` fields
+
+  if (!(0,_validate_js__WEBPACK_IMPORTED_MODULE_0__["default"])(uuid)) {
+    throw TypeError('Stringified UUID is invalid');
+  }
+
+  return uuid;
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (stringify);
+
+/***/ }),
+
+/***/ "../node_modules/uuid/dist/esm-browser/v4.js":
+/*!***************************************************!*\
+  !*** ../node_modules/uuid/dist/esm-browser/v4.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _native_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./native.js */ "../node_modules/uuid/dist/esm-browser/native.js");
+/* harmony import */ var _rng_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rng.js */ "../node_modules/uuid/dist/esm-browser/rng.js");
+/* harmony import */ var _stringify_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./stringify.js */ "../node_modules/uuid/dist/esm-browser/stringify.js");
+
+
+
+
+function v4(options, buf, offset) {
+  if (_native_js__WEBPACK_IMPORTED_MODULE_0__["default"].randomUUID && !buf && !options) {
+    return _native_js__WEBPACK_IMPORTED_MODULE_0__["default"].randomUUID();
+  }
+
+  options = options || {};
+  const rnds = options.random || (options.rng || _rng_js__WEBPACK_IMPORTED_MODULE_1__["default"])(); // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+
+  rnds[6] = rnds[6] & 0x0f | 0x40;
+  rnds[8] = rnds[8] & 0x3f | 0x80; // Copy bytes to buffer, if provided
+
+  if (buf) {
+    offset = offset || 0;
+
+    for (let i = 0; i < 16; ++i) {
+      buf[offset + i] = rnds[i];
+    }
+
+    return buf;
+  }
+
+  return (0,_stringify_js__WEBPACK_IMPORTED_MODULE_2__.unsafeStringify)(rnds);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (v4);
+
+/***/ }),
+
+/***/ "../node_modules/uuid/dist/esm-browser/validate.js":
+/*!*********************************************************!*\
+  !*** ../node_modules/uuid/dist/esm-browser/validate.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _regex_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./regex.js */ "../node_modules/uuid/dist/esm-browser/regex.js");
+
+
+function validate(uuid) {
+  return typeof uuid === 'string' && _regex_js__WEBPACK_IMPORTED_MODULE_0__["default"].test(uuid);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (validate);
+
+/***/ }),
+
 /***/ "./js/jquery.js":
 /*!**********************!*\
   !*** ./js/jquery.js ***!
@@ -27584,9 +27766,11 @@ var __webpack_exports__ = {};
   \******************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "readFile": () => (/* binding */ readFile),
 /* harmony export */   "setAlertsTab": () => (/* binding */ setAlertsTab),
 /* harmony export */   "setBuffsTab": () => (/* binding */ setBuffsTab),
 /* harmony export */   "setCompareTab": () => (/* binding */ setCompareTab),
+/* harmony export */   "setPresetsTab": () => (/* binding */ setPresetsTab),
 /* harmony export */   "setSettingsTab": () => (/* binding */ setSettingsTab)
 /* harmony export */ });
 /* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
@@ -27596,6 +27780,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_jquery_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _scripts_script_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/script.js */ "./scripts/script.js");
 /* harmony import */ var _scripts_image_reader_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/image-reader.js */ "./scripts/image-reader.js");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! uuid */ "../node_modules/uuid/dist/esm-browser/v4.js");
+
 
 
 
@@ -27626,8 +27812,11 @@ let defaultSettings = [
     { name: "antifireBuff", value: "false" },
     { name: "aggressionBuff", value: "false" },
     { name: "lowHealthBar", value: "false" },
-    { name: "lowPrayerBar", value: "false" }
+    { name: "lowPrayerBar", value: "false" },
+    { name: "savedPresets", value: "[]" },
 ];
+let presetId = (0,uuid__WEBPACK_IMPORTED_MODULE_6__["default"])();
+let savedPresets = [];
 window.onload = async function start() {
     // Add defaults if missing
     for (let d = 0; d < defaultSettings.length; d++) {
@@ -27639,6 +27828,16 @@ window.onload = async function start() {
     }
     ;
     // Load localStorage into elements
+    loadLocalStorageItems();
+    if (window.alt1) {
+        _scripts_script_js__WEBPACK_IMPORTED_MODULE_4__.start();
+    }
+    ;
+    setBuffsTab();
+    loadPresetDropdown();
+    console.log("Ready to save your ass.");
+};
+let loadLocalStorageItems = () => {
     for (let i = 0, len = localStorage.length; i < len; i++) {
         let key = localStorage.key(i);
         let value = localStorage[key];
@@ -27656,12 +27855,6 @@ window.onload = async function start() {
         }
     }
     ;
-    if (window.alt1) {
-        _scripts_script_js__WEBPACK_IMPORTED_MODULE_4__.start();
-    }
-    ;
-    setBuffsTab();
-    console.log("Ready to save your ass.");
 };
 // Listen for pasted (ctrl-v) images, usually used in the browser version of an app
 _alt1_base__WEBPACK_IMPORTED_MODULE_0__.PasteInput.listen(img => {
@@ -27671,6 +27864,107 @@ _alt1_base__WEBPACK_IMPORTED_MODULE_0__.PasteInput.listen(img => {
 if (window.alt1) {
     alt1.identifyAppUrl("./appconfig.json");
 }
+let loadPresetDropdown = () => {
+    newPreset();
+    loadPresetJson();
+    loadDropdown("presets");
+    loadDropdown("savedPresets");
+};
+let loadDropdown = (dropdownName) => {
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + dropdownName).empty();
+    if (dropdownName == "presets") {
+        _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + dropdownName).append(_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("<option>", {
+            value: "new",
+            text: "---Create New---"
+        }));
+    }
+    else {
+        _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + dropdownName).append(_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("<option>", {
+            value: "",
+            text: "---Select Preset---"
+        }));
+    }
+    for (let p = 0; p < savedPresets.length; p++) {
+        _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + dropdownName).append(_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("<option>", {
+            value: savedPresets[p].id,
+            text: savedPresets[p].presetName
+        }));
+    }
+};
+let loadPresetJson = () => {
+    savedPresets = JSON.parse(localStorage.getItem("savedPresets"));
+};
+let newPreset = () => {
+    presetId = (0,uuid__WEBPACK_IMPORTED_MODULE_6__["default"])();
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#presetName")[0].value = "";
+    let options = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".presetOption");
+    for (let o = 0; o < options.length; o++) {
+        options[o].checked = false;
+    }
+};
+_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#presets").change(function () {
+    if (this.value == "new") {
+        newPreset();
+    }
+    else {
+        presetId = this.value;
+        let foundPreset = savedPresets.find(p => p.id == presetId);
+        if (foundPreset) {
+            _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#presetName")[0].value = foundPreset.presetName;
+            for (let o = 0; o < foundPreset.options.length; o++) {
+                _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + foundPreset.options[o].name)[0].checked = foundPreset.options[o].setting;
+            }
+        }
+    }
+});
+_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#savedPresets").change(function () {
+    presetId = this.value;
+    let foundPreset = savedPresets.find(p => p.id == presetId);
+    if (foundPreset) {
+        for (let o = 0; o < foundPreset.options.length; o++) {
+            let settingName = foundPreset.options[o].name.replace("Preset", "");
+            localStorage.setItem(settingName, foundPreset.options[o].setting);
+        }
+        loadLocalStorageItems();
+    }
+});
+_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#savePreset").click(function () {
+    let foundPreset = savedPresets.find(p => p.id == presetId);
+    if (foundPreset) {
+        foundPreset.presetName = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#presetName")[0].value;
+        for (let o = 0; o < foundPreset.options.length; o++) {
+            foundPreset.options[o].setting = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + foundPreset.options[o].name)[0].checked;
+        }
+    }
+    else {
+        let presetName = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#presetName")[0].value;
+        let preset = {
+            id: presetId,
+            presetName: presetName,
+            options: []
+        };
+        let options = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".presetOption");
+        for (let o = 0; o < options.length; o++) {
+            preset.options.push({
+                name: options[o].id,
+                setting: options[o].checked
+            });
+        }
+        savedPresets.push(preset);
+    }
+    localStorage.setItem("savedPresets", JSON.stringify(savedPresets));
+    loadPresetDropdown();
+    return false;
+});
+_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#deletePreset").click(function () {
+    let foundPreset = savedPresets.find(p => p.id == presetId);
+    if (foundPreset) {
+        savedPresets = savedPresets.filter(function (el) { return el.id != foundPreset.id; });
+        localStorage.setItem("savedPresets", JSON.stringify(savedPresets));
+        loadPresetDropdown();
+    }
+    return false;
+});
 _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".contenttab").click(function () {
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".activetab").removeClass("activetab");
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(this).addClass("activetab");
@@ -27683,6 +27977,9 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".contenttab").click(function () {
     else if (this.id == "alerts-tab") {
         setAlertsTab();
     }
+    else if (this.id == "presets-tab") {
+        setPresetsTab();
+    }
     else if (this.id == "settings-tab") {
         setSettingsTab();
     }
@@ -27691,6 +27988,7 @@ function setBuffsTab() {
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#buffs-content').show();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#compare-content').hide();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#alerts-content').hide();
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#presets-content').hide();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#settings-content').hide();
 }
 ;
@@ -27698,6 +27996,7 @@ function setCompareTab() {
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#buffs-content').hide();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#compare-content').show();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#alerts-content').hide();
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#presets-content').hide();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#settings-content').hide();
 }
 ;
@@ -27705,6 +28004,15 @@ function setAlertsTab() {
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#buffs-content').hide();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#compare-content').hide();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#alerts-content').show();
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#presets-content').hide();
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#settings-content').hide();
+}
+;
+function setPresetsTab() {
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#buffs-content').hide();
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#compare-content').hide();
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#alerts-content').hide();
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#presets-content').show();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#settings-content').hide();
 }
 ;
@@ -27712,19 +28020,22 @@ function setSettingsTab() {
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#buffs-content').hide();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#compare-content').hide();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#alerts-content').hide();
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#presets-content').hide();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#settings-content').show();
 }
 ;
 // Store Checkbox values in localStorage
 _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input:checkbox").on("change", async function () {
-    var checkboxId = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(this).attr("id");
-    if (_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(this).is(":checked")) {
-        localStorage.setItem(checkboxId, "true");
+    let checkboxId = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(this).attr("id");
+    if (!checkboxId.includes("Preset")) {
+        if (_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(this).is(":checked")) {
+            localStorage.setItem(checkboxId, "true");
+        }
+        else {
+            localStorage.setItem(checkboxId, "false");
+        }
+        await _scripts_script_js__WEBPACK_IMPORTED_MODULE_4__.updateSelections();
     }
-    else {
-        localStorage.setItem(checkboxId, "false");
-    }
-    await _scripts_script_js__WEBPACK_IMPORTED_MODULE_4__.updateSelections();
 });
 // Store Range values in localStorage
 _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input[type=range]").on("input", function () {
@@ -27733,7 +28044,7 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input[type=range]").on("input", func
     localStorage.setItem(rangeId, rangeValue);
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + rangeId + "Output").val(rangeValue);
 });
-_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input[type=file]").on("change", async function () {
+_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#compareImages").on("change", async function () {
     if (this.files.length == 2) {
         _scripts_image_reader_js__WEBPACK_IMPORTED_MODULE_5__.imageToBase64(this.files[0], (firstImage) => {
             _scripts_image_reader_js__WEBPACK_IMPORTED_MODULE_5__.imageToBase64(this.files[1], async (secondImage) => {
@@ -27743,6 +28054,28 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input[type=file]").on("change", asyn
         });
     }
 });
+_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#exportPresets").on("click", async function () {
+    let fileContent = localStorage.getItem("savedPresets");
+    let bb = new Blob([fileContent], { type: 'text/plain' });
+    let a = document.createElement('a');
+    a.download = 'buff_presets.txt';
+    a.href = window.URL.createObjectURL(bb);
+    a.click();
+    a.remove();
+});
+_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#importPresets").on("change", async function () {
+    readFile(this.files[0], (data) => {
+        localStorage.setItem("savedPresets", data);
+        loadPresetDropdown();
+    });
+});
+function readFile(file, callback) {
+    let reader = new FileReader();
+    reader.onloadend = function () {
+        callback(reader.result);
+    };
+    reader.readAsText(file);
+}
 
 })();
 
