@@ -27921,8 +27921,7 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#presets").change(function () {
 });
 _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#savedPresets").change(function () { selectPreset(this); });
 let selectPreset = (selection) => {
-    presetId = selection.value;
-    let foundPreset = savedPresets.find(p => p.id == presetId);
+    let foundPreset = savedPresets.find(p => p.id == selection.value);
     if (foundPreset) {
         for (let o = 0; o < foundPreset.options.length; o++) {
             let settingName = foundPreset.options[o].name.replace("Preset", "");

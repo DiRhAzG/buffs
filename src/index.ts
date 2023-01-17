@@ -159,8 +159,7 @@ $("#presets").change(function() {
 $("#savedPresets").change(function() {selectPreset(this)});
 
 let selectPreset = (selection) => {
-	presetId = selection.value;
-	let foundPreset = savedPresets.find(p => p.id == presetId);
+	let foundPreset = savedPresets.find(p => p.id == selection.value);
 	
 	if (foundPreset) {
 		for (let o = 0; o < foundPreset.options.length; o++) {
