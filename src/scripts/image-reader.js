@@ -186,6 +186,11 @@ export function readNumbers(buffer, type = "") {
         }
     }
 
+    // Return 15 second buffer for Grimoire, to track if it's on or not
+    if (type == "grimBuff") {
+        return 15;
+    }
+
     // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
     if (type == "animate") {
         let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);

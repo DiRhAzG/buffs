@@ -28,7 +28,8 @@ let warnings = [
     { id: 8, name: "prayerRenewalBuff", friendlyName: "Prayer Renewal", timeBuffer: true },
     { id: 9, name: "excaliburBuff", friendlyName: "Excalibur", timeBuffer: false },
     { id: 10, name: "weaponPoisonBuff", friendlyName: "Weapon Poison", timeBuffer: true },
-    { id: 11, name: "kalgerBuff", friendlyName: "Kal'gerion", timeBuffer: false }
+    { id: 11, name: "kalgerBuff", friendlyName: "Kal'gerion", timeBuffer: false },
+    { id: 12, name: "grimBuff", friendlyName: "Grimoire", timeBuffer: false }
 ];
 
 /* Main function to run everything else */
