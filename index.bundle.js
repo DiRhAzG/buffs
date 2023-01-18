@@ -27957,10 +27957,20 @@ let selectPreset = (selection) => {
 };
 _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#savePreset").click(function () {
     let foundPreset = savedPresets.find(p => p.id == presetId);
+    let options = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".presetOption");
     if (foundPreset) {
         foundPreset.presetName = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#presetName")[0].value;
-        for (let o = 0; o < foundPreset.options.length; o++) {
-            foundPreset.options[o].setting = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + foundPreset.options[o].name)[0].checked;
+        for (let o = 0; o < options.length; o++) {
+            let foundOption = foundPreset.options.find(s => s.name == options[o].id);
+            if (foundOption) {
+                foundOption.setting = options[o].checked;
+            }
+            else {
+                foundPreset.options.push({
+                    name: options[o].id,
+                    setting: options[o].checked
+                });
+            }
         }
     }
     else {
@@ -27970,7 +27980,6 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#savePreset").click(function () {
             presetName: presetName,
             options: []
         };
-        let options = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".presetOption");
         for (let o = 0; o < options.length; o++) {
             preset.options.push({
                 name: options[o].id,

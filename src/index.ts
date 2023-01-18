@@ -176,12 +176,22 @@ let selectPreset = (selection) => {
 
 $("#savePreset").click(function() {
 	let foundPreset = savedPresets.find(p => p.id == presetId);
+	let options = $(".presetOption");
 		
 	if (foundPreset) {
 		foundPreset.presetName = $("#presetName")[0].value;
 
-		for (let o = 0; o < foundPreset.options.length; o++) {
-			foundPreset.options[o].setting = $("#" + foundPreset.options[o].name)[0].checked;
+		for (let o = 0; o < options.length; o++) {
+			let foundOption = foundPreset.options.find(s => s.name == options[o].id)
+
+			if (foundOption) {
+				foundOption.setting = options[o].checked;
+			} else {
+				foundPreset.options.push({
+					name: options[o].id,
+					setting: options[o].checked
+				})
+			}
 		}
 	} else {
 		let presetName = $("#presetName")[0].value;
@@ -191,8 +201,6 @@ $("#savePreset").click(function() {
 			presetName: presetName,
 			options: []
 		};
-
-		let options = $(".presetOption");
 
 		for (let o = 0; o < options.length; o++) {
 			preset.options.push({
