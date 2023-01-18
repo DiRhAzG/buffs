@@ -80,7 +80,7 @@ export function readNumbers(buffer, type = "") {
     let numberValues = "";
     let foundPixel = false;
 
-    if (type == "buff" || type == "animate") {
+    if (type.includes("Buff")) {
         numbersList = buffNumbers;
         numberValues = buffValues;
     } else if (type == "health" || type == "prayer") {
@@ -157,7 +157,7 @@ export function readNumbers(buffer, type = "") {
         for (let m = 0; m < numberMatch.length; m++) {
             if (numberMatch[m].num == 10) {
                 // Th
-                if (type == "buff" || type == "animate") {
+                if (type.includes("Buff")) {
                     str = (str * 60) + 59;
                 } else if (type == "health") {
                     // Legacy has less HP, so scale by 10
@@ -185,6 +185,7 @@ export function readNumbers(buffer, type = "") {
             }
         }
     }
+    console.log('test');
 
     // Return 15 second buffer for Grimoire, to track if it's on or not
     if (type == "grimBuff") {
@@ -192,7 +193,7 @@ export function readNumbers(buffer, type = "") {
     }
 
     // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
-    if (type == "animate") {
+    if (type == "animateDeadBuff") {
         let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
 
         if (foundParentheses.length == 0) {
