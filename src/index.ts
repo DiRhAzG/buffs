@@ -33,6 +33,8 @@ let defaultSettings = [
 	{ name: "aggressionBuff", value: "false" },
 	{ name: "lowHealthBar", value: "false" },
 	{ name: "lowPrayerBar", value: "false" },
+	{ name: "kalgerBuff", value: "false" },
+	{ name: "grimBuff", value: "false" },
 	{ name: "savedPresets", value: "[]" },
 ]
 
