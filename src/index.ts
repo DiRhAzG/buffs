@@ -59,7 +59,7 @@ window.onload = async function start() {
 	};
 
 	setBuffsTab();
-	loadPresetDropdown();
+	loadPresetDropdown(true);
 	console.log("Ready to save your ass.");
 }
 
@@ -94,9 +94,9 @@ if (window.alt1) {
 	alt1.identifyAppUrl("./appconfig.json");
 }
 
-let loadPresetDropdown = () => {
+let loadPresetDropdown = (firstLoad = false) => {
 	newPreset();
-	loadPresetJson();
+	loadPresetJson(firstLoad);
 
 	loadDropdown("presets");
 	loadDropdown("savedPresets");
@@ -127,8 +127,25 @@ let loadDropdown = (dropdownName) => {
 	}
 }
 
-let loadPresetJson = () => {
+let loadPresetJson = (firstLoad) => {
 	savedPresets = JSON.parse(localStorage.getItem("savedPresets"));
+
+	if (firstLoad) {
+		let options = $(".presetOption");
+
+		for (let s = 0; s < savedPresets.length; s++) {
+			for (let o = 0; o < options.length; o++) {
+				let foundOption = savedPresets[s].options.find(s => s.name == options[o].id)
+
+				if (!foundOption) {
+					savedPresets[s].options.push({
+						name: options[o].id,
+						setting: false
+					})
+				}
+			}
+		}
+	}
 }
 
 let newPreset = () => {
@@ -162,7 +179,7 @@ $("#savedPresets").change(function() {selectPreset(this)});
 
 let selectPreset = (selection) => {
 	let foundPreset = savedPresets.find(p => p.id == selection.value);
-	
+	console.log(foundPreset);
 	if (foundPreset) {
 		for (let o = 0; o < foundPreset.options.length; o++) {
 			let settingName = foundPreset.options[o].name.replace("Preset", "");
