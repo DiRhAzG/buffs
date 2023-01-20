@@ -185,20 +185,22 @@ export function readNumbers(buffer, type = "") {
             }
         }
     }
-    console.log('test');
 
-    // Return 15 second buffer for Grimoire, to track if it's on or not
     if (type == "grimBuff") {
+        // Return 15 second buffer for Grimoire, to track if it's on or not
         return 15;
-    }
+    } else if (type == "animateDeadBuff") {
+        // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
 
-    // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
-    if (type == "animateDeadBuff") {
         let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
 
         if (foundParentheses.length == 0) {
             return 720;
         }
+    } else if (type == 'vulnBuff') {
+        return 58;
+    } else if (type == 'smokeCloudBuff') {
+        return 118;
     }
 
     // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.
@@ -309,7 +311,7 @@ export async function generateMatchingImage(firstImage, secondImage) {
         for (let bw = 0; bw < firstBuffer.width; bw++) {
             let bi = 4 * bw + 4 * firstBuffer.width * bh;
 
-            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 5)) {
+            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 3)) {
                 firstBuffer.data[bi] = 0;
                 firstBuffer.data[bi + 1] = 0;
                 firstBuffer.data[bi + 2] = 0;

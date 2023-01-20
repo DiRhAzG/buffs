@@ -26723,6 +26723,8 @@ let imageData = [
     { id: 10, name: "aggressionBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFxSURBVEhL7ZY9S8NAGMf/d0kUWmldHBx8w1nUxcUPYBHE3cnZLyCiq34EP4LfwsnBd6wuQkEHhbboUIXW5JJ78ZIe4iK5k9Cpv/CQu+dJ+PFcwiVk63hSYUBkspOdFjHzPzncXVERE+j2Elw8RDi/bOTe85vUQ804l9mpCuZnqpibrmB1uWSybljLlFLgQoBzASGkybphLUsFnKdCIBITJuuGlWz/4Eg9dWposw28szXIYMFU3LCSUUr7y8g5kiQGY8xU3LCTEQrf9+F5HgglekkTU3HDSqb0QamXdZie0/l/sJJl3UiuQ0Dq0Jl+wRErmdCv/E9ImXVYq206t2cnizlkwhGHTI9jBP4IxsplU7XHSjaeeCgzglKkUFEBqmQU1cB9F8mV7S1tq7DehHz5RHj1ivimieSuDfLYMVfYkyv7qrfwcfaMzmkDXS3rXb8ivNXC+zesY9HtuQ3qE+O06xfBUFYIQ1khDGWFMMA/YuAbp42cxpumWUMAAAAASUVORK5CYII=" },
     { id: 11, name: "kalgerBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJHSURBVEhL7ZY9aFNRFMf/530lz9hiISBKNgUrguAiTkIGBwe7K37srg4Wp1D8yCS4uDgpUlexlIIOGRwUh9JijEELOgS/qM1QpI15713/9yZaY997CRI65Qcn97yb887/nnNPIHLu7j6FHcKIzV7+LN1nw5UDh5Rr2xBYiBBCIqAdKCg6EX1wL4wUIhE4jNNYlmC91cLqj008bn7pyafROlbX78EWGxnHQ9Z14LsZZDwXOd/DmO9jfJeP3VxzmSxyngffcRnr8B0LHoWdbTJbxIq1gjaCMABr4Ykt2Exi253VdWi2Q9Mr9/l9Jwlj+ekYP55YsTsf38vGz4CtY9tC3Td9XDF+SFPdW2YjEanQCCpuavPYjSRixTS3P9RFMUnEisw18X6EPixKhCGFKBbS9Jd8yNouk1mYW/umo2NJFLs2eURZe8Yx83pRTHJORseEg9KJubVSkzLtxruqmGI9DgsPlUSi2M36G7n+4rl5c6a2bFadRzuiq9Qb/xC1WebvHseQKLYNPQz5PEq1JRFOJ4evh1DfXxCkipn577qplIqn+sYVJ/KJMYm/szhKlWdxnfvD9JkpVWmupsYMJDZdPG1OfB4FdcEqxJ6+PPdETkweTq0+VezqyaJ5uVxZkEtOQT1EQ7ITwEX6Z/0t0amjx4z/sv72/yurrjW7HnA/aJhE97435AH9RxudZ81myrj/TarYfHVJDu4tqONj+1Pb83R5cSC1vne28rUhr9Y/DXb0Pgw0IMNiJDYURmJDYSQ2FHbwHzHwCzNEyTlL6OhZAAAAAElFTkSuQmCC" },
     { id: 12, name: "grimBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALISURBVEhL7dbLTxNBAMfx73ZpYfsUC21RJII0IEJI8EEFH0gi0ejNxIMnL568+i/4Hxj/AWP0L5CziTEYEw5EBBQRCO+WtbXd0nYf42CIhlCSVgknfqdN5vGZ2ZmdHeXB8ybBYaVa7PLdu+LiyEjVA9x2XDvPFcfr8+FSFBKJC1WDVWEdnS1ic36KOlHC3FhkuPdMVWBVWDG1ir2xSmZuBjk5MpnMTkllqRg7ezIoLMvkycMeHt1r5/7NNjTNS397RAx1NVc0w4qwvvYTotZTQ2MkwrPXX3j5ZoEN3eRqX4xYtB6jUORGd4sY6DotHj99ui+8L5Y4FxW3RvpEW+c5oRcV6gJBYkE/jWE/V3pb0LwBsgUXNWoNbk0Dj4e8P8rY6OhOD3uzL2YLhRXDTzDcgOI/jqEEyBVt8qbDxyWTZLaAKltHj/lwECTTWWpQCHm9XBoYKDu7slhPR0zML6dxmwaaP8BWPkejV8Xuvc6nH41MrSuMrzhslWxcbpdcOw2rVCS1vIie2sSW9a93hPeAZbHPX9eJ+GtxUkvkZj4QVkt8023G3k1QP3wNq7WTmdl1lpey5IwSliNoCocJe2F54TuWx03d0G1i8bZdYFnMdoSiulyy0CEQaiAYPQXdCSKJO6SaO6kNBeiN18t6DkndwDRtcoUcJbNIVr7StfkFVt++Z+3rnPxA/qYsdr61QWiah654MyGfyol6h3CTn+RGCvXVC4wvsxhGAcMskMwYqMKSkE3aMHHbDuYPnYnp3dB29mDDN4dESI7c665lLV2gVDLRV5LEfZtcO7bG7Ti0RuT6CUfWVjDyW/zM5X9jtm2TTWcU3XT2QNvZhfUPDgpL8bBoyNNC9uXIY0KRnTpytNOvRtmaHCcpN0FUn8T6uYkiW7tVMC1LbhaHFd0oi/zJYf1i/unU/58cYQeSI+xAcoQdSA7xRgy/ABxDLpej35QbAAAAAElFTkSuQmCC" },
+    { id: 13, name: "vulnBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABrUlEQVQ4T2M8w8Dwn4GKgBFkoAkDAyM1zASZRT8DJ0w59v/4/j0MD29eY/j57QXDH77/DNx/JBnk1bUYwjMjGIJc1DB8heHC89ef/zfUlCTJ++dv//hvqMoB1oNiIMgwPnY+BmUlbpIM/PT+z/+7b/4wgAzFcOG9+9/+KylykWQgsh6skXLg2OX/1uZa8Ej//PEzw8dP3xg+fGdkUJYQZeDkQ9i3/+ARBjcne7gAhoFVuSv+t02OIMmFZcnT/3fNzcQMwxUrb4ITeES4OkkGglKDhKgwWB+GC0GSBTlWcAPj0tr/c7/4yfCOlQkeBCvX1qFYiKwHw8Cbtz7+lxTlZnjz4RfDo+d3GRYtPsQwb3o2hotB4SwvJcwgzC/GwCfIgjsMG9s3/q+v9Ecx4Pffv/9BEcPLzwt25cf3HxlERITgapIyp/2fNz0LMwxB6Wn+nD0M+aUeJIXhxO4d/119TBm0NIUJhyExBQYoMmERiTUdEpv99hw6/19ZTpxBUUEKdxiiuwiUCxgZPzDIyIqDpZ48fsnAz8fFICQkgDVY6Ft8ERN+6GrgLiRHMy49AJTC5vEf1NJpAAAAAElFTkSuQmCC" },
+    { id: 14, name: "smokeCloudBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAISSURBVDhPrZXdSxRRGId/Z3Z2Z52ZnLVFosI13cp0CZHcclu2hD6goD/Di0UIwQvxIgSvuukfELoIuu4mUi90sbViyVWkUsLooi8lZEtd98vdM6cz27hgM5ta+8DhnBne8/Ce877DkCTAUEtqKTRcgrmuGYcSPnj0mN0fe8jCvdernko05wpPxydYd1cnQAgSb5fx4esqJMkJhyCU72Z+dhYbqdTvYBssGd65fYt8+bYGQSAIBs7Bd6wRlOrQdR2fVlbwbn7BjLTH9siJuQWkUj8hig4EO9qgut1Ib27h9UwctFQyo+yxFd6N9pHP/KjZTBaqLCN0vh0fl5bxY30djGdqjGrYCoPhCJuOxbC69h0lnlFuO4eWplPovXETZ862weP1mpFWyo3dzWfzuUwwfIUR6OiPRhHoCGB8chqyqqCuzs2L40ChkMcGv4KR4cE9+wxXFWGEFfI5aJqG0KUI4s9fQFZktPhb0exrgtagQVVVpLfSGOjvq+ytKrzQc5kVizt8JSCzmYHokiDx0eBthMdzlHcAIMsS/KdbMXpvaH9h18UeRilFdjsPWqS82k4o9RoWk/E9cX9iuGyLwt+jtMN7jzIcqffgpM+/r2wXizB09Vq5K3Sd4PiJZrxZfEVmpp4cSGZgERL+yblEBe+XkuRl/NmBRbtYhC6ngrlE7NCiCsZFmsv/5i9F+Xdq/AsAfgEAD7xI0n17IwAAAABJRU5ErkJggg==" },
 ];
 
 let imageBuffers = [];
@@ -26747,10 +26749,10 @@ function getBuff(img, buffName) {
 
         switch (buffName) {
             case 'animateDeadBuff':
-                numberType = 'animateDeadBuff';
-                break;
             case 'grimBuff':
-                numberType = 'grimBuff';
+            case 'vulnBuff':
+            case 'smokeCloudBuff':
+                numberType = buffName;
                 break;
             default:
                 numberType = 'Buff';
@@ -26813,7 +26815,7 @@ function setBuffTime(selectedBuff, buffTime, buffTimers) {
 
         if (expireTime != undefined) {
             if (
-                buffTime < 60 || // Time is less than a minute, most accurate
+                (buffTime < 60 && selectedBuff != "vulnBuff") || // Time is less than a minute, most accurate
                 (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
                 (buffTime > 60 && foundBuff.buffTime < buffTime && buffTime != 720) || // New time is higher, buff could've been renewed
                 foundBuff.expireTime < moment__WEBPACK_IMPORTED_MODULE_2__.utc(new Date()) || // Time has expired, but there's still a buff on screen
@@ -27123,20 +27125,22 @@ function readNumbers(buffer, type = "") {
             }
         }
     }
-    console.log('test');
 
-    // Return 15 second buffer for Grimoire, to track if it's on or not
     if (type == "grimBuff") {
+        // Return 15 second buffer for Grimoire, to track if it's on or not
         return 15;
-    }
+    } else if (type == "animateDeadBuff") {
+        // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
 
-    // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
-    if (type == "animateDeadBuff") {
         let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
 
         if (foundParentheses.length == 0) {
             return 720;
         }
+    } else if (type == 'vulnBuff') {
+        return 58;
+    } else if (type == 'smokeCloudBuff') {
+        return 118;
     }
 
     // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.
@@ -27247,7 +27251,7 @@ async function generateMatchingImage(firstImage, secondImage) {
         for (let bw = 0; bw < firstBuffer.width; bw++) {
             let bi = 4 * bw + 4 * firstBuffer.width * bh;
 
-            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 5)) {
+            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 3)) {
                 firstBuffer.data[bi] = 0;
                 firstBuffer.data[bi + 1] = 0;
                 firstBuffer.data[bi + 2] = 0;
@@ -27324,7 +27328,9 @@ let warnings = [
     { id: 9, name: "excaliburBuff", friendlyName: "Excalibur", timeBuffer: false },
     { id: 10, name: "weaponPoisonBuff", friendlyName: "Weapon Poison", timeBuffer: true },
     { id: 11, name: "kalgerBuff", friendlyName: "Kal'gerion", timeBuffer: false },
-    { id: 12, name: "grimBuff", friendlyName: "Grimoire", timeBuffer: false }
+    { id: 12, name: "grimBuff", friendlyName: "Grimoire", timeBuffer: false },
+    { id: 13, name: "vulnBuff", friendlyName: "Vulnerability", timeBuffer: false },
+    { id: 14, name: "smokeCloudBuff", friendlyName: "Smoke Cloud", timeBuffer: false }
 ];
 
 /* Main function to run everything else */
@@ -27838,6 +27844,8 @@ let defaultSettings = [
     { name: "lowPrayerBar", value: "false" },
     { name: "kalgerBuff", value: "false" },
     { name: "grimBuff", value: "false" },
+    { name: "vulnBuff", value: "false" },
+    { name: "smokeCloudBuff", value: "false" },
     { name: "savedPresets", value: "[]" },
 ];
 let presetId = (0,uuid__WEBPACK_IMPORTED_MODULE_6__["default"])();
