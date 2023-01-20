@@ -26815,7 +26815,7 @@ function setBuffTime(selectedBuff, buffTime, buffTimers) {
 
         if (expireTime != undefined) {
             if (
-                (buffTime < 60 && selectedBuff != "vulnBuff") || // Time is less than a minute, most accurate
+                buffTime < 60 || // Time is less than a minute, most accurate
                 (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
                 (buffTime > 60 && foundBuff.buffTime < buffTime && buffTime != 720) || // New time is higher, buff could've been renewed
                 foundBuff.expireTime < moment__WEBPACK_IMPORTED_MODULE_2__.utc(new Date()) || // Time has expired, but there's still a buff on screen
@@ -27138,9 +27138,9 @@ function readNumbers(buffer, type = "") {
             return 720;
         }
     } else if (type == 'vulnBuff') {
-        return 58;
+        return 60;
     } else if (type == 'smokeCloudBuff') {
-        return 118;
+        return 120;
     }
 
     // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.

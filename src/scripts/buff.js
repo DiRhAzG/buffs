@@ -110,7 +110,7 @@ export function setBuffTime(selectedBuff, buffTime, buffTimers) {
 
         if (expireTime != undefined) {
             if (
-                (buffTime < 60 && selectedBuff != "vulnBuff") || // Time is less than a minute, most accurate
+                buffTime < 60 || // Time is less than a minute, most accurate
                 (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
                 (buffTime > 60 && foundBuff.buffTime < buffTime && buffTime != 720) || // New time is higher, buff could've been renewed
                 foundBuff.expireTime < moment.utc(new Date()) || // Time has expired, but there's still a buff on screen

@@ -198,9 +198,9 @@ export function readNumbers(buffer, type = "") {
             return 720;
         }
     } else if (type == 'vulnBuff') {
-        return 58;
+        return 60;
     } else if (type == 'smokeCloudBuff') {
-        return 118;
+        return 120;
     }
 
     // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.
