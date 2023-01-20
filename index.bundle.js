@@ -26817,7 +26817,7 @@ function setBuffTime(selectedBuff, buffTime, buffTimers) {
             if (
                 buffTime < 60 || // Time is less than a minute, most accurate
                 (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
-                (buffTime > 60 && foundBuff.buffTime < buffTime && buffTime != 720) || // New time is higher, buff could've been renewed
+                (buffTime > 60 && foundBuff.buffTime < buffTime && buffTime != 720 && selectedBuff != "vulnBuff" && selectedBuff != "smokeCloudBuff") || // New time is higher, buff could've been renewed
                 foundBuff.expireTime < moment__WEBPACK_IMPORTED_MODULE_2__.utc(new Date()) || // Time has expired, but there's still a buff on screen
                 foundBuff.buffTime == 720 || // Fuzzy logic for Animate Dead. Overwrite it if an actual value is found
                 selectedBuff == "grimBuff" // Want to just keep tracking if grim is on or not
@@ -27138,9 +27138,9 @@ function readNumbers(buffer, type = "") {
             return 720;
         }
     } else if (type == 'vulnBuff') {
-        return 60;
+        return 62;
     } else if (type == 'smokeCloudBuff') {
-        return 120;
+        return 122;
     }
 
     // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.
