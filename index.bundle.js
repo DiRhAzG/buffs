@@ -26822,7 +26822,7 @@ function setBuffTime(selectedBuff, buffTime, buffTimers) {
                 foundBuff.buffTime == 720 || // Fuzzy logic for Animate Dead. Overwrite it if an actual value is found
                 selectedBuff == "grimBuff" // Want to just keep tracking if grim is on or not
             ) {
-                // console.log(`${selectedBuff}: ${buffTime}`);
+                console.log(`${selectedBuff}: ${buffTime}`);
 
                 foundBuff.buffTime = buffTime;
                 foundBuff.expireTime = expireTime;
