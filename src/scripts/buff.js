@@ -40,19 +40,6 @@ export function getBuff(img, buffName) {
         // Get starting pixel for Buff image, to be used to grab the buff
         let foundBuff = imageBuffers.filter(b => b.name == buffName);
         let buffPosition;
-        let numberType;
-
-        switch (buffName) {
-            case 'animateDeadBuff':
-            case 'grimBuff':
-            case 'vulnBuff':
-            case 'smokeCloudBuff':
-                numberType = buffName;
-                break;
-            default:
-                numberType = 'Buff';
-                break;
-        }
 
         for (let fb = 0; fb < foundBuff.length; fb++) {
             buffPosition = ImageReader.getPosition(img, foundBuff[fb].imgBuffer, 0, 0, 27, 27);
@@ -66,7 +53,7 @@ export function getBuff(img, buffName) {
             let buffer = img.toData(buffPosition.x, buffPosition.y, buffPosition.w, buffPosition.h);
 
             // ImageReader.outputImage(buffer);
-            let buff = ImageReader.readNumbers(buffer, numberType);
+            let buff = ImageReader.readNumbers(buffer, buffName);
             
             if (buff == undefined || buff == "") {
                 return undefined;
