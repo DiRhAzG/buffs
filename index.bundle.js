@@ -27115,9 +27115,11 @@ function readNumbers(buffer, type = "") {
 
     switch (type) {
         case "grimBuff":
+            return 15;
         case "excaliburBuff":
         case "ritualShardBuff":
-            return 15;
+            if (str < 15) return str;
+            else return 15;
         case "vulnBuff":
             return 63;
         case "smokeCloudBuff":
