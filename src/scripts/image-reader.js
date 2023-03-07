@@ -198,12 +198,14 @@ export function readNumbers(buffer, type = "") {
         case "smokeCloudBuff":
             return 123;
         case "animateDeadBuff":
-            // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
-            let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
+            if (str < 20) return str;
+            else return 20;
+            // // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
+            // let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
 
-            if (foundParentheses.length == 0) return 720;
+            // if (foundParentheses.length == 0) return 720;
 
-            break;
+            // break;
     }
 
     // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.

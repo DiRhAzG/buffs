@@ -99,9 +99,9 @@ export function setBuffTime(selectedBuff, buffTime, buffTimers) {
             if (
                 buffTime < 60 || // Time is less than a minute, most accurate
                 (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
-                (foundBuff.buffTime < buffTime && buffTime != 720 && selectedBuff != "vulnBuff" && selectedBuff != "smokeCloudBuff") || // New time is higher, buff could've been renewed
+                (foundBuff.buffTime < buffTime && selectedBuff != "vulnBuff" && selectedBuff != "smokeCloudBuff") || // New time is higher, buff could've been renewed
                 foundBuff.expireTime < moment.utc(new Date()) || // Time has expired, but there's still a buff on screen
-                foundBuff.buffTime == 720 || // Fuzzy logic for Animate Dead. Overwrite it if an actual value is found
+                // foundBuff.buffTime == 720 || // Fuzzy logic for Animate Dead. Overwrite it if an actual value is found
                 (selectedBuff == "grimBuff" || selectedBuff == "excaliburBuff" || selectedBuff == "ritualShardBuff") // Want to just keep tracking if these are found or not
             ) {
                 // console.log(`${moment.utc(new Date()).toString()} - ${selectedBuff}: ${buffTime}`);

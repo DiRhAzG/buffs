@@ -26804,9 +26804,9 @@ function setBuffTime(selectedBuff, buffTime, buffTimers) {
             if (
                 buffTime < 60 || // Time is less than a minute, most accurate
                 (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
-                (foundBuff.buffTime < buffTime && buffTime != 720 && selectedBuff != "vulnBuff" && selectedBuff != "smokeCloudBuff") || // New time is higher, buff could've been renewed
+                (foundBuff.buffTime < buffTime && selectedBuff != "vulnBuff" && selectedBuff != "smokeCloudBuff") || // New time is higher, buff could've been renewed
                 foundBuff.expireTime < moment__WEBPACK_IMPORTED_MODULE_2__.utc(new Date()) || // Time has expired, but there's still a buff on screen
-                foundBuff.buffTime == 720 || // Fuzzy logic for Animate Dead. Overwrite it if an actual value is found
+                // foundBuff.buffTime == 720 || // Fuzzy logic for Animate Dead. Overwrite it if an actual value is found
                 (selectedBuff == "grimBuff" || selectedBuff == "excaliburBuff" || selectedBuff == "ritualShardBuff") // Want to just keep tracking if these are found or not
             ) {
                 // console.log(`${moment.utc(new Date()).toString()} - ${selectedBuff}: ${buffTime}`);
@@ -27125,12 +27125,14 @@ function readNumbers(buffer, type = "") {
         case "smokeCloudBuff":
             return 123;
         case "animateDeadBuff":
-            // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
-            let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
+            if (str < 20) return str;
+            else return 20;
+            // // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
+            // let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
 
-            if (foundParentheses.length == 0) return 720;
+            // if (foundParentheses.length == 0) return 720;
 
-            break;
+            // break;
     }
 
     // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.
@@ -27596,7 +27598,7 @@ let findChatBox = (img) => {
 let readChatBox = (img) => {
 	chatLines = _chatbox_js__WEBPACK_IMPORTED_MODULE_1__.readChatBox(img);
 
-    // console.log(chatLines);
+    console.log(chatLines);
 
 	if (chatLines?.length > 0) {
         // debug();
