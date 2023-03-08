@@ -27598,7 +27598,7 @@ let findChatBox = (img) => {
 let readChatBox = (img) => {
 	chatLines = _chatbox_js__WEBPACK_IMPORTED_MODULE_1__.readChatBox(img);
 
-    console.log(chatLines);
+    // console.log(chatLines);
 
 	if (chatLines?.length > 0) {
         // debug();
@@ -27608,21 +27608,21 @@ let readChatBox = (img) => {
 };
 
 let handleChatLines = () => {
-    for (let l = 0; l < chatLines.length; l++) {
-        let trackAnimate = selectedBuffs.find(sb => sb.name == "animateDeadBuff");
+    // for (let l = 0; l < chatLines.length; l++) {
+    //     let trackAnimate = selectedBuffs.find(sb => sb.name == "animateDeadBuff");
 
-        // Not accurate, because the built-in alt1 chat reader is not accurate
-        if (trackAnimate) {
-            // Buffer in an extra second for buff icon to go away
-            if (chatLines[l].includes('Your control of the dead is wavering')) {
-                _buff_js__WEBPACK_IMPORTED_MODULE_3__.setBuffTime('animateDeadBuff', 31, buffTimers);
-            }
+    //     // Not accurate, because the built-in alt1 chat reader is not accurate
+    //     if (trackAnimate) {
+    //         // Buffer in an extra second for buff icon to go away
+    //         if (chatLines[l].includes('Your control of the dead is wavering')) {
+    //             Buff.setBuffTime('animateDeadBuff', 31, buffTimers);
+    //         }
             
-            if (chatLines[l].includes('Your control of the dead fades')) {
-                _buff_js__WEBPACK_IMPORTED_MODULE_3__.setBuffTime('animateDeadBuff', 1, buffTimers);
-            }
-        }
-    }
+    //         if (chatLines[l].includes('Your control of the dead fades')) {
+    //             Buff.setBuffTime('animateDeadBuff', 1, buffTimers);
+    //         }
+    //     }
+    // }
 };
 
 let numberWithCommas = (x) => {
