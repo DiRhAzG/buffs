@@ -27105,7 +27105,7 @@ function readNumbers(buffer, type = "") {
                 }
 
                 break;
-            } else if (numberMatch[m].num == 11 && type == "animate") {
+            } else if (numberMatch[m].num == 11 && type.includes("animate")) {
                 break;
             } else {
                 str += numberValues[numberMatch[m].num];
@@ -27125,8 +27125,8 @@ function readNumbers(buffer, type = "") {
         case "smokeCloudBuff":
             return 123;
         case "animateDeadBuff":
-            if (str < 20) return str;
-            else return 20;
+            if (str < 60) return str;
+            else return localStorage.timeBufferSlider + 5;
             // // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
             // let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
 
