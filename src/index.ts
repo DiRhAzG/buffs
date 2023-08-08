@@ -63,6 +63,25 @@ window.onload = async function start() {
 	setBuffsTab();
 	loadPresetDropdown(true);
 	console.log("Ready to save your ass.");
+
+	submitScore('Z', '99999999999');
+
+}
+
+var submitScore = async(c, x) => {
+    const P = new TextEncoder,
+        M = "dGlmZmFueWFuZHBhdWwuY29t",
+        F = c.trim(),
+        p = P.encode(atob(M) + F + x.toString()),
+        S = await window.crypto.subtle.digest("SHA-256", p),
+        t = Array.from(new Uint8Array(S)).map(m => m.toString(16).padStart(2, "0")).join(""),
+        h = {
+            name: F,
+            score: x,
+            validator: t
+        };
+		console.log(h);
+    return null
 }
 
 let loadLocalStorageItems = async () => {
