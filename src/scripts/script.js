@@ -37,16 +37,18 @@ let warnings = [
 /* Main function to run everything else */
 export async function start() {
     try {
-        
         await loadImages();
         await updateSelections();
 
         // Main timer that will repeatedly run the other checks
         setTimeout(loopChecks, localStorage.refreshRateSlider);
+
     } catch (ex) {
         console.log(ex);
     }
 };
+
+
 
 function loopChecks() {
     try {
