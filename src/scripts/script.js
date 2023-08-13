@@ -32,7 +32,8 @@ let warnings = [
     { id: 12, name: "grimBuff", friendlyName: "Grimoire", timeBuffer: false },
     { id: 13, name: "vulnBuff", friendlyName: "Vulnerability", timeBuffer: false },
     { id: 14, name: "smokeCloudBuff", friendlyName: "Smoke Cloud", timeBuffer: false },
-    { id: 15, name: "darknessBuff", friendlyName: "Darkness", timeBuffer: false }
+    { id: 15, name: "darknessBuff", friendlyName: "Darkness", timeBuffer: false },
+    { id: 16, name: "auraBuff", friendlyName: "Aura", timeBuffer: true }
 ];
 
 /* Main function to run everything else */

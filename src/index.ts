@@ -38,6 +38,7 @@ let defaultSettings = [
 	{ name: "vulnBuff", value: "false" },
 	{ name: "smokeCloudBuff", value: "false" },
 	{ name: "darknessBuff", value: "false" },
+	{ name: "auraBuff", value: "false" },
 	{ name: "savedPresets", value: "[]" },
 ]
 
