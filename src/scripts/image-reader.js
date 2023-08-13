@@ -191,6 +191,7 @@ export function readNumbers(buffer, type = "") {
             return 15;
         case "excaliburBuff":
         case "ritualShardBuff":
+        case "darknessBuff":
             if (str < 15) return str;
             else return 15;
         case "vulnBuff":
