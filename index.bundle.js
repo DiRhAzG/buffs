@@ -26820,7 +26820,7 @@ function setBuffTime(selectedBuff, buffTime, buffTimers) {
                 (foundBuff.buffTime < buffTime && selectedBuff != "vulnBuff" && selectedBuff != "smokeCloudBuff") || // New time is higher, buff could've been renewed
                 foundBuff.expireTime < moment__WEBPACK_IMPORTED_MODULE_2__.utc(new Date()) || // Time has expired, but there's still a buff on screen
                 // foundBuff.buffTime == 720 || // Fuzzy logic for Animate Dead. Overwrite it if an actual value is found
-                (selectedBuff != "vulnBuff" && selectedBuff != "smokeCloudBuff") // Want to just keep tracking if these are found or not
+                (selectedBuff == "bookBuff" || selectedBuff == "excaliburBuff" || selectedBuff == "ritualShardBuff" || selectedBuff == "darknessBuff" || selectedBuff == "auraBuff") // Want to just keep tracking if these are found or not
             ) {
                 // console.log(`${moment.utc(new Date()).toString()} - ${selectedBuff}: ${buffTime}`);
 
@@ -27125,33 +27125,28 @@ function readNumbers(buffer, type = "") {
             }
         }
     }
-
+    
     switch (type) {
-        // case "bookBuff":
-        // case "excaliburBuff":
-        // case "ritualShardBuff":
-        // case "darknessBuff":
-        // case "auraBuff":
-        //     if (str < 15) return str;
-        //     else return 15;
+        case "bookBuff":
+        case "excaliburBuff":
+        case "ritualShardBuff":
+        case "darknessBuff":
+        case "auraBuff":
+            if (str < 15) return str;
+            else return 15;
         case "vulnBuff":
             return 63;
         case "smokeCloudBuff":
             return 123;
-        // case "animateDeadBuff":
-        //     if (str < 20) return str;
-        //     else return 20;
-        //     // // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
-        //     // let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
+        case "animateDeadBuff":
+            if (str < 20) return str;
+            else return 20;
+            // // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
+            // let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
 
-        //     // if (foundParentheses.length == 0) return 720;
+            // if (foundParentheses.length == 0) return 720;
 
-        //     // break;
-    }
-
-    if (type.includes("Buff") ) {
-        if (str < 15) return str;
-        else return 15;
+            // break;
     }
 
     // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.
