@@ -34,7 +34,7 @@ let defaultSettings = [
 	{ name: "lowHealthBar", value: "false" },
 	{ name: "lowPrayerBar", value: "false" },
 	{ name: "kalgerBuff", value: "false" },
-	{ name: "grimBuff", value: "false" },
+	{ name: "bookBuff", value: "false" },
 	{ name: "vulnBuff", value: "false" },
 	{ name: "smokeCloudBuff", value: "false" },
 	{ name: "darknessBuff", value: "false" },

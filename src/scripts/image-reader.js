@@ -187,8 +187,7 @@ export function readNumbers(buffer, type = "") {
     }
 
     switch (type) {
-        case "grimBuff":
-            return 15;
+        case "bookBuff":
         case "excaliburBuff":
         case "ritualShardBuff":
         case "darknessBuff":
