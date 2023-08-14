@@ -186,9 +186,6 @@ export function readNumbers(buffer, type = "") {
         }
     }
 
-
-
-
     switch (type) {
         // case "bookBuff":
         // case "excaliburBuff":
