@@ -173,7 +173,12 @@ let checkWarnings = () => {
 let checkBuffTime = () => {
 
     expiredBuffs = buffTimers.filter((bt) => {
-        let timeBuffer = warnings.find(w => w.name == bt.name).timeBuffer;
+        let timeBuffer = warnings.find(w => w.name == bt.name)?.timeBuffer;
+
+        if (timeBuffer == undefined) {
+            return false;
+        }
+        
         let currentTime = timeBuffer? moment.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds') : moment.utc(new Date());
 
         if (bt.expireTime == undefined || bt.expireTime < currentTime) {
