@@ -186,33 +186,36 @@ export function readNumbers(buffer, type = "") {
         }
     }
 
-    if (type.includes("Buff")) {
+
+
+
+    switch (type) {
+        // case "bookBuff":
+        // case "excaliburBuff":
+        // case "ritualShardBuff":
+        // case "darknessBuff":
+        // case "auraBuff":
+        //     if (str < 15) return str;
+        //     else return 15;
+        case "vulnBuff":
+            return 63;
+        case "smokeCloudBuff":
+            return 123;
+        // case "animateDeadBuff":
+        //     if (str < 20) return str;
+        //     else return 20;
+        //     // // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
+        //     // let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
+
+        //     // if (foundParentheses.length == 0) return 720;
+
+        //     // break;
+    }
+
+    if (type.includes("Buff") ) {
         if (str < 15) return str;
         else return 15;
     }
-
-    // switch (type) {
-    //     case "bookBuff":
-    //     case "excaliburBuff":
-    //     case "ritualShardBuff":
-    //     case "darknessBuff":
-    //     case "auraBuff":
-    //         if (str < 15) return str;
-    //         else return 15;
-    //     case "vulnBuff":
-    //         return 63;
-    //     case "smokeCloudBuff":
-    //         return 123;
-    //     case "animateDeadBuff":
-    //         if (str < 20) return str;
-    //         else return 20;
-    //         // // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
-    //         // let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
-
-    //         // if (foundParentheses.length == 0) return 720;
-
-    //         // break;
-    // }
 
     // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.
     if (type == "health" || type == "prayer") {
