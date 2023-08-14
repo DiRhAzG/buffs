@@ -27973,7 +27973,9 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#presets").change(function () {
         if (foundPreset) {
             _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#presetName")[0].value = foundPreset.presetName;
             for (let o = 0; o < foundPreset.options.length; o++) {
-                _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + foundPreset.options[o].name)[0].checked = foundPreset.options[o].setting;
+                if (_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + foundPreset.options[o].name)[0] != undefined) {
+                    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + foundPreset.options[o].name)[0].checked = foundPreset.options[o].setting;
+                }
             }
         }
     }

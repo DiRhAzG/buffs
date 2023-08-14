@@ -174,7 +174,9 @@ $("#presets").change(function() {
 			$("#presetName")[0].value = foundPreset.presetName;
 
 			for (let o = 0; o < foundPreset.options.length; o++) {
-				$("#" + foundPreset.options[o].name)[0].checked = foundPreset.options[o].setting;
+				if ($("#" + foundPreset.options[o].name)[0] != undefined) {
+					$("#" + foundPreset.options[o].name)[0].checked = foundPreset.options[o].setting;
+				}
 			}
 		}
 	}
