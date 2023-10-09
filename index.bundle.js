@@ -26609,6 +26609,7 @@ let imageData = [
     { id: 3, name: "lowPrayerBar", imgData: "iVBORw0KGgoAAAANSUhEUgAAAFoAAAATCAYAAAAQ/xqmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAASTSURBVFhH7ZlrbJNVGMf/77Vdu7Vvu2sHGwVl06yMAhM6AriBRIl4CxMRmDEuGX7bNDFq0JBFyTQmsn3SkPhBBwqIIUENQYkjIg6IQmFDwpDuAhttYaMb69b76zmHbg7sZN/3/pL27JzzPM+Hf/455zkdhxSs21htv+0drIvdgTMWjVVseXc79jbuhCiJx2Ur3OZMa/ORAy3dyXCNaSAkR8Zzr25TzBm5jQm/bp+cMLn0osluLbBh1aZN6HK3Qwjp7Hw4zRUeiNXnPVyglFWuOX35/B+hZLrG/zAh9PqtNYq340arUc1+3qA3I002sXXH4+XIf6QY0TujuOXxwqAzQRAkcBHJNej1PrV4zcr9nRfOaWI/AJ5+UZF9f/lajWKW06C3wKBXwPMSTPmZmLe4FCaVZ2N6noWt030aR+NpHs1n1TSmhDlaMdsa7zrZAr1shCjIiCOMouUL4VzyGCRTDBk6C0aCw7jV0weJ10HgRXAcSY8JeUNBr76v98pRVlEjJcLaDZvtuKnfp5fTiUvNgMohFBlBjsNGLsWXkJOph56XYUwTkTVrLnquX0agf4AILUMUJSQSUaghzlW8fMGXnkvtgWRdjfsQsrIKdujIxSdL6WSqIpoYRV7pLFTVbGMiU5R0noivwmgQYX/Uid5+IvaNm1BVusshTsQeCQ9Ac/XU8IkRzqkSxcbCw+AVHo61y7DhtVpkW3UsgIo8eaTrdJ/G0fhoZJQIroLWYQEaKeGcjifV3Dnz4FhWjocWO2GfbUeO9V8n309gJMFG/2AI3de7cfWsGx2n2+Dr8cDdcTRlX65BhP7k6xNqoaOUTWh3IWXEoIjGlCKPQ8UOxIKk5RMxzN0VvrfjAt7avFITegq4hQtWq7Y5xShZetfRc4mjs6fh6JvE0V1JR1880wZv91Xi6J+mFHrrOzvZiT4T2fPRdo4rW/R0q6waKuilZp6VixLXUqxe/yy5CNNY0GSxJ46NgTH88sNhXDx1BkN9PrKiIoTA8bPunytZQApKXCvUgN+bnM0s+jx/c9ySFU/s0gUt9ZJoIEvEdLyKgkVF2PJ63T3OnuzkvZ8349q5TiBBDcwhGhtF2Hi76c/fjr3BgjT+A29SzM2R6BjrhzmOJzqL8Jxqx57PdjHnUiY7ma7TfRpH42kezad1WJBGSoTuzksBW1Ghoo4JLp7jwPEC+fAY7OtHhIsjr3A+olIYw4EEjh0+hI7Wk+Shoicik/45HiEih5AwB5t+P/bj/mRNjRSwAzgn39YQE0bcVDQqnpqIQ40DHW0n4bnmYd1FFxnPnzzB1un+uMg0L78gv4FV05iSiS5h3cZqxX/F18pFZacspbFHSDgSxKoXq1C+oQpt3x3Er98ehE42MjfT40KVIu6c+bmVRw60PPDpXbSoTA0OzcwXOrsMk38znnn5FWXAP7Aj4uPq6TyeiMFamI/ajz/F7rffxGBvP/sxiSLnqk2ZOZkN33/z1bTUW1ddO2PbuyMtu+8VepwXqmvsQ75bdQH/qDMaDldUv/cBWj58H5JOd9w82+RWLErzoZYvtP+wTBvgH7U52Md6auvBAAAAAElFTkSuQmCC" },
     // Prayer on
     { id: 4, name: "lowPrayerBar", imgData: "iVBORw0KGgoAAAANSUhEUgAAAFkAAAATCAYAAAD7yKGlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAQjSURBVFhH7ZhfaFtVHMe/59zc3iS9SdrYpO2yhSVudV2ptNOwuhUHe4i6ocMJqw8T34SCMEoVZA+KgkPYtAjCXtUn0wfBSevYxkCpbFLBP3UUFdq0Xbus7ZKbNGlumuQe7zlLZ2dSrc+9n4fcnHO+v9/D9/7yO+eEYBNO9JwPqY5ixCDJ2OH+l/H9xS9Ambcvm5fHv7r55nRFZrEFqkzm5rbtUqdURwMIIdCUDA6+3ocfPomhoeAGYwzZvIY/5rJhy+ytIVWegtNHPxjcF3x0xOduhUttRalMoXY0ojEcQHFlFUqqHm61BU7ZCY/qPBP0Hcj+On3tRiXcYhMemMwNDrXuueBRg3C7fJCIAzlnBv6DQfhUN8p2itScBg9pgWJ3mxEOOBQpahn93wiTeYsI7mwfaXIFoDpbIFMXMoUUEC5jb2cbZFcJ9bIHy9o96HckqIr5EmwOUCKByY6oXz3w+e+3r2oio0UVlH/sag5Muev8IKZ5gBPJrAatKYHHj3TD16igwVYPn1cxx13INd8R61zH9TyOx/M8FrWhxyPnQzalBYQ2wCgSLK4sIOWbxlMnDwtjOQ2qeBdizOf5OtdxPY/j8TyPEFlUQevq5AgrUWi5JBLlOOj+NHpfMg02K5izbvADo815vs51S+y2iAMj4HmEwKIKyiQ9tuKcgSei47EXd+CJo11VFbzOxormuj0n/CIuY58FzyMWLaogH8d+Zi3t93/pbkbFJsd78D8N3oiWNaCVcuaxzoYMMcRcYnIaZ/q6Nr3cbGfIsUNnmT+8G8HOIAKd5jMQqGoVG+EGc5ZSBczOz2N+Io7ZiVksxeMYGTu3qcmn33qfVb5uO8izkXdPNTftjvHjmPQIwY5OL3qivfDXaBnrBi8mC7h5ZQwLE0mU7zEYrIy7y/G+y+PvDAtBDTp6epm2mKiMthfkSMfZUDCwb0qtd8MoMxRYGupeguOvnnyoojdW8MhnXyL7J4NCPKASQbZwF7MzM+Fvb52zrtk1oNyYfCmBQikDRtegSC6kftNx6dNhs2J1Ifq7gu/P83Wu43oel9fTsAzeHNELtEwinM2lsFY0N7NyDna7itRkBmPfXMeS2Rr4JscNHhu9bs6vwCbLQsf1PI7Hi2wWNRHX6qmFG9rO5o4sITRKJXOKGTAMhnR6Ge6QeauzN2Jmfg6/XB4HLSiwURtKxhpW9RRSmfk3rv340ajIZlGTh04Dz/QMDrqczRds1A7JZvbafBLt0f3ofj6Kn76+iskrt6A6vCiXmGmyziuYG/xhJfxfaet+kuXS2/PvjaojV/RQf6hO8k7Z7XUoFghsPgOn3h7A8HtDKC2Z52iFQdfXYJDV8Oh3Q1vuw8+98tr2PcJVnlUce3ogVCzmI0VDj70w0I9LQxchU3ufLDvG/4+5FsBfp5WsPuCZsY4AAAAASUVORK5CYII=" },
+    { id: 4, name: "lowFamiliarBar", imgData: "iVBORw0KGgoAAAANSUhEUgAAAHAAAAAZCAYAAADpG6rZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL7SURBVGhD7ZlLbxJRGIbfMxdmgNJy6TW9GA2UxGqTWhf8gjZGf4Ju3enaP+B/0b0u3TTVjVaJiSZNG0Eol5bKpWVuwMzxG1KJSetSgXieZCBz5jCbJ+/3fScwXHC8tcX1lRU0K1Vce/1qsP6Ld3c2+a14FOrCArxuF+EXLy/tEfx7JP8ju7TELfoOTk9j4e4mrKdP+I/tbe4/86mkkjw1HYeUTEGKxeGenaGWXh08FwwP9nl9nduGgVQmAy8YhBKNIkAX6/XgfP0CO5+Ht7iESDoN1zTh0l5GCTQ/vIdVO0WyVhNJHCKsvLbGvbk5dElex7IgyTKCdK/F4wDnkBQFPVo3ajVYp6cIBAKYiMWgOw740RHie3tC4BCRjPNz9EhGs9FAu1KBeXiIdjYLu1gEOh247TYYCXSrVTi0ZpJIk0ooU1Wo4fDFawTDgr2NxfgEJc4IheCQRJXKZGJmhpKmAp4HyU8hpVKNRNBqtlC3bcRo/xzdKyR/amdHJHCISCUS0iiXESBJLqXK1HU0qc+1SiV0aL1LqXTosiiBIZLGqKTKJFa2TBi97sVrBMOin55Xssyjy8vQaAoFDS/nVCYnTQMRP4GMwZMkcJIXoGHGH3Q0GmJCRhuJvY8ifUOmf4x44LqsVSj0z3eJRAJxGlQCJE6ig4JfQmXao1LyVCqrMRpgNOqBB/WG/1PBkOkL9Lnveayxv09tz0N0agqT/pGChMmKCkXToFOP1DUdvcJ3VJoNZHI5kb4R4JKEN5OTPL2xAbXVhEe90EcKaFBiUZpWOzg5ruJ2oSjkjQhXivg0P8+vk0RGEylctz+4dGwLJ6UybhaFvFFiUEJ/x2k20Tg4gDI7C4UO9B71wUb1WMgbQa4UmLFt1q3X4eRyYBNhtOm8l8rnhbwR5EqBPqv1OpNpKoUehE0DjGA0+aNAn2zPhUNTaXJ3V6RPIPgb9JP18Nlz8d/emDIojYs3kkLimFH6diham0AgEAj+W8QQM8b4Q0xf4L1Hj4W8sQT4CdYSNlFiGr0iAAAAAElFTkSuQmCC" }
 ];
 
 let imageBuffers = [];
@@ -26626,10 +26627,10 @@ async function loadBarImages() {
 
 function getBar(img, barName) {
     try {
+
         // Get starting pixel for Bar image, to be used to grab the bar
         let foundBar = imageBuffers.filter(b => b.name == barName);
         let barPosition;
-        let numberType = barName == "lowHealthBar"? "health" : "prayer";
 
         for (let fb = 0; fb < foundBar.length; fb++) {
            barPosition = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.getPosition(img, foundBar[fb].imgBuffer, 20, -5, 90, 27);
@@ -26643,7 +26644,7 @@ function getBar(img, barName) {
             let buffer = img.toData(barPosition.x, barPosition.y, barPosition.w, barPosition.h);
 
             // ImageReader.outputImage(buffer);
-            let bar = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.readNumbers(buffer, numberType);
+            let bar = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.readNumbers(buffer, barName);
             
             // console.log(bar);
 
@@ -26666,7 +26667,7 @@ function getBar(img, barName) {
 function checkBar(img, selectedBar, barStats) {
 
     // Changing to read health and prayer at all times, for buffs like excalibur and ritual shard.
-    let checkStats = ["lowHealthBar", "lowPrayerBar"];
+    let checkStats = ["lowHealthBar", "lowPrayerBar", "lowFamiliarBar"];
 
     for (let b = 0; b < checkStats.length; b++) {
         let barValue = getBar(img, checkStats[b]);
@@ -26951,6 +26952,11 @@ let imgBarNumbers;
 let barNumbers = new _alt1_base_dist_imagedetect__WEBPACK_IMPORTED_MODULE_1__.ImageDataSet();
 let barValues = "0123456789/K";
 
+let imgFamiliarNumbers;
+let familiarNumbers = new _alt1_base_dist_imagedetect__WEBPACK_IMPORTED_MODULE_1__.ImageDataSet();
+let familiarValues = "0123456789/";
+
+
 /* Load the images that will be used to search the screen */
 async function loadImages() {
     // The numbers used for buffs
@@ -26968,6 +26974,14 @@ async function loadImages() {
     
     // Split the numbers into a dataset with each individual number
     barNumbers = _alt1_base_dist_imagedetect__WEBPACK_IMPORTED_MODULE_1__.ImageDataSet.fromFilmStrip(imgBarNumbers, 6);
+
+    // The numbers used for familiars
+    imgFamiliarNumbers = await _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.imageDataFromBase64(
+        'iVBORw0KGgoAAAANSUhEUgAAAE0AAAAKCAYAAADxVNNkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKaSURBVEhLjZZdbxJBFIb5372x0QtJ1PaiIaHVmCaaGCRC7adC+SrQaviqgF6xpbTXLP0F477jOePM7Bna52Zm3vOeMws7e3YzzOrhQQGMJBmg09ThevJb58wX92KOD4VScEybLL4cnYo5MV0rwJqmKbQ5odm9IkUpXDPJBgqpkRADiNH0P75or+PVvwukpQHaZva11vP5vJpFUbowsVwugzFdPIHnWlwD/jCaBqlUKqpQKGjfcDxVjc6lk7OMY7P269kxZnA9djXche1c3hG3dnJ6jQ0xPuXHhDzloxNVb7XFGF8w54ZqMI/FGdsn5bAmPVUgv7trdJz2jc0Xri+UGMcro0sb+4Q887v0owtwgmlqcqP57dp9SskNoOlamtbJwo3HyaOlhvfj0SeKbowuekKJth7yMDit5ZOzlAd58WqlPheLTuxmceesuT5GptbqOB7c3P5gqPD4MAen38U9aWrQ5gRc42gyVaXDY+0JHRh4aZqJbhdpj22wsfWQB6B5hhooU6lW1Xm9oT21tttfgFQfp6N6XjM6PL1+3/H1er1UXqPdTWkjajNgMByilFn7/ZZfMpi/ye2pt/sfUvXCj6fw+PjgrSndbQmugTGENlrYmhT3kTyhPPvPwhyMxpOk/16o2WymY4NfE3nPZveHepnNOsGdd/tO85Y2Hk3/JMf9m1xUQKrBhGK23rr8ad6IIRqd9Cl7Sm2byPoKCHk0fvCxNZA05utZRTU7VybeSOZ2c/aRatUuuklfc9+68L3a2jaa/X0o1WD45DB+T2XwDWd/x/n7p+AjisZNkr4QHwqtjYFiqUxq0oCP5Y9UBh6M1Vpd+0Hx4FDMwR/AvP/4yXjsviVBKc7vAyQnutum6klv3Hj2XKiZyfwFMqZvINZgM5oAAAAASUVORK5CYII='
+    );
+    
+    // Split the numbers into a dataset with each individual number
+    familiarNumbers = _alt1_base_dist_imagedetect__WEBPACK_IMPORTED_MODULE_1__.ImageDataSet.fromFilmStrip(imgFamiliarNumbers, 7);
 }
 
 /*
@@ -27025,7 +27039,10 @@ function readNumbers(buffer, type = "") {
     if (type.includes("Buff")) {
         numbersList = buffNumbers;
         numberValues = buffValues;
-    } else if (type == "health" || type == "prayer") {
+    } else if (type.includes("Familiar")) {
+        numbersList = familiarNumbers;
+        numberValues = familiarValues;
+    } else {
         numbersList = barNumbers;
         numberValues = barValues;
     }
@@ -27101,7 +27118,7 @@ function readNumbers(buffer, type = "") {
                 // Th
                 if (type.includes("Buff")) {
                     str = (str * 60) + 59;
-                } else if (type == "health") {
+                } else if (type.includes("Health")) {
                     // Legacy has less HP, so scale by 10
                     let isLegacy = checkLegacy(numberMatch, m + 1);
 
@@ -27130,39 +27147,15 @@ function readNumbers(buffer, type = "") {
     
     let foundWarning = _script_js__WEBPACK_IMPORTED_MODULE_2__.warnings.find(buff => buff.name == type);
     
-    if (type == "vulnBuff") return 63;
-    else if (type == "smokeCloudBuff") return 123;
-    else if (foundWarning) {
-        if (str <= Number(localStorage.timeBufferSlider) + 15) return str;
-        else if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 15
-        else return 15
-    }
-
-    // switch (type) {
-    //     case "bookBuff":
-    //     case "excaliburBuff":
-    //     case "ritualShardBuff":
-    //     case "darknessBuff":
-    //     case "auraBuff":
-    //         if (str < 15) return str;
-    //         else return 15;
-    //     case "vulnBuff":
-    //         return 63;
-    //     case "smokeCloudBuff":
-    //         return 123;
-    //     case "animateDeadBuff":
-    //         if (str < 20) return str;
-    //         else return 20;
-    //         // // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
-    //         // let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
-
-    //         // if (foundParentheses.length == 0) return 720;
-
-    //         // break;
-    // }
-
-    // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.
-    if (type == "health" || type == "prayer") {
+    if (type.includes("Buff")) {
+        if (type == "vulnBuff") return 63;
+        else if (type == "smokeCloudBuff") return 123;
+        else if (foundWarning) {
+            if (str <= Number(localStorage.timeBufferSlider) + 15) return str;
+            else if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 15
+            else return 15
+        }
+    } else if (type.includes("Bar")) {
         let foundSlash = numberMatch.filter(m => m.num == 10);
 
         if (foundSlash.length == 0) {
@@ -27351,7 +27344,8 @@ let warnings = [
     { id: 13, name: "vulnBuff", friendlyName: "Vulnerability", timeBuffer: false },
     { id: 14, name: "smokeCloudBuff", friendlyName: "Smoke Cloud", timeBuffer: false },
     { id: 15, name: "darknessBuff", friendlyName: "Darkness", timeBuffer: false },
-    { id: 16, name: "auraBuff", friendlyName: "Aura", timeBuffer: false }
+    { id: 16, name: "auraBuff", friendlyName: "Aura", timeBuffer: false },
+    { id: 17, name: "lowFamiliarBar", friendlyName: "Low Familiar Health", timeBuffer: false }
 ];
 
 
@@ -27858,6 +27852,7 @@ let defaultSettings = [
     { name: "audioVolumeSlider", value: "1" },
     { name: "lowHealthSlider", value: "5000" },
     { name: "lowPrayerSlider", value: "200" },
+    { name: "lowFamiliarSlider", value: "10000" },
     { name: "refreshRateSlider", value: "1000" },
     { name: "timeBufferSlider", value: "15" },
     { name: "excaliburSlider", value: "8000" },
@@ -27872,6 +27867,7 @@ let defaultSettings = [
     { name: "aggressionBuff", value: "false" },
     { name: "lowHealthBar", value: "false" },
     { name: "lowPrayerBar", value: "false" },
+    { name: "lowFamiliarBar", value: "false" },
     { name: "kalgerBuff", value: "false" },
     { name: "bookBuff", value: "false" },
     { name: "vulnBuff", value: "false" },

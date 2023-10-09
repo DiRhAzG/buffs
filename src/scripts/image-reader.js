@@ -10,6 +10,11 @@ let imgBarNumbers;
 let barNumbers = new ImageDataSet();
 let barValues = "0123456789/K";
 
+let imgFamiliarNumbers;
+let familiarNumbers = new ImageDataSet();
+let familiarValues = "0123456789/";
+
+
 /* Load the images that will be used to search the screen */
 export async function loadImages() {
     // The numbers used for buffs
@@ -27,6 +32,14 @@ export async function loadImages() {
     
     // Split the numbers into a dataset with each individual number
     barNumbers = ImageDataSet.fromFilmStrip(imgBarNumbers, 6);
+
+    // The numbers used for familiars
+    imgFamiliarNumbers = await ImageDetect.imageDataFromBase64(
+        'iVBORw0KGgoAAAANSUhEUgAAAE0AAAAKCAYAAADxVNNkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKaSURBVEhLjZZdbxJBFIb5372x0QtJ1PaiIaHVmCaaGCRC7adC+SrQaviqgF6xpbTXLP0F477jOePM7Bna52Zm3vOeMws7e3YzzOrhQQGMJBmg09ThevJb58wX92KOD4VScEybLL4cnYo5MV0rwJqmKbQ5odm9IkUpXDPJBgqpkRADiNH0P75or+PVvwukpQHaZva11vP5vJpFUbowsVwugzFdPIHnWlwD/jCaBqlUKqpQKGjfcDxVjc6lk7OMY7P269kxZnA9djXche1c3hG3dnJ6jQ0xPuXHhDzloxNVb7XFGF8w54ZqMI/FGdsn5bAmPVUgv7trdJz2jc0Xri+UGMcro0sb+4Q887v0owtwgmlqcqP57dp9SskNoOlamtbJwo3HyaOlhvfj0SeKbowuekKJth7yMDit5ZOzlAd58WqlPheLTuxmceesuT5GptbqOB7c3P5gqPD4MAen38U9aWrQ5gRc42gyVaXDY+0JHRh4aZqJbhdpj22wsfWQB6B5hhooU6lW1Xm9oT21tttfgFQfp6N6XjM6PL1+3/H1er1UXqPdTWkjajNgMByilFn7/ZZfMpi/ye2pt/sfUvXCj6fw+PjgrSndbQmugTGENlrYmhT3kTyhPPvPwhyMxpOk/16o2WymY4NfE3nPZveHepnNOsGdd/tO85Y2Hk3/JMf9m1xUQKrBhGK23rr8ad6IIRqd9Cl7Sm2byPoKCHk0fvCxNZA05utZRTU7VybeSOZ2c/aRatUuuklfc9+68L3a2jaa/X0o1WD45DB+T2XwDWd/x/n7p+AjisZNkr4QHwqtjYFiqUxq0oCP5Y9UBh6M1Vpd+0Hx4FDMwR/AvP/4yXjsviVBKc7vAyQnutum6klv3Hj2XKiZyfwFMqZvINZgM5oAAAAASUVORK5CYII='
+    );
+    
+    // Split the numbers into a dataset with each individual number
+    familiarNumbers = ImageDataSet.fromFilmStrip(imgFamiliarNumbers, 7);
 }
 
 /*
@@ -84,7 +97,10 @@ export function readNumbers(buffer, type = "") {
     if (type.includes("Buff")) {
         numbersList = buffNumbers;
         numberValues = buffValues;
-    } else if (type == "health" || type == "prayer") {
+    } else if (type.includes("Familiar")) {
+        numbersList = familiarNumbers;
+        numberValues = familiarValues;
+    } else {
         numbersList = barNumbers;
         numberValues = barValues;
     }
@@ -160,7 +176,7 @@ export function readNumbers(buffer, type = "") {
                 // Th
                 if (type.includes("Buff")) {
                     str = (str * 60) + 59;
-                } else if (type == "health") {
+                } else if (type.includes("Health")) {
                     // Legacy has less HP, so scale by 10
                     let isLegacy = checkLegacy(numberMatch, m + 1);
 
@@ -189,39 +205,15 @@ export function readNumbers(buffer, type = "") {
     
     let foundWarning = warnings.find(buff => buff.name == type);
     
-    if (type == "vulnBuff") return 63;
-    else if (type == "smokeCloudBuff") return 123;
-    else if (foundWarning) {
-        if (str <= Number(localStorage.timeBufferSlider) + 15) return str;
-        else if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 15
-        else return 15
-    }
-
-    // switch (type) {
-    //     case "bookBuff":
-    //     case "excaliburBuff":
-    //     case "ritualShardBuff":
-    //     case "darknessBuff":
-    //     case "auraBuff":
-    //         if (str < 15) return str;
-    //         else return 15;
-    //     case "vulnBuff":
-    //         return 63;
-    //     case "smokeCloudBuff":
-    //         return 123;
-    //     case "animateDeadBuff":
-    //         if (str < 20) return str;
-    //         else return 20;
-    //         // // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
-    //         // let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
-
-    //         // if (foundParentheses.length == 0) return 720;
-
-    //         // break;
-    // }
-
-    // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.
-    if (type == "health" || type == "prayer") {
+    if (type.includes("Buff")) {
+        if (type == "vulnBuff") return 63;
+        else if (type == "smokeCloudBuff") return 123;
+        else if (foundWarning) {
+            if (str <= Number(localStorage.timeBufferSlider) + 15) return str;
+            else if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 15
+            else return 15
+        }
+    } else if (type.includes("Bar")) {
         let foundSlash = numberMatch.filter(m => m.num == 10);
 
         if (foundSlash.length == 0) {
