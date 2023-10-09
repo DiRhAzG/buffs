@@ -36,6 +36,8 @@ let warnings = [
     { id: 16, name: "auraBuff", friendlyName: "Aura", timeBuffer: false }
 ];
 
+export { warnings };
+
 /* Main function to run everything else */
 export async function start() {
     try {

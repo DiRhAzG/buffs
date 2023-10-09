@@ -26815,12 +26815,12 @@ function setBuffTime(selectedBuff, buffTime, buffTimers) {
 
         if (expireTime != undefined) {
             if (
-                buffTime < 60 || // Time is less than a minute, most accurate
-                (foundBuff.buffTime - buffTime) == 60 || // Minute just changed, more accurate
-                (foundBuff.buffTime < buffTime && selectedBuff != "vulnBuff" && selectedBuff != "smokeCloudBuff") || // New time is higher, buff could've been renewed
-                foundBuff.expireTime < moment__WEBPACK_IMPORTED_MODULE_2__.utc(new Date()) || // Time has expired, but there's still a buff on screen
-                // foundBuff.buffTime == 720 || // Fuzzy logic for Animate Dead. Overwrite it if an actual value is found
-                (selectedBuff == "bookBuff" || selectedBuff == "excaliburBuff" || selectedBuff == "ritualShardBuff" || selectedBuff == "darknessBuff" || selectedBuff == "auraBuff") // Want to just keep tracking if these are found or not
+                buffTime < 60 // Time is less than a minute, most accurate
+                || (foundBuff.buffTime - buffTime) == 60 // Minute just changed, more accurate
+                || (foundBuff.buffTime < buffTime && selectedBuff != "vulnBuff" && selectedBuff != "smokeCloudBuff") // New time is higher, buff could've been renewed
+                || foundBuff.expireTime < moment__WEBPACK_IMPORTED_MODULE_2__.utc(new Date()) // Time has expired, but there's still a buff on screen
+                // || foundBuff.buffTime == 720 || // Fuzzy logic for Animate Dead. Overwrite it if an actual value is found
+                // || (selectedBuff == "bookBuff" || selectedBuff == "excaliburBuff" || selectedBuff == "ritualShardBuff" || selectedBuff == "darknessBuff" || selectedBuff == "auraBuff") // Want to just keep tracking if these are found or not
             ) {
                 // console.log(`${moment.utc(new Date()).toString()} - ${selectedBuff}: ${buffTime}`);
 
@@ -26938,6 +26938,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
 /* harmony import */ var _alt1_base_dist_imagedetect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @alt1/base/dist/imagedetect */ "../node_modules/@alt1/base/dist/imagedetect.js");
+/* harmony import */ var _script_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./script.js */ "./scripts/script.js");
+
 
 
 
@@ -27126,28 +27128,38 @@ function readNumbers(buffer, type = "") {
         }
     }
     
-    switch (type) {
-        case "bookBuff":
-        case "excaliburBuff":
-        case "ritualShardBuff":
-        case "darknessBuff":
-        case "auraBuff":
-            if (str < 15) return str;
-            else return 15;
-        case "vulnBuff":
-            return 63;
-        case "smokeCloudBuff":
-            return 123;
-        case "animateDeadBuff":
-            if (str < 20) return str;
-            else return 20;
-            // // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
-            // let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
-
-            // if (foundParentheses.length == 0) return 720;
-
-            // break;
+    let foundWarning = _script_js__WEBPACK_IMPORTED_MODULE_2__.warnings.find(buff => buff.name == type);
+    
+    if (type == "vulnBuff") return 63;
+    else if (type == "smokeCloudBuff") return 123;
+    else if (foundWarning) {
+        if (str <= Number(localStorage.timeBufferSlider) + 15) return str;
+        else if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 15
+        else return 15
     }
+
+    // switch (type) {
+    //     case "bookBuff":
+    //     case "excaliburBuff":
+    //     case "ritualShardBuff":
+    //     case "darknessBuff":
+    //     case "auraBuff":
+    //         if (str < 15) return str;
+    //         else return 15;
+    //     case "vulnBuff":
+    //         return 63;
+    //     case "smokeCloudBuff":
+    //         return 123;
+    //     case "animateDeadBuff":
+    //         if (str < 20) return str;
+    //         else return 20;
+    //         // // Animate Dead has two timers, so we have to make sure either 'm' or '(' are showing.
+    //         // let foundParentheses = numberMatch.filter(m => m.num == 10 || m.num == 11);
+
+    //         // if (foundParentheses.length == 0) return 720;
+
+    //         // break;
+    // }
 
     // Need to make sure the bar has the '/' showing, to make sure it's not blocked by anything.
     if (type == "health" || type == "prayer") {
@@ -27292,7 +27304,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "start": () => (/* binding */ start),
 /* harmony export */   "test": () => (/* binding */ test),
-/* harmony export */   "updateSelections": () => (/* binding */ updateSelections)
+/* harmony export */   "updateSelections": () => (/* binding */ updateSelections),
+/* harmony export */   "warnings": () => (/* binding */ warnings)
 /* harmony export */ });
 /* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
 /* harmony import */ var _chatbox_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chatbox.js */ "./scripts/chatbox.js");
@@ -27340,6 +27353,8 @@ let warnings = [
     { id: 15, name: "darknessBuff", friendlyName: "Darkness", timeBuffer: false },
     { id: 16, name: "auraBuff", friendlyName: "Aura", timeBuffer: false }
 ];
+
+
 
 /* Main function to run everything else */
 async function start() {
