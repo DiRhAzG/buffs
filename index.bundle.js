@@ -27194,7 +27194,6 @@ function readNumbers(buffer, type = "") {
     let foundWarning = _script_js__WEBPACK_IMPORTED_MODULE_2__.warnings.find(buff => buff.name == type);
 
     if (type.includes("Buff")) {
-        console.log(type);
         if (type == "vulnBuff") return 63;
         else if (type == "smokeCloudBuff") return 123;
         else if (foundWarning) {
