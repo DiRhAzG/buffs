@@ -28,7 +28,7 @@ let warnings = [
     { id: 8, name: "prayerRenewalBuff", friendlyName: "Prayer Renewal", timeBuffer: true },
     { id: 9, name: "excaliburBuff", friendlyName: "Excalibur", timeBuffer: false },
     { id: 10, name: "weaponPoisonBuff", friendlyName: "Weapon Poison", timeBuffer: true },
-    { id: 11, name: "kalgerBuff", friendlyName: "Kal'gerion", timeBuffer: false },
+    { id: 11, name: "sumRenewBuff", friendlyName: "Summoning Renewal", timeBuffer: true },
     { id: 12, name: "bookBuff", friendlyName: "Book", timeBuffer: false },
     { id: 13, name: "vulnBuff", friendlyName: "Vulnerability", timeBuffer: false },
     { id: 14, name: "smokeCloudBuff", friendlyName: "Smoke Cloud", timeBuffer: false },
@@ -101,7 +101,7 @@ export async function test(img) {
 }
 
 /* Load the images that will be used to read the screen */
-let loadImages = async () => {
+export async function loadImages() {
     await ImageReader.loadImages();
     await Buff.loadBuffImages();
     await Bar.loadBarImages();

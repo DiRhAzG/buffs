@@ -23,6 +23,7 @@ let defaultSettings = [
 	{ name: "timeBufferSlider", value: "15" },
 	{ name: "excaliburSlider", value: "8000" },
 	{ name: "ritualShardSlider", value: "650" },
+	{ name: "interfaceScalingDropdown", value: "100" },
 
 	{ name: "overloadBuff", value: "false" },
 	{ name: "animateDeadBuff", value: "false" },
@@ -35,7 +36,7 @@ let defaultSettings = [
 	{ name: "lowHealthBar", value: "false" },
 	{ name: "lowPrayerBar", value: "false" },
 	{ name: "lowFamiliarBar", value: "false" },
-	{ name: "kalgerBuff", value: "false" },
+	{ name: "summonRenewBuff", value: "false" },
 	{ name: "bookBuff", value: "false" },
 	{ name: "vulnBuff", value: "false" },
 	{ name: "smokeCloudBuff", value: "false" },
@@ -78,6 +79,8 @@ let loadLocalStorageItems = async () => {
 		if (key.includes("Slider")) {
 			$("input#" + key).val(value);
 			$("output#" + key + "Output").val(value);
+		} else if (key.includes("Dropdown")) {
+			$("#" + key).val(value);
 		} else if (value == "true" || value == "false") {
 			if (value == "true") {
 				$("input#" + key).prop("checked", true);
@@ -363,6 +366,11 @@ $("#importPresets").on("change", async function() {
 		localStorage.setItem("savedPresets", data);
 		loadPresetDropdown();
 	});
+});
+
+$("#interfaceScalingDropdown").change(async function() {
+	localStorage.setItem("interfaceScalingDropdown", this.value);
+	await main.loadImages();
 });
 
 export function readFile(file, callback) {

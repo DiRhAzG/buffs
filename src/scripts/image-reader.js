@@ -1,6 +1,7 @@
 import { ImageDetect } from "@alt1/base";
 import { ImageDataSet } from "@alt1/base/dist/imagedetect";
 import { warnings } from "./script.js";
+import { getNumberImages } from "./image-data.js";
 
 let imgBuffNumbers;
 let buffNumbers = new ImageDataSet();
@@ -17,26 +18,22 @@ let familiarValues = "0123456789/";
 
 /* Load the images that will be used to search the screen */
 export async function loadImages() {
+    let numberImages = getNumberImages();
+    
     // The numbers used for buffs
-    imgBuffNumbers = await ImageDetect.imageDataFromBase64(
-        'iVBORw0KGgoAAAANSUhEUgAAAEgAAAAJCAMAAACmN5q8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJUExURf///wAAAAAAAH5RqV0AAAADdFJOU///ANfKDUEAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC2SURBVChTbZEBEsMgEAKj/3902eVM20xiigjcGe21d96BfV3MhSPUDg7/xT5NOKIvF2uxDGyFYB6NSDHXN4PiEw4y3XXULARf7CIGXq38inh3ZqRbJdsCdpxzrB7EEFJsVz3NWyP3nqMpeQJKmTADZ4vMDkv/G7VPhXOdmgbMAJJsdIYxxwnZx88xGFnOkv115ZY+GrVP76Kf4SUQVIIjT0G55NlI2X8ZZJZXH14ZNlwyIz32/gAfMgM+QtgzCwAAAABJRU5ErkJggg=='
-    );
+    imgBuffNumbers = await ImageDetect.imageDataFromBase64(numberImages.find(i => i.name == "buffNumbers").imgData);
     
     // Split the numbers into a dataset with each individual number
     buffNumbers = ImageDataSet.fromFilmStrip(imgBuffNumbers, 6);
 
     // The numbers used for action bar
-    imgBarNumbers = await ImageDetect.imageDataFromBase64(
-        'iVBORw0KGgoAAAANSUhEUgAAAEgAAAAICAYAAABatbkrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ8SURBVEhLnVbNbtNAEI7yZwfuwIukVcU1kWLCCxB4AxAHUKXSlnt5hgYJxC3lUn5uOD+201uc2gnHJHa4x+4TLDvr9WbXu44Cn2RldnZmdjzjbzYFHkEQIioy+LO5pAN4/kzSO84Y2Y6jtE9hOTdkP47jnXYzfK5l24KNZTvIxg/ICIMoMSAXiBuEa8Hen//OPSNci7bu9FZYT2892ddoP0VXV18lQ+NJW3nQZbeLXr56Le0tl0ulPcA0+2RvPL5BxWIx1w5QrWpIr91jNppeQzp+IB+zn8SJ4zvyW8G2necvWP5pASpVHZ2dv0eX3Y8sDiBboFUQCGuGbNX5zgD6gyFqtQy1cw583NGDg0OlT78/2CtWVdP2sgvXf1C9Xme2nz5/YXKpVGZyFEU74/EFWq24YkFBypXKTuf/Af+CFqYeFQvDkcVk0zQRFJMuCSCfc9zxkWUhz/OVeYWZpk4mE3T97YegiyKRwhCXikpAUVJQVQKq2OkM1KOihKqmS3uu60o6rXaf6PgCpfThuwv5NBoNsm632yiPruWy2NRnnQ5y3amgWywWeCYmM4++J0F8l9CSx4qbv71eb7tPObx1VgxPAydKxb1xenpGfCAe0BQeGPiRIv7I2g7jbD78iwGy+WUvi81mI6xLuJBHR4/J+VRVuP7+U5p/PK3cqVjoQrPZFBUc4HZoGf9eoDdvj5lPmgwM11+YVkTJIUuZk5N3bG1z9EzBvxzcvA8ePmJrVQP2Af8FAYRCw6cJn77qWoSOTTjKQEehG4PhSLCdz5O/A3A9E0UOUoqls8efyX8XTDzIhzg+P7sAebFTGlq2XEzPF33yCqi61i8uPqC/Q0njy/uQJBYAAAAASUVORK5CYII='
-    );
+    imgBarNumbers = await ImageDetect.imageDataFromBase64(numberImages.find(i => i.name == "barNumbers").imgData);
     
     // Split the numbers into a dataset with each individual number
     barNumbers = ImageDataSet.fromFilmStrip(imgBarNumbers, 6);
 
     // The numbers used for familiars
-    imgFamiliarNumbers = await ImageDetect.imageDataFromBase64(
-        'iVBORw0KGgoAAAANSUhEUgAAAE0AAAAKCAYAAADxVNNkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKaSURBVEhLjZZdbxJBFIb5372x0QtJ1PaiIaHVmCaaGCRC7adC+SrQaviqgF6xpbTXLP0F477jOePM7Bna52Zm3vOeMws7e3YzzOrhQQGMJBmg09ThevJb58wX92KOD4VScEybLL4cnYo5MV0rwJqmKbQ5odm9IkUpXDPJBgqpkRADiNH0P75or+PVvwukpQHaZva11vP5vJpFUbowsVwugzFdPIHnWlwD/jCaBqlUKqpQKGjfcDxVjc6lk7OMY7P269kxZnA9djXche1c3hG3dnJ6jQ0xPuXHhDzloxNVb7XFGF8w54ZqMI/FGdsn5bAmPVUgv7trdJz2jc0Xri+UGMcro0sb+4Q887v0owtwgmlqcqP57dp9SskNoOlamtbJwo3HyaOlhvfj0SeKbowuekKJth7yMDit5ZOzlAd58WqlPheLTuxmceesuT5GptbqOB7c3P5gqPD4MAen38U9aWrQ5gRc42gyVaXDY+0JHRh4aZqJbhdpj22wsfWQB6B5hhooU6lW1Xm9oT21tttfgFQfp6N6XjM6PL1+3/H1er1UXqPdTWkjajNgMByilFn7/ZZfMpi/ye2pt/sfUvXCj6fw+PjgrSndbQmugTGENlrYmhT3kTyhPPvPwhyMxpOk/16o2WymY4NfE3nPZveHepnNOsGdd/tO85Y2Hk3/JMf9m1xUQKrBhGK23rr8ad6IIRqd9Cl7Sm2byPoKCHk0fvCxNZA05utZRTU7VybeSOZ2c/aRatUuuklfc9+68L3a2jaa/X0o1WD45DB+T2XwDWd/x/n7p+AjisZNkr4QHwqtjYFiqUxq0oCP5Y9UBh6M1Vpd+0Hx4FDMwR/AvP/4yXjsviVBKc7vAyQnutum6klv3Hj2XKiZyfwFMqZvINZgM5oAAAAASUVORK5CYII='
-    );
+    imgFamiliarNumbers = await ImageDetect.imageDataFromBase64(numberImages.find(i => i.name == "familiarNumbers").imgData);
     
     // Split the numbers into a dataset with each individual number
     familiarNumbers = ImageDataSet.fromFilmStrip(imgFamiliarNumbers, 7);
@@ -204,11 +201,12 @@ export function readNumbers(buffer, type = "") {
     }
     
     let foundWarning = warnings.find(buff => buff.name == type);
-    
+
     if (type.includes("Buff")) {
         if (type == "vulnBuff") return 63;
         else if (type == "smokeCloudBuff") return 123;
         else if (foundWarning) {
+
             if (str <= Number(localStorage.timeBufferSlider) + 15) return str;
             else if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 15
             else return 15

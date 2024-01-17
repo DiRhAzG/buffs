@@ -10,7 +10,7 @@
 				<div class="col">
 					<div id="tabcontainer">
 						<div id="buffs-tab" class="contenttab lefttab activetab">Buffs</div>
-						<div id="compare-tab" class="contenttab lefttab" hidden>Compare</div>
+						<div id="compare-tab" class="contenttab lefttab">Compare</div>
 						<div id="alerts-tab" class="contenttab lefttab">Alerts</div>
 						<div id="presets-tab" class="contenttab lefttab">Presets</div>
 						<div id="settings-tab" class="contenttab lefttab">Settings</div>
@@ -78,10 +78,10 @@
 									</label>
 								</div>
 							</label>
-							<label class="list-group-item table-item" id="kalgerBuff">
+							<label class="list-group-item table-item" id="sumRenewBuff">
 								<div class="form-check form-switch">
-									<label class="form-check-label" for="kalgerBuff">
-										<input class="form-check-input" type="checkbox" role="switch" id="kalgerBuff" />Kal'gerion
+									<label class="form-check-label" for="sumRenewBuff">
+										<input class="form-check-input" type="checkbox" role="switch" id="sumRenewBuff" />Summon Renew
 									</label>
 								</div>
 							</label>
@@ -277,8 +277,8 @@
 							<label class="form-presets-label" for="antifireBuffPreset">
 								<input class="presetOption" type="checkbox" id="antifireBuffPreset" />Antifire
 							</label>
-							<label class="form-presets-label" for="kalgerBuffPreset">
-								<input class="presetOption" type="checkbox" id="kalgerBuffPreset" />Kal'gerion
+							<label class="form-presets-label" for="sumRenewBuffPreset">
+								<input class="presetOption" type="checkbox" id="sumRenewBuffPreset" />Summon Renew
 							</label>
 							<label class="form-presets-label" for="vulnBuffPreset">
 								<input class="presetOption" type="checkbox" id="vulnBuffPreset" />Vulnerability
@@ -391,6 +391,17 @@
 										Refresh Rate(ms)
 										<input id="refreshRateSlider" class="input-range" type="range" min="100" max="5000" step="100" value="1000">
 										<output id="refreshRateSliderOutput">1000</output>
+									</label>
+								</div>
+							</label>
+							<label class="list-group-item setting-item" hidden>
+								<div>
+									<label class="form-check-label" for="interfaceScalingDropdown"  title="Set images to use based on the Interface Scaling in game.">
+										Interface Scaling
+										<select class="dropdown" name="interfaceScalingDropdown" id="interfaceScalingDropdown">
+											<option>100</option>
+											<option>135</option>
+										</select> 
 									</label>
 								</div>
 							</label>
