@@ -273,9 +273,9 @@ let displayWarnings = () => {
 
                     warningText += topWarning[w].friendlyName;
 
-                    // Play alert for new warnings
-                    if (!priorWarnings.includes(topWarning[w].friendlyName)) {
-                        priorWarnings.push(topWarning[w].friendlyName);
+                    // Play sound alert for new warnings
+                    if (!priorWarnings.includes(topWarning[w].name)) {
+                        priorWarnings.push(topWarning[w].name);
                         alertPlayed = false;
                     }
                 }
@@ -291,9 +291,11 @@ let displayWarnings = () => {
             for (let nw = 0; nw < noWarning.length; nw++) {
                 $("label#" + noWarning[nw].name).removeClass("warning");
 
+                // Remove warnings that are resolved, so that they can alert again next time (for sounds)
                 const index = priorWarnings.indexOf(noWarning[nw].name);
 
                 if (index > -1) {
+                    console.
                     priorWarnings.splice(index, 1);
                 }
             }
