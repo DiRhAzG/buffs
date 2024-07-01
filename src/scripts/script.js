@@ -290,6 +290,12 @@ let displayWarnings = () => {
     
             for (let nw = 0; nw < noWarning.length; nw++) {
                 $("label#" + noWarning[nw].name).removeClass("warning");
+
+                const index = priorWarnings.indexOf(noWarning[nw].name);
+
+                if (index > -1) {
+                    priorWarnings.splice(index, 1);
+                }
             }
 
             if (!alertPlayed && localStorage.soundsOn == "true") {
