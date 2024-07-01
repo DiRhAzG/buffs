@@ -16,6 +16,7 @@ let expiredBuffs = [];
 let lowStats = [];
 let alert = new Audio("src/sounds/alert_1.mp3");
 let alertPlayed = false;
+let priorWarnings = [];
 
 let warnings = [
     { id: 1, name: "lowHealthBar", friendlyName: "Low Health", timeBuffer: false },
@@ -52,8 +53,6 @@ export async function start() {
         console.log(ex);
     }
 };
-
-
 
 function loopChecks() {
     try {
@@ -259,6 +258,12 @@ let displayWarnings = () => {
                     }
 
                     warningText += topWarning[w].friendlyName;
+
+                    // Play alert for new warnings
+                    if (!priorWarnings.includes(topWarning[w].friendlyName)) {
+                        priorWarnings.add(topWarning[w].friendlyName);
+                        alertPlayed = false;
+                    }
                 }
 
                 alt1.setTooltip(warningText);
@@ -299,6 +304,7 @@ let clearWarnings = () => {
         }
 
         alertPlayed = false;
+        priorWarnings = [];
     } catch (ex) {
         console.log(ex);
     }
