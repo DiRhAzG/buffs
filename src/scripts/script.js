@@ -156,7 +156,7 @@ let checkBuff = (img) => {
     }
 };
 
-/* Get the buff timers */
+/* Get the bar stats */
 let checkBar = (img) => {
     Bar.checkBar(img, selectedBar, barStats);
 
@@ -261,7 +261,7 @@ let displayWarnings = () => {
 
                     // Play alert for new warnings
                     if (!priorWarnings.includes(topWarning[w].friendlyName)) {
-                        priorWarnings.add(topWarning[w].friendlyName);
+                        priorWarnings.push(topWarning[w].friendlyName);
                         alertPlayed = false;
                     }
                 }
