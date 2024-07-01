@@ -295,7 +295,6 @@ let displayWarnings = () => {
                 const index = priorWarnings.indexOf(noWarning[nw].name);
 
                 if (index > -1) {
-                    console.
                     priorWarnings.splice(index, 1);
                 }
             }
