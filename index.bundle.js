@@ -27618,6 +27618,7 @@ let displayWarnings = () => {
 
                     warningText += topWarning[w].friendlyName;
 
+                    // Play alert for new warnings
                     if (!priorWarnings.includes(topWarning[w].friendlyName)) {
                         priorWarnings.add(topWarning[w].friendlyName);
                         alertPlayed = false;
