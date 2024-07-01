@@ -27581,12 +27581,12 @@ let checkLowStats = () => {
 
             // Adding these for now, because I'm bad and need extra help
             if (bs.name == "lowPrayerBar") {
-                if (bs.value <= 200) warnings.find(w => w.name == "lowPrayerBar").friendlyName = "LOW PRAYER!"
+                if (bs.value <= 100) warnings.find(w => w.name == "lowPrayerBar").friendlyName = "LOW PRAYER!"
                 else warnings.find(w => w.name == "lowPrayerBar").friendlyName = "Low Prayer"
             }
             
             if (bs.name == "lowFamiliarBar") {
-                if (bs.value <= 2000) warnings.find(w => w.name == "lowFamiliarBar").friendlyName = "LOW FAMILIAR HEALTH!"
+                if (bs.value <= 3000) warnings.find(w => w.name == "lowFamiliarBar").friendlyName = "LOW FAMILIAR HEALTH!"
                 else warnings.find(w => w.name == "lowFamiliarBar").friendlyName = "Low Familiar Health"
             }
             
