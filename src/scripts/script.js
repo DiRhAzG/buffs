@@ -18,6 +18,11 @@ let alert = new Audio("src/sounds/alert_1.mp3");
 let alertPlayed = false;
 let priorWarnings = [];
 
+/*
+    name: Name used in code to find the warning and handle various logic for it
+    friendlyName: Display name on the mouse when the warning is triggered
+    timeBuffer: Determines if there needs to be a buffer time for the warning to be displayed, length of time controlled by user
+*/
 let warnings = [
     { id: 1, name: "lowHealthBar", friendlyName: "Low Health", timeBuffer: false },
     { id: 2, name: "animateDeadBuff", friendlyName: "Animate Dead", timeBuffer: true },
@@ -33,8 +38,8 @@ let warnings = [
     { id: 12, name: "bookBuff", friendlyName: "Book", timeBuffer: false },
     { id: 13, name: "vulnBuff", friendlyName: "Vulnerability", timeBuffer: false },
     { id: 14, name: "smokeCloudBuff", friendlyName: "Smoke Cloud", timeBuffer: false },
-    { id: 15, name: "darknessBuff", friendlyName: "Darkness", timeBuffer: false },
-    { id: 16, name: "auraBuff", friendlyName: "Aura", timeBuffer: false },
+    { id: 15, name: "darknessBuff", friendlyName: "Darkness", timeBuffer: true },
+    { id: 16, name: "auraBuff", friendlyName: "Aura", timeBuffer: true },
     { id: 17, name: "lowFamiliarBar", friendlyName: "Low Familiar Health", timeBuffer: false }
 ];
 
