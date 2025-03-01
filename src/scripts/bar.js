@@ -44,7 +44,8 @@ export function getBar(img, barName) {
                 return undefined;
             } else {
 
-                if (barName == "lowFamiliarBar" && barValue < 9000) {
+                if (barName == "lowFamiliarBar") {
+                    console.log(barValue);
                     ImageReader.outputImage(buffer);
                 }
                 return Number(barValue);

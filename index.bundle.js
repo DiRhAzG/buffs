@@ -26645,8 +26645,9 @@ function getBar(img, barName) {
                 return undefined;
             } else {
 
-                if (barName == "lowFamiliarBar" && barValue < 9000) {
-                    console.log()
+                if (barName == "lowFamiliarBar") {
+                    console.log(barValue);
+                    _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
                 }
                 return Number(barValue);
             }
