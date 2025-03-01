@@ -36,14 +36,18 @@ export function getBar(img, barName) {
             let buffer = img.toData(barPosition.x, barPosition.y, barPosition.w, barPosition.h);
 
             // ImageReader.outputImage(buffer);
-            let bar = ImageReader.readNumbers(buffer, barName);
+            let barValue = ImageReader.readNumbers(buffer, barName);
             
             // console.log(bar);
 
-            if (bar == undefined || bar == "") {
+            if (barValue == undefined || barValue == "") {
                 return undefined;
             } else {
-                return Number(bar);
+
+                if (barName == "lowFamiliarBar" && barValue < 9000) {
+                    ImageReader.outputImage(buffer);
+                }
+                return Number(barValue);
             }
         }
         
@@ -71,6 +75,7 @@ export function checkBar(img, selectedBar, barStats) {
         } else if (barValue != undefined && barValue != "") {
             foundBar.value = barValue;
         }
+
         // console.log(barValue);
     }
 
