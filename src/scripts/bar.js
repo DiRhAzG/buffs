@@ -43,11 +43,6 @@ export function getBar(img, barName) {
             if (barValue == undefined || barValue == "") {
                 return undefined;
             } else {
-
-                if (barName == "lowFamiliarBar") {
-                    console.log(barValue);
-                    ImageReader.outputImage(buffer);
-                }
                 return Number(barValue);
             }
         }
