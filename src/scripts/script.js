@@ -216,7 +216,10 @@ let checkBuffTime = () => {
         }
     });
 
-    // console.log(expiredBuffs);
+    if (localStorage.debugMode == "true"){
+        console.log("Expired Buffs: ");
+        console.log(expiredBuffs);
+    }
 };
 
 let checkLowStats = () => {
@@ -243,7 +246,10 @@ let checkLowStats = () => {
         return false;
     });
 
-    // console.log(lowStats);
+    if (localStorage.debugMode == "true"){
+        console.log("Low Stats: ");
+        console.log(lowStats);
+    }
 };
 
 let displayWarnings = () => {

@@ -27593,7 +27593,10 @@ let checkBuffTime = () => {
         }
     });
 
-    // console.log(expiredBuffs);
+    if (localStorage.debugMode == "true"){
+        console.log("Expired Buffs: ");
+        console.log(expiredBuffs);
+    }
 };
 
 let checkLowStats = () => {
@@ -27620,7 +27623,10 @@ let checkLowStats = () => {
         return false;
     });
 
-    // console.log(lowStats);
+    if (localStorage.debugMode == "true"){
+        console.log("Low Stats: ");
+        console.log(lowStats);
+    }
 };
 
 let displayWarnings = () => {
@@ -27948,6 +27954,7 @@ let defaultSettings = [
     { name: "mouseTooltip", value: "true" },
     { name: "buffColor", value: "true" },
     { name: "soundsOn", value: "false" },
+    { name: "debugMode", value: "false" },
     { name: "audioVolumeSlider", value: "1" },
     { name: "lowHealthSlider", value: "5000" },
     { name: "lowPrayerSlider", value: "200" },
