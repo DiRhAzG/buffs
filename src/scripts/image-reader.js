@@ -207,6 +207,7 @@ export function readNumbers(buffer, type = "") {
     if (type.includes("Buff")) {
         if (type == "vulnBuff") return 63;
         else if (type == "smokeCloudBuff") return 123;
+        else if (type == "quickPrayerBuff") return 15;
         else if (foundWarning) {
             if (type == "animateDeadBuff") {
                 if (foundParentheses) return str;
