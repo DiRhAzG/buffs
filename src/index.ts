@@ -42,6 +42,7 @@ let defaultSettings = [
 	{ name: "smokeCloudBuff", value: "false" },
 	{ name: "darknessBuff", value: "false" },
 	{ name: "auraBuff", value: "false" },
+	{ name: "quickPrayerBuff", value: "false" },
 	{ name: "savedPresets", value: "[]" },
 ]
 

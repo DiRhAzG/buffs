@@ -90,6 +90,7 @@ export function readNumbers(buffer, type = "") {
     let numbersList;
     let numberValues = "";
     let foundPixel = false;
+    let foundParentheses = false;
 
     if (type.includes("Buff")) {
         numbersList = buffNumbers;
@@ -170,7 +171,7 @@ export function readNumbers(buffer, type = "") {
         
         for (let m = 0; m < numberMatch.length; m++) {
             if (numberMatch[m].num == 10) {
-                // Th
+
                 if (type.includes("Buff")) {
                     str = (str * 60) + 59;
                 } else if (type.includes("Health")) {
@@ -193,6 +194,7 @@ export function readNumbers(buffer, type = "") {
 
                 break;
             } else if (numberMatch[m].num == 11 && type.includes("animate")) {
+                foundParentheses = true;
                 break;
             } else {
                 str += numberValues[numberMatch[m].num];
@@ -206,10 +208,14 @@ export function readNumbers(buffer, type = "") {
         if (type == "vulnBuff") return 63;
         else if (type == "smokeCloudBuff") return 123;
         else if (foundWarning) {
-
-            if (str <= Number(localStorage.timeBufferSlider) + 15) return str;
-            else if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 15
-            else return 15
+            if (type == "animateDeadBuff") {
+                if (foundParentheses) return str;
+                else return Number(localStorage.timeBufferSlider) + 5;
+            } else {
+                if (str <= Number(localStorage.timeBufferSlider) + 15) return str;
+                else if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 15
+                else return 15;
+            }
         }
     } else if (type.includes("Bar")) {
         let foundSlash = numberMatch.filter(m => m.num == 10);

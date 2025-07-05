@@ -40,7 +40,8 @@ let warnings = [
     { id: 14, name: "smokeCloudBuff", friendlyName: "Smoke Cloud", timeBuffer: false },
     { id: 15, name: "darknessBuff", friendlyName: "Darkness", timeBuffer: true },
     { id: 16, name: "auraBuff", friendlyName: "Aura", timeBuffer: false },
-    { id: 17, name: "lowFamiliarBar", friendlyName: "Low Familiar Health", timeBuffer: false }
+    { id: 17, name: "lowFamiliarBar", friendlyName: "Low Familiar Health", timeBuffer: false },
+    { id: 18, name: "quickPrayerBuff", friendlyName: "Quick Prayer", timeBuffer: false }
 ];
 
 export { warnings };
