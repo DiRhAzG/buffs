@@ -26745,6 +26745,11 @@ function getBuff(img, buffName) {
             let buff = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.readNumbers(buffer, buffName);
             
             if (buff == undefined || buff == "") {
+                if (localStorage.debugMode == "true"){
+                    console.log(buffName);
+                    _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
+                }
+                
                 return undefined;
             } else {
                 return Number(buff);

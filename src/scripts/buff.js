@@ -39,6 +39,11 @@ export function getBuff(img, buffName) {
             let buff = ImageReader.readNumbers(buffer, buffName);
             
             if (buff == undefined || buff == "") {
+                if (localStorage.debugMode == "true"){
+                    console.log(buffName);
+                    ImageReader.outputImage(buffer);
+                }
+                
                 return undefined;
             } else {
                 return Number(buff);
