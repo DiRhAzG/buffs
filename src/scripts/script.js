@@ -157,7 +157,7 @@ let updateBarSettings = async () => {
 let checkBuff = (img) => {
     Buff.checkBuff(img, selectedBuffs, buffTimers);
 
-    if (localStorage.debug == "true") {
+    if (localStorage.debugMode == "true") {
         console.log(buffTimers);
     }
 };
@@ -166,7 +166,7 @@ let checkBuff = (img) => {
 let checkBar = (img) => {
     Bar.checkBar(img, selectedBar, barStats);
 
-    if (localStorage.debug == "true") {
+    if (localStorage.debugMode == "true") {
         console.log(barStats);
     } 
 };
@@ -216,10 +216,10 @@ let checkBuffTime = () => {
         }
     });
 
-    if (localStorage.debugMode == "true"){
-        console.log("Expired Buffs: ");
-        console.log(expiredBuffs);
-    }
+    // if (localStorage.debugMode == "true"){
+    //     console.log("Expired Buffs: ");
+    //     console.log(expiredBuffs);
+    // }
 };
 
 let checkLowStats = () => {
@@ -246,10 +246,10 @@ let checkLowStats = () => {
         return false;
     });
 
-    if (localStorage.debugMode == "true"){
-        console.log("Low Stats: ");
-        console.log(lowStats);
-    }
+    // if (localStorage.debugMode == "true"){
+    //     console.log("Low Stats: ");
+    //     console.log(lowStats);
+    // }
 };
 
 let displayWarnings = () => {
