@@ -25,12 +25,12 @@ export function getBuff(img, buffName) {
         let buffPosition;
 
         for (let fb = 0; fb < foundBuff.length; fb++) {
-            buffPosition = ImageReader.getPosition(img, foundBuff[fb].imgBuffer, 0, 0, 27, 27);
+            buffPosition = ImageReader.getPosition(img, foundBuff[fb].imgBuffer, 0, 0, foundBuff[fb].imgBuffer.width, foundBuff[fb].imgBuffer.height);
  
              if (buffPosition != undefined) {
                  break;
              }
-         }
+        }
 
         if (buffPosition != undefined) {
             let buffer = img.toData(buffPosition.x, buffPosition.y, buffPosition.w, buffPosition.h);
