@@ -3,6 +3,7 @@ import * as ChatBox from "./chatbox.js";
 import * as ImageReader from "./image-reader.js";
 import * as Buff from "./buff.js";
 import * as Bar from "./bar.js";
+import * as Nexus from "./nexus.js";
 import * as moment from 'moment';
 import * as $ from "../js/jquery.js";
 
@@ -74,6 +75,7 @@ function loopChecks() {
         
                 checkBuff(img);
                 checkBar(img);
+                checkNexus(img);
             } catch (ex) {
                 console.log(ex);
             }
@@ -99,6 +101,7 @@ export async function test(img) {
         readChatBox(img);
         checkBuff(img);
         checkBar(img);
+        checkNexus(img);
         setInterval(checkWarnings, 1000);
     } catch (ex) {
         console.log(ex);
@@ -110,6 +113,7 @@ export async function loadImages() {
     await ImageReader.loadImages();
     await Buff.loadBuffImages();
     await Bar.loadBarImages();
+    await Nexus.loadNexusImages();
 };
 
 export async function updateSelections() {
@@ -169,6 +173,15 @@ let checkBar = (img) => {
     if (localStorage.debugMode == "true") {
         console.log(barStats);
     } 
+};
+
+/* Check Nexus counts */
+let checkNexus = (img) => {
+    Nexus.checkNexus(img);
+
+    // if (localStorage.debugMode == "true") {
+    //     console.log(barStats);
+    // } 
 };
 
 let checkWarnings = () => {

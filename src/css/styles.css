@@ -19,6 +19,42 @@
     width: 305px;
 }
 
+.nexus-table {
+    color: #ffffff;
+    background-color: transparent;
+    border-color: #ffffff;
+    width: 366px;
+    border-collapse: collapse;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.nexus-table th,
+.nexus-table td {
+    border: 1px solid #ffffff;
+    padding: 8px;
+    text-align: left;
+}
+
+.nexus-table thead th {
+    background-color: #333366;
+    color: #ffcc00;
+}
+
+.ability-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.rune-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
 .form-check {
     margin-bottom: 0;
     min-height: 0;

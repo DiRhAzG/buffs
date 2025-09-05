@@ -11,7 +11,7 @@
 					<div id="tabcontainer">
 						<div id="buffs-tab" class="contenttab lefttab activetab">Buffs</div>
 						<div id="compare-tab" class="contenttab lefttab" hidden>Compare</div>
-						<div id="alerts-tab" class="contenttab lefttab">Alerts</div>
+						<div id="nexus-tab" class="contenttab lefttab">Nexus</div>
 						<div id="presets-tab" class="contenttab lefttab">Presets</div>
 						<div id="settings-tab" class="contenttab lefttab">Settings</div>
 					</div>
@@ -193,52 +193,58 @@
 			</table>
 		</div>
 
-		<div class="container tabcontent" id="alerts-content" style="display:none;">
-			<table class="table-center">
-				<tr>
-					<td>
-						<div class="list-group">
-							<label class="list-group-item alert-item" id="mouseTooltip">
-								<div class="form-check form-switch">
-									<label class="form-check-label" for="mouseTooltip" title="Display warnings on mouse.">
-										<input class="form-check-input" type="checkbox" role="switch" id="mouseTooltip" />Mouse Tooltip
-									</label>
-								</div>
-							</label>
-							<label class="list-group-item alert-item" id="buffColor">
-								<div class="form-check form-switch">
-									<label class="form-check-label" for="buffColor" title="Change color of buff box for warnings.">
-										<input class="form-check-input" type="checkbox" role="switch" id="buffColor" />Buff Colors
-									</label>
-								</div>
-							</label>
-							<label class="list-group-item alert-item" id="soundsOn">
-								<div class="form-check form-switch">
-									<label class="form-check-label" for="soundsOn" title="Play sound for warnings.">
-										<input class="form-check-input" type="checkbox" role="switch" id="soundsOn" />Sounds On
-									</label>
-								</div>
-							</label>
-							<label class="list-group-item alert-item">
-								<div>
-									<label class="form-check-label" for="soundVolumeSlider" title="Volume for the Sounds alert.">
-										Sound Volume
-										<input id="soundVolumeSlider" class="input-range" type="range" min="0" max="1" step=".01" value="1">
-										<output id="soundVolumeSliderOutput">1</output>
-									</label>
-								</div>
-							</label>
-							<label class="list-group-item alert-item" id="debugMode">
-								<div class="form-check form-switch">
-									<label class="form-check-label" for="debugMode" title="Debug mode for additional logging.">
-										<input class="form-check-input" type="checkbox" role="switch" id="debugMode" />Debug Mode
-									</label>
-								</div>
-							</label>
-						</div>
-					</td>
-				</tr>
-			</table>
+		<div class="container tabcontent" id="nexus-content" style="display:none;">
+		<table id="abilitiesTable" class="nexus-table table-center" border="1" cellpadding="8" cellspacing="0">
+			<thead>
+			<tr>
+				<th>Ability Name</th>
+				<th>Max Casts</th>
+				<th>Min Limiting Rune</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><img src="./src/images/nexus/lesser_bone_shield.png" alt="Lesser Shield" class="ability-icon">Lesser Shield</td>
+				<td class="maxCasts"></td>
+				<td class="minRune"></td>
+			</tr>
+			<tr>
+				<td><img src="./src/images/nexus/greater_bone_shield.png" alt="Greater Shield" class="ability-icon">Greater Shield</td>
+				<td class="maxCasts"></td>
+				<td class="minRune"></td>
+			</tr>
+			<tr>
+				<td><img src="./src/images/nexus/threads_of_fate.png" alt="Threads of Fate" class="ability-icon">Threads</td>
+				<td class="maxCasts"></td>
+				<td class="minRune"></td>
+			</tr>
+			<tr>
+				<td><img src="./src/images/nexus/invoke_death.png" alt="Invoke Death" class="ability-icon">Invoke Death</td>
+				<td class="maxCasts"></td>
+				<td class="minRune"></td>
+			</tr>
+			<tr>
+				<td><img src="./src/images/nexus/invoke_lord_of_bones.png" alt="Invoke Bones" class="ability-icon">Invoke Bones</td>
+				<td class="maxCasts"></td>
+				<td class="minRune"></td>
+			</tr>
+			<tr>
+				<td><img src="./src/images/nexus/split_soul.png" alt="Split Soul" class="ability-icon">Split Soul</td>
+				<td class="maxCasts"></td>
+				<td class="minRune"></td>
+			</tr>
+			<tr>
+				<td><img src="./src/images/nexus/life_transfer.png" alt="Life Transfer" class="ability-icon">Life Transfer</td>
+				<td class="maxCasts"></td>
+				<td class="minRune"></td>
+			</tr>
+			<tr>
+				<td><img src="./src/images/nexus/darkness.png" alt="Darkness" class="ability-icon">Darkness</td>
+				<td class="maxCasts"></td>
+				<td class="minRune"></td>
+			</tr>
+			</tbody>
+		</table>
 		</div>
 
 		<div class="container tabcontent" id="presets-content">
@@ -409,6 +415,43 @@
 											<option>100</option>
 											<option>135</option>
 										</select> 
+									</label>
+								</div>
+							</label>
+							<label class="list-group-item setting-item" id="mouseTooltip">
+								<div class="form-check form-switch">
+									<label class="form-check-label" for="mouseTooltip" title="Display warnings on mouse.">
+										<input class="form-check-input" type="checkbox" role="switch" id="mouseTooltip" />Mouse Tooltip
+									</label>
+								</div>
+							</label>
+							<label class="list-group-item setting-item" id="buffColor">
+								<div class="form-check form-switch">
+									<label class="form-check-label" for="buffColor" title="Change color of buff box for warnings.">
+										<input class="form-check-input" type="checkbox" role="switch" id="buffColor" />Buff Colors
+									</label>
+								</div>
+							</label>
+							<label class="list-group-item setting-item" id="soundsOn">
+								<div class="form-check form-switch">
+									<label class="form-check-label" for="soundsOn" title="Play sound for warnings.">
+										<input class="form-check-input" type="checkbox" role="switch" id="soundsOn" />Sounds On
+									</label>
+								</div>
+							</label>
+							<label class="list-group-item setting-item">
+								<div>
+									<label class="form-check-label" for="soundVolumeSlider" title="Volume for the Sounds alert.">
+										Sound Volume
+										<input id="soundVolumeSlider" class="input-range" type="range" min="0" max="1" step=".01" value="1">
+										<output id="soundVolumeSliderOutput">1</output>
+									</label>
+								</div>
+							</label>
+							<label class="list-group-item setting-item" id="debugMode">
+								<div class="form-check form-switch">
+									<label class="form-check-label" for="debugMode" title="Debug mode for additional logging.">
+										<input class="form-check-input" type="checkbox" role="switch" id="debugMode" />Debug Mode
 									</label>
 								</div>
 							</label>

@@ -269,8 +269,8 @@ $(".contenttab").click(function() {
 		setBuffsTab();
 	} else if (this.id == "compare-tab") {
 		setCompareTab();
-	} else if (this.id == "alerts-tab") {
-		setAlertsTab();
+	} else if (this.id == "nexus-tab") {
+		setNexusTab();
 	} else if (this.id == "presets-tab") {
 		setPresetsTab();
 	} else if (this.id == "settings-tab") {
@@ -281,7 +281,7 @@ $(".contenttab").click(function() {
 export function setBuffsTab() {
 	$('#buffs-content').show();
 	$('#compare-content').hide();
-	$('#alerts-content').hide();
+	$('#nexus-content').hide();
 	$('#presets-content').hide();
 	$('#settings-content').hide();
 };
@@ -289,15 +289,15 @@ export function setBuffsTab() {
 export function setCompareTab() {
 	$('#buffs-content').hide();
 	$('#compare-content').show();
-	$('#alerts-content').hide();
+	$('#nexus-content').hide();
 	$('#presets-content').hide();
 	$('#settings-content').hide();
 };
 
-export function setAlertsTab() {
+export function setNexusTab() {
 	$('#buffs-content').hide();
 	$('#compare-content').hide();
-	$('#alerts-content').show();
+	$('#nexus-content').show();
 	$('#presets-content').hide();
 	$('#settings-content').hide();
 };
@@ -305,7 +305,7 @@ export function setAlertsTab() {
 export function setPresetsTab() {
 	$('#buffs-content').hide();
 	$('#compare-content').hide();
-	$('#alerts-content').hide();
+	$('#nexus-content').hide();
 	$('#presets-content').show();
 	$('#settings-content').hide();
 };
@@ -313,7 +313,7 @@ export function setPresetsTab() {
 export function setSettingsTab() {
 	$('#buffs-content').hide();
 	$('#compare-content').hide();
-	$('#alerts-content').hide();
+	$('#nexus-content').hide();
 	$('#presets-content').hide();
 	$('#settings-content').show();
 };

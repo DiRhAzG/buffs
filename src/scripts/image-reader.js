@@ -15,6 +15,13 @@ let imgFamiliarNumbers;
 let familiarNumbers = new ImageDataSet();
 let familiarValues = "0123456789/";
 
+let imgWhiteNexusNumbers;
+let whiteNexusNumbers = new ImageDataSet();
+let whiteNexusValues = "0123456789K";
+
+let imgYellowNexusNumbers;
+let yellowNexusNumbers = new ImageDataSet();
+let yellowNexusValues = "0123456789K";
 
 /* Load the images that will be used to search the screen */
 export async function loadImages() {
@@ -37,6 +44,18 @@ export async function loadImages() {
     
     // Split the numbers into a dataset with each individual number
     familiarNumbers = ImageDataSet.fromFilmStrip(imgFamiliarNumbers, 7);
+
+    // The numbers used for Nexus
+    imgWhiteNexusNumbers = await ImageDetect.imageDataFromBase64(numberImages.find(i => i.name == "whiteNexusNumbers").imgData);
+    
+    // Split the numbers into a dataset with each individual number
+    whiteNexusNumbers = ImageDataSet.fromFilmStrip(imgWhiteNexusNumbers, 6);
+
+    // The numbers used for Nexus
+    imgYellowNexusNumbers = await ImageDetect.imageDataFromBase64(numberImages.find(i => i.name == "yellowNexusNumbers").imgData);
+    
+    // Split the numbers into a dataset with each individual number
+    yellowNexusNumbers = ImageDataSet.fromFilmStrip(imgYellowNexusNumbers, 6);
 }
 
 /*
@@ -98,6 +117,12 @@ export function readNumbers(buffer, type = "") {
     } else if (type.includes("Familiar")) {
         numbersList = familiarNumbers;
         numberValues = familiarValues;
+    } else if (type == "WhiteNexus") {
+        numbersList = whiteNexusNumbers;
+        numberValues = whiteNexusValues;
+    } else if (type == "YellowNexus") {
+        numbersList = yellowNexusNumbers;
+        numberValues = yellowNexusValues;
     } else {
         numbersList = barNumbers;
         numberValues = barValues;
@@ -166,10 +191,14 @@ export function readNumbers(buffer, type = "") {
 
     // console.log(numberMatch);
 
+    // Create the full number using the array of numbers found
     if (numberMatch.length > 0) {
+
+        // Sort the array of numbers first, so that we go from left to right
         numberMatch.sort((a, b) => a.startWidth - b.startWidth).sort((a, b) => a.startHeight - b.startHeight);
         
         for (let m = 0; m < numberMatch.length; m++) {
+
             if (numberMatch[m].num == 10) {
 
                 if (type.includes("Buff")) {
@@ -190,6 +219,8 @@ export function readNumbers(buffer, type = "") {
                             str *= 1000;
                         }
                     }
+                } else if (type.includes("Nexus")) {
+                    str *= 1000;
                 }
 
                 break;
