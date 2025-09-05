@@ -3,7 +3,7 @@ import { getNexusImages } from "./image-data.js";
 import { ImageDetect } from "@alt1/base";
 
 let imageBuffers = [];
-let runeCounts = [];
+
 const abilities = [
   { id: 1, name: "Lesser Bone Shield", runes: { spiritRune: 5, boneRune: 5, fleshRune: 0, miasmaRune: 0 } },
   { id: 2, name: "Greater Bone Shield", runes: { spiritRune: 10, boneRune: 10, fleshRune: 5, miasmaRune: 0 } },
@@ -23,8 +23,6 @@ const runes = {
     miasmaRune: { name: "miasma_rune", friendlyName: "Miasma Rune", color: "#7DBA10", fontColor: "#000000" }, // Purple bg, white text
 }
 
-let abilityCasts = [];
-
 export async function loadNexusImages() {
     let nexusImages = getNexusImages();
 
@@ -38,6 +36,9 @@ export async function loadNexusImages() {
 };
 
 export function checkNexus(img) {
+    let runeCounts = [];
+    let abilityCasts = [];
+    
     try {
 
         for (let ib = 0; ib < imageBuffers.length; ib++) {
@@ -133,41 +134,6 @@ export function checkNexus(img) {
                 }
             }
         });
-        // for (let a = 0; a < abilities.length; a++) {
-        //     let casts = runeCounts.spiritRune;
-        //     let allCasts = [];
-
-        //     if (abilities[a].spiritRune && abilities[a].spiritRune > 0) {
-        //         casts = runeCounts.spiritRune / abilities[a].spiritRune;
-        //     }
-        //     allCasts.push({});
-
-        //     casts = runeCounts.boneRune;
-        //     if (abilities[a].boneRune && abilities[a].boneRune > 0) {
-        //         casts = runeCounts.boneRune / abilities[a].boneRune;
-        //     }
-        //     allCasts.push(casts);
-
-        //     casts = runeCounts.fleshRune;
-        //     if (abilities[a].fleshRune && abilities[a].fleshRune > 0) {
-        //         casts = runeCounts.fleshRune / abilities[a].fleshRune;
-        //     }
-        //     allCasts.push(casts);
-
-        //     casts = runeCounts.miasmaRune;
-        //     if (abilities[a].miasmaRune && abilities[a].miasmaRune > 0) {
-        //         casts = runeCounts.miasmaRune / abilities[a].miasmaRune;
-        //     }
-        //     allCasts.push(casts);
-
-        //     data.push({
-        //         name: abilities[a].name,
-
-        //     });
-        // }
-
-        
-        // throw 'Buff not found.'
     }
     catch (ex) {
         console.log(ex);
