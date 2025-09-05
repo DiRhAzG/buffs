@@ -5183,9 +5183,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.table-item {
     color: #ffffff;
     background-color: transparent;
     border-color: #ffffff;
-    width: 366px;
+    width: 353;
     border-collapse: collapse;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
 }
 
