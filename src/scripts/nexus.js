@@ -69,7 +69,7 @@ export function checkNexus(img) {
                 let casts = undefined;
                 let runeCount = runeCounts.filter(r => r.name === rune);
 
-                if (runeCount) {
+                if (runeCount[0]) {
                     if (cost > 0) {
                         casts = runeCount[0].count / cost; // Rune found and cost > 0, so divide
                     } else {
@@ -101,7 +101,6 @@ export function checkNexus(img) {
                 rows[index].querySelector(".minRune").textContent = ability.minRune;
             }
         });
-
 
         abilityCasts.forEach((ability, index) => {
              if (rows[index]) {
