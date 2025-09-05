@@ -28881,11 +28881,14 @@ function checkNexus(img) {
             const minRune = validRunes.reduce((min, curr) =>
                 curr.casts < min.casts ? curr : min, validRunes[0]);
 
-            abilityCasts.push({
-                name: ability.name,
-                maxCasts: Math.floor(minRune.casts),
-                minRune: minRune.name
-            })
+            if (minRune) {
+                abilityCasts.push({
+                    name: ability.name,
+                    maxCasts: Math.floor(minRune.casts),
+                    minRune: minRune.name
+                })
+            }
+            
         }
 
         const table = document.getElementById("abilitiesTable");
