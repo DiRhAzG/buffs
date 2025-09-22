@@ -28155,7 +28155,6 @@ function checkBuff(img, selectedBuffs, buffTimers) {
 
 function setBuffTime(selectedBuff, buffTime, buffTimers) {
     let expireTime = buffTime != undefined? moment__WEBPACK_IMPORTED_MODULE_3__.utc(new Date()).add(buffTime, 's') : undefined;
-     
     let foundBuff = buffTimers.find(bt => bt.name === selectedBuff);
     
     if (!foundBuff) {
@@ -28640,6 +28639,7 @@ function readNumbers(buffer, type = "") {
         if (type == "vulnBuff") return 63;
         else if (type == "smokeCloudBuff") return 123;
         else if (type == "quickPrayerBuff") return 5;
+        else if (type == "bookBuff") return 5;
         else if (foundWarning) {
             if (type == "animateDeadBuff") {
                 if (foundParentheses) return str;

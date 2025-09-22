@@ -74,7 +74,6 @@ export function checkBuff(img, selectedBuffs, buffTimers) {
 
 export function setBuffTime(selectedBuff, buffTime, buffTimers) {
     let expireTime = buffTime != undefined? moment.utc(new Date()).add(buffTime, 's') : undefined;
-     
     let foundBuff = buffTimers.find(bt => bt.name === selectedBuff);
     
     if (!foundBuff) {
