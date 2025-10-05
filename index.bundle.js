@@ -29147,10 +29147,6 @@ let checkBar = (img) => {
 /* Check Nexus counts */
 let checkNexus = (img) => {
     _nexus_js__WEBPACK_IMPORTED_MODULE_5__.checkNexus(img);
-
-    // if (localStorage.debugMode == "true") {
-    //     console.log(barStats);
-    // } 
 };
 
 let checkWarnings = () => {
