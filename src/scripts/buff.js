@@ -38,12 +38,12 @@ export function getBuff(img, buffName) {
             // ImageReader.outputImage(buffer);
             let buff = ImageReader.readNumbers(buffer, buffName);
             
+            if (localStorage.debugMode == "true"){
+                console.log(buffName + ": " + buff.toString());
+                ImageReader.outputImage(buffer);
+            }
+
             if (buff == undefined || buff == "") {
-                if (localStorage.debugMode == "true"){
-                    console.log(buffName);
-                    ImageReader.outputImage(buffer);
-                }
-                
                 return undefined;
             } else {
                 return Number(buff);

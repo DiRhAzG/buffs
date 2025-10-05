@@ -28014,16 +28014,14 @@ function getBar(img, barName) {
             // ImageReader.outputImage(buffer);
             let barValue = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.readNumbers(buffer, barName);
             
-            // console.log(bar);
+            if (localStorage.debugMode == "true"){
+                console.log(barName + ": " + barValue.toString());
+                _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
+            }
 
             if (barValue == undefined || barValue == "") {
                 return undefined;
             } else {
-
-                if (barName == "lowFamiliarBar" && Number(barValue) < 9000) {
-                    console.log(barValue);
-                    _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
-                }
                 return Number(barValue);
             }
         }
@@ -28119,12 +28117,12 @@ function getBuff(img, buffName) {
             // ImageReader.outputImage(buffer);
             let buff = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.readNumbers(buffer, buffName);
             
+            if (localStorage.debugMode == "true"){
+                console.log(buffName + ": " + buff.toString());
+                _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
+            }
+
             if (buff == undefined || buff == "") {
-                if (localStorage.debugMode == "true"){
-                    console.log(buffName);
-                    _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
-                }
-                
                 return undefined;
             } else {
                 return Number(buff);

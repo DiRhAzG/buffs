@@ -38,16 +38,14 @@ export function getBar(img, barName) {
             // ImageReader.outputImage(buffer);
             let barValue = ImageReader.readNumbers(buffer, barName);
             
-            // console.log(bar);
+            if (localStorage.debugMode == "true"){
+                console.log(barName + ": " + barValue.toString());
+                ImageReader.outputImage(buffer);
+            }
 
             if (barValue == undefined || barValue == "") {
                 return undefined;
             } else {
-
-                if (barName == "lowFamiliarBar" && Number(barValue) < 9000) {
-                    console.log(barValue);
-                    ImageReader.outputImage(buffer);
-                }
                 return Number(barValue);
             }
         }

@@ -178,10 +178,6 @@ let checkBar = (img) => {
 /* Check Nexus counts */
 let checkNexus = (img) => {
     Nexus.checkNexus(img);
-
-    // if (localStorage.debugMode == "true") {
-    //     console.log(barStats);
-    // } 
 };
 
 let checkWarnings = () => {
