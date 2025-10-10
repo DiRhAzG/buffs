@@ -32,8 +32,6 @@ export function getBar(img, barName) {
             }
         }
 
-        console.log(barName);
-        console.log(barPosition);
         if (barPosition != undefined) {
             let buffer = img.toData(barPosition.x, barPosition.y, barPosition.w, barPosition.h);
 
