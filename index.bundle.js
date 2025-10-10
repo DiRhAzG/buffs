@@ -28001,17 +28001,19 @@ function getBar(img, barName) {
         let barPosition;
 
         for (let fb = 0; fb < foundBar.length; fb++) {
-           barPosition = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.getPosition(img, foundBar[fb].imgBuffer, 20, -5, 90, 27);
+            barPosition = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.getPosition(img, foundBar[fb].imgBuffer, 10, -5, 100, 27);
 
             if (barPosition != undefined) {
                 break;
             }
         }
 
+        console.log(barName);
+        console.log(barPosition);
         if (barPosition != undefined) {
             let buffer = img.toData(barPosition.x, barPosition.y, barPosition.w, barPosition.h);
 
-            // ImageReader.outputImage(buffer);
+            _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
             let barValue = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.readNumbers(buffer, barName);
             
             if (localStorage.debugMode == "true"){
