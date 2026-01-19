@@ -5,11 +5,11 @@ import { getNumberImages } from "./image-data.js";
 
 let imgBuffNumbers;
 let buffNumbers = new ImageDataSet();
-let buffValues = "0123456789m(";
+let buffValues = "0123456789/mh";
 
 let imgBarNumbers;
 let barNumbers = new ImageDataSet();
-let barValues = "0123456789/K";
+let barValues = "0123456789/mh";
 
 let imgFamiliarNumbers;
 let familiarNumbers = new ImageDataSet();
@@ -194,38 +194,20 @@ export function readNumbers(buffer, type = "") {
     // Create the full number using the array of numbers found
     if (numberMatch.length > 0) {
 
+        console.log(numberMatch);
         // Sort the array of numbers first, so that we go from left to right
-        numberMatch.sort((a, b) => a.startWidth - b.startWidth).sort((a, b) => a.startHeight - b.startHeight);
+        numberMatch.sort((a, b) => a.startWidth - b.startWidth);//.sort((a, b) => a.startHeight - b.startHeight);
+        console.log(numberMatch);
         
         for (let m = 0; m < numberMatch.length; m++) {
 
-            if (numberMatch[m].num == 10) {
-
-                if (type.includes("Buff")) {
-                    str = (str * 60) + 59;
-                } else if (type.includes("Health")) {
-                    // Legacy has less HP, so scale by 10
-                    let isLegacy = checkLegacy(numberMatch, m + 1);
-
-                    if (isLegacy) {
-                        str *= 10;
-                    } else if (str.includes("K")) {
-                        str = str.replace("K", "");
-
-                        // Can't track the dot, because it's only two pixels. Assume if 3 digits, then has dot. If 2 digits, then no dot.
-                        if (str >= 100) {
-                            str *= 100;
-                        } else {
-                            str *= 1000;
-                        }
-                    }
-                } else if (type.includes("Nexus")) {
-                    str *= 1000;
-                }
-
+            if (numberValues[numberMatch[m].num] == "m") {
+                str = (str * 60) + 59;
                 break;
-            } else if (numberMatch[m].num == 11 && type.includes("animate")) {
-                foundParentheses = true;
+            } else if (numberValues[numberMatch[m].num] == "h") {
+                str = str * 60 * 60;
+                break;
+            } else if (numberValues[numberMatch[m].num] == "/") {
                 break;
             } else {
                 str += numberValues[numberMatch[m].num];
@@ -233,21 +215,22 @@ export function readNumbers(buffer, type = "") {
         }
     }
     
+    console.log(str);
     let foundWarning = warnings.find(buff => buff.name == type);
 
     if (type.includes("Buff")) {
         if (type == "vulnBuff") return 63;
         else if (type == "smokeCloudBuff") return 123;
         else if (type == "quickPrayerBuff") return 5;
-        else if (type == "bookBuff") return 5;
+        // else if (type == "bookBuff") return 5;
         else if (foundWarning) {
             if (type == "animateDeadBuff") {
                 if (foundParentheses) return str;
                 else return Number(localStorage.timeBufferSlider) + 5;
             } else {
-                if (str <= Number(localStorage.timeBufferSlider) + 15) return str;
-                else if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 15
-                else return 15;
+                if (str <= Number(localStorage.timeBufferSlider) + 10) return str;
+                else if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 10
+                else return 10;
             }
         }
     } else if (type.includes("Bar")) {
