@@ -189,15 +189,13 @@ export function readNumbers(buffer, type = "") {
         match = false;
     }
 
-    console.log(numberMatch);
+    // console.log(numberMatch);
 
     // Create the full number using the array of numbers found
     if (numberMatch.length > 0) {
 
-        console.log(numberMatch);
         // Sort the array of numbers first, so that we go from left to right
         numberMatch.sort((a, b) => a.startWidth - b.startWidth);//.sort((a, b) => a.startHeight - b.startHeight);
-        console.log(numberMatch);
         
         for (let m = 0; m < numberMatch.length; m++) {
 
