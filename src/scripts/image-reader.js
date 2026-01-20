@@ -134,7 +134,8 @@ export function readNumbers(buffer, type = "") {
         // Load the current number's buffer
         let numBuffer = numbersList.buffers[a];
         let match = false;
-        // outputImage(numBuffer);
+        console.log(a);
+        outputImage(numBuffer);
 
         for (let nbh = 0; nbh < numBuffer.height; nbh++) {
 
@@ -261,6 +262,7 @@ let checkLegacy = (numberMatch, m) => {
 
 /* Check if two pixels match, within reasonable bounds */
 export function checkPixelMatch(buffer, numBuffer, bi, i, variance = 15) {
+    console.log(variance);
     if (
         buffer.data[bi] > numBuffer.data[i] - variance && buffer.data[bi] < numBuffer.data[i] + variance
         && buffer.data[bi + 1] > numBuffer.data[i + 1] - variance && buffer.data[bi + 1] < numBuffer.data[i + 1] + variance
