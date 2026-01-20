@@ -134,8 +134,8 @@ export function readNumbers(buffer, type = "") {
         // Load the current number's buffer
         let numBuffer = numbersList.buffers[a];
         let match = false;
-        console.log(a);
-        outputImage(numBuffer);
+        // console.log(a);
+        // outputImage(numBuffer);
 
         for (let nbh = 0; nbh < numBuffer.height; nbh++) {
 
