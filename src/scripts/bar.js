@@ -25,15 +25,13 @@ export function getBar(img, barName) {
         let barPosition;
 
         for (let fb = 0; fb < foundBar.length; fb++) {
-            barPosition = ImageReader.getPosition(img, foundBar[fb].imgBuffer, 10, -5, 105, 27);
+            barPosition = ImageReader.getPosition(img, foundBar[fb].imgBuffer, -5, -5, 125, 27);
 
             if (barPosition != undefined) {
                 break;
             }
         }
 
-        console.log(barName);
-        console.log(barPosition);
         if (barPosition != undefined) {
             let buffer = img.toData(barPosition.x, barPosition.y, barPosition.w, barPosition.h);
 
