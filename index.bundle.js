@@ -28661,7 +28661,6 @@ let checkLegacy = (numberMatch, m) => {
 
 /* Check if two pixels match, within reasonable bounds */
 function checkPixelMatch(buffer, numBuffer, bi, i, variance = 15) {
-    console.log(variance);
     if (
         buffer.data[bi] > numBuffer.data[i] - variance && buffer.data[bi] < numBuffer.data[i] + variance
         && buffer.data[bi + 1] > numBuffer.data[i + 1] - variance && buffer.data[bi + 1] < numBuffer.data[i + 1] + variance
