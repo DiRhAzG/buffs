@@ -264,6 +264,7 @@ export function checkPixelMatch(buffer, numBuffer, bi, i, variance = 15) {
         buffer.data[bi] > numBuffer.data[i] - variance && buffer.data[bi] < numBuffer.data[i] + variance
         && buffer.data[bi + 1] > numBuffer.data[i + 1] - variance && buffer.data[bi + 1] < numBuffer.data[i + 1] + variance
         && buffer.data[bi + 2] > numBuffer.data[i + 2] - variance && buffer.data[bi + 2] < numBuffer.data[i + 2] + variance
+        && buffer.data[bi + 3] > numBuffer.data[i + 3] - variance && buffer.data[bi + 3] < numBuffer.data[i + 3] + variance
     ) {
         return true;
     }
@@ -340,7 +341,7 @@ export async function generateMatchingImage(firstImage, secondImage) {
         for (let bw = 0; bw < firstBuffer.width; bw++) {
             let bi = 4 * bw + 4 * firstBuffer.width * bh;
 
-            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 3)) {
+            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 10)) {
                 firstBuffer.data[bi] = 0;
                 firstBuffer.data[bi + 1] = 0;
                 firstBuffer.data[bi + 2] = 0;
