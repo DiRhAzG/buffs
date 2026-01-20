@@ -28629,6 +28629,7 @@ function readNumbers(buffer, type = "") {
                 if (foundParentheses) return str;
                 else return Number(localStorage.timeBufferSlider) + 5;
             } else {
+                if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 5
                 return 5;
                 // if (str <= Number(localStorage.timeBufferSlider) + 10) return str;
                 // else if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 10
