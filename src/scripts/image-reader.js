@@ -111,10 +111,7 @@ export function readNumbers(buffer, type = "") {
     let foundPixel = false;
     let foundParentheses = false;
 
-    if (type.includes("Buff")) {
-        numbersList = buffNumbers;
-        numberValues = buffValues;
-    } else if (type.includes("Familiar")) {
+    if (type.includes("Familiar")) {
         numbersList = familiarNumbers;
         numberValues = familiarValues;
     } else if (type == "WhiteNexus") {
@@ -306,8 +303,8 @@ function checkMatch(buffer, numBuffer, bw, bh, nbw, nbh) {
                 // console.log(`${buffer.data[bi]}, ${buffer.data[bi + 1]}, ${buffer.data[bi + 2]}`);
                 // console.log(`${numBuffer.data[i]}, ${numBuffer.data[i + 1]}, ${numBuffer.data[i + 2]}`);
 
-                // showPixel(buffer, bi);
-                // showPixel(numBuffer, i);
+                showPixel(buffer, bi);
+                showPixel(numBuffer, i);
 
                 return false;
             }
