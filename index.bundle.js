@@ -28588,7 +28588,7 @@ function readNumbers(buffer, type = "") {
         match = false;
     }
 
-    // console.log(numberMatch);
+    console.log(numberMatch);
 
     // Create the full number using the array of numbers found
     if (numberMatch.length > 0) {
