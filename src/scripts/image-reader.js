@@ -213,7 +213,10 @@ export function readNumbers(buffer, type = "") {
         }
     }
     
-    console.log(str);
+    if (localStorage.debugMode == "true"){
+        console.log(str);
+    }
+    
     let foundWarning = warnings.find(buff => buff.name == type);
 
     if (type.includes("Buff")) {
