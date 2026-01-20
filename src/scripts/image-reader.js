@@ -7,9 +7,9 @@ let imgBuffNumbers;
 let buffNumbers = new ImageDataSet();
 let buffValues = "0123456789/mh";
 
-// let imgBarNumbers;
-// let barNumbers = new ImageDataSet();
-// let barValues = "0123456789/mh";
+let imgBarNumbers;
+let barNumbers = new ImageDataSet();
+let barValues = "0123456789/mh";
 
 let imgFamiliarNumbers;
 let familiarNumbers = new ImageDataSet();
@@ -34,10 +34,10 @@ export async function loadImages() {
     buffNumbers = ImageDataSet.fromFilmStrip(imgBuffNumbers, 6);
 
     // The numbers used for action bar
-    // imgBarNumbers = await ImageDetect.imageDataFromBase64(numberImages.find(i => i.name == "barNumbers").imgData);
+    imgBarNumbers = await ImageDetect.imageDataFromBase64(numberImages.find(i => i.name == "barNumbers").imgData);
     
     // Split the numbers into a dataset with each individual number
-    // barNumbers = ImageDataSet.fromFilmStrip(imgBarNumbers, 6);
+    barNumbers = ImageDataSet.fromFilmStrip(imgBarNumbers, 6);
 
     // The numbers used for familiars
     imgFamiliarNumbers = await ImageDetect.imageDataFromBase64(numberImages.find(i => i.name == "familiarNumbers").imgData);
@@ -111,7 +111,10 @@ export function readNumbers(buffer, type = "") {
     let foundPixel = false;
     let foundParentheses = false;
 
-    if (type.includes("Familiar")) {
+    if (type.includes("Buff")) {
+        numbersList = buffNumbers;
+        numberValues = buffValues;
+    } else if (type.includes("Familiar")) {
         numbersList = familiarNumbers;
         numberValues = familiarValues;
     } else if (type == "WhiteNexus") {
@@ -121,8 +124,8 @@ export function readNumbers(buffer, type = "") {
         numbersList = yellowNexusNumbers;
         numberValues = yellowNexusValues;
     } else {
-        numbersList = buffNumbers;
-        numberValues = buffValues;
+        numbersList = barNumbers;
+        numberValues = barValues;
     }
 
     // Loop through each number in our list
@@ -227,9 +230,10 @@ export function readNumbers(buffer, type = "") {
                 if (foundParentheses) return str;
                 else return Number(localStorage.timeBufferSlider) + 5;
             } else {
-                if (str <= Number(localStorage.timeBufferSlider) + 10) return str;
-                else if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 10
-                else return 10;
+                return 5;
+                // if (str <= Number(localStorage.timeBufferSlider) + 10) return str;
+                // else if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 10
+                // else return 10;
             }
         }
     } else if (type.includes("Bar")) {
