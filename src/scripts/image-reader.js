@@ -7,9 +7,9 @@ let imgBuffNumbers;
 let buffNumbers = new ImageDataSet();
 let buffValues = "0123456789/mh";
 
-let imgBarNumbers;
-let barNumbers = new ImageDataSet();
-let barValues = "0123456789/mh";
+// let imgBarNumbers;
+// let barNumbers = new ImageDataSet();
+// let barValues = "0123456789/mh";
 
 let imgFamiliarNumbers;
 let familiarNumbers = new ImageDataSet();
@@ -34,10 +34,10 @@ export async function loadImages() {
     buffNumbers = ImageDataSet.fromFilmStrip(imgBuffNumbers, 6);
 
     // The numbers used for action bar
-    imgBarNumbers = await ImageDetect.imageDataFromBase64(numberImages.find(i => i.name == "barNumbers").imgData);
+    // imgBarNumbers = await ImageDetect.imageDataFromBase64(numberImages.find(i => i.name == "barNumbers").imgData);
     
     // Split the numbers into a dataset with each individual number
-    barNumbers = ImageDataSet.fromFilmStrip(imgBarNumbers, 6);
+    // barNumbers = ImageDataSet.fromFilmStrip(imgBarNumbers, 6);
 
     // The numbers used for familiars
     imgFamiliarNumbers = await ImageDetect.imageDataFromBase64(numberImages.find(i => i.name == "familiarNumbers").imgData);
@@ -303,8 +303,8 @@ function checkMatch(buffer, numBuffer, bw, bh, nbw, nbh) {
                 // console.log(`${buffer.data[bi]}, ${buffer.data[bi + 1]}, ${buffer.data[bi + 2]}`);
                 // console.log(`${numBuffer.data[i]}, ${numBuffer.data[i + 1]}, ${numBuffer.data[i + 2]}`);
 
-                showPixel(buffer, bi);
-                showPixel(numBuffer, i);
+                // showPixel(buffer, bi);
+                // showPixel(numBuffer, i);
 
                 return false;
             }
