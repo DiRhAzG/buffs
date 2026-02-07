@@ -343,13 +343,30 @@ $("input[type=range]").on("input", function() {
 });
 
 $("#compareImages").on("change", async function() {
-	if (this.files.length == 2) {
-		ImageReader.imageToBase64(this.files[0], (firstImage) => {
-			ImageReader.imageToBase64(this.files[1], async (secondImage) => {
-				let url = await ImageReader.generateMatchingImage(firstImage, secondImage);
-				window.open(url, '_blank');
-			});
-		});
+	var firstImage;
+	var secondImage;
+
+	if (this.files.length > 1) {
+		for (var i = 0; i < this.files.length - 1; i++) {
+			if (i == 0) {
+				firstImage = await ImageReader.imageToBase64(this.files[i]);
+			}
+
+			secondImage = await ImageReader.imageToBase64(this.files[i + 1]);
+
+			console.log("First Image: " + firstImage);
+			console.log("Second Image: " + secondImage);
+			firstImage = await ImageReader.generateMatchingImage(firstImage, secondImage);
+		}
+
+		window.open(firstImage, '_blank');
+
+		// ImageReader.imageToBase64(this.files[0], (firstImage) => {
+		// 	ImageReader.imageToBase64(this.files[1], async (secondImage) => {
+		// 		let url = await ImageReader.generateMatchingImage(firstImage, secondImage);
+		// 		window.open(url, '_blank');
+		// 	});
+		// });
 	}
 });
 

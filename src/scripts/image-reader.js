@@ -230,11 +230,11 @@ export function readNumbers(buffer, type = "") {
                 if (foundParentheses) return str;
                 else return Number(localStorage.timeBufferSlider) + 5;
             } else {
-                if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 5
-                return 5;
-                // if (str <= Number(localStorage.timeBufferSlider) + 10) return str;
-                // else if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 10
-                // else return 10;
+                // if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 5
+                // return 5;
+                if (str <= Number(localStorage.timeBufferSlider) + 5) return str;
+                else if (foundWarning.timeBuffer) return Number(localStorage.timeBufferSlider) + 5
+                else return 5;
             }
         }
     } else if (type.includes("Bar")) {
@@ -337,32 +337,55 @@ function showPixel(buffer, i) {
 
 /* Generate a new image based off two images, with only the matching pixels */
 export async function generateMatchingImage(firstImage, secondImage) {
+    try {
+        firstImage = firstImage.includes(',')? firstImage.split(',')[1]: firstImage;
+        secondImage = secondImage.includes(',')? secondImage.split(',')[1]: secondImage;
 
-    let firstBuffer = await ImageDetect.imageDataFromBase64(firstImage);
-    let secondBuffer = await ImageDetect.imageDataFromBase64(secondImage);
+        let firstBuffer = await ImageDetect.imageDataFromBase64(firstImage);
+        let secondBuffer = await ImageDetect.imageDataFromBase64(secondImage);
 
-    for (let bh = 0; bh < firstBuffer.height; bh++) {
-        for (let bw = 0; bw < firstBuffer.width; bw++) {
-            let bi = 4 * bw + 4 * firstBuffer.width * bh;
+        for (let bh = 0; bh < firstBuffer.height; bh++) {
+            for (let bw = 0; bw < firstBuffer.width; bw++) {
+                let bi = 4 * bw + 4 * firstBuffer.width * bh;
 
-            if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 10)) {
-                firstBuffer.data[bi] = 0;
-                firstBuffer.data[bi + 1] = 0;
-                firstBuffer.data[bi + 2] = 0;
-                firstBuffer.data[bi + 3] = 0;
+                if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 10)) {
+                    firstBuffer.data[bi] = 0;
+                    firstBuffer.data[bi + 1] = 0;
+                    firstBuffer.data[bi + 2] = 0;
+                    firstBuffer.data[bi + 3] = 0;
+                }
             }
         }
+
+        return outputImage(firstBuffer);
+    }
+    catch (ex) {
+        console.log(ex);
+        return null;
     }
 
-    return outputImage(firstBuffer);
 };
 
-export function imageToBase64(image, callback) {
-    let reader = new FileReader();
+// export function imageToBase64(image, callback) {
+//     let reader = new FileReader();
 
-    reader.onloadend = function() {
-      callback(reader.result.replace("data:image/png;base64,", ""));
-    }
+//     reader.onloadend = function() {
+//       callback(reader.result.replace("data:image/png;base64,", ""));
+//     }
 
-    reader.readAsDataURL(image);
+//     reader.readAsDataURL(image);
+// }
+
+export function imageToBase64(image) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+
+        reader.onloadend = () => {
+            resolve(reader.result.split(',')[1]);
+        };
+
+        reader.onerror = reject;
+
+        reader.readAsDataURL(image);
+    });
 }
