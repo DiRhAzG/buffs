@@ -5,7 +5,7 @@ import { getNumberImages } from "./image-data.js";
 
 let imgBuffNumbers;
 let buffNumbers = new ImageDataSet();
-let buffValues = "0123456789/mh";
+let buffValues = "0123456789m";
 
 let imgBarNumbers;
 let barNumbers = new ImageDataSet();

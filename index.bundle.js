@@ -28404,7 +28404,7 @@ __webpack_require__.r(__webpack_exports__);
 
 let imgBuffNumbers;
 let buffNumbers = new _alt1_base_dist_imagedetect__WEBPACK_IMPORTED_MODULE_1__.ImageDataSet();
-let buffValues = "0123456789/mh";
+let buffValues = "0123456789m";
 
 let imgBarNumbers;
 let barNumbers = new _alt1_base_dist_imagedetect__WEBPACK_IMPORTED_MODULE_1__.ImageDataSet();
