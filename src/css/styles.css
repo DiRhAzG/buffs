@@ -115,7 +115,7 @@ input[type="checkbox"]:focus {
     background-color: #e60808c5;
 }
 
-#onOffSwitch {
+#onOffSwitch, #onOffSwitch2 {
     width: 4.5em;
     height: 2em;
     margin-left: -34px;

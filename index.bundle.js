@@ -5275,7 +5275,7 @@ input[type="checkbox"]:focus {
     background-color: #e60808c5;
 }
 
-#onOffSwitch {
+#onOffSwitch, #onOffSwitch2 {
     width: 4.5em;
     height: 2em;
     margin-left: -34px;
@@ -29773,6 +29773,16 @@ let loadPresetJson = (firstLoad) => {
         }
     }
 };
+// Change handler for all synced switches
+_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".sync-switch").on("change", function () {
+    const setting = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(this).data("setting"); // e.g., "onOffSwitch"
+    const checked = this.checked;
+    // Update all checkboxes with the same data-setting
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(`.sync-switch[data-setting="${setting}"]`).each(function () {
+        _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(this).prop("checked", checked); // visually update checkbox
+        localStorage.setItem(_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(this).attr("id"), checked); // update localStorage per checkbox ID
+    });
+});
 let newPreset = () => {
     presetId = (0,uuid__WEBPACK_IMPORTED_MODULE_6__["default"])();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#presetName")[0].value = "";

@@ -181,6 +181,18 @@ let loadPresetJson = (firstLoad) => {
 	}
 }
 
+// Change handler for all synced switches
+$(".sync-switch").on("change", function() {
+    const setting = $(this).data("setting"); // e.g., "onOffSwitch"
+    const checked = this.checked;
+
+    // Update all checkboxes with the same data-setting
+    $(`.sync-switch[data-setting="${setting}"]`).each(function() {
+        $(this).prop("checked", checked);               // visually update checkbox
+        localStorage.setItem($(this).attr("id"), checked); // update localStorage per checkbox ID
+    });
+});
+
 let newPreset = () => {
 	presetId = uuid();
 	$("#presetName")[0].value = "";
