@@ -82,12 +82,22 @@ window.onload = async function start() {
 	};
 
 	loadPresetDropdown(true);
-	// buffPresets.addEventListener('change', () => syncDropdowns(buffPresets, skillingPresets));
-	// skillingPresets.addEventListener('change', () => syncDropdowns(buffPresets, skillingPresets));
+	updateScrollHeight();
 
 	console.log("Ready to save your ass.");
 
 }
+
+function updateScrollHeight() {
+    const offsetTop = $(".settings-scroll").offset().top; // distance from top of window
+    const windowHeight = $(window).height();             // viewport height
+
+    const newHeight = windowHeight - offsetTop - 30;
+    $(".settings-scroll").css("max-height", newHeight + "px");
+}
+
+// Run on resize
+$(window).on("resize", updateScrollHeight);
 
 let loadLocalStorageItems = async () => {
 	for (let i = 0, len = localStorage.length; i < len; i++) {

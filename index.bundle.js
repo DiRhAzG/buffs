@@ -5347,7 +5347,6 @@ input[type="range"] {
 }
 
 .settings-scroll {
-  max-height: 340px;
   overflow-y: auto;
   padding-right: 6px;
 }`, ""]);
@@ -29691,10 +29690,17 @@ window.onload = async function start() {
     }
     ;
     loadPresetDropdown(true);
-    // buffPresets.addEventListener('change', () => syncDropdowns(buffPresets, skillingPresets));
-    // skillingPresets.addEventListener('change', () => syncDropdowns(buffPresets, skillingPresets));
+    updateScrollHeight();
     console.log("Ready to save your ass.");
 };
+function updateScrollHeight() {
+    const offsetTop = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".settings-scroll").offset().top; // distance from top of window
+    const windowHeight = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(window).height(); // viewport height
+    const newHeight = windowHeight - offsetTop - 30;
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".settings-scroll").css("max-height", newHeight + "px");
+}
+// Run on resize
+_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(window).on("resize", updateScrollHeight);
 let loadLocalStorageItems = async () => {
     for (let i = 0, len = localStorage.length; i < len; i++) {
         let key = localStorage.key(i);
