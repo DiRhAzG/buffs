@@ -29698,7 +29698,7 @@ window.onload = async function start() {
 function updateScrollHeight() {
     const offsetTop = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".settings-scroll").offset().top; // distance from top of window
     const windowHeight = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(window).height(); // viewport height
-    const newHeight = windowHeight - offsetTop - 5;
+    const newHeight = windowHeight - offsetTop;
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".settings-scroll").css("max-height", newHeight + "px");
 }
 // Run on resize
@@ -29884,7 +29884,7 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".contenttab").on("click", function (
     // Show the matching content
     const contentId = this.id.replace("-tab", "-content");
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + contentId).show();
-    if (contentId === "settings-tab") {
+    if (this.id == "settings-tab") {
         updateScrollHeight();
     }
 });

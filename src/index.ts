@@ -94,7 +94,7 @@ function updateScrollHeight() {
     const offsetTop = $(".settings-scroll").offset().top; // distance from top of window
     const windowHeight = $(window).height();             // viewport height
 
-    const newHeight = windowHeight - offsetTop - 5;
+    const newHeight = windowHeight - offsetTop;
     $(".settings-scroll").css("max-height", newHeight + "px");
 }
 
@@ -319,7 +319,7 @@ $(".contenttab").on("click", function () {
   const contentId = this.id.replace("-tab", "-content");
   $("#" + contentId).show();
 
-  if (contentId === "settings-tab") {
+  if (this.id == "settings-tab") {
 	updateScrollHeight();
   }
 });
