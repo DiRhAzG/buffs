@@ -94,7 +94,7 @@ function updateScrollHeight() {
     const offsetTop = $(".settings-scroll").offset().top; // distance from top of window
     const windowHeight = $(window).height();             // viewport height
 
-    const newHeight = windowHeight - offsetTop - 10;
+    const newHeight = windowHeight - offsetTop;
     $(".settings-scroll").css("max-height", newHeight + "px");
 }
 
