@@ -358,7 +358,8 @@ let clearWarnings = () => {
         if (window.alt1) alt1.setTooltip("");
         
         for (let w = 0; w < warnings.length; w++) {
-            $("label#" + warnings[w].name).removeClass("warning");
+            const $label = $("#" + warnings[w].name).closest("label");
+            $label.removeClass("warning");
         }
 
         alertPlayed = false;

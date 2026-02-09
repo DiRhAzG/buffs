@@ -29375,7 +29375,8 @@ let clearWarnings = () => {
         if (window.alt1) alt1.setTooltip("");
         
         for (let w = 0; w < warnings.length; w++) {
-            _js_jquery_js__WEBPACK_IMPORTED_MODULE_7__("label#" + warnings[w].name).removeClass("warning");
+            const $label = _js_jquery_js__WEBPACK_IMPORTED_MODULE_7__("#" + warnings[w].name).closest("label");
+            $label.removeClass("warning");
         }
 
         alertPlayed = false;
