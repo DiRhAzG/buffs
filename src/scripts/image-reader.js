@@ -351,7 +351,7 @@ export async function generateMatchingImage(firstImage, secondImage) {
             for (let bw = 0; bw < firstBuffer.width; bw++) {
                 let bi = 4 * bw + 4 * firstBuffer.width * bh;
 
-                if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 10)) {
+                if (!checkPixelMatch(firstBuffer, secondBuffer, bi, bi, 1)) {
                     firstBuffer.data[bi] = 0;
                     firstBuffer.data[bi + 1] = 0;
                     firstBuffer.data[bi + 2] = 0;
