@@ -29207,9 +29207,9 @@ let checkWarnings = () => {
     if (localStorage.onOffSwitch == "true") {
         checkBuffTime();
         checkLowStats();
-
-        displayWarnings();
     }
+
+    displayWarnings();
 };
 
 let checkBuffTime = () => {
@@ -29884,6 +29884,9 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".contenttab").on("click", function (
     // Show the matching content
     const contentId = this.id.replace("-tab", "-content");
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + contentId).show();
+    if (contentId === "settings-tab") {
+        updateScrollHeight();
+    }
 });
 // Store Checkbox values in localStorage
 _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input:checkbox").on("change", async function () {

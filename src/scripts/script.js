@@ -190,9 +190,9 @@ let checkWarnings = () => {
     if (localStorage.onOffSwitch == "true") {
         checkBuffTime();
         checkLowStats();
-
-        displayWarnings();
     }
+
+    displayWarnings();
 };
 
 let checkBuffTime = () => {

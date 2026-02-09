@@ -318,6 +318,10 @@ $(".contenttab").on("click", function () {
   // Show the matching content
   const contentId = this.id.replace("-tab", "-content");
   $("#" + contentId).show();
+
+  if (contentId === "settings-tab") {
+	updateScrollHeight();
+  }
 });
 
 // Store Checkbox values in localStorage
