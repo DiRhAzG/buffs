@@ -16,7 +16,9 @@ let defaultSettings = [
 	{ name: "buffColor", value: "true" },
 	{ name: "soundsOn", value: "false" },
 	{ name: "debugMode", value: "false" },
-	{ name: "audioVolumeSlider", value: "1" },
+	{ name: "skillingTab", value: "true" },
+	{ name: "nexusTab", value: "false" },
+	{ name: "soundVolumeSlider", value: "0.2" },
 	{ name: "lowHealthSlider", value: "5000" },
 	{ name: "lowPrayerSlider", value: "200" },
 	{ name: "lowFamiliarSlider", value: "10000" },
@@ -44,11 +46,23 @@ let defaultSettings = [
 	{ name: "darknessBuff", value: "false" },
 	{ name: "auraBuff", value: "false" },
 	{ name: "quickPrayerBuff", value: "false" },
+	{ name: "crystalMaskBuff", value: "false" },
+	{ name: "lightFormBuff", value: "false" },
+	{ name: "perfectPlusBuff", value: "false" },
+	{ name: "superheatBuff", value: "false" },
+	{ name: "torstolBuff", value: "false" },
+	{ name: "clanBuff", value: "false" },
 	{ name: "savedPresets", value: "[]" },
 ]
 
 let presetId = uuid();
 let savedPresets = [];
+const buffPresets = document.getElementById('buffPresets');
+const skillingPresets = document.getElementById('skillingPresets');
+
+function syncDropdowns(source, target) {
+  target.value = source.value; // Update target value
+}
 
 window.onload = async function start() {
 	// Add defaults if missing
@@ -67,8 +81,10 @@ window.onload = async function start() {
 		main.start();
 	};
 
-	setBuffsTab();
 	loadPresetDropdown(true);
+	// buffPresets.addEventListener('change', () => syncDropdowns(buffPresets, skillingPresets));
+	// skillingPresets.addEventListener('change', () => syncDropdowns(buffPresets, skillingPresets));
+
 	console.log("Ready to save your ass.");
 
 }
@@ -84,10 +100,14 @@ let loadLocalStorageItems = async () => {
 		} else if (key.includes("Dropdown")) {
 			$("#" + key).val(value);
 		} else if (value == "true" || value == "false") {
-			if (value == "true") {
-				$("input#" + key).prop("checked", true);
-			} else {
-				$("input#" + key).prop("checked", false);
+			const checked = value === "true";
+			const $checkbox = $("input#" + key);
+
+			$checkbox.prop("checked", checked);
+
+			if (key.includes("Tab")) {
+				const tabId = key.replace("Tab", "-tab");
+				$("#" + tabId).toggle(checked);
 			}
 	  	} 
 	};
@@ -111,7 +131,8 @@ let loadPresetDropdown = (firstLoad = false) => {
 	loadPresetJson(firstLoad);
 
 	loadDropdown("presets");
-	loadDropdown("savedPresets");
+	loadDropdown("buffPresets");
+	loadDropdown("skillingPresets");
 }
 
 let loadDropdown = (dropdownName) => {
@@ -189,7 +210,8 @@ $("#presets").change(function() {
 	}
 });
 
-$("#savedPresets").change(function() {selectPreset(this)});
+$("#buffPresets").change(function() {selectPreset(this)});
+$("#skillingPresets").change(function() {selectPreset(this)});
 
 let selectPreset = (selection) => {
 	let foundPreset = savedPresets.find(p => p.id == selection.value);
@@ -261,62 +283,18 @@ $("#deletePreset").click(function() {
 	return false;
 });
 
-$(".contenttab").click(function() {
-	$(".activetab").removeClass("activetab");
-	$(this).addClass("activetab");
-	
-	if (this.id == "buffs-tab") {
-		setBuffsTab();
-	} else if (this.id == "compare-tab") {
-		setCompareTab();
-	} else if (this.id == "nexus-tab") {
-		setNexusTab();
-	} else if (this.id == "presets-tab") {
-		setPresetsTab();
-	} else if (this.id == "settings-tab") {
-		setSettingsTab();
-	}
+$(".contenttab").on("click", function () {
+  // Active tab styling
+  $(".contenttab").removeClass("activetab");
+  $(this).addClass("activetab");
+
+  // Hide all tab content
+  $(".tabcontent").hide();
+
+  // Show the matching content
+  const contentId = this.id.replace("-tab", "-content");
+  $("#" + contentId).show();
 });
-
-export function setBuffsTab() {
-	$('#buffs-content').show();
-	$('#compare-content').hide();
-	$('#nexus-content').hide();
-	$('#presets-content').hide();
-	$('#settings-content').hide();
-};
-
-export function setCompareTab() {
-	$('#buffs-content').hide();
-	$('#compare-content').show();
-	$('#nexus-content').hide();
-	$('#presets-content').hide();
-	$('#settings-content').hide();
-};
-
-export function setNexusTab() {
-	$('#buffs-content').hide();
-	$('#compare-content').hide();
-	$('#nexus-content').show();
-	$('#presets-content').hide();
-	$('#settings-content').hide();
-};
-
-export function setPresetsTab() {
-	$('#buffs-content').hide();
-	$('#compare-content').hide();
-	$('#nexus-content').hide();
-	$('#presets-content').show();
-	$('#settings-content').hide();
-};
-
-export function setSettingsTab() {
-	$('#buffs-content').hide();
-	$('#compare-content').hide();
-	$('#nexus-content').hide();
-	$('#presets-content').hide();
-	$('#settings-content').show();
-};
 
 // Store Checkbox values in localStorage
 $("input:checkbox").on("change", async function() {
@@ -330,6 +308,16 @@ $("input:checkbox").on("change", async function() {
 		}
 	
 		await main.updateSelections();
+	}
+
+	if (checkboxId.includes("Tab")) {
+		const tabId = checkboxId.replace("Tab", "-tab");
+
+        if ($(this).is(":checked")) {
+            $("#" + tabId).show();
+        } else {
+            $("#" + tabId).hide();
+        }
 	}
 });
 
@@ -360,13 +348,6 @@ $("#compareImages").on("change", async function() {
 		}
 
 		window.open(firstImage, '_blank');
-
-		// ImageReader.imageToBase64(this.files[0], (firstImage) => {
-		// 	ImageReader.imageToBase64(this.files[1], async (secondImage) => {
-		// 		let url = await ImageReader.generateMatchingImage(firstImage, secondImage);
-		// 		window.open(url, '_blank');
-		// 	});
-		// });
 	}
 });
 

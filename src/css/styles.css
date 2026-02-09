@@ -1,15 +1,41 @@
+.table-center, #presets-content {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table-center td {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ffffff;
+
+}
+
+.table-center td.no-border {
+    border: none;
+}
+
 .table-item {
     color: #ffffff;
     background-color: transparent;
-    border-color: #ffffff;
     width: 170px;
+    margin: 0;
+    border-radius: 0;
+}
+
+.table-center td div,
+.table-center td label,
+.table-center td select {
+    border-radius: 0;
 }
 
 .setting-item {
     color: #ffffff;
     background-color: transparent;
-    border-color: #ffffff;
-    width: 353px;
+    /* width: 353px; */
+    /* width: 170px; */
 }
 
 .alert-item {
@@ -81,12 +107,6 @@ input[type="checkbox"]:focus {
     box-shadow: 0 0 0 rgb(255, 255, 255) !important;
 }
 
-.table-center, #presets-content {
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .input-range {
     vertical-align: middle;
 }
@@ -142,7 +162,7 @@ input:checked + .slider:after {
 }
 
 label.form-switch {
-    padding: .3rem 0rem .3rem 2.9rem;
+    padding: .3rem 0rem .3rem 2.7rem;
 }
 
 input[type="range"] {
@@ -164,4 +184,10 @@ input[type="range"] {
 .center {
     margin-top: 10px;
     text-align: center;
+}
+
+.settings-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 6px;
 }

@@ -42,7 +42,13 @@ let warnings = [
     { id: 15, name: "darknessBuff", friendlyName: "Darkness", timeBuffer: true },
     { id: 16, name: "auraBuff", friendlyName: "Aura", timeBuffer: false },
     { id: 17, name: "lowFamiliarBar", friendlyName: "Low Familiar Health", timeBuffer: false },
-    { id: 18, name: "quickPrayerBuff", friendlyName: "Quick Prayer", timeBuffer: false }
+    { id: 18, name: "quickPrayerBuff", friendlyName: "Quick Prayer", timeBuffer: false },
+    { id: 19, name: "crystalMaskBuff", friendlyName: "Crystal Mask", timeBuffer: true },
+    { id: 20, name: "lightFormBuff", friendlyName: "Light Form", timeBuffer: false },
+    { id: 21, name: "perfectPlusBuff", friendlyName: "Perfect Plus", timeBuffer: true },
+    { id: 22, name: "superheatBuff", friendlyName: "Superheat", timeBuffer: false },
+    { id: 23, name: "torstolBuff", friendlyName: "Torstol Sticks", timeBuffer: false },
+    { id: 24, name: "clanBuff", friendlyName: "Clan Boost", timeBuffer: false },
 ];
 
 export { warnings };
@@ -181,10 +187,12 @@ let checkNexus = (img) => {
 };
 
 let checkWarnings = () => {
-    checkBuffTime();
-    checkLowStats();
+    if (localStorage.onOffSwitch == "true") {
+        checkBuffTime();
+        checkLowStats();
 
-    displayWarnings();
+        displayWarnings();
+    }
 };
 
 let checkBuffTime = () => {
@@ -265,6 +273,7 @@ let displayWarnings = () => {
 
     try {
         if (localStorage.onOffSwitch == "true" && (expiredBuffs.length > 0 || lowStats.length > 0)) {
+            // console.log(expiredBuffs);
             let needsWarning = warnings.filter(w => {
                 let allWarnings = expiredBuffs.concat(lowStats);
     
@@ -303,14 +312,20 @@ let displayWarnings = () => {
 
                 alt1.setTooltip(warningText);
             }
-    
+            
             for (let w = 0; w < needsWarning.length; w++) {
-                if (localStorage.buffColor != "true") $("label#" + needsWarning[w].name).removeClass("warning");
-                else if (localStorage.buffColor == "true") $("label#" + needsWarning[w].name).addClass("warning");
+                const $label = $("#" + needsWarning[w].name).closest("label");
+
+                if (localStorage.buffColor !== "true") {
+                    $label.removeClass("warning");
+                } else {
+                    $label.addClass("warning");
+                }
             }
     
-            for (let nw = 0; nw < noWarning.length; nw++) {
-                $("label#" + noWarning[nw].name).removeClass("warning");
+            for (let nw = 0; nw < noWarning.length; nw++) {4
+                const $label = $("#" + noWarning[nw].name).closest("label");
+                $label.removeClass("warning");
 
                 // Remove warnings that are resolved, so that they can alert again next time (for sounds)
                 const index = priorWarnings.indexOf(noWarning[nw].name);
@@ -321,6 +336,7 @@ let displayWarnings = () => {
             }
 
             if (!alertPlayed && localStorage.soundsOn == "true") {
+                console.log(localStorage.soundVolumeSlider);
                 alert.volume = localStorage.soundVolumeSlider;
                 alert.play();
 

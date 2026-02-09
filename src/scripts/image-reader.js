@@ -169,7 +169,7 @@ export function readNumbers(buffer, type = "") {
                             
                             // Not a match, so continue to the next match attempt
                             if (!match) continue;
-                            console.log(a);
+                            // console.log(a);
                             // All pixels in number match, so add it to our number array
                             numberMatch.push({ startWidth: bw, startHeight: bh, num: a });
                         }
@@ -190,7 +190,7 @@ export function readNumbers(buffer, type = "") {
         match = false;
     }
 
-    console.log(numberMatch);
+    // console.log(numberMatch);
 
     // Create the full number using the array of numbers found
     if (numberMatch.length > 0) {
@@ -226,7 +226,10 @@ export function readNumbers(buffer, type = "") {
         else if (type == "quickPrayerBuff") return 5;
         // else if (type == "bookBuff") return 5;
         else if (foundWarning) {
-            if (type == "animateDeadBuff") {
+            if (!foundWarning.timeBuffer) {
+                return 5;
+            }
+            else if (type == "animateDeadBuff") {
                 if (foundParentheses) return str;
                 else return Number(localStorage.timeBufferSlider) + 5;
             } else {

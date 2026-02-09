@@ -5158,18 +5158,44 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.table-item {
+___CSS_LOADER_EXPORT___.push([module.id, `.table-center, #presets-content {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table-center td {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ffffff;
+
+}
+
+.table-center td.no-border {
+    border: none;
+}
+
+.table-item {
     color: #ffffff;
     background-color: transparent;
-    border-color: #ffffff;
     width: 170px;
+    margin: 0;
+    border-radius: 0;
+}
+
+.table-center td div,
+.table-center td label,
+.table-center td select {
+    border-radius: 0;
 }
 
 .setting-item {
     color: #ffffff;
     background-color: transparent;
-    border-color: #ffffff;
-    width: 353px;
+    /* width: 353px; */
+    /* width: 170px; */
 }
 
 .alert-item {
@@ -5241,12 +5267,6 @@ input[type="checkbox"]:focus {
     box-shadow: 0 0 0 rgb(255, 255, 255) !important;
 }
 
-.table-center, #presets-content {
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .input-range {
     vertical-align: middle;
 }
@@ -5302,7 +5322,7 @@ input:checked + .slider:after {
 }
 
 label.form-switch {
-    padding: .3rem 0rem .3rem 2.9rem;
+    padding: .3rem 0rem .3rem 2.7rem;
 }
 
 input[type="range"] {
@@ -5324,6 +5344,12 @@ input[type="range"] {
 .center {
     margin-top: 10px;
     text-align: center;
+}
+
+.settings-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 6px;
 }`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -28283,7 +28309,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 let numberImages = {
     100: [
-        { id: 1, name: "buffNumbers", imgData: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAAJCAMAAACmN5q8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACxUExURfv8/Pb29+/w8Pn6+P////v6/fLy9fT3+IuLi4WEhoyNjfz8/AYECPHw9CIiI/r6+omJiQAAAP39//Lx9gcJCvLy8ggICPf39xQUFPn5+f38/fr6+wQEBPb2+PT09Pz6/P39/QQGBvv7+xQTE/Hx8fz8/QsLC4+PjwAAAfX4+PX19fn8/P/9/fr4/ff3+efn6AMDA/r6+e3s7vX0+AIBB+7u8O/v8PX19vz9/fb5+QAAAG+l0d8AAAA7dFJOU/////////////////////////////////////////////////////////////////////////////8AocQ7HgAAAAlwSFlzAAAOwwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAUGFpbnQuTkVUIDUuMS4xMYoIFs4AAAC4ZVhJZklJKgAIAAAABQAaAQUAAQAAAEoAAAAbAQUAAQAAAFIAAAAoAQMAAQAAAAIAAAAxAQIAEQAAAFoAAABphwQAAQAAAGwAAAAAAAAAYAAAAAEAAABgAAAAAQAAAFBhaW50Lk5FVCA1LjEuMTEAAAMAAJAHAAQAAAAwMjMwAaADAAEAAAABAAAABaAEAAEAAACWAAAAAAAAAAIAAQACAAQAAABSOTgAAgAHAAQAAAAwMTAwAAAAAAY11HOyj3I7AAAA3klEQVQoU3WRh1IDMQxEDQgIhN5C6C2F3tv7/w9j1pbORwKaubVWWu3J44RHyjgzK5zzmoGZlXxeaWYLmS+6BqwjTBhL0tpyM9xgt5RWWAXWYjC668E2hAk2C82+fxq1Yott7+5MaMuNpowUuzl3HuU9esC+F3v6rK88HQgPq1Fr6ij+eHzijVNB9yw0xjlW1P2pjUpcAJe/VucKGNSUYZjZSMc/Rta8UfuyMOZax43gNow0aXq1UhC9q0YV7zM+BH8MTZmxThgpnrzoWzyHEF5e4Q14r+Mfn8DX94TRD6KMd3WWPmOxAAAAAElFTkSuQmCC" },
+        { id: 1, name: "buffNumbers", imgData: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAAJCAMAAACmN5q8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrUExURfv8/Pn6+P////v6/fLy9fT3+IuLi4WEhoyNjfz8/AYECPHw9CIiI/r6+omJiQAAAP39//Lx9gcJCvLy8ggICPf39xQUFPn5+f38/fr6+wQEBPb2+PT09Pz6/P39/QQGBvv7+xQTE/Hx8fz8/QsLC4+PjwAAAfX4+PX19fn8/P/9/fr4/ff3+efn6AMDA/r6+e3s7vX0+AIBB+7u8O/v8PX19vz9/fb5+QAAALNBhJYAAAA5dFJOU///////////////////////////////////////////////////////////////////////////ADqsZUAAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMTGKCBbOAAAAuGVYSWZJSSoACAAAAAUAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAMQECABEAAABaAAAAaYcEAAEAAABsAAAAAAAAAPJ2AQDoAwAA8nYBAOgDAABQYWludC5ORVQgNS4xLjExAAADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlgAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAABc7WH6CeiquwAAAN5JREFUKFN1kYtSQjEMREsUFAVFeSMC4gtFQZHH+f8vc9I27QUxM3eTTTZ726kjhrMCKMUsICKhPtHSs1PPy0ktFUWHcKZaOU/LCauhdcElULNFm9aNXSk6uA7U+x41KkSDmzi9PdCmG+0baTR9Hbm1W7SBTmy29ZOu1q6n2M9Gha2B/fFuGAf3CtWRaYQxEtTdPycKMQEe9o7OFHjMJU9mJs+a/jGS9EbFy8ILr5pmCm9mpJuirxYaSt+zUca5xw/jn6YJO1IxI41FbMZTLE0IX9+wAn7y+noDbHcHRr9Dc3LYmNC8lQAAAABJRU5ErkJggg==" },
         { id: 2, name: "barNumbers", imgData: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAJCAYAAACc9xrJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuOWxu2j4AAAC2ZVhJZklJKgAIAAAABQAaAQUAAQAAAEoAAAAbAQUAAQAAAFIAAAAoAQMAAQAAAAIAAAAxAQIAEAAAAFoAAABphwQAAQAAAGoAAAAAAAAA2XYBAOgDAADZdgEA6AMAAFBhaW50Lk5FVCA1LjEuOQADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlAAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAAACMojeFEB6NgAAAhtJREFUSEutls1u4jAQxwcSwXJrOXLiaXgdTkgI8QCII9L2tn0HLtuHQNxbHoCINGlK7JjECcweGkfGHylh+5OQ8Mx4ZP89nhigJMs4iv8qCTtZfU1JKK1yxXFcm5eeUquf8xSLorD6byEMP76dL6+3MYQQdFxXSzCdTjUbAMB8PsfNZmP0EULQabdlH7puxxgLAND51at8vV4XxW88HuN6vbbOk3l+/mONcxzH6oM64Ti3V5qAEIIAYIw7+L7R7vsHoz2OY1W4/6Iocnx8fNDy5fn1vrbbrRYDANDp2A8NACAM3nE2m+kxiIjfTeY8swrXFEoJtkvhPM/TcuZ5rtnuIU0ZjkajKtdH9Fmb93K5XPlFQZ3PZ/M8zjm2Wq3KSWmiBXKeYbdbL64AEWvjKKVaxb28/K3GiIiTyQQBAJ6eftfmEkSRuVftdrvKHirC+cpNUdctxqq94taKu1U4AIDVamWNpZSi4+hX1fP2COUVc6V+GgR6K/g8Es3WlNfXN5T7W5JcFwy19DbGyjjGTjgcDo1BgqbCAQAcDl89rigKDIJ3DMMAoTwo9bRlOM+w3+9b/QLxsSqK+6+2XDCqUOrYyHK5rA26RziZwWBQzSWEoDw2sVgsrH616afpzzyVVKHUsRXGmDVQFi7PcySEYBRFeFTeYYTUv8tA+ThUZW/geLQ3c/kqCxjTN5qm5j3t919tQUYVSh0LxJr/AQZqoeJu30h7AAAAAElFTkSuQmCC" },
         { id: 3, name: "familiarNumbers", imgData: "iVBORw0KGgoAAAANSUhEUgAAAE0AAAAKCAYAAADxVNNkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuOWxu2j4AAAC2ZVhJZklJKgAIAAAABQAaAQUAAQAAAEoAAAAbAQUAAQAAAFIAAAAoAQMAAQAAAAIAAAAxAQIAEAAAAFoAAABphwQAAQAAAGoAAAAAAAAAYAAAAAEAAABgAAAAAQAAAFBhaW50Lk5FVCA1LjEuOQADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlAAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAABMz8BIJY/XoAAAAs9JREFUSEudlk9L41AUxa9VItSVCCOFcVHUhUxBUNx1q9ClOxdddSfi1/ATiOtxnZ2rcRxBEOpGEMEuKhQabdqmaWhNazVT5cwmL7x/iY4/CDTv3PuanLx73yMKeX5+Rsd1we5lAGi1Xr+PXr+v1TzPw3A41Go88tyQ4DVGx3XxdzwGaeIZco7v+/A8TxmnUGu321otka2trdhJAWBmZkarrays4M/5OX6fnSn68vIyTNNE9f5e0RgAMD09Lehzc3Ngl2EYkdbr9aLf3xcWkE6nIcfv7e2hXC5HcU9PT9HvXC6Hk5MTXF9fK8+zubmJVquljCv0uQkZv05PhbF8Po8k0xgvLy+xehAEsZrOtCQmJyc/HUvh/N/m54Wc19dXMI0fJyLiDWdxAgCwuLQkCI1GQwn8jGmWZSXqPA3bjmJ504bDIR4eHtDpdJS5+Bd4fHxUdMZgMFC0w8NDZYzC/56PMZSIyHEcTExMiLkAMDs7KwzqVsVnTJMZDAZ4f3+PzZmamgJpVtr6+jp+5HIolUrocu0CAC4vL6P7+4SST6VSglatVtF2HMiGdj0PBwcHwpi8+thzRuhMG4cNlucrphERFQoF3N3dJebJpsmwPgYAa2trQpzcg+I2pa7nYXd3F6ZpKqvYtm0EQRD1c9lYBQDIZrNCkKMpja+axmC7KBKQcxjsI0JTSroPnJJ6His3vhfe3t4KMZlMBoZhYH9/Hzc3N6CYiiMKjwU7OzuCWL66UoLxgWn8DqeD33BWV1fBrmKxCADY2NhIzKfQ+O3tbSGuXq9/mKcze5SwaTGarabazxiVSiUS4pamzrSu19XG/i9IKE/5CFSr1bRxlLB7u66Lo6MjrSZjcxsU6foZ4+fxMXzfj5qu3ERJYxpXVQJMtywLQRBAfggdkEzzfR+j0Si6l48YdrMJx3G088atjIuLC+Eded7e3tDiDraxRoX8Aw8qsdlrES+nAAAAAElFTkSuQmCC" },
         { id: 4, name: "whiteNexusNumbers", imgData: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAAICAMAAAB6SdnQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAGUExURf///wAAAFXC034AAAACdFJOU/8A5bcwSgAAAAlwSFlzAAAOwwAADsMBx2+oZAAAABh0RVh0U29mdHdhcmUAUGFpbnQuTkVUIDUuMS45bG7aPgAAALZlWElmSUkqAAgAAAAFABoBBQABAAAASgAAABsBBQABAAAAUgAAACgBAwABAAAAAgAAADEBAgAQAAAAWgAAAGmHBAABAAAAagAAAAAAAABgAAAAAQAAAGAAAAABAAAAUGFpbnQuTkVUIDUuMS45AAMAAJAHAAQAAAAwMjMwAaADAAEAAAABAAAABaAEAAEAAACUAAAAAAAAAAIAAQACAAQAAABSOTgAAgAHAAQAAAAwMTAwAAAAAEzPwEglj9egAAAAc0lEQVQoU22RAQ7AMAgC9f+fXiogtFmWqEU826y6q5uhq05GkIB2bR2RnvkwNRKObivJsB47uZHe2/qAOJiIyQ8iNJSsRbZk9UY4AcE63kb/kP4QnMIYDGq+CCzBSTlal3kR3mJEGvSn5s42713jrWzv7g+DTwFyFUdIwAAAAABJRU5ErkJggg==" },
@@ -28352,7 +28378,15 @@ let buffImages = {
         { id: 24, name: "bookBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAwUExURVqWGXl9g3x/YXp+eH6BV3+BV3t/fXl+hH+AUn+BU4KDRYGDTXh9g3l9hHx/bAAAAGwwzY0AAAAQdFJOU////////////////////wDgI10ZAAAACXBIWXMAAA7CAAAOwgEVKEqAAAAAGHRFWHRTb2Z0d2FyZQBQYWludC5ORVQgNS4xLjlsbto+AAAAtmVYSWZJSSoACAAAAAUAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAMQECABAAAABaAAAAaYcEAAEAAABqAAAAAAAAAPJ2AQDoAwAA8nYBAOgDAABQYWludC5ORVQgNS4xLjkAAwAAkAcABAAAADAyMzABoAMAAQAAAAEAAAAFoAQAAQAAAJQAAAAAAAAAAgABAAIABAAAAFI5OAACAAcABAAAADAxMDAAAAAAKyH3JzxCB5QAAAAySURBVChTY2DAB/hxgUEqx8jEzMLKxo5djpGRg5OLG5ccDy8fH1Y5DDAqhx0MMjncAACT4yPi0UvISwAAAABJRU5ErkJggg==" },
         // Elder God from Catalysts
         { id: 25, name: "bookBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAwUExURVqWGVNCAIhsDZJzEHFaCKV8F29YB5N0EHNbCJl4DndeCX9kC2lTBWtVBHhcEQAAACvzv+QAAAAQdFJOU////////////////////wDgI10ZAAAACXBIWXMAAA7CAAAOwgEVKEqAAAAAGHRFWHRTb2Z0d2FyZQBQYWludC5ORVQgNS4xLjlsbto+AAAAtmVYSWZJSSoACAAAAAUAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAMQECABAAAABaAAAAaYcEAAEAAABqAAAAAAAAAPJ2AQDoAwAA8nYBAOgDAABQYWludC5ORVQgNS4xLjkAAwAAkAcABAAAADAyMzABoAMAAQAAAAEAAAAFoAQAAQAAAJQAAAAAAAAAAgABAAIABAAAAFI5OAACAAcABAAAADAxMDAAAAAAKyH3JzxCB5QAAAAzSURBVChTY2DAB/hxgZEkx8jEzMLIil2OjZmdg5ETuxwjFzcPLx92OXQwKocdUCCHGwAABdgkASnjvLkAAAAASUVORK5CYII=" },
-        { id: 26, name: "quickPrayerBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABfSURBVBhXYzz35Od/Hk4mBjVhVkYGILjz5vf/f4yMDF++/WEwkuUAi4HB2Yd//oPo2+/+/L/37u//O28gfILg3OMfWBUyQWk4+PuXGcpCgPSAFcTZAgeRkf0EdDAwAAAXHyU/Or6iCQAAAABJRU5ErkJggg==" }
+        { id: 26, name: "quickPrayerBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABfSURBVBhXYzz35Od/Hk4mBjVhVkYGILjz5vf/f4yMDF++/WEwkuUAi4HB2Yd//oPo2+/+/L/37u//O28gfILg3OMfWBUyQWk4+PuXGcpCgPSAFcTZAgeRkf0EdDAwAAAXHyU/Or6iCQAAAABJRU5ErkJggg==" },
+        { id: 27, name: "crystalMaskBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMTGKCBbOAAAAuGVYSWZJSSoACAAAAAUAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAMQECABEAAABaAAAAaYcEAAEAAABsAAAAAAAAAGAAAAABAAAAYAAAAAEAAABQYWludC5ORVQgNS4xLjExAAADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlgAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAAAGNdRzso9yOwAAAIZJREFUSEtjjJom+Z+BXoBelkVNk/zPhC5ISzBqGVXAqGUMUqpZ/wX2Zfznvxn9n2t5ElnZhWjLmIQYGThrmRnYFP8wMJy8jy5NFCDasn9QvzAxsDD8Z+dClyYKEG0Zw384wcAshy5JJBgtrqgBRi2jChi1jCpg1DKqgOFrGSO9Sn0GBgYGAG7GHS34RS7NAAAAAElFTkSuQmCC" },
+        { id: 28, name: "lightFormBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABsUExURVqWGSZeViJaUiBZUSBYUChgWCpYVC5gWD50ci1vbSNcVC1hWC1wbi1mXixlXTWAcj66lSRZUS1lXS5fVz3BlixvaV3qnDSAbipiWitkXDBvZlnppDXKpC9SUS1eVipjWyliWi5wbx5JTgAAAJqHDxoAAAAkdFJOU///////////////////////////////////////////////AFgsDQ0AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMTGKCBbOAAAAuGVYSWZJSSoACAAAAAUAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAMQECABEAAABaAAAAaYcEAAEAAABsAAAAAAAAAGAAAAABAAAAYAAAAAEAAABQYWludC5ORVQgNS4xLjExAAADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlgAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAAAGNdRzso9yOwAAAFFJREFUKFPt0kcCQEAUBFHhS0PL2cj3v6M1mgtQ27ctw3hrf+pDZlq2iCPiEvP8QIUqQkwsSTMgL8qKWN0I2g79QEyP07xg3TSxW7/xriOfOgClR1IXoYKDkAAAAABJRU5ErkJggg==" },
+        { id: 29, name: "superheatBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMTGKCBbOAAAAuGVYSWZJSSoACAAAAAUAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAMQECABEAAABaAAAAaYcEAAEAAABsAAAAAAAAAGAAAAABAAAAYAAAAAEAAABQYWludC5ORVQgNS4xLjExAAADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlgAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAAAGNdRzso9yOwAAAPhJREFUSEvt1TFLgkEcx/HvPT7n86j1EGKSRIiGidTcEAji3htw6xWEo1NzW5NLSFNvxa0pHKK2psbEMAyff/vBEzdcz3Tf8fjBZ7o7NZo2hLzKCxtNGxKYh/+Zx5zkMSd5jMerY/m+r8n7Q1feJh2ZX7fkbHAhvWHf+gWyxu5eq2zDQ3QhZvegSL0ccqq+kNTasseWlRIvixXJUUjxJAKtuDlfk5rDP7LGlMDtU4ygiap19tsxzW6J5GdtTjOzxpYbYSF78CHoWpmg0yRQMB5+mtPMrLE4gC2K2bMi3STonTYSFbjsJ+Y0O/+fuchjTvKYk1RelxrgFxTtPvm5PwlYAAAAAElFTkSuQmCC" },
+        { id: 30, name: "perfectPlusBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAB1UExURVqWGda4VElONl+JehU5RCdyjBM5RidzjCh1kidzjh9YbCNngSl2kSVrhwsQEidxiydviSRshiVthCh6kSuEnAwnMS+StDCUsxM8SCqBoCd1jhRATil+lyBmfwcWGyVyjCuJqSZ1jRxTZwgaHyqCnSJpggAAAJQ9gbAAAAAndFJOU///////////////////////////////////////////////////AINWl9kAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMTGKCBbOAAAAuGVYSWZJSSoACAAAAAUAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAMQECABEAAABaAAAAaYcEAAEAAABsAAAAAAAAAGAAAAABAAAAYAAAAAEAAABQYWludC5ORVQgNS4xLjExAAADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlgAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAAAGNdRzso9yOwAAAFxJREFUKFPtycUVgDAUBdHg7u6e/ktk+xPyoAFmN+cy9hZHiabpZCQzTDKSWTYZyRyXjGieH4TIopgnyFLOM2R5UVbI6qYlJFrXD8jGaV6Ardt+nJfaHv2m7sNwNwihWgiLTQZRAAAAAElFTkSuQmCC" },
+        // Elidinis
+        { id: 31, name: "bookBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMTGKCBbOAAAAuGVYSWZJSSoACAAAAAUAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAMQECABEAAABaAAAAaYcEAAEAAABsAAAAAAAAAGAAAAABAAAAYAAAAAEAAABQYWludC5ORVQgNS4xLjExAAADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlgAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAAAGNdRzso9yOwAAANVJREFUSEtjjJom+Z+BXoBelkVNk/zPhC5ISzBqGVXA4LUsNin3f1py6P9F9Vz/F9Xx/7f2yP6v4DCf6NRMkmXWMrsYvv7iYlh6PoBhz6NABnOJ7ehK8AKSLBPkYWA4+tCG4eYnJ4ZDD2wZhPjY0JXgBSRZJsSHYLd6TmRgZESWJQxIskxO6CVDs3MFQ7NLG8OEQ1EMsy+WMZBiI0mWffzKwPDkHQdD14FEhtdfRRkYGBgY/jMQnT5Gy0bqgFHLqAJGLaMKGLWMKoCuljHSqyBmYGBgAAAk7TjTF04o+AAAAABJRU5ErkJggg==" },
+        { id: 32, name: "torstolBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMTGKCBbOAAAAuGVYSWZJSSoACAAAAAUAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAMQECABEAAABaAAAAaYcEAAEAAABsAAAAAAAAAGAAAAABAAAAYAAAAAEAAABQYWludC5ORVQgNS4xLjExAAADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlgAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAAAGNdRzso9yOwAAAJpJREFUSEvt1DEKwkAQheG3LokEVhElrEu2VUgTxFJvkoPlfN5AU0jIEjP2AcViXETmLweGr3uqbhwhVrGwunE0mx6/mWAsCcaSYCz9Drb0K9ocD7T1ntx+R9YXpBJNpsxJZwnpLCVT5h9v61tsvA5YVxXaELA4n9B2PQprkd6BMTwwdwbd5TZ9e52sPkeCsSQYS/+LqVhzBQBPvA0pk/EVNc8AAAAASUVORK5CYII=" },
+        { id: 33, name: "clanBuff", imgData: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAeUExURVqWGe3mau3oZ+3oZurlY+nkYefhXebgXOTeWAAAADhs940AAAAKdFJOU////////////wCyzCzPAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQBQYWludC5ORVQgNS4xLjExiggWzgAAALhlWElmSUkqAAgAAAAFABoBBQABAAAASgAAABsBBQABAAAAUgAAACgBAwABAAAAAgAAADEBAgARAAAAWgAAAGmHBAABAAAAbAAAAAAAAABgAAAAAQAAAGAAAAABAAAAUGFpbnQuTkVUIDUuMS4xMQAAAwAAkAcABAAAADAyMzABoAMAAQAAAAEAAAAFoAQAAQAAAJYAAAAAAAAAAgABAAIABAAAAFI5OAACAAcABAAAADAxMDAAAAAABjXUc7KPcjsAAAA3SURBVChT7cnBCgAQEATQZbD8/w+ruZpVSrl412e2MyIXLmUA0Ffo/Crpa6TPSV8nfYt/2oOLTRJIFVtSB59FAAAAAElFTkSuQmCC" },
     ]
 };
 
@@ -28568,7 +28602,7 @@ function readNumbers(buffer, type = "") {
                             
                             // Not a match, so continue to the next match attempt
                             if (!match) continue;
-                            console.log(a);
+                            // console.log(a);
                             // All pixels in number match, so add it to our number array
                             numberMatch.push({ startWidth: bw, startHeight: bh, num: a });
                         }
@@ -28589,7 +28623,7 @@ function readNumbers(buffer, type = "") {
         match = false;
     }
 
-    console.log(numberMatch);
+    // console.log(numberMatch);
 
     // Create the full number using the array of numbers found
     if (numberMatch.length > 0) {
@@ -28625,7 +28659,10 @@ function readNumbers(buffer, type = "") {
         else if (type == "quickPrayerBuff") return 5;
         // else if (type == "bookBuff") return 5;
         else if (foundWarning) {
-            if (type == "animateDeadBuff") {
+            if (!foundWarning.timeBuffer) {
+                return 5;
+            }
+            else if (type == "animateDeadBuff") {
                 if (foundParentheses) return str;
                 else return Number(localStorage.timeBufferSlider) + 5;
             } else {
@@ -29023,7 +29060,13 @@ let warnings = [
     { id: 15, name: "darknessBuff", friendlyName: "Darkness", timeBuffer: true },
     { id: 16, name: "auraBuff", friendlyName: "Aura", timeBuffer: false },
     { id: 17, name: "lowFamiliarBar", friendlyName: "Low Familiar Health", timeBuffer: false },
-    { id: 18, name: "quickPrayerBuff", friendlyName: "Quick Prayer", timeBuffer: false }
+    { id: 18, name: "quickPrayerBuff", friendlyName: "Quick Prayer", timeBuffer: false },
+    { id: 19, name: "crystalMaskBuff", friendlyName: "Crystal Mask", timeBuffer: true },
+    { id: 20, name: "lightFormBuff", friendlyName: "Light Form", timeBuffer: false },
+    { id: 21, name: "perfectPlusBuff", friendlyName: "Perfect Plus", timeBuffer: true },
+    { id: 22, name: "superheatBuff", friendlyName: "Superheat", timeBuffer: false },
+    { id: 23, name: "torstolBuff", friendlyName: "Torstol Sticks", timeBuffer: false },
+    { id: 24, name: "clanBuff", friendlyName: "Clan Boost", timeBuffer: false },
 ];
 
 
@@ -29162,10 +29205,12 @@ let checkNexus = (img) => {
 };
 
 let checkWarnings = () => {
-    checkBuffTime();
-    checkLowStats();
+    if (localStorage.onOffSwitch == "true") {
+        checkBuffTime();
+        checkLowStats();
 
-    displayWarnings();
+        displayWarnings();
+    }
 };
 
 let checkBuffTime = () => {
@@ -29246,6 +29291,7 @@ let displayWarnings = () => {
 
     try {
         if (localStorage.onOffSwitch == "true" && (expiredBuffs.length > 0 || lowStats.length > 0)) {
+            // console.log(expiredBuffs);
             let needsWarning = warnings.filter(w => {
                 let allWarnings = expiredBuffs.concat(lowStats);
     
@@ -29284,14 +29330,20 @@ let displayWarnings = () => {
 
                 alt1.setTooltip(warningText);
             }
-    
+            
             for (let w = 0; w < needsWarning.length; w++) {
-                if (localStorage.buffColor != "true") _js_jquery_js__WEBPACK_IMPORTED_MODULE_7__("label#" + needsWarning[w].name).removeClass("warning");
-                else if (localStorage.buffColor == "true") _js_jquery_js__WEBPACK_IMPORTED_MODULE_7__("label#" + needsWarning[w].name).addClass("warning");
+                const $label = _js_jquery_js__WEBPACK_IMPORTED_MODULE_7__("#" + needsWarning[w].name).closest("label");
+
+                if (localStorage.buffColor !== "true") {
+                    $label.removeClass("warning");
+                } else {
+                    $label.addClass("warning");
+                }
             }
     
-            for (let nw = 0; nw < noWarning.length; nw++) {
-                _js_jquery_js__WEBPACK_IMPORTED_MODULE_7__("label#" + noWarning[nw].name).removeClass("warning");
+            for (let nw = 0; nw < noWarning.length; nw++) {4
+                const $label = _js_jquery_js__WEBPACK_IMPORTED_MODULE_7__("#" + noWarning[nw].name).closest("label");
+                $label.removeClass("warning");
 
                 // Remove warnings that are resolved, so that they can alert again next time (for sounds)
                 const index = priorWarnings.indexOf(noWarning[nw].name);
@@ -29302,6 +29354,7 @@ let displayWarnings = () => {
             }
 
             if (!alertPlayed && localStorage.soundsOn == "true") {
+                console.log(localStorage.soundVolumeSlider);
                 alert.volume = localStorage.soundVolumeSlider;
                 alert.play();
 
@@ -29551,12 +29604,7 @@ var __webpack_exports__ = {};
   \******************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   readFile: () => (/* binding */ readFile),
-/* harmony export */   setBuffsTab: () => (/* binding */ setBuffsTab),
-/* harmony export */   setCompareTab: () => (/* binding */ setCompareTab),
-/* harmony export */   setNexusTab: () => (/* binding */ setNexusTab),
-/* harmony export */   setPresetsTab: () => (/* binding */ setPresetsTab),
-/* harmony export */   setSettingsTab: () => (/* binding */ setSettingsTab)
+/* harmony export */   readFile: () => (/* binding */ readFile)
 /* harmony export */ });
 /* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
 /* harmony import */ var _css_nis_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/nis.css */ "./css/nis.css");
@@ -29582,7 +29630,9 @@ let defaultSettings = [
     { name: "buffColor", value: "true" },
     { name: "soundsOn", value: "false" },
     { name: "debugMode", value: "false" },
-    { name: "audioVolumeSlider", value: "1" },
+    { name: "skillingTab", value: "true" },
+    { name: "nexusTab", value: "false" },
+    { name: "soundVolumeSlider", value: "0.2" },
     { name: "lowHealthSlider", value: "5000" },
     { name: "lowPrayerSlider", value: "200" },
     { name: "lowFamiliarSlider", value: "10000" },
@@ -29609,10 +29659,21 @@ let defaultSettings = [
     { name: "darknessBuff", value: "false" },
     { name: "auraBuff", value: "false" },
     { name: "quickPrayerBuff", value: "false" },
+    { name: "crystalMaskBuff", value: "false" },
+    { name: "lightFormBuff", value: "false" },
+    { name: "perfectPlusBuff", value: "false" },
+    { name: "superheatBuff", value: "false" },
+    { name: "torstolBuff", value: "false" },
+    { name: "clanBuff", value: "false" },
     { name: "savedPresets", value: "[]" },
 ];
 let presetId = (0,uuid__WEBPACK_IMPORTED_MODULE_6__["default"])();
 let savedPresets = [];
+const buffPresets = document.getElementById('buffPresets');
+const skillingPresets = document.getElementById('skillingPresets');
+function syncDropdowns(source, target) {
+    target.value = source.value; // Update target value
+}
 window.onload = async function start() {
     // Add defaults if missing
     for (let d = 0; d < defaultSettings.length; d++) {
@@ -29629,8 +29690,9 @@ window.onload = async function start() {
         _scripts_script_js__WEBPACK_IMPORTED_MODULE_4__.start();
     }
     ;
-    setBuffsTab();
     loadPresetDropdown(true);
+    // buffPresets.addEventListener('change', () => syncDropdowns(buffPresets, skillingPresets));
+    // skillingPresets.addEventListener('change', () => syncDropdowns(buffPresets, skillingPresets));
     console.log("Ready to save your ass.");
 };
 let loadLocalStorageItems = async () => {
@@ -29645,11 +29707,12 @@ let loadLocalStorageItems = async () => {
             _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + key).val(value);
         }
         else if (value == "true" || value == "false") {
-            if (value == "true") {
-                _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input#" + key).prop("checked", true);
-            }
-            else {
-                _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input#" + key).prop("checked", false);
+            const checked = value === "true";
+            const $checkbox = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input#" + key);
+            $checkbox.prop("checked", checked);
+            if (key.includes("Tab")) {
+                const tabId = key.replace("Tab", "-tab");
+                _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + tabId).toggle(checked);
             }
         }
     }
@@ -29668,7 +29731,8 @@ let loadPresetDropdown = (firstLoad = false) => {
     newPreset();
     loadPresetJson(firstLoad);
     loadDropdown("presets");
-    loadDropdown("savedPresets");
+    loadDropdown("buffPresets");
+    loadDropdown("skillingPresets");
 };
 let loadDropdown = (dropdownName) => {
     let orderedPresets = savedPresets.sort((a, b) => a.presetName.localeCompare(b.presetName));
@@ -29734,7 +29798,8 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#presets").change(function () {
         }
     }
 });
-_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#savedPresets").change(function () { selectPreset(this); });
+_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#buffPresets").change(function () { selectPreset(this); });
+_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#skillingPresets").change(function () { selectPreset(this); });
 let selectPreset = (selection) => {
     let foundPreset = savedPresets.find(p => p.id == selection.value);
     console.log(foundPreset);
@@ -29792,65 +29857,16 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#deletePreset").click(function () {
     }
     return false;
 });
-_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".contenttab").click(function () {
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".activetab").removeClass("activetab");
+_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".contenttab").on("click", function () {
+    // Active tab styling
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".contenttab").removeClass("activetab");
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(this).addClass("activetab");
-    if (this.id == "buffs-tab") {
-        setBuffsTab();
-    }
-    else if (this.id == "compare-tab") {
-        setCompareTab();
-    }
-    else if (this.id == "nexus-tab") {
-        setNexusTab();
-    }
-    else if (this.id == "presets-tab") {
-        setPresetsTab();
-    }
-    else if (this.id == "settings-tab") {
-        setSettingsTab();
-    }
+    // Hide all tab content
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".tabcontent").hide();
+    // Show the matching content
+    const contentId = this.id.replace("-tab", "-content");
+    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + contentId).show();
 });
-function setBuffsTab() {
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#buffs-content').show();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#compare-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#nexus-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#presets-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#settings-content').hide();
-}
-;
-function setCompareTab() {
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#buffs-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#compare-content').show();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#nexus-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#presets-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#settings-content').hide();
-}
-;
-function setNexusTab() {
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#buffs-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#compare-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#nexus-content').show();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#presets-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#settings-content').hide();
-}
-;
-function setPresetsTab() {
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#buffs-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#compare-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#nexus-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#presets-content').show();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#settings-content').hide();
-}
-;
-function setSettingsTab() {
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#buffs-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#compare-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#nexus-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#presets-content').hide();
-    _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__('#settings-content').show();
-}
-;
 // Store Checkbox values in localStorage
 _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input:checkbox").on("change", async function () {
     let checkboxId = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(this).attr("id");
@@ -29862,6 +29878,15 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("input:checkbox").on("change", async 
             localStorage.setItem(checkboxId, "false");
         }
         await _scripts_script_js__WEBPACK_IMPORTED_MODULE_4__.updateSelections();
+    }
+    if (checkboxId.includes("Tab")) {
+        const tabId = checkboxId.replace("Tab", "-tab");
+        if (_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(this).is(":checked")) {
+            _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + tabId).show();
+        }
+        else {
+            _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#" + tabId).hide();
+        }
     }
 });
 // Store Range values in localStorage
@@ -29885,12 +29910,6 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#compareImages").on("change", async 
             firstImage = await _scripts_image_reader_js__WEBPACK_IMPORTED_MODULE_5__.generateMatchingImage(firstImage, secondImage);
         }
         window.open(firstImage, '_blank');
-        // ImageReader.imageToBase64(this.files[0], (firstImage) => {
-        // 	ImageReader.imageToBase64(this.files[1], async (secondImage) => {
-        // 		let url = await ImageReader.generateMatchingImage(firstImage, secondImage);
-        // 		window.open(url, '_blank');
-        // 	});
-        // });
     }
 });
 _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#exportPresets").on("click", async function () {
