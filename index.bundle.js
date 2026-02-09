@@ -5347,7 +5347,7 @@ input[type="range"] {
 }
 
 .settings-scroll {
-  max-height: 375px;
+  max-height: 340px;
   overflow-y: auto;
   padding-right: 6px;
 }`, ""]);
