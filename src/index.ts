@@ -18,6 +18,8 @@ let defaultSettings = [
 	{ name: "debugMode", value: "false" },
 	{ name: "skillingTab", value: "true" },
 	{ name: "nexusTab", value: "false" },
+	{ name: "presetsTab", value: "true" },
+	{ name: "compareTab", value: "false" },
 	{ name: "soundVolumeSlider", value: "0.2" },
 	{ name: "lowHealthSlider", value: "5000" },
 	{ name: "lowPrayerSlider", value: "200" },
