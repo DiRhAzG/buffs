@@ -46,7 +46,7 @@ let defaultSettings = [
 	{ name: "vulnBuff", value: "false" },
 	{ name: "smokeCloudBuff", value: "false" },
 	{ name: "darknessBuff", value: "false" },
-	{ name: "auraBuff", value: "false" },
+	{ name: "penanceBuff", value: "false" },
 	{ name: "quickPrayerBuff", value: "false" },
 	{ name: "crystalMaskBuff", value: "false" },
 	{ name: "lightFormBuff", value: "false" },
