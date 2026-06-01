@@ -54,6 +54,7 @@ let defaultSettings = [
 	{ name: "superheatBuff", value: "false" },
 	{ name: "torstolBuff", value: "false" },
 	{ name: "clanBuff", value: "false" },
+	{ name: "farmJujuBuff", value: "false" },
 	{ name: "savedPresets", value: "[]" },
 ]
 

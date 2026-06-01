@@ -49,6 +49,7 @@ let warnings = [
     { id: 22, name: "superheatBuff", friendlyName: "Superheat", timeBuffer: false },
     { id: 23, name: "torstolBuff", friendlyName: "Torstol Sticks", timeBuffer: false },
     { id: 24, name: "clanBuff", friendlyName: "Clan Boost", timeBuffer: false },
+    { id: 25, name: "farmJujuBuff", friendlyName: "Farm Juju", timeBuffer: true },
 ];
 
 export { warnings };
