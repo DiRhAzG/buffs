@@ -2269,7 +2269,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#tabcontainer::after {
 
 }
 
-.table-center td.no-border {
+.table-center td.no-border,
+.table-center th.no-border {
     border: none;
 }
 
@@ -2299,6 +2300,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#tabcontainer::after {
     background-color: transparent;
     border-color: #ffffff;
     width: 305px;
+}
+
+#nexus-content {
+    text-align: center;
+}
+
+.nexus-wrap {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.nexus-switch {
+    margin-bottom: 4px;
 }
 
 .nexus-table {
@@ -2371,7 +2386,7 @@ input[type="checkbox"]:focus {
     background-color: #e60808c5;
 }
 
-#onOffSwitch, #onOffSwitch2 {
+#buffOnOffSwitch, #skillingOnOffSwitch, #nexusOnOffSwitch {
     width: 4.5em;
     height: 2em;
     margin-left: -34px;
@@ -26069,6 +26084,8 @@ const barWarnings = [
 let warnings = [...barWarnings, ..._buff_registry_js__WEBPACK_IMPORTED_MODULE_7__.buffRegistry]
     .map((w, i) => ({ id: i + 1, name: w.name, friendlyName: w.friendlyName, timeBuffer: w.timeBuffer }));
 const warningsMap = new Map(warnings.map(w => [w.name, w]));
+// Pre-built set for O(1) skilling/combat classification
+const skillingBuffNames = new Set(_buff_registry_js__WEBPACK_IMPORTED_MODULE_7__.buffRegistry.filter(b => b.skilling).map(b => b.name));
 
 async function start() {
     try {
@@ -26082,12 +26099,17 @@ async function start() {
 }
 function loopChecks() {
     try {
-        if (localStorage.onOffSwitch === "true") {
+        const buffOn = localStorage.buffOnOffSwitch === "true";
+        const skillingOn = localStorage.skillingOnOffSwitch === "true";
+        const nexusOn = localStorage.nexusOnOffSwitch === "true";
+        if (buffOn || skillingOn || nexusOn) {
             try {
                 const img = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.captureHoldFullRs();
-                checkBuff(img);
-                checkBar(img);
-                checkNexus(img);
+                checkBuff(img, buffOn, skillingOn);
+                if (buffOn)
+                    checkBar(img);
+                if (nexusOn)
+                    checkNexus(img);
             }
             catch (ex) {
                 console.log(ex);
@@ -26108,7 +26130,7 @@ async function test(img) {
     try {
         await loadImages();
         await updateSelections();
-        checkBuff(img);
+        checkBuff(img, true, true);
         checkBar(img);
         checkNexus(img);
         setInterval(checkWarnings, 1000);
@@ -26154,8 +26176,9 @@ const updateBarSettings = async () => {
     }
     barStats = barStats.filter(bs => selectedBar.includes(bs.name));
 };
-const checkBuff = (img) => {
-    _buff_ts__WEBPACK_IMPORTED_MODULE_2__.checkBuff(img, selectedBuffs, buffTimers);
+const checkBuff = (img, buffOn, skillingOn) => {
+    const activeBuffs = selectedBuffs.filter(name => skillingBuffNames.has(name) ? skillingOn : buffOn);
+    _buff_ts__WEBPACK_IMPORTED_MODULE_2__.checkBuff(img, activeBuffs, buffTimers);
     if (localStorage.debugMode === "true") {
         console.log(buffTimers);
     }
@@ -26170,14 +26193,17 @@ const checkNexus = (img) => {
     _nexus_js__WEBPACK_IMPORTED_MODULE_4__.checkNexus(img);
 };
 const checkWarnings = () => {
-    if (localStorage.onOffSwitch === "true") {
-        checkBuffTime();
-        checkLowStats();
-    }
+    checkBuffTime();
+    checkLowStats();
     displayWarnings();
 };
 const checkBuffTime = () => {
+    const buffOn = localStorage.buffOnOffSwitch === "true";
+    const skillingOn = localStorage.skillingOnOffSwitch === "true";
     expiredBuffs = buffTimers.filter((bt) => {
+        // Skip if this buff's switch is currently off
+        if (skillingBuffNames.has(bt.name) ? !skillingOn : !buffOn)
+            return false;
         const warning = warningsMap.get(bt.name);
         const timeBuffer = warning === null || warning === void 0 ? void 0 : warning.timeBuffer;
         if (timeBuffer === undefined) {
@@ -26205,6 +26231,10 @@ const checkBuffTime = () => {
     });
 };
 const checkLowStats = () => {
+    if (localStorage.buffOnOffSwitch !== "true") {
+        lowStats = [];
+        return;
+    }
     lowStats = barStats.filter((bs) => {
         const foundSetting = localStorage[bs.name.replace("Bar", "Slider")];
         const selected = selectedBar.find(s => s === bs.name);
@@ -26226,7 +26256,7 @@ const checkLowStats = () => {
 };
 const displayWarnings = () => {
     try {
-        if (localStorage.onOffSwitch === "true" && (expiredBuffs.length > 0 || lowStats.length > 0)) {
+        if (expiredBuffs.length > 0 || lowStats.length > 0) {
             hasActiveWarnings = true;
             // Build active-name set once — O(1) lookup below instead of O(n) .some()
             const activeNames = new Set([
@@ -26498,7 +26528,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! !file-loader?name=[name].[ext]!./index.html */ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./index.html");
 __webpack_require__(/*! !file-loader?name=[name].[ext]!./appconfig.json */ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./appconfig.json");
 let defaultSettings = [
-    { name: "onOffSwitch", value: "true" },
+    { name: "buffOnOffSwitch", value: "true" },
+    { name: "skillingOnOffSwitch", value: "false" },
+    { name: "nexusOnOffSwitch", value: "false" },
     { name: "mouseTooltip", value: "true" },
     { name: "buffColor", value: "true" },
     { name: "soundsOn", value: "false" },

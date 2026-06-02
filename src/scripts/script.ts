@@ -49,6 +49,11 @@ let warnings: Warning[] = [...barWarnings, ...buffRegistry]
 
 const warningsMap = new Map<string, Warning>(warnings.map(w => [w.name, w]));
 
+// Pre-built set for O(1) skilling/combat classification
+const skillingBuffNames = new Set<string>(
+    (buffRegistry as any[]).filter(b => b.skilling).map(b => b.name)
+);
+
 export { warnings };
 
 export async function start(): Promise<void> {
@@ -63,13 +68,16 @@ export async function start(): Promise<void> {
 
 function loopChecks(): void {
     try {
-        if (localStorage.onOffSwitch === "true") {
+        const buffOn    = localStorage.buffOnOffSwitch    === "true";
+        const skillingOn = localStorage.skillingOnOffSwitch === "true";
+        const nexusOn   = localStorage.nexusOnOffSwitch   === "true";
+        if (buffOn || skillingOn || nexusOn) {
             try {
                 const img = a1lib.captureHoldFullRs();
 
-                checkBuff(img);
-                checkBar(img);
-                checkNexus(img);
+                checkBuff(img, buffOn, skillingOn);
+                if (buffOn) checkBar(img);
+                if (nexusOn) checkNexus(img);
             } catch (ex) {
                 console.log(ex);
             }
@@ -90,7 +98,7 @@ export async function test(img: any): Promise<void> {
         await loadImages();
         await updateSelections();
 
-        checkBuff(img);
+        checkBuff(img, true, true);
         checkBar(img);
         checkNexus(img);
         setInterval(checkWarnings, 1000);
@@ -144,8 +152,11 @@ const updateBarSettings = async (): Promise<void> => {
     barStats = barStats.filter(bs => selectedBar.includes(bs.name));
 };
 
-const checkBuff = (img: any): void => {
-    Buff.checkBuff(img, selectedBuffs, buffTimers);
+const checkBuff = (img: any, buffOn: boolean, skillingOn: boolean): void => {
+    const activeBuffs = selectedBuffs.filter(name =>
+        skillingBuffNames.has(name) ? skillingOn : buffOn
+    );
+    Buff.checkBuff(img, activeBuffs, buffTimers);
 
     if (localStorage.debugMode === "true") {
         console.log(buffTimers);
@@ -165,16 +176,19 @@ const checkNexus = (img: any): void => {
 };
 
 const checkWarnings = (): void => {
-    if (localStorage.onOffSwitch === "true") {
-        checkBuffTime();
-        checkLowStats();
-    }
-
+    checkBuffTime();
+    checkLowStats();
     displayWarnings();
 };
 
 const checkBuffTime = (): void => {
+    const buffOn     = localStorage.buffOnOffSwitch    === "true";
+    const skillingOn = localStorage.skillingOnOffSwitch === "true";
+
     expiredBuffs = buffTimers.filter((bt) => {
+        // Skip if this buff's switch is currently off
+        if (skillingBuffNames.has(bt.name) ? !skillingOn : !buffOn) return false;
+
         const warning = warningsMap.get(bt.name);
         const timeBuffer = warning?.timeBuffer;
 
@@ -206,6 +220,11 @@ const checkBuffTime = (): void => {
 };
 
 const checkLowStats = (): void => {
+    if (localStorage.buffOnOffSwitch !== "true") {
+        lowStats = [];
+        return;
+    }
+
     lowStats = barStats.filter((bs) => {
         const foundSetting = localStorage[bs.name.replace("Bar", "Slider")];
         const selected = selectedBar.find(s => s === bs.name);
@@ -229,7 +248,7 @@ const checkLowStats = (): void => {
 
 const displayWarnings = (): void => {
     try {
-        if (localStorage.onOffSwitch === "true" && (expiredBuffs.length > 0 || lowStats.length > 0)) {
+        if (expiredBuffs.length > 0 || lowStats.length > 0) {
             hasActiveWarnings = true;
 
             // Build active-name set once — O(1) lookup below instead of O(n) .some()

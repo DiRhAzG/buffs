@@ -12,7 +12,9 @@ require("!file-loader?name=[name].[ext]!./index.html");
 require("!file-loader?name=[name].[ext]!./appconfig.json");
 
 let defaultSettings = [
-	{ name: "onOffSwitch", value: "true" },
+	{ name: "buffOnOffSwitch", value: "true" },
+	{ name: "skillingOnOffSwitch", value: "false" },
+	{ name: "nexusOnOffSwitch", value: "false" },
 	{ name: "mouseTooltip", value: "true" },
 	{ name: "buffColor", value: "true" },
 	{ name: "soundsOn", value: "false" },

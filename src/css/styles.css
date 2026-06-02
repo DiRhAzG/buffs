@@ -19,7 +19,8 @@
 
 }
 
-.table-center td.no-border {
+.table-center td.no-border,
+.table-center th.no-border {
     border: none;
 }
 
@@ -49,6 +50,20 @@
     background-color: transparent;
     border-color: #ffffff;
     width: 305px;
+}
+
+#nexus-content {
+    text-align: center;
+}
+
+.nexus-wrap {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.nexus-switch {
+    margin-bottom: 4px;
 }
 
 .nexus-table {
@@ -121,7 +136,7 @@ input[type="checkbox"]:focus {
     background-color: #e60808c5;
 }
 
-#onOffSwitch, #onOffSwitch2 {
+#buffOnOffSwitch, #skillingOnOffSwitch, #nexusOnOffSwitch {
     width: 4.5em;
     height: 2em;
     margin-left: -34px;
