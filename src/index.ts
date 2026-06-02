@@ -2,9 +2,10 @@ import * as a1lib from "@alt1/base";
 import "./css/nis.css";
 import "./css/styles.css";
 import * as $ from "./js/jquery.js";
-import * as main from "./scripts/script.js";
+import * as main from "./scripts/script.ts";
 import * as ImageReader from "./scripts/image-reader.js";
 import { v4 as uuid } from 'uuid';
+import { buffRegistry } from './scripts/buff-registry.js';
 
 // Tell webpack to add index.html and appconfig.json to output
 require("!file-loader?name=[name].[ext]!./index.html");
@@ -30,41 +31,55 @@ let defaultSettings = [
 	{ name: "ritualShardSlider", value: "650" },
 	{ name: "interfaceScalingDropdown", value: "100" },
 
-	{ name: "overloadBuff", value: "false" },
-	{ name: "animateDeadBuff", value: "false" },
-	{ name: "excaliburBuff", value: "false" },
-	{ name: "prayerRenewalBuff", value: "false" },
-	{ name: "ritualShardBuff", value: "false" },
-	{ name: "weaponPoisonBuff", value: "false" },
-	{ name: "antifireBuff", value: "false" },
-	{ name: "aggressionBuff", value: "false" },
 	{ name: "lowHealthBar", value: "false" },
 	{ name: "lowPrayerBar", value: "false" },
 	{ name: "lowFamiliarBar", value: "false" },
-	{ name: "summonRenewBuff", value: "false" },
-	{ name: "bookBuff", value: "false" },
-	{ name: "vulnBuff", value: "false" },
-	{ name: "smokeCloudBuff", value: "false" },
-	{ name: "darknessBuff", value: "false" },
-	{ name: "penanceBuff", value: "false" },
-	{ name: "quickPrayerBuff", value: "false" },
-	{ name: "crystalMaskBuff", value: "false" },
-	{ name: "lightFormBuff", value: "false" },
-	{ name: "perfectPlusBuff", value: "false" },
-	{ name: "superheatBuff", value: "false" },
-	{ name: "torstolBuff", value: "false" },
-	{ name: "clanBuff", value: "false" },
-	{ name: "farmJujuBuff", value: "false" },
+	...buffRegistry.map((b: any) => ({ name: b.name, value: "false" })),
 	{ name: "savedPresets", value: "[]" },
 ]
 
 let presetId = uuid();
-let savedPresets = [];
+let savedPresets: any[] = [];
 const buffPresets = document.getElementById('buffPresets');
 const skillingPresets = document.getElementById('skillingPresets');
 
-function syncDropdowns(source, target) {
+function syncDropdowns(source: any, target: any) {
   target.value = source.value; // Update target value
+}
+
+function renderSkillingTab() {
+	const skillingBuffs = buffRegistry.filter((b: any) => b.skilling);
+	let rows = '';
+	for (let i = 0; i < skillingBuffs.length; i += 2) {
+		const left = skillingBuffs[i];
+		const right = skillingBuffs[i + 1];
+		const cell = (buff: any) => buff ? `<td>
+					<div class="list-group">
+					<label class="list-group-item table-item form-check form-switch form-check-label" for="${buff.name}">
+						<input class="form-check-input" type="checkbox" id="${buff.name}" role="switch">
+						${buff.friendlyName}
+					</label>
+					</div>
+				</td>` : '<td></td>';
+		rows += `<tr>${cell(left)}${cell(right)}</tr>`;
+	}
+	$('#skilling-buff-rows').html(rows);
+}
+
+function renderBuffPresets() {
+	const barItems = [
+		{ name: "lowHealthBar",   friendlyName: "Low Health" },
+		{ name: "lowPrayerBar",   friendlyName: "Low Prayer" },
+		{ name: "lowFamiliarBar", friendlyName: "Low Familiar" },
+	];
+	const all = [...barItems, ...buffRegistry];
+	const half = Math.ceil(all.length / 2);
+	const makeLabel = (item: any) =>
+		`<label class="form-presets-label" for="${item.name}Preset">` +
+		`<input class="presetOption" type="checkbox" id="${item.name}Preset" />${item.friendlyName}` +
+		`</label>`;
+	$('#presets-col-left').html(all.slice(0, half).map(makeLabel).join(''));
+	$('#presets-col-right').html(all.slice(half).map(makeLabel).join(''));
 }
 
 window.onload = async function start() {
@@ -77,6 +92,9 @@ window.onload = async function start() {
 		};
 	};
 	
+	renderSkillingTab();
+	renderBuffPresets();
+
 	// Load localStorage into elements
 	await loadLocalStorageItems();
 
@@ -104,8 +122,9 @@ $(window).on("resize", updateScrollHeight);
 
 let loadLocalStorageItems = async () => {
 	for (let i = 0, len = localStorage.length; i < len; i++) {
-		let key = localStorage.key(i);
-		let value = localStorage[key];
+		const key = localStorage.key(i);
+		if (!key) continue;
+		const value = localStorage[key];
 
 		if (key.includes("Slider")) {
 			$("input#" + key).val(value);
@@ -148,7 +167,7 @@ let loadPresetDropdown = (firstLoad = false) => {
 	loadDropdown("skillingPresets");
 }
 
-let loadDropdown = (dropdownName) => {
+let loadDropdown = (dropdownName: string) => {
 	let orderedPresets = savedPresets.sort((a, b) => a.presetName.localeCompare(b.presetName));
 
 	$("#" + dropdownName).empty();
@@ -173,15 +192,15 @@ let loadDropdown = (dropdownName) => {
 	}
 }
 
-let loadPresetJson = (firstLoad) => {
-	savedPresets = JSON.parse(localStorage.getItem("savedPresets"));
+let loadPresetJson = (firstLoad: boolean) => {
+	savedPresets = JSON.parse(localStorage.getItem("savedPresets") ?? "[]");
 
 	if (firstLoad) {
 		let options = $(".presetOption");
 
 		for (let s = 0; s < savedPresets.length; s++) {
 			for (let o = 0; o < options.length; o++) {
-				let foundOption = savedPresets[s].options.find(s => s.name == options[o].id)
+				let foundOption = savedPresets[s].options.find((s: any) => s.name == options[o].id)
 
 				if (!foundOption) {
 					savedPresets[s].options.push({
@@ -195,7 +214,7 @@ let loadPresetJson = (firstLoad) => {
 }
 
 // Change handler for all synced switches
-$(".sync-switch").on("change", function() {
+$(document).on("change", ".sync-switch", function() {
     const setting = $(this).data("setting"); // e.g., "onOffSwitch"
     const checked = this.checked;
 
@@ -238,7 +257,7 @@ $("#presets").change(function() {
 $("#buffPresets").change(function() {selectPreset(this)});
 $("#skillingPresets").change(function() {selectPreset(this)});
 
-let selectPreset = (selection) => {
+let selectPreset = (selection: any) => {
 	let foundPreset = savedPresets.find(p => p.id == selection.value);
 	console.log(foundPreset);
 	if (foundPreset) {
@@ -260,7 +279,7 @@ $("#savePreset").click(function() {
 		foundPreset.presetName = $("#presetName")[0].value;
 
 		for (let o = 0; o < options.length; o++) {
-			let foundOption = foundPreset.options.find(s => s.name == options[o].id)
+			let foundOption = foundPreset.options.find((s: any) => s.name == options[o].id)
 
 			if (foundOption) {
 				foundOption.setting = options[o].checked;
@@ -277,7 +296,7 @@ $("#savePreset").click(function() {
 		let preset = {
 			id: presetId,
 			presetName: presetName,
-			options: []
+			options: [] as any[]
 		};
 
 		for (let o = 0; o < options.length; o++) {
@@ -326,7 +345,7 @@ $(".contenttab").on("click", function () {
 });
 
 // Store Checkbox values in localStorage
-$("input:checkbox").on("change", async function() {
+$(document).on("change", "input:checkbox", async function() {
 	let checkboxId = $(this).attr("id");
 	
 	if (!checkboxId.includes("Preset")) {
@@ -381,8 +400,8 @@ $("#compareImages").on("change", async function() {
 });
 
 $("#exportPresets").on("click", async function() {
-	let fileContent = localStorage.getItem("savedPresets");
-	let bb = new Blob([fileContent ], { type: 'text/plain' });
+	const fileContent = localStorage.getItem("savedPresets") ?? '';
+	const bb = new Blob([fileContent], { type: 'text/plain' });
 	let a = document.createElement('a');
 	a.download = 'buff_presets.txt';
 	a.href = window.URL.createObjectURL(bb);
@@ -402,11 +421,11 @@ $("#interfaceScalingDropdown").change(async function() {
 	await main.loadImages();
 });
 
-export function readFile(file, callback) {
+export function readFile(file: File, callback: (data: string) => void) {
     let reader = new FileReader();
 
     reader.onloadend = function() {
-      callback(reader.result);
+      callback(reader.result as string);
     }
 
     reader.readAsText(file);

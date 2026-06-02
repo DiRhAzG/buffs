@@ -1,3 +1,9 @@
+#tabcontainer::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
 .table-center, #presets-content {
     margin-top: 10px;
     margin-left: auto;

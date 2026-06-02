@@ -1,6 +1,9 @@
 {
 	"compilerOptions": {
-		"moduleResolution": "Node"
+		"moduleResolution": "Node",
+		"strict": true,
+		"noImplicitThis": false,
+		"esModuleInterop": true
 	},
 	"allowTsInNodeModules": true
 }

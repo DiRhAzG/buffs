@@ -1,6 +1,6 @@
 import { ImageDetect } from "@alt1/base";
 import { ImageDataSet } from "@alt1/base/dist/imagedetect";
-import { warnings } from "./script.js";
+import { warnings } from "./script.ts";
 import { getNumberImages } from "./image-data.js";
 
 let imgBuffNumbers;

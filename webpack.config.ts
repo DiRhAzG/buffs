@@ -10,24 +10,12 @@ var outdir = path.resolve(__dirname, ".");
 var config = new alt1chain(srcdir, { ugly: false });
 
 //exposes all root level exports as UMD (as named package "testpackege" or "TEST" in global scope)
-config.makeUmd("testpackage", "TEST");
+config.makeUmd("buff-tracker", "BuffTracker");
 
 //the name and location of our entry file (the name is used for output and can contain a relative path)
 config.entry("index", "./index.ts");
 
 //where to put all the stuff
 config.output(outdir);
-
-module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      }
-    ]
-  }
 
 export default config.toConfig();
