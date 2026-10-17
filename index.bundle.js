@@ -44,7 +44,7 @@ return /******/ (() => { // webpackBootstrap
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   ImageData: () => (/* binding */ ImageData)
+/* harmony export */   "ImageData": () => (/* binding */ ImageData)
 /* harmony export */ });
 /* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "../node_modules/@alt1/base/dist/index.js");
 /* harmony import */ var _nodepolyfill_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nodepolyfill.js */ "../node_modules/@alt1/base/dist/nodepolyfill.js");
@@ -360,19 +360,19 @@ if (typeof HTMLImageElement != "undefined") {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   ImageDataSet: () => (/* binding */ ImageDataSet),
-/* harmony export */   asyncMap: () => (/* binding */ asyncMap),
-/* harmony export */   clearPngColorspace: () => (/* binding */ clearPngColorspace),
-/* harmony export */   coldif: () => (/* binding */ coldif),
-/* harmony export */   findSubbuffer: () => (/* binding */ findSubbuffer),
-/* harmony export */   findSubimage: () => (/* binding */ findSubimage),
-/* harmony export */   imageDataFromBase64: () => (/* binding */ imageDataFromBase64),
-/* harmony export */   imageDataFromFileBuffer: () => (/* binding */ imageDataFromFileBuffer),
-/* harmony export */   imageDataFromUrl: () => (/* binding */ imageDataFromUrl),
-/* harmony export */   isPngBuffer: () => (/* binding */ isPngBuffer),
-/* harmony export */   simpleCompare: () => (/* binding */ simpleCompare),
-/* harmony export */   simpleCompareRMSE: () => (/* binding */ simpleCompareRMSE),
-/* harmony export */   webpackImages: () => (/* binding */ webpackImages)
+/* harmony export */   "ImageDataSet": () => (/* binding */ ImageDataSet),
+/* harmony export */   "asyncMap": () => (/* binding */ asyncMap),
+/* harmony export */   "clearPngColorspace": () => (/* binding */ clearPngColorspace),
+/* harmony export */   "coldif": () => (/* binding */ coldif),
+/* harmony export */   "findSubbuffer": () => (/* binding */ findSubbuffer),
+/* harmony export */   "findSubimage": () => (/* binding */ findSubimage),
+/* harmony export */   "imageDataFromBase64": () => (/* binding */ imageDataFromBase64),
+/* harmony export */   "imageDataFromFileBuffer": () => (/* binding */ imageDataFromFileBuffer),
+/* harmony export */   "imageDataFromUrl": () => (/* binding */ imageDataFromUrl),
+/* harmony export */   "isPngBuffer": () => (/* binding */ isPngBuffer),
+/* harmony export */   "simpleCompare": () => (/* binding */ simpleCompare),
+/* harmony export */   "simpleCompareRMSE": () => (/* binding */ simpleCompareRMSE),
+/* harmony export */   "webpackImages": () => (/* binding */ webpackImages)
 /* harmony export */ });
 /* harmony import */ var _imgref_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./imgref.js */ "../node_modules/@alt1/base/dist/imgref.js");
 /* harmony import */ var _wrapper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./wrapper.js */ "../node_modules/@alt1/base/dist/wrapper.js");
@@ -763,10 +763,10 @@ class ImageDataSet {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   ImgRef: () => (/* binding */ ImgRef),
-/* harmony export */   ImgRefBind: () => (/* binding */ ImgRefBind),
-/* harmony export */   ImgRefCtx: () => (/* binding */ ImgRefCtx),
-/* harmony export */   ImgRefData: () => (/* binding */ ImgRefData)
+/* harmony export */   "ImgRef": () => (/* binding */ ImgRef),
+/* harmony export */   "ImgRefBind": () => (/* binding */ ImgRefBind),
+/* harmony export */   "ImgRefCtx": () => (/* binding */ ImgRefCtx),
+/* harmony export */   "ImgRefData": () => (/* binding */ ImgRefData)
 /* harmony export */ });
 /* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "../node_modules/@alt1/base/dist/index.js");
 
@@ -872,44 +872,44 @@ class ImgRefData extends ImgRef {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Alt1Error: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.Alt1Error),
-/* harmony export */   ImageData: () => (/* reexport safe */ _imagedata_extensions_js__WEBPACK_IMPORTED_MODULE_4__.ImageData),
-/* harmony export */   ImageDetect: () => (/* reexport module object */ _imagedetect_js__WEBPACK_IMPORTED_MODULE_1__),
-/* harmony export */   ImageStreamReader: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.ImageStreamReader),
-/* harmony export */   ImgRef: () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRef),
-/* harmony export */   ImgRefBind: () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRefBind),
-/* harmony export */   ImgRefCtx: () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRefCtx),
-/* harmony export */   ImgRefData: () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRefData),
-/* harmony export */   NoAlt1Error: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.NoAlt1Error),
-/* harmony export */   NodePolyfill: () => (/* reexport module object */ _nodepolyfill_js__WEBPACK_IMPORTED_MODULE_5__),
-/* harmony export */   PasteInput: () => (/* reexport module object */ _pasteinput_js__WEBPACK_IMPORTED_MODULE_2__),
-/* harmony export */   Rect: () => (/* reexport safe */ _rect_js__WEBPACK_IMPORTED_MODULE_3__["default"]),
-/* harmony export */   addResizeElement: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.addResizeElement),
-/* harmony export */   capture: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.capture),
-/* harmony export */   captureAsync: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.captureAsync),
-/* harmony export */   captureHold: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.captureHold),
-/* harmony export */   captureHoldFullRs: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.captureHoldFullRs),
-/* harmony export */   captureHoldScreen: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.captureHoldScreen),
-/* harmony export */   captureMultiAsync: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.captureMultiAsync),
-/* harmony export */   captureStream: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.captureStream),
-/* harmony export */   decodeImageString: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.decodeImageString),
-/* harmony export */   encodeImageString: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.encodeImageString),
-/* harmony export */   getMousePosition: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.getMousePosition),
-/* harmony export */   getdisplaybounds: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.getdisplaybounds),
-/* harmony export */   hasAlt1: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.hasAlt1),
-/* harmony export */   hasAlt1Version: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.hasAlt1Version),
-/* harmony export */   identifyApp: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.identifyApp),
-/* harmony export */   mixColor: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.mixColor),
-/* harmony export */   newestversion: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.newestversion),
-/* harmony export */   on: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.on),
-/* harmony export */   once: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.once),
-/* harmony export */   openbrowser: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.openbrowser),
-/* harmony export */   removeListener: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.removeListener),
-/* harmony export */   requireAlt1: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.requireAlt1),
-/* harmony export */   resetEnvironment: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.resetEnvironment),
-/* harmony export */   skinName: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.skinName),
-/* harmony export */   transferImageData: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.transferImageData),
-/* harmony export */   unmixColor: () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.unmixColor)
+/* harmony export */   "Alt1Error": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.Alt1Error),
+/* harmony export */   "ImageData": () => (/* reexport safe */ _imagedata_extensions_js__WEBPACK_IMPORTED_MODULE_4__.ImageData),
+/* harmony export */   "ImageDetect": () => (/* reexport module object */ _imagedetect_js__WEBPACK_IMPORTED_MODULE_1__),
+/* harmony export */   "ImageStreamReader": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.ImageStreamReader),
+/* harmony export */   "ImgRef": () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRef),
+/* harmony export */   "ImgRefBind": () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRefBind),
+/* harmony export */   "ImgRefCtx": () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRefCtx),
+/* harmony export */   "ImgRefData": () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRefData),
+/* harmony export */   "NoAlt1Error": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.NoAlt1Error),
+/* harmony export */   "NodePolyfill": () => (/* reexport module object */ _nodepolyfill_js__WEBPACK_IMPORTED_MODULE_5__),
+/* harmony export */   "PasteInput": () => (/* reexport module object */ _pasteinput_js__WEBPACK_IMPORTED_MODULE_2__),
+/* harmony export */   "Rect": () => (/* reexport safe */ _rect_js__WEBPACK_IMPORTED_MODULE_3__["default"]),
+/* harmony export */   "addResizeElement": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.addResizeElement),
+/* harmony export */   "capture": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.capture),
+/* harmony export */   "captureAsync": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.captureAsync),
+/* harmony export */   "captureHold": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.captureHold),
+/* harmony export */   "captureHoldFullRs": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.captureHoldFullRs),
+/* harmony export */   "captureHoldScreen": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.captureHoldScreen),
+/* harmony export */   "captureMultiAsync": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.captureMultiAsync),
+/* harmony export */   "captureStream": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.captureStream),
+/* harmony export */   "decodeImageString": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.decodeImageString),
+/* harmony export */   "encodeImageString": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.encodeImageString),
+/* harmony export */   "getMousePosition": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.getMousePosition),
+/* harmony export */   "getdisplaybounds": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.getdisplaybounds),
+/* harmony export */   "hasAlt1": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.hasAlt1),
+/* harmony export */   "hasAlt1Version": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.hasAlt1Version),
+/* harmony export */   "identifyApp": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.identifyApp),
+/* harmony export */   "mixColor": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.mixColor),
+/* harmony export */   "newestversion": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.newestversion),
+/* harmony export */   "on": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.on),
+/* harmony export */   "once": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.once),
+/* harmony export */   "openbrowser": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.openbrowser),
+/* harmony export */   "removeListener": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.removeListener),
+/* harmony export */   "requireAlt1": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.requireAlt1),
+/* harmony export */   "resetEnvironment": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.resetEnvironment),
+/* harmony export */   "skinName": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.skinName),
+/* harmony export */   "transferImageData": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.transferImageData),
+/* harmony export */   "unmixColor": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.unmixColor)
 /* harmony export */ });
 /* harmony import */ var _declarations_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./declarations.js */ "../node_modules/@alt1/base/dist/declarations.js");
 /* harmony import */ var _declarations_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_declarations_js__WEBPACK_IMPORTED_MODULE_0__);
@@ -941,15 +941,15 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   createCanvas: () => (/* binding */ createCanvas),
-/* harmony export */   imageDataFromBase64: () => (/* binding */ imageDataFromBase64),
-/* harmony export */   imageDataFromBuffer: () => (/* binding */ imageDataFromBuffer),
-/* harmony export */   imageDataToDrawable: () => (/* binding */ imageDataToDrawable),
-/* harmony export */   imageDataToFileBytes: () => (/* binding */ imageDataToFileBytes),
-/* harmony export */   polyfillRequire: () => (/* binding */ polyfillRequire),
-/* harmony export */   requireElectronCommon: () => (/* binding */ requireElectronCommon),
-/* harmony export */   requireNodeCanvas: () => (/* binding */ requireNodeCanvas),
-/* harmony export */   requireSharp: () => (/* binding */ requireSharp)
+/* harmony export */   "createCanvas": () => (/* binding */ createCanvas),
+/* harmony export */   "imageDataFromBase64": () => (/* binding */ imageDataFromBase64),
+/* harmony export */   "imageDataFromBuffer": () => (/* binding */ imageDataFromBuffer),
+/* harmony export */   "imageDataToDrawable": () => (/* binding */ imageDataToDrawable),
+/* harmony export */   "imageDataToFileBytes": () => (/* binding */ imageDataToFileBytes),
+/* harmony export */   "polyfillRequire": () => (/* binding */ polyfillRequire),
+/* harmony export */   "requireElectronCommon": () => (/* binding */ requireElectronCommon),
+/* harmony export */   "requireNodeCanvas": () => (/* binding */ requireNodeCanvas),
+/* harmony export */   "requireSharp": () => (/* binding */ requireSharp)
 /* harmony export */ });
 /* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "../node_modules/@alt1/base/dist/index.js");
 /* harmony import */ var _imagedetect_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./imagedetect.js */ "../node_modules/@alt1/base/dist/imagedetect.js");
@@ -1116,13 +1116,13 @@ function imageDataFromBuffer(buffer) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   fileDialog: () => (/* binding */ fileDialog),
-/* harmony export */   lastref: () => (/* binding */ lastref),
-/* harmony export */   listen: () => (/* binding */ listen),
-/* harmony export */   start: () => (/* binding */ start),
-/* harmony export */   startDragNDrop: () => (/* binding */ startDragNDrop),
-/* harmony export */   triggerPaste: () => (/* binding */ triggerPaste),
-/* harmony export */   unlisten: () => (/* binding */ unlisten)
+/* harmony export */   "fileDialog": () => (/* binding */ fileDialog),
+/* harmony export */   "lastref": () => (/* binding */ lastref),
+/* harmony export */   "listen": () => (/* binding */ listen),
+/* harmony export */   "start": () => (/* binding */ start),
+/* harmony export */   "startDragNDrop": () => (/* binding */ startDragNDrop),
+/* harmony export */   "triggerPaste": () => (/* binding */ triggerPaste),
+/* harmony export */   "unlisten": () => (/* binding */ unlisten)
 /* harmony export */ });
 /* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "../node_modules/@alt1/base/dist/index.js");
 /* harmony import */ var _imagedetect_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./imagedetect.js */ "../node_modules/@alt1/base/dist/imagedetect.js");
@@ -1441,35 +1441,35 @@ class Rect {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Alt1Error: () => (/* binding */ Alt1Error),
-/* harmony export */   ImageStreamReader: () => (/* binding */ ImageStreamReader),
-/* harmony export */   NoAlt1Error: () => (/* binding */ NoAlt1Error),
-/* harmony export */   addResizeElement: () => (/* binding */ addResizeElement),
-/* harmony export */   capture: () => (/* binding */ capture),
-/* harmony export */   captureAsync: () => (/* binding */ captureAsync),
-/* harmony export */   captureHold: () => (/* binding */ captureHold),
-/* harmony export */   captureHoldFullRs: () => (/* binding */ captureHoldFullRs),
-/* harmony export */   captureHoldScreen: () => (/* binding */ captureHoldScreen),
-/* harmony export */   captureMultiAsync: () => (/* binding */ captureMultiAsync),
-/* harmony export */   captureStream: () => (/* binding */ captureStream),
-/* harmony export */   decodeImageString: () => (/* binding */ decodeImageString),
-/* harmony export */   encodeImageString: () => (/* binding */ encodeImageString),
-/* harmony export */   getMousePosition: () => (/* binding */ getMousePosition),
-/* harmony export */   getdisplaybounds: () => (/* binding */ getdisplaybounds),
-/* harmony export */   hasAlt1: () => (/* binding */ hasAlt1),
-/* harmony export */   hasAlt1Version: () => (/* binding */ hasAlt1Version),
-/* harmony export */   identifyApp: () => (/* binding */ identifyApp),
-/* harmony export */   mixColor: () => (/* binding */ mixColor),
-/* harmony export */   newestversion: () => (/* binding */ newestversion),
-/* harmony export */   on: () => (/* binding */ on),
-/* harmony export */   once: () => (/* binding */ once),
-/* harmony export */   openbrowser: () => (/* binding */ openbrowser),
-/* harmony export */   removeListener: () => (/* binding */ removeListener),
-/* harmony export */   requireAlt1: () => (/* binding */ requireAlt1),
-/* harmony export */   resetEnvironment: () => (/* binding */ resetEnvironment),
-/* harmony export */   skinName: () => (/* binding */ skinName),
-/* harmony export */   transferImageData: () => (/* binding */ transferImageData),
-/* harmony export */   unmixColor: () => (/* binding */ unmixColor)
+/* harmony export */   "Alt1Error": () => (/* binding */ Alt1Error),
+/* harmony export */   "ImageStreamReader": () => (/* binding */ ImageStreamReader),
+/* harmony export */   "NoAlt1Error": () => (/* binding */ NoAlt1Error),
+/* harmony export */   "addResizeElement": () => (/* binding */ addResizeElement),
+/* harmony export */   "capture": () => (/* binding */ capture),
+/* harmony export */   "captureAsync": () => (/* binding */ captureAsync),
+/* harmony export */   "captureHold": () => (/* binding */ captureHold),
+/* harmony export */   "captureHoldFullRs": () => (/* binding */ captureHoldFullRs),
+/* harmony export */   "captureHoldScreen": () => (/* binding */ captureHoldScreen),
+/* harmony export */   "captureMultiAsync": () => (/* binding */ captureMultiAsync),
+/* harmony export */   "captureStream": () => (/* binding */ captureStream),
+/* harmony export */   "decodeImageString": () => (/* binding */ decodeImageString),
+/* harmony export */   "encodeImageString": () => (/* binding */ encodeImageString),
+/* harmony export */   "getMousePosition": () => (/* binding */ getMousePosition),
+/* harmony export */   "getdisplaybounds": () => (/* binding */ getdisplaybounds),
+/* harmony export */   "hasAlt1": () => (/* binding */ hasAlt1),
+/* harmony export */   "hasAlt1Version": () => (/* binding */ hasAlt1Version),
+/* harmony export */   "identifyApp": () => (/* binding */ identifyApp),
+/* harmony export */   "mixColor": () => (/* binding */ mixColor),
+/* harmony export */   "newestversion": () => (/* binding */ newestversion),
+/* harmony export */   "on": () => (/* binding */ on),
+/* harmony export */   "once": () => (/* binding */ once),
+/* harmony export */   "openbrowser": () => (/* binding */ openbrowser),
+/* harmony export */   "removeListener": () => (/* binding */ removeListener),
+/* harmony export */   "requireAlt1": () => (/* binding */ requireAlt1),
+/* harmony export */   "resetEnvironment": () => (/* binding */ resetEnvironment),
+/* harmony export */   "skinName": () => (/* binding */ skinName),
+/* harmony export */   "transferImageData": () => (/* binding */ transferImageData),
+/* harmony export */   "unmixColor": () => (/* binding */ unmixColor)
 /* harmony export */ });
 /* harmony import */ var _rect_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rect.js */ "../node_modules/@alt1/base/dist/rect.js");
 /* harmony import */ var _imgref_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./imgref.js */ "../node_modules/@alt1/base/dist/imgref.js");
@@ -2094,134 +2094,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `/*This stylesheet provides a set of classes to make an application fit in with the nis theme (new interface system)
-//
-//
-//This library is free to use by anyone who obtains the code etc etc as-is no guaranties etc etc (i'll figure out the copyright stuff some time)
-//
-//Please contact me if you plan to develop something for alt1, I'll be happy to help out
-//in-game: Skillbert
-//reddit: skillbert_ii
-//or on the runeapps forums (http://runeapps.org/forums/)
-//
-*/
-
-:root {
-	--nis-col-url:#DDD;
-	--nis-col-urlhover:#FFF;
-	--nis-col-std:#E5E6EB;
-	--nis-col-low:#AAA;
-	--nis-col-faded:#777;
-	--nis-col-back:#171E24;
-	--nis-col-backsub:rgba(0, 0, 0, 0.5);
-}
-
-
-.nismainborder{position:absolute; top:0px; left:0px; right:0px; bottom:0px;}
-.nisborder{border-width:4px; border-style:solid; -moz-border-image:url('https://runeapps.org/nis/alt1-currentskin/borderSprite.png') 4 repeat; border-image:url('https://runeapps.org/nis/alt1-currentskin/borderSprite.png') 4 repeat; background:url('https://runeapps.org/nis/alt1-currentskin/background.png'); overflow:hidden;}
-.nisexitbutton{background:url('https://runeapps.org/nis/alt1-currentskin/exitSprite.png'); position:absolute; top:-4px; right:-4px; width:12px; height:12px; cursor:pointer; z-index:1000;}
-.nisexitbutton:hover{background-position:0px -12px;}
-.nisseperator{width:100%; height:0px; border-top:1px solid #000; border-bottom:1px solid #41555F; position:absolute; left:0px;}
-
-.nissmallimagebutton{width:21px; height:21px; cursor:pointer; user-select:none; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; background-image:url("https://runeapps.org/nis/alt1-currentskin/buttonsmall.png"); background-size:auto 42px;}
-.nissmallimagebutton:hover{background-position:0px -21px;}
-.nissmallimagebutton.offset1{background-position:-21px 0px;}
-.nissmallimagebutton.offset1:hover{background-position:-21px -21px;}
-.nissmallimagebutton.offset2{background-position:-42px 0px;}
-.nissmallimagebutton.offset2:hover{background-position:-42px -21px;}
-
-.nistinyimagebutton{width:21px; height:19px; cursor:pointer; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;}
-.nistinyimagebutton:hover{background-position:0px -19px;}
-.nistinyimagebutton.offset1{background-position:-21px 0px;}
-.nistinyimagebutton.offset1:hover{background-position:-21px -19px;}
-.nistinyimagebutton.offset2{background-position:-42px 0px;}
-.nistinyimagebutton.offset2:hover{background-position:-42px -19px;}
-
-.nisimgbutton{ width:20px; height:20px; border:3px solid #212B2D; box-sizing:border-box; border-image:url('https://runeapps.org/nis/alt1-currentskin/imgbutton.png') 3 fill; cursor:pointer;}
-.nisimgbutton:hover{ filter:brightness(1.2);}
-
-.nistext{ color:var(--nis-col-std);}
-.nistable{color:var(--nis-col-std); border:1px solid #666;}
-	.nistable tr:nth-child(even){background:rgba(255,255,255,0.1);}
-	.nistable tr:nth-child(odd){background:rgba(255,255,255,0.15);}
-	.nistable th{color:#DDD;}
-
-.contenttab, .contenttableft{float:right; width:90px; height:20px; line-height:20px; text-align:center; color:#BBB; cursor:pointer; background:url('https://runeapps.org/nis/alt1-currentskin/tabback.png') 0 0 / 100% 100%; position:relative; margin-left:-14px; z-index:11; margin-top:-1px;}
-.contenttab.lefttab{float:left; margin-left:0px; margin-right:-14px;}
-.contenttab:not(.activetab){z-index:10; -webkit-filter:brightness(50%); filter:brightness(50%); margin-top:1px; height:18px;}
-
-.nisinput,
-.nisdropdown
-	{height:20px; cursor:text; color:#B1AFAE; outline:none; position:relative; padding:0px 4px; box-sizing:border-box; background:linear-gradient(to bottom, #191714,#292222,#100C0C); border:1px solid #514949; font-family:sans-serif; font-size:13px;}
-
-.nisdropdown{height:19px; cursor:pointer; outline:none; box-sizing:border-box; padding:0px 0px 0px 4px;}
-.nisdropdown>option{background:#1D190D;}
-
-.nisbutton{height:32px; position:relative; background:url('https://runeapps.org/nis/alt1-currentskin/nisbutton.png') 0px -100%/24px 400% repeat content-box; cursor:pointer; text-align:center; color:#000; font-family:'trajan-pro-3'; text-shadow:1px 1px 2px #ECC622; font-size:18px; margin:5px; padding:0px 12px; line-height:32px; user-select:none; -webkit-user-select:none;}
-.nisbutton::before{width:12px; height:100%; content:""; position:absolute; top:0px; left:0px; background:url('https://runeapps.org/nis/alt1-currentskin/nisbutton.png') 0px 0px / 24px 400%;}
-.nisbutton::after{width:12px; height:100%; content:""; position:absolute; top:0px; right:0px; background:url('https://runeapps.org/nis/alt1-currentskin/nisbutton.png') -12px 0px / 24px 400%;}
-.nisbutton:hover{background-position:0px -300%;}
-.nisbutton:hover::before{background-position:0px -200%;}
-.nisbutton:hover::after{background-position:-12px -200%;}
-.nisbutton:active, .nisbutton.fakeactive{-webkit-filter:brightness(1.2); filter:brightness(1.2);}
-.nissmallbutton{line-height:26px; height:26px; font-size:12px;}
-
-.pb2_nis .pb2-button, .nisbutton2{padding:0.15em; user-select:none; border:1px solid #485b65; border-radius:3px; background:linear-gradient(to bottom,#2a799c,#123443 25%); font-weight:bold; color:#ddd; cursor:pointer; box-shadow:0px 0px 5px #152932 inset; text-align:center; box-sizing:border-box;}
-.pb2_nis .pb2-button:hover, .nisbutton2:hover{background:linear-gradient(to bottom,#2a799c,#1b4e65 25%); color:white;}
-
-body.nis{background-image:url('https://runeapps.org/nis/alt1-currentskin/background.png'); background-color:var(--nis-col-back); overflow:hidden; margin:0px; font-family:sans-serif; font-size:13px; color:var(--nis-col-std);}
-
-.nisclosebutton{width:12px; height:12px; background:url('https://runeapps.org/nis/alt1-currentskin/exitSprite.png'); cursor:pointer;}
-.nisclosebutton:hover{background-position:0px -12px;}
-
-/*Chromium custom scrollbars, will only work on chromium browsers (such as alt1) */
-body.nis::-webkit-scrollbar,
-body.nis *:not(.normalscroll)::-webkit-scrollbar
-{width:10px; height:10px;}
-
-body.nis::-webkit-scrollbar-button:start:vertical,
-body.nis *:not(.normalscroll)::-webkit-scrollbar-button:start:vertical
-{background-image:url('https://runeapps.org/nis/alt1-currentskin/scroll.png'); background-position:0px 0px; height:15px;}
-
-body.nis::-webkit-scrollbar-button:end:vertical,
-body.nis *:not(.normalscroll)::-webkit-scrollbar-button:end:vertical
-{background-image:url('https://runeapps.org/nis/alt1-currentskin/scroll.png'); background-position:-45px 0px; height:15px;}		
-
-body.nis::-webkit-scrollbar-track:vertical,
-body.nis *:not(.normalscroll)::-webkit-scrollbar-track:vertical
-{background-image:url('https://runeapps.org/nis/alt1-currentskin/scroll.png'); background-position:-15px 0px;}
-
-body.nis::-webkit-scrollbar-thumb:vertical,
-body.nis *:not(.normalscroll)::-webkit-scrollbar-thumb:vertical
-{background-image:url('https://runeapps.org/nis/alt1-currentskin/scroll.png'); background-position:-30px 0px; border-radius:5px;}
-
-body.nis::-webkit-scrollbar-button:start:horizontal,
-body.nis *:not(.normalscroll)::-webkit-scrollbar-button:start:horizontal
-{background-image:url('https://runeapps.org/nis/alt1-currentskin/scrollhor.png'); background-position:0px 0px; width:15px;}		
-
-body.nis::-webkit-scrollbar-button:end:horizontal,
-body.nis *:not(.normalscroll)::-webkit-scrollbar-button:end:horizontal
-{background-image:url('https://runeapps.org/nis/alt1-currentskin/scrollhor.png'); background-position:0px -45px; width:15px;}		
-
-body.nis::-webkit-scrollbar-track:horizontal,
-body.nis *:not(.normalscroll)::-webkit-scrollbar-track:horizontal
-{background-image:url('https://runeapps.org/nis/alt1-currentskin/scrollhor.png'); background-position:0px -15px;}
-
-body.nis::-webkit-scrollbar-thumb:horizontal,
-body.nis *:not(.normalscroll)::-webkit-scrollbar-thumb:horizontal
-{background-image:url('https://runeapps.org/nis/alt1-currentskin/scrollhor.png'); background-position:0px -30px; border-radius:5px;}
-
-body.nis::-webkit-scrollbar-corner,
-body.nis *:not(.normalscroll)::-webkit-scrollbar-corner
-{background:#060d11;}
-
-body.scrollreset *{overflow:hidden !important;}
-
-/*font stolen from jagex*/
-@font-face{
-	font-family:'trajan-pro-3';
-	src:url(${___CSS_LOADER_URL_REPLACEMENT_0___});
-}`, ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/*This stylesheet provides a set of classes to make an application fit in with the nis theme (new interface system)\r\n//\r\n//\r\n//This library is free to use by anyone who obtains the code etc etc as-is no guaranties etc etc (i'll figure out the copyright stuff some time)\r\n//\r\n//Please contact me if you plan to develop something for alt1, I'll be happy to help out\r\n//in-game: Skillbert\r\n//reddit: skillbert_ii\r\n//or on the runeapps forums (http://runeapps.org/forums/)\r\n//\r\n*/\r\n\r\n:root {\r\n\t--nis-col-url:#DDD;\r\n\t--nis-col-urlhover:#FFF;\r\n\t--nis-col-std:#E5E6EB;\r\n\t--nis-col-low:#AAA;\r\n\t--nis-col-faded:#777;\r\n\t--nis-col-back:#171E24;\r\n\t--nis-col-backsub:rgba(0, 0, 0, 0.5);\r\n}\r\n\r\n\r\n.nismainborder{position:absolute; top:0px; left:0px; right:0px; bottom:0px;}\r\n.nisborder{border-width:4px; border-style:solid; -moz-border-image:url('https://runeapps.org/nis/alt1-currentskin/borderSprite.png') 4 repeat; border-image:url('https://runeapps.org/nis/alt1-currentskin/borderSprite.png') 4 repeat; background:url('https://runeapps.org/nis/alt1-currentskin/background.png'); overflow:hidden;}\r\n.nisexitbutton{background:url('https://runeapps.org/nis/alt1-currentskin/exitSprite.png'); position:absolute; top:-4px; right:-4px; width:12px; height:12px; cursor:pointer; z-index:1000;}\r\n.nisexitbutton:hover{background-position:0px -12px;}\r\n.nisseperator{width:100%; height:0px; border-top:1px solid #000; border-bottom:1px solid #41555F; position:absolute; left:0px;}\r\n\r\n.nissmallimagebutton{width:21px; height:21px; cursor:pointer; user-select:none; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; background-image:url(\"https://runeapps.org/nis/alt1-currentskin/buttonsmall.png\"); background-size:auto 42px;}\r\n.nissmallimagebutton:hover{background-position:0px -21px;}\r\n.nissmallimagebutton.offset1{background-position:-21px 0px;}\r\n.nissmallimagebutton.offset1:hover{background-position:-21px -21px;}\r\n.nissmallimagebutton.offset2{background-position:-42px 0px;}\r\n.nissmallimagebutton.offset2:hover{background-position:-42px -21px;}\r\n\r\n.nistinyimagebutton{width:21px; height:19px; cursor:pointer; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;}\r\n.nistinyimagebutton:hover{background-position:0px -19px;}\r\n.nistinyimagebutton.offset1{background-position:-21px 0px;}\r\n.nistinyimagebutton.offset1:hover{background-position:-21px -19px;}\r\n.nistinyimagebutton.offset2{background-position:-42px 0px;}\r\n.nistinyimagebutton.offset2:hover{background-position:-42px -19px;}\r\n\r\n.nisimgbutton{ width:20px; height:20px; border:3px solid #212B2D; box-sizing:border-box; border-image:url('https://runeapps.org/nis/alt1-currentskin/imgbutton.png') 3 fill; cursor:pointer;}\r\n.nisimgbutton:hover{ filter:brightness(1.2);}\r\n\r\n.nistext{ color:var(--nis-col-std);}\r\n.nistable{color:var(--nis-col-std); border:1px solid #666;}\r\n\t.nistable tr:nth-child(even){background:rgba(255,255,255,0.1);}\r\n\t.nistable tr:nth-child(odd){background:rgba(255,255,255,0.15);}\r\n\t.nistable th{color:#DDD;}\r\n\r\n.contenttab, .contenttableft{float:right; width:90px; height:20px; line-height:20px; text-align:center; color:#BBB; cursor:pointer; background:url('https://runeapps.org/nis/alt1-currentskin/tabback.png') 0 0 / 100% 100%; position:relative; margin-left:-14px; z-index:11; margin-top:-1px;}\r\n.contenttab.lefttab{float:left; margin-left:0px; margin-right:-14px;}\r\n.contenttab:not(.activetab){z-index:10; -webkit-filter:brightness(50%); filter:brightness(50%); margin-top:1px; height:18px;}\r\n\r\n.nisinput,\r\n.nisdropdown\r\n\t{height:20px; cursor:text; color:#B1AFAE; outline:none; position:relative; padding:0px 4px; box-sizing:border-box; background:linear-gradient(to bottom, #191714,#292222,#100C0C); border:1px solid #514949; font-family:sans-serif; font-size:13px;}\r\n\r\n.nisdropdown{height:19px; cursor:pointer; outline:none; box-sizing:border-box; padding:0px 0px 0px 4px;}\r\n.nisdropdown>option{background:#1D190D;}\r\n\r\n.nisbutton{height:32px; position:relative; background:url('https://runeapps.org/nis/alt1-currentskin/nisbutton.png') 0px -100%/24px 400% repeat content-box; cursor:pointer; text-align:center; color:#000; font-family:'trajan-pro-3'; text-shadow:1px 1px 2px #ECC622; font-size:18px; margin:5px; padding:0px 12px; line-height:32px; user-select:none; -webkit-user-select:none;}\r\n.nisbutton::before{width:12px; height:100%; content:\"\"; position:absolute; top:0px; left:0px; background:url('https://runeapps.org/nis/alt1-currentskin/nisbutton.png') 0px 0px / 24px 400%;}\r\n.nisbutton::after{width:12px; height:100%; content:\"\"; position:absolute; top:0px; right:0px; background:url('https://runeapps.org/nis/alt1-currentskin/nisbutton.png') -12px 0px / 24px 400%;}\r\n.nisbutton:hover{background-position:0px -300%;}\r\n.nisbutton:hover::before{background-position:0px -200%;}\r\n.nisbutton:hover::after{background-position:-12px -200%;}\r\n.nisbutton:active, .nisbutton.fakeactive{-webkit-filter:brightness(1.2); filter:brightness(1.2);}\r\n.nissmallbutton{line-height:26px; height:26px; font-size:12px;}\r\n\r\n.pb2_nis .pb2-button, .nisbutton2{padding:0.15em; user-select:none; border:1px solid #485b65; border-radius:3px; background:linear-gradient(to bottom,#2a799c,#123443 25%); font-weight:bold; color:#ddd; cursor:pointer; box-shadow:0px 0px 5px #152932 inset; text-align:center; box-sizing:border-box;}\r\n.pb2_nis .pb2-button:hover, .nisbutton2:hover{background:linear-gradient(to bottom,#2a799c,#1b4e65 25%); color:white;}\r\n\r\nbody.nis{background-image:url('https://runeapps.org/nis/alt1-currentskin/background.png'); background-color:var(--nis-col-back); overflow:hidden; margin:0px; font-family:sans-serif; font-size:13px; color:var(--nis-col-std);}\r\n\r\n.nisclosebutton{width:12px; height:12px; background:url('https://runeapps.org/nis/alt1-currentskin/exitSprite.png'); cursor:pointer;}\r\n.nisclosebutton:hover{background-position:0px -12px;}\r\n\r\n/*Chromium custom scrollbars, will only work on chromium browsers (such as alt1) */\r\nbody.nis::-webkit-scrollbar,\r\nbody.nis *:not(.normalscroll)::-webkit-scrollbar\r\n{width:10px; height:10px;}\r\n\r\nbody.nis::-webkit-scrollbar-button:start:vertical,\r\nbody.nis *:not(.normalscroll)::-webkit-scrollbar-button:start:vertical\r\n{background-image:url('https://runeapps.org/nis/alt1-currentskin/scroll.png'); background-position:0px 0px; height:15px;}\r\n\r\nbody.nis::-webkit-scrollbar-button:end:vertical,\r\nbody.nis *:not(.normalscroll)::-webkit-scrollbar-button:end:vertical\r\n{background-image:url('https://runeapps.org/nis/alt1-currentskin/scroll.png'); background-position:-45px 0px; height:15px;}\t\t\r\n\r\nbody.nis::-webkit-scrollbar-track:vertical,\r\nbody.nis *:not(.normalscroll)::-webkit-scrollbar-track:vertical\r\n{background-image:url('https://runeapps.org/nis/alt1-currentskin/scroll.png'); background-position:-15px 0px;}\r\n\r\nbody.nis::-webkit-scrollbar-thumb:vertical,\r\nbody.nis *:not(.normalscroll)::-webkit-scrollbar-thumb:vertical\r\n{background-image:url('https://runeapps.org/nis/alt1-currentskin/scroll.png'); background-position:-30px 0px; border-radius:5px;}\r\n\r\nbody.nis::-webkit-scrollbar-button:start:horizontal,\r\nbody.nis *:not(.normalscroll)::-webkit-scrollbar-button:start:horizontal\r\n{background-image:url('https://runeapps.org/nis/alt1-currentskin/scrollhor.png'); background-position:0px 0px; width:15px;}\t\t\r\n\r\nbody.nis::-webkit-scrollbar-button:end:horizontal,\r\nbody.nis *:not(.normalscroll)::-webkit-scrollbar-button:end:horizontal\r\n{background-image:url('https://runeapps.org/nis/alt1-currentskin/scrollhor.png'); background-position:0px -45px; width:15px;}\t\t\r\n\r\nbody.nis::-webkit-scrollbar-track:horizontal,\r\nbody.nis *:not(.normalscroll)::-webkit-scrollbar-track:horizontal\r\n{background-image:url('https://runeapps.org/nis/alt1-currentskin/scrollhor.png'); background-position:0px -15px;}\r\n\r\nbody.nis::-webkit-scrollbar-thumb:horizontal,\r\nbody.nis *:not(.normalscroll)::-webkit-scrollbar-thumb:horizontal\r\n{background-image:url('https://runeapps.org/nis/alt1-currentskin/scrollhor.png'); background-position:0px -30px; border-radius:5px;}\r\n\r\nbody.nis::-webkit-scrollbar-corner,\r\nbody.nis *:not(.normalscroll)::-webkit-scrollbar-corner\r\n{background:#060d11;}\r\n\r\nbody.scrollreset *{overflow:hidden !important;}\r\n\r\n/*font stolen from jagex*/\r\n@font-face{\r\n\tfont-family:'trajan-pro-3';\r\n\tsrc:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2248,219 +2121,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `#tabcontainer::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-.table-center, #presets-content {
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-.table-center td {
-    padding: 0;
-    margin: 0;
-    border: 1px solid #ffffff;
-
-}
-
-.table-center td.no-border,
-.table-center th.no-border {
-    border: none;
-}
-
-.table-item {
-    color: #ffffff;
-    background-color: transparent;
-    width: 170px;
-    margin: 0;
-    border-radius: 0;
-}
-
-.table-center td div,
-.table-center td label,
-.table-center td select {
-    border-radius: 0;
-}
-
-.setting-item {
-    color: #ffffff;
-    background-color: transparent;
-    /* width: 353px; */
-    /* width: 170px; */
-}
-
-.alert-item {
-    color: #ffffff;
-    background-color: transparent;
-    border-color: #ffffff;
-    width: 305px;
-}
-
-#nexus-content {
-    text-align: center;
-}
-
-.nexus-wrap {
-    display: inline-block;
-    text-align: left;
-    margin-top: 10px;
-}
-
-.nexus-switch {
-    margin-bottom: 4px;
-}
-
-.nexus-table {
-    color: #ffffff;
-    background-color: transparent;
-    border-color: #ffffff;
-    width: 353;
-    border-collapse: collapse;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.nexus-table th,
-.nexus-table td {
-    border: 1px solid #ffffff;
-    padding: 8px;
-    text-align: left;
-}
-
-.nexus-table thead th {
-    background-color: #333366;
-    color: #ffcc00;
-}
-
-.ability-icon {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 8px;
-}
-
-.rune-icon {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 8px;
-}
-
-.form-check {
-    margin-bottom: 0;
-    min-height: 0;
-}
-
-.list-group-item {
-    padding: .3rem .7rem;
-}
-
-.form-check-label {
-    font-size: 14px;
-    font-weight: bold;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
-
-input[type="checkbox"]:focus {
-    outline: none !important;
-    box-shadow: 0 0 0 rgb(255, 255, 255) !important;
-}
-
-.input-range {
-    vertical-align: middle;
-}
-
-.warning {
-    background-color: #e60808c5;
-}
-
-#buffOnOffSwitch, #skillingOnOffSwitch, #nexusOnOffSwitch {
-    width: 4.5em;
-    height: 2em;
-    margin-left: -34px;
-    position: relative;
-    display: inline-block;
-}
-
-
-.form-check-label {
-    position: relative;
-    display: inline-block;
-}
-
-.slider:after {
-    content:'OFF';
-    color: gray;
-    display: block;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 56%;
-    left: 35%;
-    font-size: 15px;
-}
-
-input:checked + .slider:after {  
-    content:'ON';
-    color: white;
-    left: -37%;
-}
-
-.settings-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0rem 0rem;
-}
-  
-.col-settings {
-    width: 50%;
-    /* padding: .3rem .7rem; */
-}
-
-.border-right {
-    border-right: 1px solid white;
-}
-
-label.form-switch {
-    padding: .3rem 0rem .3rem 2.7rem;
-}
-
-input[type="range"] {
-    width: 140px;
-}
-
-.form-presets {
-    width: 300px;
-}
-
-.form-presets-label, .presets-group {
-    width: 130px;
-}
-
-.dropdown {
-    width: 160px;
-}
-
-.center {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.settings-scroll {
-  overflow-y: auto;
-  padding-right: 6px;
-}`, ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#tabcontainer::after {\r\n    content: '';\r\n    display: table;\r\n    clear: both;\r\n}\r\n\r\n.table-center, #presets-content {\r\n    margin-top: 10px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    border-collapse: collapse;\r\n    border-spacing: 0;\r\n}\r\n\r\n.table-center td {\r\n    padding: 0;\r\n    margin: 0;\r\n    border: 1px solid #ffffff;\r\n\r\n}\r\n\r\n.table-center td.no-border,\r\n.table-center th.no-border {\r\n    border: none;\r\n}\r\n\r\n.table-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    width: 170px;\r\n    margin: 0;\r\n    border-radius: 0;\r\n}\r\n\r\n.table-center td div,\r\n.table-center td label,\r\n.table-center td select {\r\n    border-radius: 0;\r\n}\r\n\r\n.setting-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    /* width: 353px; */\r\n    /* width: 170px; */\r\n}\r\n\r\n.alert-item {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 305px;\r\n}\r\n\r\n#nexus-content {\r\n    text-align: center;\r\n}\r\n\r\n.nexus-wrap {\r\n    display: inline-block;\r\n    text-align: left;\r\n    margin-top: 10px;\r\n}\r\n\r\n.nexus-switch {\r\n    margin-bottom: 4px;\r\n}\r\n\r\n.nexus-table {\r\n    color: #ffffff;\r\n    background-color: transparent;\r\n    border-color: #ffffff;\r\n    width: 353;\r\n    border-collapse: collapse;\r\n    font-size: 12px;\r\n    font-weight: bold;\r\n}\r\n\r\n.nexus-table th,\r\n.nexus-table td {\r\n    border: 1px solid #ffffff;\r\n    padding: 8px;\r\n    text-align: left;\r\n}\r\n\r\n.nexus-table thead th {\r\n    background-color: #333366;\r\n    color: #ffcc00;\r\n}\r\n\r\n.ability-icon {\r\n    width: 20px;\r\n    height: 20px;\r\n    vertical-align: middle;\r\n    margin-right: 8px;\r\n}\r\n\r\n.rune-icon {\r\n    width: 20px;\r\n    height: 20px;\r\n    vertical-align: middle;\r\n    margin-right: 8px;\r\n}\r\n\r\n.form-check {\r\n    margin-bottom: 0;\r\n    min-height: 0;\r\n}\r\n\r\n.list-group-item {\r\n    padding: .3rem .7rem;\r\n}\r\n\r\n.form-check-label {\r\n    font-size: 14px;\r\n    font-weight: bold;\r\n    -webkit-touch-callout: none; /* iOS Safari */\r\n    -webkit-user-select: none; /* Safari */\r\n     -khtml-user-select: none; /* Konqueror HTML */\r\n       -moz-user-select: none; /* Old versions of Firefox */\r\n        -ms-user-select: none; /* Internet Explorer/Edge */\r\n            user-select: none; /* Non-prefixed version, currently\r\n                                  supported by Chrome, Edge, Opera and Firefox */\r\n}\r\n\r\ninput[type=\"checkbox\"]:focus {\r\n    outline: none !important;\r\n    box-shadow: 0 0 0 rgb(255, 255, 255) !important;\r\n}\r\n\r\n.input-range {\r\n    vertical-align: middle;\r\n}\r\n\r\n.warning {\r\n    background-color: #e60808c5;\r\n}\r\n\r\n#buffOnOffSwitch, #skillingOnOffSwitch, #nexusOnOffSwitch {\r\n    width: 4.5em;\r\n    height: 2em;\r\n    margin-left: -34px;\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n\r\n.form-check-label {\r\n    position: relative;\r\n    display: inline-block;\r\n}\r\n\r\n.slider:after {\r\n    content:'OFF';\r\n    color: gray;\r\n    display: block;\r\n    position: absolute;\r\n    transform: translate(-50%,-50%);\r\n    top: 56%;\r\n    left: 35%;\r\n    font-size: 15px;\r\n}\r\n\r\ninput:checked + .slider:after {  \r\n    content:'ON';\r\n    color: white;\r\n    left: -37%;\r\n}\r\n\r\n.settings-container {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    padding: 0rem 0rem;\r\n}\r\n  \r\n.col-settings {\r\n    width: 50%;\r\n    /* padding: .3rem .7rem; */\r\n}\r\n\r\n.border-right {\r\n    border-right: 1px solid white;\r\n}\r\n\r\nlabel.form-switch {\r\n    padding: .3rem 0rem .3rem 2.7rem;\r\n}\r\n\r\ninput[type=\"range\"] {\r\n    width: 140px;\r\n}\r\n\r\n.form-presets {\r\n    width: 300px;\r\n}\r\n\r\n.form-presets-label, .presets-group {\r\n    width: 130px;\r\n}\r\n\r\n.dropdown {\r\n    width: 160px;\r\n}\r\n\r\n.center {\r\n    margin-top: 10px;\r\n    text-align: center;\r\n}\r\n\r\n.settings-scroll {\r\n  overflow-y: auto;\r\n  padding-right: 6px;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2481,55 +2142,68 @@ input[type="range"] {
   Author Tobias Koppers @sokra
 */
 module.exports = function (cssWithMappingToString) {
-  var list = [];
+  var list = []; // return the list of modules as css string
 
-  // return the list of modules as css string
   list.toString = function toString() {
     return this.map(function (item) {
       var content = "";
       var needLayer = typeof item[5] !== "undefined";
+
       if (item[4]) {
         content += "@supports (".concat(item[4], ") {");
       }
+
       if (item[2]) {
         content += "@media ".concat(item[2], " {");
       }
+
       if (needLayer) {
         content += "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {");
       }
+
       content += cssWithMappingToString(item);
+
       if (needLayer) {
         content += "}";
       }
+
       if (item[2]) {
         content += "}";
       }
+
       if (item[4]) {
         content += "}";
       }
+
       return content;
     }).join("");
-  };
+  }; // import a list of modules into the list
 
-  // import a list of modules into the list
+
   list.i = function i(modules, media, dedupe, supports, layer) {
     if (typeof modules === "string") {
       modules = [[null, modules, undefined]];
     }
+
     var alreadyImportedModules = {};
+
     if (dedupe) {
       for (var k = 0; k < this.length; k++) {
         var id = this[k][0];
+
         if (id != null) {
           alreadyImportedModules[id] = true;
         }
       }
     }
+
     for (var _k = 0; _k < modules.length; _k++) {
       var item = [].concat(modules[_k]);
+
       if (dedupe && alreadyImportedModules[item[0]]) {
         continue;
       }
+
       if (typeof layer !== "undefined") {
         if (typeof item[5] === "undefined") {
           item[5] = layer;
@@ -2538,6 +2212,7 @@ module.exports = function (cssWithMappingToString) {
           item[5] = layer;
         }
       }
+
       if (media) {
         if (!item[2]) {
           item[2] = media;
@@ -2546,6 +2221,7 @@ module.exports = function (cssWithMappingToString) {
           item[2] = media;
         }
       }
+
       if (supports) {
         if (!item[4]) {
           item[4] = "".concat(supports);
@@ -2554,9 +2230,11 @@ module.exports = function (cssWithMappingToString) {
           item[4] = supports;
         }
       }
+
       list.push(item);
     }
   };
+
   return list;
 };
 
@@ -2575,24 +2253,27 @@ module.exports = function (url, options) {
   if (!options) {
     options = {};
   }
+
   if (!url) {
     return url;
   }
-  url = String(url.__esModule ? url.default : url);
 
-  // If url is already wrapped in quotes, remove them
+  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them
+
   if (/^['"].*['"]$/.test(url)) {
     url = url.slice(1, -1);
   }
+
   if (options.hash) {
     url += options.hash;
-  }
-
-  // Should url be wrapped?
+  } // Should url be wrapped?
   // See https://drafts.csswg.org/css-values-3/#urls
+
+
   if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
     return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
   }
+
   return url;
 };
 
@@ -2640,311 +2321,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "index.html");
-
-/***/ }),
-
-/***/ "../node_modules/moment/locale sync recursive ^\\.\\/.*$":
-/*!****************************************************!*\
-  !*** ../node_modules/moment/locale/ sync ^\.\/.*$ ***!
-  \****************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var map = {
-	"./af": "../node_modules/moment/locale/af.js",
-	"./af.js": "../node_modules/moment/locale/af.js",
-	"./ar": "../node_modules/moment/locale/ar.js",
-	"./ar-dz": "../node_modules/moment/locale/ar-dz.js",
-	"./ar-dz.js": "../node_modules/moment/locale/ar-dz.js",
-	"./ar-kw": "../node_modules/moment/locale/ar-kw.js",
-	"./ar-kw.js": "../node_modules/moment/locale/ar-kw.js",
-	"./ar-ly": "../node_modules/moment/locale/ar-ly.js",
-	"./ar-ly.js": "../node_modules/moment/locale/ar-ly.js",
-	"./ar-ma": "../node_modules/moment/locale/ar-ma.js",
-	"./ar-ma.js": "../node_modules/moment/locale/ar-ma.js",
-	"./ar-ps": "../node_modules/moment/locale/ar-ps.js",
-	"./ar-ps.js": "../node_modules/moment/locale/ar-ps.js",
-	"./ar-sa": "../node_modules/moment/locale/ar-sa.js",
-	"./ar-sa.js": "../node_modules/moment/locale/ar-sa.js",
-	"./ar-tn": "../node_modules/moment/locale/ar-tn.js",
-	"./ar-tn.js": "../node_modules/moment/locale/ar-tn.js",
-	"./ar.js": "../node_modules/moment/locale/ar.js",
-	"./az": "../node_modules/moment/locale/az.js",
-	"./az.js": "../node_modules/moment/locale/az.js",
-	"./be": "../node_modules/moment/locale/be.js",
-	"./be.js": "../node_modules/moment/locale/be.js",
-	"./bg": "../node_modules/moment/locale/bg.js",
-	"./bg.js": "../node_modules/moment/locale/bg.js",
-	"./bm": "../node_modules/moment/locale/bm.js",
-	"./bm.js": "../node_modules/moment/locale/bm.js",
-	"./bn": "../node_modules/moment/locale/bn.js",
-	"./bn-bd": "../node_modules/moment/locale/bn-bd.js",
-	"./bn-bd.js": "../node_modules/moment/locale/bn-bd.js",
-	"./bn.js": "../node_modules/moment/locale/bn.js",
-	"./bo": "../node_modules/moment/locale/bo.js",
-	"./bo.js": "../node_modules/moment/locale/bo.js",
-	"./br": "../node_modules/moment/locale/br.js",
-	"./br.js": "../node_modules/moment/locale/br.js",
-	"./bs": "../node_modules/moment/locale/bs.js",
-	"./bs.js": "../node_modules/moment/locale/bs.js",
-	"./ca": "../node_modules/moment/locale/ca.js",
-	"./ca.js": "../node_modules/moment/locale/ca.js",
-	"./cs": "../node_modules/moment/locale/cs.js",
-	"./cs.js": "../node_modules/moment/locale/cs.js",
-	"./cv": "../node_modules/moment/locale/cv.js",
-	"./cv.js": "../node_modules/moment/locale/cv.js",
-	"./cy": "../node_modules/moment/locale/cy.js",
-	"./cy.js": "../node_modules/moment/locale/cy.js",
-	"./da": "../node_modules/moment/locale/da.js",
-	"./da.js": "../node_modules/moment/locale/da.js",
-	"./de": "../node_modules/moment/locale/de.js",
-	"./de-at": "../node_modules/moment/locale/de-at.js",
-	"./de-at.js": "../node_modules/moment/locale/de-at.js",
-	"./de-ch": "../node_modules/moment/locale/de-ch.js",
-	"./de-ch.js": "../node_modules/moment/locale/de-ch.js",
-	"./de.js": "../node_modules/moment/locale/de.js",
-	"./dv": "../node_modules/moment/locale/dv.js",
-	"./dv.js": "../node_modules/moment/locale/dv.js",
-	"./el": "../node_modules/moment/locale/el.js",
-	"./el.js": "../node_modules/moment/locale/el.js",
-	"./en-au": "../node_modules/moment/locale/en-au.js",
-	"./en-au.js": "../node_modules/moment/locale/en-au.js",
-	"./en-ca": "../node_modules/moment/locale/en-ca.js",
-	"./en-ca.js": "../node_modules/moment/locale/en-ca.js",
-	"./en-gb": "../node_modules/moment/locale/en-gb.js",
-	"./en-gb.js": "../node_modules/moment/locale/en-gb.js",
-	"./en-ie": "../node_modules/moment/locale/en-ie.js",
-	"./en-ie.js": "../node_modules/moment/locale/en-ie.js",
-	"./en-il": "../node_modules/moment/locale/en-il.js",
-	"./en-il.js": "../node_modules/moment/locale/en-il.js",
-	"./en-in": "../node_modules/moment/locale/en-in.js",
-	"./en-in.js": "../node_modules/moment/locale/en-in.js",
-	"./en-nz": "../node_modules/moment/locale/en-nz.js",
-	"./en-nz.js": "../node_modules/moment/locale/en-nz.js",
-	"./en-sg": "../node_modules/moment/locale/en-sg.js",
-	"./en-sg.js": "../node_modules/moment/locale/en-sg.js",
-	"./eo": "../node_modules/moment/locale/eo.js",
-	"./eo.js": "../node_modules/moment/locale/eo.js",
-	"./es": "../node_modules/moment/locale/es.js",
-	"./es-do": "../node_modules/moment/locale/es-do.js",
-	"./es-do.js": "../node_modules/moment/locale/es-do.js",
-	"./es-mx": "../node_modules/moment/locale/es-mx.js",
-	"./es-mx.js": "../node_modules/moment/locale/es-mx.js",
-	"./es-us": "../node_modules/moment/locale/es-us.js",
-	"./es-us.js": "../node_modules/moment/locale/es-us.js",
-	"./es.js": "../node_modules/moment/locale/es.js",
-	"./et": "../node_modules/moment/locale/et.js",
-	"./et.js": "../node_modules/moment/locale/et.js",
-	"./eu": "../node_modules/moment/locale/eu.js",
-	"./eu.js": "../node_modules/moment/locale/eu.js",
-	"./fa": "../node_modules/moment/locale/fa.js",
-	"./fa.js": "../node_modules/moment/locale/fa.js",
-	"./fi": "../node_modules/moment/locale/fi.js",
-	"./fi.js": "../node_modules/moment/locale/fi.js",
-	"./fil": "../node_modules/moment/locale/fil.js",
-	"./fil.js": "../node_modules/moment/locale/fil.js",
-	"./fo": "../node_modules/moment/locale/fo.js",
-	"./fo.js": "../node_modules/moment/locale/fo.js",
-	"./fr": "../node_modules/moment/locale/fr.js",
-	"./fr-ca": "../node_modules/moment/locale/fr-ca.js",
-	"./fr-ca.js": "../node_modules/moment/locale/fr-ca.js",
-	"./fr-ch": "../node_modules/moment/locale/fr-ch.js",
-	"./fr-ch.js": "../node_modules/moment/locale/fr-ch.js",
-	"./fr.js": "../node_modules/moment/locale/fr.js",
-	"./fy": "../node_modules/moment/locale/fy.js",
-	"./fy.js": "../node_modules/moment/locale/fy.js",
-	"./ga": "../node_modules/moment/locale/ga.js",
-	"./ga.js": "../node_modules/moment/locale/ga.js",
-	"./gd": "../node_modules/moment/locale/gd.js",
-	"./gd.js": "../node_modules/moment/locale/gd.js",
-	"./gl": "../node_modules/moment/locale/gl.js",
-	"./gl.js": "../node_modules/moment/locale/gl.js",
-	"./gom-deva": "../node_modules/moment/locale/gom-deva.js",
-	"./gom-deva.js": "../node_modules/moment/locale/gom-deva.js",
-	"./gom-latn": "../node_modules/moment/locale/gom-latn.js",
-	"./gom-latn.js": "../node_modules/moment/locale/gom-latn.js",
-	"./gu": "../node_modules/moment/locale/gu.js",
-	"./gu.js": "../node_modules/moment/locale/gu.js",
-	"./he": "../node_modules/moment/locale/he.js",
-	"./he.js": "../node_modules/moment/locale/he.js",
-	"./hi": "../node_modules/moment/locale/hi.js",
-	"./hi.js": "../node_modules/moment/locale/hi.js",
-	"./hr": "../node_modules/moment/locale/hr.js",
-	"./hr.js": "../node_modules/moment/locale/hr.js",
-	"./hu": "../node_modules/moment/locale/hu.js",
-	"./hu.js": "../node_modules/moment/locale/hu.js",
-	"./hy-am": "../node_modules/moment/locale/hy-am.js",
-	"./hy-am.js": "../node_modules/moment/locale/hy-am.js",
-	"./id": "../node_modules/moment/locale/id.js",
-	"./id.js": "../node_modules/moment/locale/id.js",
-	"./is": "../node_modules/moment/locale/is.js",
-	"./is.js": "../node_modules/moment/locale/is.js",
-	"./it": "../node_modules/moment/locale/it.js",
-	"./it-ch": "../node_modules/moment/locale/it-ch.js",
-	"./it-ch.js": "../node_modules/moment/locale/it-ch.js",
-	"./it.js": "../node_modules/moment/locale/it.js",
-	"./ja": "../node_modules/moment/locale/ja.js",
-	"./ja.js": "../node_modules/moment/locale/ja.js",
-	"./jv": "../node_modules/moment/locale/jv.js",
-	"./jv.js": "../node_modules/moment/locale/jv.js",
-	"./ka": "../node_modules/moment/locale/ka.js",
-	"./ka.js": "../node_modules/moment/locale/ka.js",
-	"./kk": "../node_modules/moment/locale/kk.js",
-	"./kk.js": "../node_modules/moment/locale/kk.js",
-	"./km": "../node_modules/moment/locale/km.js",
-	"./km.js": "../node_modules/moment/locale/km.js",
-	"./kn": "../node_modules/moment/locale/kn.js",
-	"./kn.js": "../node_modules/moment/locale/kn.js",
-	"./ko": "../node_modules/moment/locale/ko.js",
-	"./ko.js": "../node_modules/moment/locale/ko.js",
-	"./ku": "../node_modules/moment/locale/ku.js",
-	"./ku-kmr": "../node_modules/moment/locale/ku-kmr.js",
-	"./ku-kmr.js": "../node_modules/moment/locale/ku-kmr.js",
-	"./ku.js": "../node_modules/moment/locale/ku.js",
-	"./ky": "../node_modules/moment/locale/ky.js",
-	"./ky.js": "../node_modules/moment/locale/ky.js",
-	"./lb": "../node_modules/moment/locale/lb.js",
-	"./lb.js": "../node_modules/moment/locale/lb.js",
-	"./lo": "../node_modules/moment/locale/lo.js",
-	"./lo.js": "../node_modules/moment/locale/lo.js",
-	"./lt": "../node_modules/moment/locale/lt.js",
-	"./lt.js": "../node_modules/moment/locale/lt.js",
-	"./lv": "../node_modules/moment/locale/lv.js",
-	"./lv.js": "../node_modules/moment/locale/lv.js",
-	"./me": "../node_modules/moment/locale/me.js",
-	"./me.js": "../node_modules/moment/locale/me.js",
-	"./mi": "../node_modules/moment/locale/mi.js",
-	"./mi.js": "../node_modules/moment/locale/mi.js",
-	"./mk": "../node_modules/moment/locale/mk.js",
-	"./mk.js": "../node_modules/moment/locale/mk.js",
-	"./ml": "../node_modules/moment/locale/ml.js",
-	"./ml.js": "../node_modules/moment/locale/ml.js",
-	"./mn": "../node_modules/moment/locale/mn.js",
-	"./mn.js": "../node_modules/moment/locale/mn.js",
-	"./mr": "../node_modules/moment/locale/mr.js",
-	"./mr.js": "../node_modules/moment/locale/mr.js",
-	"./ms": "../node_modules/moment/locale/ms.js",
-	"./ms-my": "../node_modules/moment/locale/ms-my.js",
-	"./ms-my.js": "../node_modules/moment/locale/ms-my.js",
-	"./ms.js": "../node_modules/moment/locale/ms.js",
-	"./mt": "../node_modules/moment/locale/mt.js",
-	"./mt.js": "../node_modules/moment/locale/mt.js",
-	"./my": "../node_modules/moment/locale/my.js",
-	"./my.js": "../node_modules/moment/locale/my.js",
-	"./nb": "../node_modules/moment/locale/nb.js",
-	"./nb.js": "../node_modules/moment/locale/nb.js",
-	"./ne": "../node_modules/moment/locale/ne.js",
-	"./ne.js": "../node_modules/moment/locale/ne.js",
-	"./nl": "../node_modules/moment/locale/nl.js",
-	"./nl-be": "../node_modules/moment/locale/nl-be.js",
-	"./nl-be.js": "../node_modules/moment/locale/nl-be.js",
-	"./nl.js": "../node_modules/moment/locale/nl.js",
-	"./nn": "../node_modules/moment/locale/nn.js",
-	"./nn.js": "../node_modules/moment/locale/nn.js",
-	"./oc-lnc": "../node_modules/moment/locale/oc-lnc.js",
-	"./oc-lnc.js": "../node_modules/moment/locale/oc-lnc.js",
-	"./pa-in": "../node_modules/moment/locale/pa-in.js",
-	"./pa-in.js": "../node_modules/moment/locale/pa-in.js",
-	"./pl": "../node_modules/moment/locale/pl.js",
-	"./pl.js": "../node_modules/moment/locale/pl.js",
-	"./pt": "../node_modules/moment/locale/pt.js",
-	"./pt-br": "../node_modules/moment/locale/pt-br.js",
-	"./pt-br.js": "../node_modules/moment/locale/pt-br.js",
-	"./pt.js": "../node_modules/moment/locale/pt.js",
-	"./ro": "../node_modules/moment/locale/ro.js",
-	"./ro.js": "../node_modules/moment/locale/ro.js",
-	"./ru": "../node_modules/moment/locale/ru.js",
-	"./ru.js": "../node_modules/moment/locale/ru.js",
-	"./sd": "../node_modules/moment/locale/sd.js",
-	"./sd.js": "../node_modules/moment/locale/sd.js",
-	"./se": "../node_modules/moment/locale/se.js",
-	"./se.js": "../node_modules/moment/locale/se.js",
-	"./si": "../node_modules/moment/locale/si.js",
-	"./si.js": "../node_modules/moment/locale/si.js",
-	"./sk": "../node_modules/moment/locale/sk.js",
-	"./sk.js": "../node_modules/moment/locale/sk.js",
-	"./sl": "../node_modules/moment/locale/sl.js",
-	"./sl.js": "../node_modules/moment/locale/sl.js",
-	"./sq": "../node_modules/moment/locale/sq.js",
-	"./sq.js": "../node_modules/moment/locale/sq.js",
-	"./sr": "../node_modules/moment/locale/sr.js",
-	"./sr-cyrl": "../node_modules/moment/locale/sr-cyrl.js",
-	"./sr-cyrl.js": "../node_modules/moment/locale/sr-cyrl.js",
-	"./sr.js": "../node_modules/moment/locale/sr.js",
-	"./ss": "../node_modules/moment/locale/ss.js",
-	"./ss.js": "../node_modules/moment/locale/ss.js",
-	"./sv": "../node_modules/moment/locale/sv.js",
-	"./sv.js": "../node_modules/moment/locale/sv.js",
-	"./sw": "../node_modules/moment/locale/sw.js",
-	"./sw.js": "../node_modules/moment/locale/sw.js",
-	"./ta": "../node_modules/moment/locale/ta.js",
-	"./ta.js": "../node_modules/moment/locale/ta.js",
-	"./te": "../node_modules/moment/locale/te.js",
-	"./te.js": "../node_modules/moment/locale/te.js",
-	"./tet": "../node_modules/moment/locale/tet.js",
-	"./tet.js": "../node_modules/moment/locale/tet.js",
-	"./tg": "../node_modules/moment/locale/tg.js",
-	"./tg.js": "../node_modules/moment/locale/tg.js",
-	"./th": "../node_modules/moment/locale/th.js",
-	"./th.js": "../node_modules/moment/locale/th.js",
-	"./tk": "../node_modules/moment/locale/tk.js",
-	"./tk.js": "../node_modules/moment/locale/tk.js",
-	"./tl-ph": "../node_modules/moment/locale/tl-ph.js",
-	"./tl-ph.js": "../node_modules/moment/locale/tl-ph.js",
-	"./tlh": "../node_modules/moment/locale/tlh.js",
-	"./tlh.js": "../node_modules/moment/locale/tlh.js",
-	"./tr": "../node_modules/moment/locale/tr.js",
-	"./tr.js": "../node_modules/moment/locale/tr.js",
-	"./tzl": "../node_modules/moment/locale/tzl.js",
-	"./tzl.js": "../node_modules/moment/locale/tzl.js",
-	"./tzm": "../node_modules/moment/locale/tzm.js",
-	"./tzm-latn": "../node_modules/moment/locale/tzm-latn.js",
-	"./tzm-latn.js": "../node_modules/moment/locale/tzm-latn.js",
-	"./tzm.js": "../node_modules/moment/locale/tzm.js",
-	"./ug-cn": "../node_modules/moment/locale/ug-cn.js",
-	"./ug-cn.js": "../node_modules/moment/locale/ug-cn.js",
-	"./uk": "../node_modules/moment/locale/uk.js",
-	"./uk.js": "../node_modules/moment/locale/uk.js",
-	"./ur": "../node_modules/moment/locale/ur.js",
-	"./ur.js": "../node_modules/moment/locale/ur.js",
-	"./uz": "../node_modules/moment/locale/uz.js",
-	"./uz-latn": "../node_modules/moment/locale/uz-latn.js",
-	"./uz-latn.js": "../node_modules/moment/locale/uz-latn.js",
-	"./uz.js": "../node_modules/moment/locale/uz.js",
-	"./vi": "../node_modules/moment/locale/vi.js",
-	"./vi.js": "../node_modules/moment/locale/vi.js",
-	"./x-pseudo": "../node_modules/moment/locale/x-pseudo.js",
-	"./x-pseudo.js": "../node_modules/moment/locale/x-pseudo.js",
-	"./yo": "../node_modules/moment/locale/yo.js",
-	"./yo.js": "../node_modules/moment/locale/yo.js",
-	"./zh-cn": "../node_modules/moment/locale/zh-cn.js",
-	"./zh-cn.js": "../node_modules/moment/locale/zh-cn.js",
-	"./zh-hk": "../node_modules/moment/locale/zh-hk.js",
-	"./zh-hk.js": "../node_modules/moment/locale/zh-hk.js",
-	"./zh-mo": "../node_modules/moment/locale/zh-mo.js",
-	"./zh-mo.js": "../node_modules/moment/locale/zh-mo.js",
-	"./zh-tw": "../node_modules/moment/locale/zh-tw.js",
-	"./zh-tw.js": "../node_modules/moment/locale/zh-tw.js"
-};
-
-
-function webpackContext(req) {
-	var id = webpackContextResolve(req);
-	return __webpack_require__(id);
-}
-function webpackContextResolve(req) {
-	if(!__webpack_require__.o(map, req)) {
-		var e = new Error("Cannot find module '" + req + "'");
-		e.code = 'MODULE_NOT_FOUND';
-		throw e;
-	}
-	return map[req];
-}
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /***/ }),
 
@@ -3063,14 +2439,14 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
             return n === 0
                 ? 0
                 : n === 1
-                  ? 1
-                  : n === 2
-                    ? 2
-                    : n % 100 >= 3 && n % 100 <= 10
-                      ? 3
-                      : n % 100 >= 11
-                        ? 4
-                        : 5;
+                ? 1
+                : n === 2
+                ? 2
+                : n % 100 >= 3 && n % 100 <= 10
+                ? 3
+                : n % 100 >= 11
+                ? 4
+                : 5;
         },
         plurals = {
             s: [
@@ -3320,14 +2696,14 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
             return n === 0
                 ? 0
                 : n === 1
-                  ? 1
-                  : n === 2
-                    ? 2
-                    : n % 100 >= 3 && n % 100 <= 10
-                      ? 3
-                      : n % 100 >= 11
-                        ? 4
-                        : 5;
+                ? 1
+                : n === 2
+                ? 2
+                : n % 100 >= 3 && n % 100 <= 10
+                ? 3
+                : n % 100 >= 11
+                ? 4
+                : 5;
         },
         plurals = {
             s: [
@@ -3546,137 +2922,6 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
     });
 
     return arMa;
-
-})));
-
-
-/***/ }),
-
-/***/ "../node_modules/moment/locale/ar-ps.js":
-/*!**********************************************!*\
-  !*** ../node_modules/moment/locale/ar-ps.js ***!
-  \**********************************************/
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
-
-//! moment.js locale configuration
-//! locale : Arabic (Palestine) [ar-ps]
-//! author : Majd Al-Shihabi : https://github.com/majdal
-
-;(function (global, factory) {
-    true ? factory(__webpack_require__(/*! ../moment */ "../node_modules/moment/moment.js")) :
-   0
-}(this, (function (moment) { 'use strict';
-
-    //! moment.js locale configuration
-
-    var symbolMap = {
-            1: '١',
-            2: '٢',
-            3: '٣',
-            4: '٤',
-            5: '٥',
-            6: '٦',
-            7: '٧',
-            8: '٨',
-            9: '٩',
-            0: '٠',
-        },
-        numberMap = {
-            '١': '1',
-            '٢': '2',
-            '٣': '3',
-            '٤': '4',
-            '٥': '5',
-            '٦': '6',
-            '٧': '7',
-            '٨': '8',
-            '٩': '9',
-            '٠': '0',
-        };
-
-    var arPs = moment.defineLocale('ar-ps', {
-        months: 'كانون الثاني_شباط_آذار_نيسان_أيّار_حزيران_تمّوز_آب_أيلول_تشري الأوّل_تشرين الثاني_كانون الأوّل'.split(
-            '_'
-        ),
-        monthsShort:
-            'ك٢_شباط_آذار_نيسان_أيّار_حزيران_تمّوز_آب_أيلول_ت١_ت٢_ك١'.split('_'),
-        weekdays: 'الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
-        weekdaysShort: 'أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت'.split('_'),
-        weekdaysMin: 'ح_ن_ث_ر_خ_ج_س'.split('_'),
-        weekdaysParseExact: true,
-        longDateFormat: {
-            LT: 'HH:mm',
-            LTS: 'HH:mm:ss',
-            L: 'DD/MM/YYYY',
-            LL: 'D MMMM YYYY',
-            LLL: 'D MMMM YYYY HH:mm',
-            LLLL: 'dddd D MMMM YYYY HH:mm',
-        },
-        meridiemParse: /ص|م/,
-        isPM: function (input) {
-            return 'م' === input;
-        },
-        meridiem: function (hour, minute, isLower) {
-            if (hour < 12) {
-                return 'ص';
-            } else {
-                return 'م';
-            }
-        },
-        calendar: {
-            sameDay: '[اليوم على الساعة] LT',
-            nextDay: '[غدا على الساعة] LT',
-            nextWeek: 'dddd [على الساعة] LT',
-            lastDay: '[أمس على الساعة] LT',
-            lastWeek: 'dddd [على الساعة] LT',
-            sameElse: 'L',
-        },
-        relativeTime: {
-            future: 'في %s',
-            past: 'منذ %s',
-            s: 'ثوان',
-            ss: '%d ثانية',
-            m: 'دقيقة',
-            mm: '%d دقائق',
-            h: 'ساعة',
-            hh: '%d ساعات',
-            d: 'يوم',
-            dd: '%d أيام',
-            M: 'شهر',
-            MM: '%d أشهر',
-            y: 'سنة',
-            yy: '%d سنوات',
-        },
-        preparse: function (string) {
-            return string
-                .replace(/[٣٤٥٦٧٨٩٠]/g, function (match) {
-                    return numberMap[match];
-                })
-                .split('') // reversed since negative lookbehind not supported everywhere
-                .reverse()
-                .join('')
-                .replace(/[١٢](?![\u062a\u0643])/g, function (match) {
-                    return numberMap[match];
-                })
-                .split('')
-                .reverse()
-                .join('')
-                .replace(/،/g, ',');
-        },
-        postformat: function (string) {
-            return string
-                .replace(/\d/g, function (match) {
-                    return symbolMap[match];
-                })
-                .replace(/,/g, '،');
-        },
-        week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6, // The week that contains Jan 6th is the first week of the year.
-        },
-    });
-
-    return arPs;
 
 })));
 
@@ -3928,14 +3173,14 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
             return n === 0
                 ? 0
                 : n === 1
-                  ? 1
-                  : n === 2
-                    ? 2
-                    : n % 100 >= 3 && n % 100 <= 10
-                      ? 3
-                      : n % 100 >= 11
-                        ? 4
-                        : 5;
+                ? 1
+                : n === 2
+                ? 2
+                : n % 100 >= 3 && n % 100 <= 10
+                ? 3
+                : n % 100 >= 11
+                ? 4
+                : 5;
         },
         plurals = {
             s: [
@@ -4234,8 +3479,8 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         return num % 10 === 1 && num % 100 !== 11
             ? forms[0]
             : num % 10 >= 2 && num % 10 <= 4 && (num % 100 < 10 || num % 100 >= 20)
-              ? forms[1]
-              : forms[2];
+            ? forms[1]
+            : forms[2];
     }
     function relativeTimeWithPlural(number, withoutSuffix, key) {
         var format = {
@@ -5172,7 +4417,6 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 //! moment.js locale configuration
 //! locale : Bosnian [bs]
 //! author : Nedim Cholich : https://github.com/frontyard
-//! author : Rasid Redzic : https://github.com/rasidre
 //! based on (hr) translation by Bojan Marković
 
 ;(function (global, factory) {
@@ -5181,17 +4425,6 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 }(this, (function (moment) { 'use strict';
 
     //! moment.js locale configuration
-
-    function processRelativeTime(number, withoutSuffix, key, isFuture) {
-        switch (key) {
-            case 'm':
-                return withoutSuffix
-                    ? 'jedna minuta'
-                    : isFuture
-                      ? 'jednu minutu'
-                      : 'jedne minute';
-        }
-    }
 
     function translate(number, withoutSuffix, key) {
         var result = number + ' ';
@@ -5205,6 +4438,8 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                     result += 'sekundi';
                 }
                 return result;
+            case 'm':
+                return withoutSuffix ? 'jedna minuta' : 'jedne minute';
             case 'mm':
                 if (number === 1) {
                     result += 'minuta';
@@ -5215,7 +4450,7 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                 }
                 return result;
             case 'h':
-                return withoutSuffix ? 'jedan sat' : 'jedan sat';
+                return withoutSuffix ? 'jedan sat' : 'jednog sata';
             case 'hh':
                 if (number === 1) {
                     result += 'sat';
@@ -5316,7 +4551,7 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
             past: 'prije %s',
             s: 'par sekundi',
             ss: translate,
-            m: processRelativeTime,
+            m: translate,
             mm: translate,
             h: translate,
             hh: translate,
@@ -5437,12 +4672,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                 number === 1
                     ? 'r'
                     : number === 2
-                      ? 'n'
-                      : number === 3
-                        ? 'r'
-                        : number === 4
-                          ? 't'
-                          : 'è';
+                    ? 'n'
+                    : number === 3
+                    ? 'r'
+                    : number === 4
+                    ? 't'
+                    : 'è';
             if (period === 'w' || period === 'W') {
                 output = 'a';
             }
@@ -5479,14 +4714,13 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
     //! moment.js locale configuration
 
     var months = {
-            standalone:
-                'leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec'.split(
-                    '_'
-                ),
-            format: 'ledna_února_března_dubna_května_června_července_srpna_září_října_listopadu_prosince'.split(
+            format: 'leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec'.split(
                 '_'
             ),
-            isFormat: /DD?[o.]?(\[[^\[\]]*\]|\s)+MMMM/,
+            standalone:
+                'ledna_února_března_dubna_května_června_července_srpna_září_října_listopadu_prosince'.split(
+                    '_'
+                ),
         },
         monthsShort = 'led_úno_bře_dub_kvě_čvn_čvc_srp_zář_říj_lis_pro'.split('_'),
         monthsParse = [
@@ -5710,8 +4944,8 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                 var affix = /сехет$/i.exec(output)
                     ? 'рен'
                     : /ҫул$/i.exec(output)
-                      ? 'тан'
-                      : 'ран';
+                    ? 'тан'
+                    : 'ран';
                 return output + affix;
             },
             past: '%s каялла',
@@ -6522,12 +5756,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                     ~~((number % 100) / 10) === 1
                         ? 'th'
                         : b === 1
-                          ? 'st'
-                          : b === 2
-                            ? 'nd'
-                            : b === 3
-                              ? 'rd'
-                              : 'th';
+                        ? 'st'
+                        : b === 2
+                        ? 'nd'
+                        : b === 3
+                        ? 'rd'
+                        : 'th';
             return number + output;
         },
         week: {
@@ -6609,12 +5843,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                     ~~((number % 100) / 10) === 1
                         ? 'th'
                         : b === 1
-                          ? 'st'
-                          : b === 2
-                            ? 'nd'
-                            : b === 3
-                              ? 'rd'
-                              : 'th';
+                        ? 'st'
+                        : b === 2
+                        ? 'nd'
+                        : b === 3
+                        ? 'rd'
+                        : 'th';
             return number + output;
         },
     });
@@ -6692,12 +5926,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                     ~~((number % 100) / 10) === 1
                         ? 'th'
                         : b === 1
-                          ? 'st'
-                          : b === 2
-                            ? 'nd'
-                            : b === 3
-                              ? 'rd'
-                              : 'th';
+                        ? 'st'
+                        : b === 2
+                        ? 'nd'
+                        : b === 3
+                        ? 'rd'
+                        : 'th';
             return number + output;
         },
         week: {
@@ -6779,12 +6013,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                     ~~((number % 100) / 10) === 1
                         ? 'th'
                         : b === 1
-                          ? 'st'
-                          : b === 2
-                            ? 'nd'
-                            : b === 3
-                              ? 'rd'
-                              : 'th';
+                        ? 'st'
+                        : b === 2
+                        ? 'nd'
+                        : b === 3
+                        ? 'rd'
+                        : 'th';
             return number + output;
         },
         week: {
@@ -6866,12 +6100,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                     ~~((number % 100) / 10) === 1
                         ? 'th'
                         : b === 1
-                          ? 'st'
-                          : b === 2
-                            ? 'nd'
-                            : b === 3
-                              ? 'rd'
-                              : 'th';
+                        ? 'st'
+                        : b === 2
+                        ? 'nd'
+                        : b === 3
+                        ? 'rd'
+                        : 'th';
             return number + output;
         },
     });
@@ -6949,12 +6183,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                     ~~((number % 100) / 10) === 1
                         ? 'th'
                         : b === 1
-                          ? 'st'
-                          : b === 2
-                            ? 'nd'
-                            : b === 3
-                              ? 'rd'
-                              : 'th';
+                        ? 'st'
+                        : b === 2
+                        ? 'nd'
+                        : b === 3
+                        ? 'rd'
+                        : 'th';
             return number + output;
         },
         week: {
@@ -7036,12 +6270,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                     ~~((number % 100) / 10) === 1
                         ? 'th'
                         : b === 1
-                          ? 'st'
-                          : b === 2
-                            ? 'nd'
-                            : b === 3
-                              ? 'rd'
-                              : 'th';
+                        ? 'st'
+                        : b === 2
+                        ? 'nd'
+                        : b === 3
+                        ? 'rd'
+                        : 'th';
             return number + output;
         },
         week: {
@@ -7123,12 +6357,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                     ~~((number % 100) / 10) === 1
                         ? 'th'
                         : b === 1
-                          ? 'st'
-                          : b === 2
-                            ? 'nd'
-                            : b === 3
-                              ? 'rd'
-                              : 'th';
+                        ? 'st'
+                        : b === 2
+                        ? 'nd'
+                        : b === 3
+                        ? 'rd'
+                        : 'th';
             return number + output;
         },
         week: {
@@ -10644,8 +9878,8 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                             (this.hours() > 1
                                 ? 'lle '
                                 : this.hours() === 0
-                                  ? ' '
-                                  : "ll'") +
+                                ? ' '
+                                : "ll'") +
                             ']LT'
                         );
                     default:
@@ -10654,8 +9888,8 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                             (this.hours() > 1
                                 ? 'lle '
                                 : this.hours() === 0
-                                  ? ' '
-                                  : "ll'") +
+                                ? ' '
+                                : "ll'") +
                             ']LT'
                         );
                 }
@@ -11528,139 +10762,6 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /***/ }),
 
-/***/ "../node_modules/moment/locale/ku-kmr.js":
-/*!***********************************************!*\
-  !*** ../node_modules/moment/locale/ku-kmr.js ***!
-  \***********************************************/
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
-
-//! moment.js locale configuration
-//! locale : Northern Kurdish [ku-kmr]
-//! authors : Mazlum Özdogan : https://github.com/mergehez
-
-;(function (global, factory) {
-    true ? factory(__webpack_require__(/*! ../moment */ "../node_modules/moment/moment.js")) :
-   0
-}(this, (function (moment) { 'use strict';
-
-    //! moment.js locale configuration
-
-    function processRelativeTime(num, withoutSuffix, key, isFuture) {
-        var format = {
-            s: ['çend sanîye', 'çend sanîyeyan'],
-            ss: [num + ' sanîye', num + ' sanîyeyan'],
-            m: ['deqîqeyek', 'deqîqeyekê'],
-            mm: [num + ' deqîqe', num + ' deqîqeyan'],
-            h: ['saetek', 'saetekê'],
-            hh: [num + ' saet', num + ' saetan'],
-            d: ['rojek', 'rojekê'],
-            dd: [num + ' roj', num + ' rojan'],
-            w: ['hefteyek', 'hefteyekê'],
-            ww: [num + ' hefte', num + ' hefteyan'],
-            M: ['mehek', 'mehekê'],
-            MM: [num + ' meh', num + ' mehan'],
-            y: ['salek', 'salekê'],
-            yy: [num + ' sal', num + ' salan'],
-        };
-        return withoutSuffix ? format[key][0] : format[key][1];
-    }
-    // function obliqueNumSuffix(num) {
-    //     if(num.includes(':'))
-    //         num = parseInt(num.split(':')[0]);
-    //     else
-    //         num = parseInt(num);
-    //     return num == 0 || num % 10 == 1 ? 'ê'
-    //                         : (num > 10 && num % 10 == 0 ? 'î' : 'an');
-    // }
-    function ezafeNumSuffix(num) {
-        num = '' + num;
-        var l = num.substring(num.length - 1),
-            ll = num.length > 1 ? num.substring(num.length - 2) : '';
-        if (
-            !(ll == 12 || ll == 13) &&
-            (l == '2' || l == '3' || ll == '50' || l == '70' || l == '80')
-        )
-            return 'yê';
-        return 'ê';
-    }
-
-    var kuKmr = moment.defineLocale('ku-kmr', {
-        // According to the spelling rules defined by the work group of Weqfa Mezopotamyayê (Mesopotamia Foundation)
-        // this should be: 'Kanûna Paşîn_Sibat_Adar_Nîsan_Gulan_Hezîran_Tîrmeh_Tebax_Îlon_Çirîya Pêşîn_Çirîya Paşîn_Kanûna Pêşîn'
-        // But the names below are more well known and handy
-        months: 'Rêbendan_Sibat_Adar_Nîsan_Gulan_Hezîran_Tîrmeh_Tebax_Îlon_Cotmeh_Mijdar_Berfanbar'.split(
-            '_'
-        ),
-        monthsShort: 'Rêb_Sib_Ada_Nîs_Gul_Hez_Tîr_Teb_Îlo_Cot_Mij_Ber'.split('_'),
-        monthsParseExact: true,
-        weekdays: 'Yekşem_Duşem_Sêşem_Çarşem_Pêncşem_În_Şemî'.split('_'),
-        weekdaysShort: 'Yek_Du_Sê_Çar_Pên_În_Şem'.split('_'),
-        weekdaysMin: 'Ye_Du_Sê_Ça_Pê_În_Şe'.split('_'),
-        meridiem: function (hours, minutes, isLower) {
-            if (hours < 12) {
-                return isLower ? 'bn' : 'BN';
-            } else {
-                return isLower ? 'pn' : 'PN';
-            }
-        },
-        meridiemParse: /bn|BN|pn|PN/,
-        longDateFormat: {
-            LT: 'HH:mm',
-            LTS: 'HH:mm:ss',
-            L: 'DD.MM.YYYY',
-            LL: 'Do MMMM[a] YYYY[an]',
-            LLL: 'Do MMMM[a] YYYY[an] HH:mm',
-            LLLL: 'dddd, Do MMMM[a] YYYY[an] HH:mm',
-            ll: 'Do MMM[.] YYYY[an]',
-            lll: 'Do MMM[.] YYYY[an] HH:mm',
-            llll: 'ddd[.], Do MMM[.] YYYY[an] HH:mm',
-        },
-        calendar: {
-            sameDay: '[Îro di saet] LT [de]',
-            nextDay: '[Sibê di saet] LT [de]',
-            nextWeek: 'dddd [di saet] LT [de]',
-            lastDay: '[Duh di saet] LT [de]',
-            lastWeek: 'dddd[a borî di saet] LT [de]',
-            sameElse: 'L',
-        },
-        relativeTime: {
-            future: 'di %s de',
-            past: 'berî %s',
-            s: processRelativeTime,
-            ss: processRelativeTime,
-            m: processRelativeTime,
-            mm: processRelativeTime,
-            h: processRelativeTime,
-            hh: processRelativeTime,
-            d: processRelativeTime,
-            dd: processRelativeTime,
-            w: processRelativeTime,
-            ww: processRelativeTime,
-            M: processRelativeTime,
-            MM: processRelativeTime,
-            y: processRelativeTime,
-            yy: processRelativeTime,
-        },
-        dayOfMonthOrdinalParse: /\d{1,2}(?:yê|ê|\.)/,
-        ordinal: function (num, period) {
-            var p = period.toLowerCase();
-            if (p.includes('w') || p.includes('m')) return num + '.';
-
-            return num + ezafeNumSuffix(num);
-        },
-        week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
-        },
-    });
-
-    return kuKmr;
-
-})));
-
-
-/***/ }),
-
 /***/ "../node_modules/moment/locale/ku.js":
 /*!*******************************************!*\
   !*** ../node_modules/moment/locale/ku.js ***!
@@ -12183,8 +11284,8 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         return withoutSuffix
             ? forms(key)[0]
             : isFuture
-              ? forms(key)[1]
-              : forms(key)[2];
+            ? forms(key)[1]
+            : forms(key)[2];
     }
     function special(number) {
         return number % 10 === 0 || (number > 10 && number < 20);
@@ -12432,8 +11533,8 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
             return number === 1
                 ? wordKey[0]
                 : number >= 2 && number <= 4
-                  ? wordKey[1]
-                  : wordKey[2];
+                ? wordKey[1]
+                : wordKey[2];
         },
         translate: function (number, withoutSuffix, key) {
             var wordKey = translator.words[key];
@@ -13588,13 +12689,13 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
             ss: '%d sekunder',
             m: 'ett minutt',
             mm: '%d minutter',
-            h: 'én time',
+            h: 'en time',
             hh: '%d timer',
-            d: 'én dag',
+            d: 'en dag',
             dd: '%d dager',
-            w: 'én uke',
+            w: 'en uke',
             ww: '%d uker',
-            M: 'én måned',
+            M: 'en måned',
             MM: '%d måneder',
             y: 'ett år',
             yy: '%d år',
@@ -13779,7 +12880,7 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         monthsParse = [
             /^jan/i,
             /^feb/i,
-            /^(maart|mrt\.?)$/i,
+            /^maart|mrt.?$/i,
             /^apr/i,
             /^mei$/i,
             /^jun[i.]?$/i,
@@ -13900,7 +13001,7 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         monthsParse = [
             /^jan/i,
             /^feb/i,
-            /^(maart|mrt\.?)$/i,
+            /^maart|mrt.?$/i,
             /^apr/i,
             /^mei$/i,
             /^jun[i.]?$/i,
@@ -14156,12 +13257,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                 number === 1
                     ? 'r'
                     : number === 2
-                      ? 'n'
-                      : number === 3
-                        ? 'r'
-                        : number === 4
-                          ? 't'
-                          : 'è';
+                    ? 'n'
+                    : number === 3
+                    ? 'r'
+                    : number === 4
+                    ? 't'
+                    : 'è';
             if (period === 'w' || period === 'W') {
                 output = 'a';
             }
@@ -14758,8 +13859,8 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         return num % 10 === 1 && num % 100 !== 11
             ? forms[0]
             : num % 10 >= 2 && num % 10 <= 4 && (num % 100 < 10 || num % 100 >= 20)
-              ? forms[1]
-              : forms[2];
+            ? forms[1]
+            : forms[2];
     }
     function relativeTimeWithPlural(number, withoutSuffix, key) {
         var format = {
@@ -16131,12 +15232,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                     ~~((number % 100) / 10) === 1
                         ? ':e'
                         : b === 1
-                          ? ':a'
-                          : b === 2
-                            ? ':a'
-                            : b === 3
-                              ? ':e'
-                              : ':e';
+                        ? ':a'
+                        : b === 2
+                        ? ':a'
+                        : b === 3
+                        ? ':e'
+                        : ':e';
             return number + output;
         },
         week: {
@@ -16549,12 +15650,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                     ~~((number % 100) / 10) === 1
                         ? 'th'
                         : b === 1
-                          ? 'st'
-                          : b === 2
-                            ? 'nd'
-                            : b === 3
-                              ? 'rd'
-                              : 'th';
+                        ? 'st'
+                        : b === 2
+                        ? 'nd'
+                        : b === 3
+                        ? 'rd'
+                        : 'th';
             return number + output;
         },
         week: {
@@ -17001,10 +16102,10 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
             output.indexOf('jaj') !== -1
                 ? time.slice(0, -3) + 'leS'
                 : output.indexOf('jar') !== -1
-                  ? time.slice(0, -3) + 'waQ'
-                  : output.indexOf('DIS') !== -1
-                    ? time.slice(0, -3) + 'nem'
-                    : time + ' pIq';
+                ? time.slice(0, -3) + 'waQ'
+                : output.indexOf('DIS') !== -1
+                ? time.slice(0, -3) + 'nem'
+                : time + ' pIq';
         return time;
     }
 
@@ -17014,10 +16115,10 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
             output.indexOf('jaj') !== -1
                 ? time.slice(0, -3) + 'Hu’'
                 : output.indexOf('jar') !== -1
-                  ? time.slice(0, -3) + 'wen'
-                  : output.indexOf('DIS') !== -1
-                    ? time.slice(0, -3) + 'ben'
-                    : time + ' ret';
+                ? time.slice(0, -3) + 'wen'
+                : output.indexOf('DIS') !== -1
+                ? time.slice(0, -3) + 'ben'
+                : time + ' ret';
         return time;
     }
 
@@ -17341,8 +16442,8 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         return isFuture
             ? format[key][0]
             : withoutSuffix
-              ? format[key][0]
-              : format[key][1];
+            ? format[key][0]
+            : format[key][1];
     }
 
     return tzl;
@@ -17651,8 +16752,8 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         return num % 10 === 1 && num % 100 !== 11
             ? forms[0]
             : num % 10 >= 2 && num % 10 <= 4 && (num % 100 < 10 || num % 100 >= 20)
-              ? forms[1]
-              : forms[2];
+            ? forms[1]
+            : forms[2];
     }
     function relativeTimeWithPlural(number, withoutSuffix, key) {
         var format = {
@@ -17700,8 +16801,8 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         nounCase = /(\[[ВвУу]\]) ?dddd/.test(format)
             ? 'accusative'
             : /\[?(?:минулої|наступної)? ?\] ?dddd/.test(format)
-              ? 'genitive'
-              : 'nominative';
+            ? 'genitive'
+            : 'nominative';
         return weekdays[nounCase][m.day()];
     }
     function processHoursFunction(str) {
@@ -18228,12 +17329,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                     ~~((number % 100) / 10) === 1
                         ? 'th'
                         : b === 1
-                          ? 'st'
-                          : b === 2
-                            ? 'nd'
-                            : b === 3
-                              ? 'rd'
-                              : 'th';
+                        ? 'st'
+                        : b === 2
+                        ? 'nd'
+                        : b === 3
+                        ? 'rd'
+                        : 'th';
             return number + output;
         },
         week: {
@@ -18817,6 +17918,307 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /***/ }),
 
+/***/ "../node_modules/moment/locale sync recursive ^\\.\\/.*$":
+/*!****************************************************!*\
+  !*** ../node_modules/moment/locale/ sync ^\.\/.*$ ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./af": "../node_modules/moment/locale/af.js",
+	"./af.js": "../node_modules/moment/locale/af.js",
+	"./ar": "../node_modules/moment/locale/ar.js",
+	"./ar-dz": "../node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "../node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "../node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "../node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "../node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "../node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "../node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "../node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "../node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "../node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "../node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "../node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "../node_modules/moment/locale/ar.js",
+	"./az": "../node_modules/moment/locale/az.js",
+	"./az.js": "../node_modules/moment/locale/az.js",
+	"./be": "../node_modules/moment/locale/be.js",
+	"./be.js": "../node_modules/moment/locale/be.js",
+	"./bg": "../node_modules/moment/locale/bg.js",
+	"./bg.js": "../node_modules/moment/locale/bg.js",
+	"./bm": "../node_modules/moment/locale/bm.js",
+	"./bm.js": "../node_modules/moment/locale/bm.js",
+	"./bn": "../node_modules/moment/locale/bn.js",
+	"./bn-bd": "../node_modules/moment/locale/bn-bd.js",
+	"./bn-bd.js": "../node_modules/moment/locale/bn-bd.js",
+	"./bn.js": "../node_modules/moment/locale/bn.js",
+	"./bo": "../node_modules/moment/locale/bo.js",
+	"./bo.js": "../node_modules/moment/locale/bo.js",
+	"./br": "../node_modules/moment/locale/br.js",
+	"./br.js": "../node_modules/moment/locale/br.js",
+	"./bs": "../node_modules/moment/locale/bs.js",
+	"./bs.js": "../node_modules/moment/locale/bs.js",
+	"./ca": "../node_modules/moment/locale/ca.js",
+	"./ca.js": "../node_modules/moment/locale/ca.js",
+	"./cs": "../node_modules/moment/locale/cs.js",
+	"./cs.js": "../node_modules/moment/locale/cs.js",
+	"./cv": "../node_modules/moment/locale/cv.js",
+	"./cv.js": "../node_modules/moment/locale/cv.js",
+	"./cy": "../node_modules/moment/locale/cy.js",
+	"./cy.js": "../node_modules/moment/locale/cy.js",
+	"./da": "../node_modules/moment/locale/da.js",
+	"./da.js": "../node_modules/moment/locale/da.js",
+	"./de": "../node_modules/moment/locale/de.js",
+	"./de-at": "../node_modules/moment/locale/de-at.js",
+	"./de-at.js": "../node_modules/moment/locale/de-at.js",
+	"./de-ch": "../node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "../node_modules/moment/locale/de-ch.js",
+	"./de.js": "../node_modules/moment/locale/de.js",
+	"./dv": "../node_modules/moment/locale/dv.js",
+	"./dv.js": "../node_modules/moment/locale/dv.js",
+	"./el": "../node_modules/moment/locale/el.js",
+	"./el.js": "../node_modules/moment/locale/el.js",
+	"./en-au": "../node_modules/moment/locale/en-au.js",
+	"./en-au.js": "../node_modules/moment/locale/en-au.js",
+	"./en-ca": "../node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "../node_modules/moment/locale/en-ca.js",
+	"./en-gb": "../node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "../node_modules/moment/locale/en-gb.js",
+	"./en-ie": "../node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "../node_modules/moment/locale/en-ie.js",
+	"./en-il": "../node_modules/moment/locale/en-il.js",
+	"./en-il.js": "../node_modules/moment/locale/en-il.js",
+	"./en-in": "../node_modules/moment/locale/en-in.js",
+	"./en-in.js": "../node_modules/moment/locale/en-in.js",
+	"./en-nz": "../node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "../node_modules/moment/locale/en-nz.js",
+	"./en-sg": "../node_modules/moment/locale/en-sg.js",
+	"./en-sg.js": "../node_modules/moment/locale/en-sg.js",
+	"./eo": "../node_modules/moment/locale/eo.js",
+	"./eo.js": "../node_modules/moment/locale/eo.js",
+	"./es": "../node_modules/moment/locale/es.js",
+	"./es-do": "../node_modules/moment/locale/es-do.js",
+	"./es-do.js": "../node_modules/moment/locale/es-do.js",
+	"./es-mx": "../node_modules/moment/locale/es-mx.js",
+	"./es-mx.js": "../node_modules/moment/locale/es-mx.js",
+	"./es-us": "../node_modules/moment/locale/es-us.js",
+	"./es-us.js": "../node_modules/moment/locale/es-us.js",
+	"./es.js": "../node_modules/moment/locale/es.js",
+	"./et": "../node_modules/moment/locale/et.js",
+	"./et.js": "../node_modules/moment/locale/et.js",
+	"./eu": "../node_modules/moment/locale/eu.js",
+	"./eu.js": "../node_modules/moment/locale/eu.js",
+	"./fa": "../node_modules/moment/locale/fa.js",
+	"./fa.js": "../node_modules/moment/locale/fa.js",
+	"./fi": "../node_modules/moment/locale/fi.js",
+	"./fi.js": "../node_modules/moment/locale/fi.js",
+	"./fil": "../node_modules/moment/locale/fil.js",
+	"./fil.js": "../node_modules/moment/locale/fil.js",
+	"./fo": "../node_modules/moment/locale/fo.js",
+	"./fo.js": "../node_modules/moment/locale/fo.js",
+	"./fr": "../node_modules/moment/locale/fr.js",
+	"./fr-ca": "../node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "../node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "../node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "../node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "../node_modules/moment/locale/fr.js",
+	"./fy": "../node_modules/moment/locale/fy.js",
+	"./fy.js": "../node_modules/moment/locale/fy.js",
+	"./ga": "../node_modules/moment/locale/ga.js",
+	"./ga.js": "../node_modules/moment/locale/ga.js",
+	"./gd": "../node_modules/moment/locale/gd.js",
+	"./gd.js": "../node_modules/moment/locale/gd.js",
+	"./gl": "../node_modules/moment/locale/gl.js",
+	"./gl.js": "../node_modules/moment/locale/gl.js",
+	"./gom-deva": "../node_modules/moment/locale/gom-deva.js",
+	"./gom-deva.js": "../node_modules/moment/locale/gom-deva.js",
+	"./gom-latn": "../node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "../node_modules/moment/locale/gom-latn.js",
+	"./gu": "../node_modules/moment/locale/gu.js",
+	"./gu.js": "../node_modules/moment/locale/gu.js",
+	"./he": "../node_modules/moment/locale/he.js",
+	"./he.js": "../node_modules/moment/locale/he.js",
+	"./hi": "../node_modules/moment/locale/hi.js",
+	"./hi.js": "../node_modules/moment/locale/hi.js",
+	"./hr": "../node_modules/moment/locale/hr.js",
+	"./hr.js": "../node_modules/moment/locale/hr.js",
+	"./hu": "../node_modules/moment/locale/hu.js",
+	"./hu.js": "../node_modules/moment/locale/hu.js",
+	"./hy-am": "../node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "../node_modules/moment/locale/hy-am.js",
+	"./id": "../node_modules/moment/locale/id.js",
+	"./id.js": "../node_modules/moment/locale/id.js",
+	"./is": "../node_modules/moment/locale/is.js",
+	"./is.js": "../node_modules/moment/locale/is.js",
+	"./it": "../node_modules/moment/locale/it.js",
+	"./it-ch": "../node_modules/moment/locale/it-ch.js",
+	"./it-ch.js": "../node_modules/moment/locale/it-ch.js",
+	"./it.js": "../node_modules/moment/locale/it.js",
+	"./ja": "../node_modules/moment/locale/ja.js",
+	"./ja.js": "../node_modules/moment/locale/ja.js",
+	"./jv": "../node_modules/moment/locale/jv.js",
+	"./jv.js": "../node_modules/moment/locale/jv.js",
+	"./ka": "../node_modules/moment/locale/ka.js",
+	"./ka.js": "../node_modules/moment/locale/ka.js",
+	"./kk": "../node_modules/moment/locale/kk.js",
+	"./kk.js": "../node_modules/moment/locale/kk.js",
+	"./km": "../node_modules/moment/locale/km.js",
+	"./km.js": "../node_modules/moment/locale/km.js",
+	"./kn": "../node_modules/moment/locale/kn.js",
+	"./kn.js": "../node_modules/moment/locale/kn.js",
+	"./ko": "../node_modules/moment/locale/ko.js",
+	"./ko.js": "../node_modules/moment/locale/ko.js",
+	"./ku": "../node_modules/moment/locale/ku.js",
+	"./ku.js": "../node_modules/moment/locale/ku.js",
+	"./ky": "../node_modules/moment/locale/ky.js",
+	"./ky.js": "../node_modules/moment/locale/ky.js",
+	"./lb": "../node_modules/moment/locale/lb.js",
+	"./lb.js": "../node_modules/moment/locale/lb.js",
+	"./lo": "../node_modules/moment/locale/lo.js",
+	"./lo.js": "../node_modules/moment/locale/lo.js",
+	"./lt": "../node_modules/moment/locale/lt.js",
+	"./lt.js": "../node_modules/moment/locale/lt.js",
+	"./lv": "../node_modules/moment/locale/lv.js",
+	"./lv.js": "../node_modules/moment/locale/lv.js",
+	"./me": "../node_modules/moment/locale/me.js",
+	"./me.js": "../node_modules/moment/locale/me.js",
+	"./mi": "../node_modules/moment/locale/mi.js",
+	"./mi.js": "../node_modules/moment/locale/mi.js",
+	"./mk": "../node_modules/moment/locale/mk.js",
+	"./mk.js": "../node_modules/moment/locale/mk.js",
+	"./ml": "../node_modules/moment/locale/ml.js",
+	"./ml.js": "../node_modules/moment/locale/ml.js",
+	"./mn": "../node_modules/moment/locale/mn.js",
+	"./mn.js": "../node_modules/moment/locale/mn.js",
+	"./mr": "../node_modules/moment/locale/mr.js",
+	"./mr.js": "../node_modules/moment/locale/mr.js",
+	"./ms": "../node_modules/moment/locale/ms.js",
+	"./ms-my": "../node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "../node_modules/moment/locale/ms-my.js",
+	"./ms.js": "../node_modules/moment/locale/ms.js",
+	"./mt": "../node_modules/moment/locale/mt.js",
+	"./mt.js": "../node_modules/moment/locale/mt.js",
+	"./my": "../node_modules/moment/locale/my.js",
+	"./my.js": "../node_modules/moment/locale/my.js",
+	"./nb": "../node_modules/moment/locale/nb.js",
+	"./nb.js": "../node_modules/moment/locale/nb.js",
+	"./ne": "../node_modules/moment/locale/ne.js",
+	"./ne.js": "../node_modules/moment/locale/ne.js",
+	"./nl": "../node_modules/moment/locale/nl.js",
+	"./nl-be": "../node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "../node_modules/moment/locale/nl-be.js",
+	"./nl.js": "../node_modules/moment/locale/nl.js",
+	"./nn": "../node_modules/moment/locale/nn.js",
+	"./nn.js": "../node_modules/moment/locale/nn.js",
+	"./oc-lnc": "../node_modules/moment/locale/oc-lnc.js",
+	"./oc-lnc.js": "../node_modules/moment/locale/oc-lnc.js",
+	"./pa-in": "../node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "../node_modules/moment/locale/pa-in.js",
+	"./pl": "../node_modules/moment/locale/pl.js",
+	"./pl.js": "../node_modules/moment/locale/pl.js",
+	"./pt": "../node_modules/moment/locale/pt.js",
+	"./pt-br": "../node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "../node_modules/moment/locale/pt-br.js",
+	"./pt.js": "../node_modules/moment/locale/pt.js",
+	"./ro": "../node_modules/moment/locale/ro.js",
+	"./ro.js": "../node_modules/moment/locale/ro.js",
+	"./ru": "../node_modules/moment/locale/ru.js",
+	"./ru.js": "../node_modules/moment/locale/ru.js",
+	"./sd": "../node_modules/moment/locale/sd.js",
+	"./sd.js": "../node_modules/moment/locale/sd.js",
+	"./se": "../node_modules/moment/locale/se.js",
+	"./se.js": "../node_modules/moment/locale/se.js",
+	"./si": "../node_modules/moment/locale/si.js",
+	"./si.js": "../node_modules/moment/locale/si.js",
+	"./sk": "../node_modules/moment/locale/sk.js",
+	"./sk.js": "../node_modules/moment/locale/sk.js",
+	"./sl": "../node_modules/moment/locale/sl.js",
+	"./sl.js": "../node_modules/moment/locale/sl.js",
+	"./sq": "../node_modules/moment/locale/sq.js",
+	"./sq.js": "../node_modules/moment/locale/sq.js",
+	"./sr": "../node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "../node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "../node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "../node_modules/moment/locale/sr.js",
+	"./ss": "../node_modules/moment/locale/ss.js",
+	"./ss.js": "../node_modules/moment/locale/ss.js",
+	"./sv": "../node_modules/moment/locale/sv.js",
+	"./sv.js": "../node_modules/moment/locale/sv.js",
+	"./sw": "../node_modules/moment/locale/sw.js",
+	"./sw.js": "../node_modules/moment/locale/sw.js",
+	"./ta": "../node_modules/moment/locale/ta.js",
+	"./ta.js": "../node_modules/moment/locale/ta.js",
+	"./te": "../node_modules/moment/locale/te.js",
+	"./te.js": "../node_modules/moment/locale/te.js",
+	"./tet": "../node_modules/moment/locale/tet.js",
+	"./tet.js": "../node_modules/moment/locale/tet.js",
+	"./tg": "../node_modules/moment/locale/tg.js",
+	"./tg.js": "../node_modules/moment/locale/tg.js",
+	"./th": "../node_modules/moment/locale/th.js",
+	"./th.js": "../node_modules/moment/locale/th.js",
+	"./tk": "../node_modules/moment/locale/tk.js",
+	"./tk.js": "../node_modules/moment/locale/tk.js",
+	"./tl-ph": "../node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "../node_modules/moment/locale/tl-ph.js",
+	"./tlh": "../node_modules/moment/locale/tlh.js",
+	"./tlh.js": "../node_modules/moment/locale/tlh.js",
+	"./tr": "../node_modules/moment/locale/tr.js",
+	"./tr.js": "../node_modules/moment/locale/tr.js",
+	"./tzl": "../node_modules/moment/locale/tzl.js",
+	"./tzl.js": "../node_modules/moment/locale/tzl.js",
+	"./tzm": "../node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "../node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "../node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "../node_modules/moment/locale/tzm.js",
+	"./ug-cn": "../node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "../node_modules/moment/locale/ug-cn.js",
+	"./uk": "../node_modules/moment/locale/uk.js",
+	"./uk.js": "../node_modules/moment/locale/uk.js",
+	"./ur": "../node_modules/moment/locale/ur.js",
+	"./ur.js": "../node_modules/moment/locale/ur.js",
+	"./uz": "../node_modules/moment/locale/uz.js",
+	"./uz-latn": "../node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "../node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "../node_modules/moment/locale/uz.js",
+	"./vi": "../node_modules/moment/locale/vi.js",
+	"./vi.js": "../node_modules/moment/locale/vi.js",
+	"./x-pseudo": "../node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "../node_modules/moment/locale/x-pseudo.js",
+	"./yo": "../node_modules/moment/locale/yo.js",
+	"./yo.js": "../node_modules/moment/locale/yo.js",
+	"./zh-cn": "../node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "../node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "../node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "../node_modules/moment/locale/zh-hk.js",
+	"./zh-mo": "../node_modules/moment/locale/zh-mo.js",
+	"./zh-mo.js": "../node_modules/moment/locale/zh-mo.js",
+	"./zh-tw": "../node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "../node_modules/moment/locale/zh-tw.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
 /***/ "../node_modules/moment/moment.js":
 /*!****************************************!*\
   !*** ../node_modules/moment/moment.js ***!
@@ -18825,7 +18227,7 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /* module decorator */ module = __webpack_require__.nmd(module);
 //! moment.js
-//! version : 2.30.1
+//! version : 2.29.4
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
 //! license : MIT
 //! momentjs.com
@@ -18980,25 +18382,24 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
     }
 
     function isValid(m) {
-        var flags = null,
-            parsedParts = false,
-            isNowValid = m._d && !isNaN(m._d.getTime());
-        if (isNowValid) {
-            flags = getParsingFlags(m);
-            parsedParts = some.call(flags.parsedDateParts, function (i) {
-                return i != null;
-            });
-            isNowValid =
-                flags.overflow < 0 &&
-                !flags.empty &&
-                !flags.invalidEra &&
-                !flags.invalidMonth &&
-                !flags.invalidWeekday &&
-                !flags.weekdayMismatch &&
-                !flags.nullInput &&
-                !flags.invalidFormat &&
-                !flags.userInvalidated &&
-                (!flags.meridiem || (flags.meridiem && parsedParts));
+        if (m._isValid == null) {
+            var flags = getParsingFlags(m),
+                parsedParts = some.call(flags.parsedDateParts, function (i) {
+                    return i != null;
+                }),
+                isNowValid =
+                    !isNaN(m._d.getTime()) &&
+                    flags.overflow < 0 &&
+                    !flags.empty &&
+                    !flags.invalidEra &&
+                    !flags.invalidMonth &&
+                    !flags.invalidWeekday &&
+                    !flags.weekdayMismatch &&
+                    !flags.nullInput &&
+                    !flags.invalidFormat &&
+                    !flags.userInvalidated &&
+                    (!flags.meridiem || (flags.meridiem && parsedParts));
+
             if (m._strict) {
                 isNowValid =
                     isNowValid &&
@@ -19006,11 +18407,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                     flags.unusedTokens.length === 0 &&
                     flags.bigHour === undefined;
             }
-        }
-        if (Object.isFrozen == null || !Object.isFrozen(m)) {
-            m._isValid = isNowValid;
-        } else {
-            return isNowValid;
+
+            if (Object.isFrozen == null || !Object.isFrozen(m)) {
+                m._isValid = isNowValid;
+            } else {
+                return isNowValid;
+            }
         }
         return m._isValid;
     }
@@ -19455,56 +18857,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         return isFunction(format) ? format(output) : format.replace(/%s/i, output);
     }
 
-    var aliases = {
-        D: 'date',
-        dates: 'date',
-        date: 'date',
-        d: 'day',
-        days: 'day',
-        day: 'day',
-        e: 'weekday',
-        weekdays: 'weekday',
-        weekday: 'weekday',
-        E: 'isoWeekday',
-        isoweekdays: 'isoWeekday',
-        isoweekday: 'isoWeekday',
-        DDD: 'dayOfYear',
-        dayofyears: 'dayOfYear',
-        dayofyear: 'dayOfYear',
-        h: 'hour',
-        hours: 'hour',
-        hour: 'hour',
-        ms: 'millisecond',
-        milliseconds: 'millisecond',
-        millisecond: 'millisecond',
-        m: 'minute',
-        minutes: 'minute',
-        minute: 'minute',
-        M: 'month',
-        months: 'month',
-        month: 'month',
-        Q: 'quarter',
-        quarters: 'quarter',
-        quarter: 'quarter',
-        s: 'second',
-        seconds: 'second',
-        second: 'second',
-        gg: 'weekYear',
-        weekyears: 'weekYear',
-        weekyear: 'weekYear',
-        GG: 'isoWeekYear',
-        isoweekyears: 'isoWeekYear',
-        isoweekyear: 'isoWeekYear',
-        w: 'week',
-        weeks: 'week',
-        week: 'week',
-        W: 'isoWeek',
-        isoweeks: 'isoWeek',
-        isoweek: 'isoWeek',
-        y: 'year',
-        years: 'year',
-        year: 'year',
-    };
+    var aliases = {};
+
+    function addUnitAlias(unit, shorthand) {
+        var lowerCase = unit.toLowerCase();
+        aliases[lowerCase] = aliases[lowerCase + 's'] = aliases[shorthand] = unit;
+    }
 
     function normalizeUnits(units) {
         return typeof units === 'string'
@@ -19529,24 +18887,11 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         return normalizedInput;
     }
 
-    var priorities = {
-        date: 9,
-        day: 11,
-        weekday: 11,
-        isoWeekday: 11,
-        dayOfYear: 4,
-        hour: 13,
-        millisecond: 16,
-        minute: 14,
-        month: 8,
-        quarter: 7,
-        second: 15,
-        weekYear: 1,
-        isoWeekYear: 1,
-        week: 5,
-        isoWeek: 5,
-        year: 1,
-    };
+    var priorities = {};
+
+    function addUnitPriority(unit, priority) {
+        priorities[unit] = priority;
+    }
 
     function getPrioritizedUnits(unitsObj) {
         var units = [],
@@ -19560,6 +18905,96 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
             return a.priority - b.priority;
         });
         return units;
+    }
+
+    function isLeapYear(year) {
+        return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+    }
+
+    function absFloor(number) {
+        if (number < 0) {
+            // -0 -> 0
+            return Math.ceil(number) || 0;
+        } else {
+            return Math.floor(number);
+        }
+    }
+
+    function toInt(argumentForCoercion) {
+        var coercedNumber = +argumentForCoercion,
+            value = 0;
+
+        if (coercedNumber !== 0 && isFinite(coercedNumber)) {
+            value = absFloor(coercedNumber);
+        }
+
+        return value;
+    }
+
+    function makeGetSet(unit, keepTime) {
+        return function (value) {
+            if (value != null) {
+                set$1(this, unit, value);
+                hooks.updateOffset(this, keepTime);
+                return this;
+            } else {
+                return get(this, unit);
+            }
+        };
+    }
+
+    function get(mom, unit) {
+        return mom.isValid()
+            ? mom._d['get' + (mom._isUTC ? 'UTC' : '') + unit]()
+            : NaN;
+    }
+
+    function set$1(mom, unit, value) {
+        if (mom.isValid() && !isNaN(value)) {
+            if (
+                unit === 'FullYear' &&
+                isLeapYear(mom.year()) &&
+                mom.month() === 1 &&
+                mom.date() === 29
+            ) {
+                value = toInt(value);
+                mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](
+                    value,
+                    mom.month(),
+                    daysInMonth(value, mom.month())
+                );
+            } else {
+                mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value);
+            }
+        }
+    }
+
+    // MOMENTS
+
+    function stringGet(units) {
+        units = normalizeUnits(units);
+        if (isFunction(this[units])) {
+            return this[units]();
+        }
+        return this;
+    }
+
+    function stringSet(units, value) {
+        if (typeof units === 'object') {
+            units = normalizeObjectUnits(units);
+            var prioritized = getPrioritizedUnits(units),
+                i,
+                prioritizedLen = prioritized.length;
+            for (i = 0; i < prioritizedLen; i++) {
+                this[prioritized[i].unit](units[prioritized[i].unit]);
+            }
+        } else {
+            units = normalizeUnits(units);
+            if (isFunction(this[units])) {
+                return this[units](value);
+            }
+        }
+        return this;
     }
 
     var match1 = /\d/, //       0 - 9
@@ -19582,8 +19017,6 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         // includes scottish gaelic two word and hyphenated months
         matchWord =
             /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF\/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i,
-        match1to2NoLeadingZero = /^[1-9]\d?/, //         1-99
-        match1to2HasZero = /^([1-9]\d|\d)/, //           0-99
         regexes;
 
     regexes = {};
@@ -19622,26 +19055,6 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
     }
 
-    function absFloor(number) {
-        if (number < 0) {
-            // -0 -> 0
-            return Math.ceil(number) || 0;
-        } else {
-            return Math.floor(number);
-        }
-    }
-
-    function toInt(argumentForCoercion) {
-        var coercedNumber = +argumentForCoercion,
-            value = 0;
-
-        if (coercedNumber !== 0 && isFinite(coercedNumber)) {
-            value = absFloor(coercedNumber);
-        }
-
-        return value;
-    }
-
     var tokens = {};
 
     function addParseToken(token, callback) {
@@ -19675,10 +19088,6 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         }
     }
 
-    function isLeapYear(year) {
-        return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-    }
-
     var YEAR = 0,
         MONTH = 1,
         DATE = 2,
@@ -19688,173 +19097,6 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         MILLISECOND = 6,
         WEEK = 7,
         WEEKDAY = 8;
-
-    // FORMATTING
-
-    addFormatToken('Y', 0, 0, function () {
-        var y = this.year();
-        return y <= 9999 ? zeroFill(y, 4) : '+' + y;
-    });
-
-    addFormatToken(0, ['YY', 2], 0, function () {
-        return this.year() % 100;
-    });
-
-    addFormatToken(0, ['YYYY', 4], 0, 'year');
-    addFormatToken(0, ['YYYYY', 5], 0, 'year');
-    addFormatToken(0, ['YYYYYY', 6, true], 0, 'year');
-
-    // PARSING
-
-    addRegexToken('Y', matchSigned);
-    addRegexToken('YY', match1to2, match2);
-    addRegexToken('YYYY', match1to4, match4);
-    addRegexToken('YYYYY', match1to6, match6);
-    addRegexToken('YYYYYY', match1to6, match6);
-
-    addParseToken(['YYYYY', 'YYYYYY'], YEAR);
-    addParseToken('YYYY', function (input, array) {
-        array[YEAR] =
-            input.length === 2 ? hooks.parseTwoDigitYear(input) : toInt(input);
-    });
-    addParseToken('YY', function (input, array) {
-        array[YEAR] = hooks.parseTwoDigitYear(input);
-    });
-    addParseToken('Y', function (input, array) {
-        array[YEAR] = parseInt(input, 10);
-    });
-
-    // HELPERS
-
-    function daysInYear(year) {
-        return isLeapYear(year) ? 366 : 365;
-    }
-
-    // HOOKS
-
-    hooks.parseTwoDigitYear = function (input) {
-        return toInt(input) + (toInt(input) > 68 ? 1900 : 2000);
-    };
-
-    // MOMENTS
-
-    var getSetYear = makeGetSet('FullYear', true);
-
-    function getIsLeapYear() {
-        return isLeapYear(this.year());
-    }
-
-    function makeGetSet(unit, keepTime) {
-        return function (value) {
-            if (value != null) {
-                set$1(this, unit, value);
-                hooks.updateOffset(this, keepTime);
-                return this;
-            } else {
-                return get(this, unit);
-            }
-        };
-    }
-
-    function get(mom, unit) {
-        if (!mom.isValid()) {
-            return NaN;
-        }
-
-        var d = mom._d,
-            isUTC = mom._isUTC;
-
-        switch (unit) {
-            case 'Milliseconds':
-                return isUTC ? d.getUTCMilliseconds() : d.getMilliseconds();
-            case 'Seconds':
-                return isUTC ? d.getUTCSeconds() : d.getSeconds();
-            case 'Minutes':
-                return isUTC ? d.getUTCMinutes() : d.getMinutes();
-            case 'Hours':
-                return isUTC ? d.getUTCHours() : d.getHours();
-            case 'Date':
-                return isUTC ? d.getUTCDate() : d.getDate();
-            case 'Day':
-                return isUTC ? d.getUTCDay() : d.getDay();
-            case 'Month':
-                return isUTC ? d.getUTCMonth() : d.getMonth();
-            case 'FullYear':
-                return isUTC ? d.getUTCFullYear() : d.getFullYear();
-            default:
-                return NaN; // Just in case
-        }
-    }
-
-    function set$1(mom, unit, value) {
-        var d, isUTC, year, month, date;
-
-        if (!mom.isValid() || isNaN(value)) {
-            return;
-        }
-
-        d = mom._d;
-        isUTC = mom._isUTC;
-
-        switch (unit) {
-            case 'Milliseconds':
-                return void (isUTC
-                    ? d.setUTCMilliseconds(value)
-                    : d.setMilliseconds(value));
-            case 'Seconds':
-                return void (isUTC ? d.setUTCSeconds(value) : d.setSeconds(value));
-            case 'Minutes':
-                return void (isUTC ? d.setUTCMinutes(value) : d.setMinutes(value));
-            case 'Hours':
-                return void (isUTC ? d.setUTCHours(value) : d.setHours(value));
-            case 'Date':
-                return void (isUTC ? d.setUTCDate(value) : d.setDate(value));
-            // case 'Day': // Not real
-            //    return void (isUTC ? d.setUTCDay(value) : d.setDay(value));
-            // case 'Month': // Not used because we need to pass two variables
-            //     return void (isUTC ? d.setUTCMonth(value) : d.setMonth(value));
-            case 'FullYear':
-                break; // See below ...
-            default:
-                return; // Just in case
-        }
-
-        year = value;
-        month = mom.month();
-        date = mom.date();
-        date = date === 29 && month === 1 && !isLeapYear(year) ? 28 : date;
-        void (isUTC
-            ? d.setUTCFullYear(year, month, date)
-            : d.setFullYear(year, month, date));
-    }
-
-    // MOMENTS
-
-    function stringGet(units) {
-        units = normalizeUnits(units);
-        if (isFunction(this[units])) {
-            return this[units]();
-        }
-        return this;
-    }
-
-    function stringSet(units, value) {
-        if (typeof units === 'object') {
-            units = normalizeObjectUnits(units);
-            var prioritized = getPrioritizedUnits(units),
-                i,
-                prioritizedLen = prioritized.length;
-            for (i = 0; i < prioritizedLen; i++) {
-                this[prioritized[i].unit](units[prioritized[i].unit]);
-            }
-        } else {
-            units = normalizeUnits(units);
-            if (isFunction(this[units])) {
-                return this[units](value);
-            }
-        }
-        return this;
-    }
 
     function mod(n, x) {
         return ((n % x) + x) % x;
@@ -19904,9 +19146,17 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         return this.localeData().months(this, format);
     });
 
+    // ALIASES
+
+    addUnitAlias('month', 'M');
+
+    // PRIORITY
+
+    addUnitPriority('month', 8);
+
     // PARSING
 
-    addRegexToken('M', match1to2, match1to2NoLeadingZero);
+    addRegexToken('M', match1to2);
     addRegexToken('MM', match1to2, match2);
     addRegexToken('MMM', function (isStrict, locale) {
         return locale.monthsShortRegex(isStrict);
@@ -20072,6 +19322,8 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
     // MOMENTS
 
     function setMonth(mom, value) {
+        var dayOfMonth;
+
         if (!mom.isValid()) {
             // No op
             return mom;
@@ -20089,13 +19341,8 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
             }
         }
 
-        var month = value,
-            date = mom.date();
-
-        date = date < 29 ? date : Math.min(date, daysInMonth(mom.year(), month));
-        void (mom._isUTC
-            ? mom._d.setUTCMonth(month, date)
-            : mom._d.setMonth(month, date));
+        dayOfMonth = Math.min(mom.date(), daysInMonth(mom.year(), value));
+        mom._d['set' + (mom._isUTC ? 'UTC' : '') + 'Month'](value, dayOfMonth);
         return mom;
     }
 
@@ -20162,24 +19409,27 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
             longPieces = [],
             mixedPieces = [],
             i,
-            mom,
-            shortP,
-            longP;
+            mom;
         for (i = 0; i < 12; i++) {
             // make the regex if we don't have it already
             mom = createUTC([2000, i]);
-            shortP = regexEscape(this.monthsShort(mom, ''));
-            longP = regexEscape(this.months(mom, ''));
-            shortPieces.push(shortP);
-            longPieces.push(longP);
-            mixedPieces.push(longP);
-            mixedPieces.push(shortP);
+            shortPieces.push(this.monthsShort(mom, ''));
+            longPieces.push(this.months(mom, ''));
+            mixedPieces.push(this.months(mom, ''));
+            mixedPieces.push(this.monthsShort(mom, ''));
         }
         // Sorting makes sure if one month (or abbr) is a prefix of another it
         // will match the longer piece.
         shortPieces.sort(cmpLenRev);
         longPieces.sort(cmpLenRev);
         mixedPieces.sort(cmpLenRev);
+        for (i = 0; i < 12; i++) {
+            shortPieces[i] = regexEscape(shortPieces[i]);
+            longPieces[i] = regexEscape(longPieces[i]);
+        }
+        for (i = 0; i < 24; i++) {
+            mixedPieces[i] = regexEscape(mixedPieces[i]);
+        }
 
         this._monthsRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
         this._monthsShortRegex = this._monthsRegex;
@@ -20191,6 +19441,69 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
             '^(' + shortPieces.join('|') + ')',
             'i'
         );
+    }
+
+    // FORMATTING
+
+    addFormatToken('Y', 0, 0, function () {
+        var y = this.year();
+        return y <= 9999 ? zeroFill(y, 4) : '+' + y;
+    });
+
+    addFormatToken(0, ['YY', 2], 0, function () {
+        return this.year() % 100;
+    });
+
+    addFormatToken(0, ['YYYY', 4], 0, 'year');
+    addFormatToken(0, ['YYYYY', 5], 0, 'year');
+    addFormatToken(0, ['YYYYYY', 6, true], 0, 'year');
+
+    // ALIASES
+
+    addUnitAlias('year', 'y');
+
+    // PRIORITIES
+
+    addUnitPriority('year', 1);
+
+    // PARSING
+
+    addRegexToken('Y', matchSigned);
+    addRegexToken('YY', match1to2, match2);
+    addRegexToken('YYYY', match1to4, match4);
+    addRegexToken('YYYYY', match1to6, match6);
+    addRegexToken('YYYYYY', match1to6, match6);
+
+    addParseToken(['YYYYY', 'YYYYYY'], YEAR);
+    addParseToken('YYYY', function (input, array) {
+        array[YEAR] =
+            input.length === 2 ? hooks.parseTwoDigitYear(input) : toInt(input);
+    });
+    addParseToken('YY', function (input, array) {
+        array[YEAR] = hooks.parseTwoDigitYear(input);
+    });
+    addParseToken('Y', function (input, array) {
+        array[YEAR] = parseInt(input, 10);
+    });
+
+    // HELPERS
+
+    function daysInYear(year) {
+        return isLeapYear(year) ? 366 : 365;
+    }
+
+    // HOOKS
+
+    hooks.parseTwoDigitYear = function (input) {
+        return toInt(input) + (toInt(input) > 68 ? 1900 : 2000);
+    };
+
+    // MOMENTS
+
+    var getSetYear = makeGetSet('FullYear', true);
+
+    function getIsLeapYear() {
+        return isLeapYear(this.year());
     }
 
     function createDate(y, m, d, h, M, s, ms) {
@@ -20298,11 +19611,21 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
     addFormatToken('w', ['ww', 2], 'wo', 'week');
     addFormatToken('W', ['WW', 2], 'Wo', 'isoWeek');
 
+    // ALIASES
+
+    addUnitAlias('week', 'w');
+    addUnitAlias('isoWeek', 'W');
+
+    // PRIORITIES
+
+    addUnitPriority('week', 5);
+    addUnitPriority('isoWeek', 5);
+
     // PARSING
 
-    addRegexToken('w', match1to2, match1to2NoLeadingZero);
+    addRegexToken('w', match1to2);
     addRegexToken('ww', match1to2, match2);
-    addRegexToken('W', match1to2, match1to2NoLeadingZero);
+    addRegexToken('W', match1to2);
     addRegexToken('WW', match1to2, match2);
 
     addWeekParseToken(
@@ -20363,6 +19686,17 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     addFormatToken('e', 0, 0, 'weekday');
     addFormatToken('E', 0, 0, 'isoWeekday');
+
+    // ALIASES
+
+    addUnitAlias('day', 'd');
+    addUnitAlias('weekday', 'e');
+    addUnitAlias('isoWeekday', 'E');
+
+    // PRIORITY
+    addUnitPriority('day', 11);
+    addUnitPriority('weekday', 11);
+    addUnitPriority('isoWeekday', 11);
 
     // PARSING
 
@@ -20443,24 +19777,24 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         return m === true
             ? shiftWeekdays(weekdays, this._week.dow)
             : m
-              ? weekdays[m.day()]
-              : weekdays;
+            ? weekdays[m.day()]
+            : weekdays;
     }
 
     function localeWeekdaysShort(m) {
         return m === true
             ? shiftWeekdays(this._weekdaysShort, this._week.dow)
             : m
-              ? this._weekdaysShort[m.day()]
-              : this._weekdaysShort;
+            ? this._weekdaysShort[m.day()]
+            : this._weekdaysShort;
     }
 
     function localeWeekdaysMin(m) {
         return m === true
             ? shiftWeekdays(this._weekdaysMin, this._week.dow)
             : m
-              ? this._weekdaysMin[m.day()]
-              : this._weekdaysMin;
+            ? this._weekdaysMin[m.day()]
+            : this._weekdaysMin;
     }
 
     function handleStrictParse$1(weekdayName, format, strict) {
@@ -20609,8 +19943,7 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         if (!this.isValid()) {
             return input != null ? this : NaN;
         }
-
-        var day = get(this, 'Day');
+        var day = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
         if (input != null) {
             input = parseWeekday(input, this.localeData());
             return this.add(input - day, 'd');
@@ -20809,6 +20142,13 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
     meridiem('a', true);
     meridiem('A', false);
 
+    // ALIASES
+
+    addUnitAlias('hour', 'h');
+
+    // PRIORITY
+    addUnitPriority('hour', 13);
+
     // PARSING
 
     function matchMeridiem(isStrict, locale) {
@@ -20817,9 +20157,9 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     addRegexToken('a', matchMeridiem);
     addRegexToken('A', matchMeridiem);
-    addRegexToken('H', match1to2, match1to2HasZero);
-    addRegexToken('h', match1to2, match1to2NoLeadingZero);
-    addRegexToken('k', match1to2, match1to2NoLeadingZero);
+    addRegexToken('H', match1to2);
+    addRegexToken('h', match1to2);
+    addRegexToken('k', match1to2);
     addRegexToken('HH', match1to2, match2);
     addRegexToken('hh', match1to2, match2);
     addRegexToken('kk', match1to2, match2);
@@ -20969,8 +20309,7 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     function isLocaleNameSane(name) {
         // Prevent names that look like filesystem paths, i.e contain '/' or '\'
-        // Ensure name is available and function returns boolean
-        return !!(name && name.match('^[^/\\\\]*$'));
+        return name.match('^[^/\\\\]*$') != null;
     }
 
     function loadLocale(name) {
@@ -21162,21 +20501,21 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                 a[MONTH] < 0 || a[MONTH] > 11
                     ? MONTH
                     : a[DATE] < 1 || a[DATE] > daysInMonth(a[YEAR], a[MONTH])
-                      ? DATE
-                      : a[HOUR] < 0 ||
-                          a[HOUR] > 24 ||
-                          (a[HOUR] === 24 &&
-                              (a[MINUTE] !== 0 ||
-                                  a[SECOND] !== 0 ||
-                                  a[MILLISECOND] !== 0))
-                        ? HOUR
-                        : a[MINUTE] < 0 || a[MINUTE] > 59
-                          ? MINUTE
-                          : a[SECOND] < 0 || a[SECOND] > 59
-                            ? SECOND
-                            : a[MILLISECOND] < 0 || a[MILLISECOND] > 999
-                              ? MILLISECOND
-                              : -1;
+                    ? DATE
+                    : a[HOUR] < 0 ||
+                      a[HOUR] > 24 ||
+                      (a[HOUR] === 24 &&
+                          (a[MINUTE] !== 0 ||
+                              a[SECOND] !== 0 ||
+                              a[MILLISECOND] !== 0))
+                    ? HOUR
+                    : a[MINUTE] < 0 || a[MINUTE] > 59
+                    ? MINUTE
+                    : a[SECOND] < 0 || a[SECOND] > 59
+                    ? SECOND
+                    : a[MILLISECOND] < 0 || a[MILLISECOND] > 999
+                    ? MILLISECOND
+                    : -1;
 
             if (
                 getParsingFlags(m)._overflowDayOfYear &&
@@ -22617,16 +21956,16 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         return diff < -6
             ? 'sameElse'
             : diff < -1
-              ? 'lastWeek'
-              : diff < 0
-                ? 'lastDay'
-                : diff < 1
-                  ? 'sameDay'
-                  : diff < 2
-                    ? 'nextDay'
-                    : diff < 7
-                      ? 'nextWeek'
-                      : 'sameElse';
+            ? 'lastWeek'
+            : diff < 0
+            ? 'lastDay'
+            : diff < 1
+            ? 'sameDay'
+            : diff < 2
+            ? 'nextDay'
+            : diff < 7
+            ? 'nextWeek'
+            : 'sameElse';
     }
 
     function calendar$1(time, formats) {
@@ -23434,22 +22773,16 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
             mixedPieces = [],
             i,
             l,
-            erasName,
-            erasAbbr,
-            erasNarrow,
             eras = this.eras();
 
         for (i = 0, l = eras.length; i < l; ++i) {
-            erasName = regexEscape(eras[i].name);
-            erasAbbr = regexEscape(eras[i].abbr);
-            erasNarrow = regexEscape(eras[i].narrow);
+            namePieces.push(regexEscape(eras[i].name));
+            abbrPieces.push(regexEscape(eras[i].abbr));
+            narrowPieces.push(regexEscape(eras[i].narrow));
 
-            namePieces.push(erasName);
-            abbrPieces.push(erasAbbr);
-            narrowPieces.push(erasNarrow);
-            mixedPieces.push(erasName);
-            mixedPieces.push(erasAbbr);
-            mixedPieces.push(erasNarrow);
+            mixedPieces.push(regexEscape(eras[i].name));
+            mixedPieces.push(regexEscape(eras[i].abbr));
+            mixedPieces.push(regexEscape(eras[i].narrow));
         }
 
         this._erasRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
@@ -23482,6 +22815,14 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     // ALIASES
 
+    addUnitAlias('weekYear', 'gg');
+    addUnitAlias('isoWeekYear', 'GG');
+
+    // PRIORITY
+
+    addUnitPriority('weekYear', 1);
+    addUnitPriority('isoWeekYear', 1);
+
     // PARSING
 
     addRegexToken('G', matchSigned);
@@ -23511,7 +22852,7 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
             this,
             input,
             this.week(),
-            this.weekday() + this.localeData()._week.dow,
+            this.weekday(),
             this.localeData()._week.dow,
             this.localeData()._week.doy
         );
@@ -23573,6 +22914,14 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     addFormatToken('Q', 0, 'Qo', 'quarter');
 
+    // ALIASES
+
+    addUnitAlias('quarter', 'Q');
+
+    // PRIORITY
+
+    addUnitPriority('quarter', 7);
+
     // PARSING
 
     addRegexToken('Q', match1);
@@ -23592,9 +22941,16 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     addFormatToken('D', ['DD', 2], 'Do', 'date');
 
+    // ALIASES
+
+    addUnitAlias('date', 'D');
+
+    // PRIORITY
+    addUnitPriority('date', 9);
+
     // PARSING
 
-    addRegexToken('D', match1to2, match1to2NoLeadingZero);
+    addRegexToken('D', match1to2);
     addRegexToken('DD', match1to2, match2);
     addRegexToken('Do', function (isStrict, locale) {
         // TODO: Remove "ordinalParse" fallback in next major release.
@@ -23615,6 +22971,13 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
     // FORMATTING
 
     addFormatToken('DDD', ['DDDD', 3], 'DDDo', 'dayOfYear');
+
+    // ALIASES
+
+    addUnitAlias('dayOfYear', 'DDD');
+
+    // PRIORITY
+    addUnitPriority('dayOfYear', 4);
 
     // PARSING
 
@@ -23640,9 +23003,17 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     addFormatToken('m', ['mm', 2], 0, 'minute');
 
+    // ALIASES
+
+    addUnitAlias('minute', 'm');
+
+    // PRIORITY
+
+    addUnitPriority('minute', 14);
+
     // PARSING
 
-    addRegexToken('m', match1to2, match1to2HasZero);
+    addRegexToken('m', match1to2);
     addRegexToken('mm', match1to2, match2);
     addParseToken(['m', 'mm'], MINUTE);
 
@@ -23654,9 +23025,17 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     addFormatToken('s', ['ss', 2], 0, 'second');
 
+    // ALIASES
+
+    addUnitAlias('second', 's');
+
+    // PRIORITY
+
+    addUnitPriority('second', 15);
+
     // PARSING
 
-    addRegexToken('s', match1to2, match1to2HasZero);
+    addRegexToken('s', match1to2);
     addRegexToken('ss', match1to2, match2);
     addParseToken(['s', 'ss'], SECOND);
 
@@ -23693,6 +23072,14 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
     addFormatToken(0, ['SSSSSSSSS', 9], 0, function () {
         return this.millisecond() * 1000000;
     });
+
+    // ALIASES
+
+    addUnitAlias('millisecond', 'ms');
+
+    // PRIORITY
+
+    addUnitPriority('millisecond', 16);
 
     // PARSING
 
@@ -24001,12 +23388,12 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
                     toInt((number % 100) / 10) === 1
                         ? 'th'
                         : b === 1
-                          ? 'st'
-                          : b === 2
-                            ? 'nd'
-                            : b === 3
-                              ? 'rd'
-                              : 'th';
+                        ? 'st'
+                        : b === 2
+                        ? 'nd'
+                        : b === 3
+                        ? 'rd'
+                        : 'th';
             return number + output;
         },
     });
@@ -24179,6 +23566,19 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         }
     }
 
+    // TODO: Use this.as('ms')?
+    function valueOf$1() {
+        if (!this.isValid()) {
+            return NaN;
+        }
+        return (
+            this._milliseconds +
+            this._days * 864e5 +
+            (this._months % 12) * 2592e6 +
+            toInt(this._months / 12) * 31536e6
+        );
+    }
+
     function makeAs(alias) {
         return function () {
             return this.as(alias);
@@ -24193,8 +23593,7 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
         asWeeks = makeAs('w'),
         asMonths = makeAs('M'),
         asQuarters = makeAs('Q'),
-        asYears = makeAs('y'),
-        valueOf$1 = asMilliseconds;
+        asYears = makeAs('y');
 
     function clone$1() {
         return createDuration(this);
@@ -24463,7 +23862,7 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     //! moment.js
 
-    hooks.version = '2.30.1';
+    hooks.version = '2.29.4';
 
     setHookCallback(createLocal);
 
@@ -24512,461 +23911,6 @@ webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 })));
 
-
-/***/ }),
-
-/***/ "../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
-/*!*****************************************************************************!*\
-  !*** ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
-  \*****************************************************************************/
-/***/ ((module) => {
-
-"use strict";
-
-
-var stylesInDOM = [];
-function getIndexByIdentifier(identifier) {
-  var result = -1;
-  for (var i = 0; i < stylesInDOM.length; i++) {
-    if (stylesInDOM[i].identifier === identifier) {
-      result = i;
-      break;
-    }
-  }
-  return result;
-}
-function modulesToDom(list, options) {
-  var idCountMap = {};
-  var identifiers = [];
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i];
-    var id = options.base ? item[0] + options.base : item[0];
-    var count = idCountMap[id] || 0;
-    var identifier = "".concat(id, " ").concat(count);
-    idCountMap[id] = count + 1;
-    var indexByIdentifier = getIndexByIdentifier(identifier);
-    var obj = {
-      css: item[1],
-      media: item[2],
-      sourceMap: item[3],
-      supports: item[4],
-      layer: item[5]
-    };
-    if (indexByIdentifier !== -1) {
-      stylesInDOM[indexByIdentifier].references++;
-      stylesInDOM[indexByIdentifier].updater(obj);
-    } else {
-      var updater = addElementStyle(obj, options);
-      options.byIndex = i;
-      stylesInDOM.splice(i, 0, {
-        identifier: identifier,
-        updater: updater,
-        references: 1
-      });
-    }
-    identifiers.push(identifier);
-  }
-  return identifiers;
-}
-function addElementStyle(obj, options) {
-  var api = options.domAPI(options);
-  api.update(obj);
-  var updater = function updater(newObj) {
-    if (newObj) {
-      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap && newObj.supports === obj.supports && newObj.layer === obj.layer) {
-        return;
-      }
-      api.update(obj = newObj);
-    } else {
-      api.remove();
-    }
-  };
-  return updater;
-}
-module.exports = function (list, options) {
-  options = options || {};
-  list = list || [];
-  var lastIdentifiers = modulesToDom(list, options);
-  return function update(newList) {
-    newList = newList || [];
-    for (var i = 0; i < lastIdentifiers.length; i++) {
-      var identifier = lastIdentifiers[i];
-      var index = getIndexByIdentifier(identifier);
-      stylesInDOM[index].references--;
-    }
-    var newLastIdentifiers = modulesToDom(newList, options);
-    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
-      var _identifier = lastIdentifiers[_i];
-      var _index = getIndexByIdentifier(_identifier);
-      if (stylesInDOM[_index].references === 0) {
-        stylesInDOM[_index].updater();
-        stylesInDOM.splice(_index, 1);
-      }
-    }
-    lastIdentifiers = newLastIdentifiers;
-  };
-};
-
-/***/ }),
-
-/***/ "../node_modules/style-loader/dist/runtime/insertBySelector.js":
-/*!*********************************************************************!*\
-  !*** ../node_modules/style-loader/dist/runtime/insertBySelector.js ***!
-  \*********************************************************************/
-/***/ ((module) => {
-
-"use strict";
-
-
-var memo = {};
-
-/* istanbul ignore next  */
-function getTarget(target) {
-  if (typeof memo[target] === "undefined") {
-    var styleTarget = document.querySelector(target);
-
-    // Special case to return head of iframe instead of iframe itself
-    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
-      try {
-        // This will throw an exception if access to iframe is blocked
-        // due to cross-origin restrictions
-        styleTarget = styleTarget.contentDocument.head;
-      } catch (e) {
-        // istanbul ignore next
-        styleTarget = null;
-      }
-    }
-    memo[target] = styleTarget;
-  }
-  return memo[target];
-}
-
-/* istanbul ignore next  */
-function insertBySelector(insert, style) {
-  var target = getTarget(insert);
-  if (!target) {
-    throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
-  }
-  target.appendChild(style);
-}
-module.exports = insertBySelector;
-
-/***/ }),
-
-/***/ "../node_modules/style-loader/dist/runtime/insertStyleElement.js":
-/*!***********************************************************************!*\
-  !*** ../node_modules/style-loader/dist/runtime/insertStyleElement.js ***!
-  \***********************************************************************/
-/***/ ((module) => {
-
-"use strict";
-
-
-/* istanbul ignore next  */
-function insertStyleElement(options) {
-  var element = document.createElement("style");
-  options.setAttributes(element, options.attributes);
-  options.insert(element, options.options);
-  return element;
-}
-module.exports = insertStyleElement;
-
-/***/ }),
-
-/***/ "../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js":
-/*!***********************************************************************************!*\
-  !*** ../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js ***!
-  \***********************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-
-/* istanbul ignore next  */
-function setAttributesWithoutAttributes(styleElement) {
-  var nonce =  true ? __webpack_require__.nc : 0;
-  if (nonce) {
-    styleElement.setAttribute("nonce", nonce);
-  }
-}
-module.exports = setAttributesWithoutAttributes;
-
-/***/ }),
-
-/***/ "../node_modules/style-loader/dist/runtime/styleDomAPI.js":
-/*!****************************************************************!*\
-  !*** ../node_modules/style-loader/dist/runtime/styleDomAPI.js ***!
-  \****************************************************************/
-/***/ ((module) => {
-
-"use strict";
-
-
-/* istanbul ignore next  */
-function apply(styleElement, options, obj) {
-  var css = "";
-  if (obj.supports) {
-    css += "@supports (".concat(obj.supports, ") {");
-  }
-  if (obj.media) {
-    css += "@media ".concat(obj.media, " {");
-  }
-  var needLayer = typeof obj.layer !== "undefined";
-  if (needLayer) {
-    css += "@layer".concat(obj.layer.length > 0 ? " ".concat(obj.layer) : "", " {");
-  }
-  css += obj.css;
-  if (needLayer) {
-    css += "}";
-  }
-  if (obj.media) {
-    css += "}";
-  }
-  if (obj.supports) {
-    css += "}";
-  }
-  var sourceMap = obj.sourceMap;
-  if (sourceMap && typeof btoa !== "undefined") {
-    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
-  }
-
-  // For old IE
-  /* istanbul ignore if  */
-  options.styleTagTransform(css, styleElement, options.options);
-}
-function removeStyleElement(styleElement) {
-  // istanbul ignore if
-  if (styleElement.parentNode === null) {
-    return false;
-  }
-  styleElement.parentNode.removeChild(styleElement);
-}
-
-/* istanbul ignore next  */
-function domAPI(options) {
-  if (typeof document === "undefined") {
-    return {
-      update: function update() {},
-      remove: function remove() {}
-    };
-  }
-  var styleElement = options.insertStyleElement(options);
-  return {
-    update: function update(obj) {
-      apply(styleElement, options, obj);
-    },
-    remove: function remove() {
-      removeStyleElement(styleElement);
-    }
-  };
-}
-module.exports = domAPI;
-
-/***/ }),
-
-/***/ "../node_modules/style-loader/dist/runtime/styleTagTransform.js":
-/*!**********************************************************************!*\
-  !*** ../node_modules/style-loader/dist/runtime/styleTagTransform.js ***!
-  \**********************************************************************/
-/***/ ((module) => {
-
-"use strict";
-
-
-/* istanbul ignore next  */
-function styleTagTransform(css, styleElement) {
-  if (styleElement.styleSheet) {
-    styleElement.styleSheet.cssText = css;
-  } else {
-    while (styleElement.firstChild) {
-      styleElement.removeChild(styleElement.firstChild);
-    }
-    styleElement.appendChild(document.createTextNode(css));
-  }
-}
-module.exports = styleTagTransform;
-
-/***/ }),
-
-/***/ "../node_modules/uuid/dist/esm-browser/native.js":
-/*!*******************************************************!*\
-  !*** ../node_modules/uuid/dist/esm-browser/native.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-const randomUUID = typeof crypto !== 'undefined' && crypto.randomUUID && crypto.randomUUID.bind(crypto);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  randomUUID
-});
-
-/***/ }),
-
-/***/ "../node_modules/uuid/dist/esm-browser/regex.js":
-/*!******************************************************!*\
-  !*** ../node_modules/uuid/dist/esm-browser/regex.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i);
-
-/***/ }),
-
-/***/ "../node_modules/uuid/dist/esm-browser/rng.js":
-/*!****************************************************!*\
-  !*** ../node_modules/uuid/dist/esm-browser/rng.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ rng)
-/* harmony export */ });
-// Unique ID creation requires a high quality random # generator. In the browser we therefore
-// require the crypto API and do not support built-in fallback to lower quality random number
-// generators (like Math.random()).
-let getRandomValues;
-const rnds8 = new Uint8Array(16);
-function rng() {
-  // lazy load so that environments that need to polyfill have a chance to do so
-  if (!getRandomValues) {
-    // getRandomValues needs to be invoked in a context where "this" is a Crypto implementation.
-    getRandomValues = typeof crypto !== 'undefined' && crypto.getRandomValues && crypto.getRandomValues.bind(crypto);
-
-    if (!getRandomValues) {
-      throw new Error('crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported');
-    }
-  }
-
-  return getRandomValues(rnds8);
-}
-
-/***/ }),
-
-/***/ "../node_modules/uuid/dist/esm-browser/stringify.js":
-/*!**********************************************************!*\
-  !*** ../node_modules/uuid/dist/esm-browser/stringify.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   unsafeStringify: () => (/* binding */ unsafeStringify)
-/* harmony export */ });
-/* harmony import */ var _validate_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validate.js */ "../node_modules/uuid/dist/esm-browser/validate.js");
-
-/**
- * Convert array of 16 byte values to UUID string format of the form:
- * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
- */
-
-const byteToHex = [];
-
-for (let i = 0; i < 256; ++i) {
-  byteToHex.push((i + 0x100).toString(16).slice(1));
-}
-
-function unsafeStringify(arr, offset = 0) {
-  // Note: Be careful editing this code!  It's been tuned for performance
-  // and works in ways you may not expect. See https://github.com/uuidjs/uuid/pull/434
-  return byteToHex[arr[offset + 0]] + byteToHex[arr[offset + 1]] + byteToHex[arr[offset + 2]] + byteToHex[arr[offset + 3]] + '-' + byteToHex[arr[offset + 4]] + byteToHex[arr[offset + 5]] + '-' + byteToHex[arr[offset + 6]] + byteToHex[arr[offset + 7]] + '-' + byteToHex[arr[offset + 8]] + byteToHex[arr[offset + 9]] + '-' + byteToHex[arr[offset + 10]] + byteToHex[arr[offset + 11]] + byteToHex[arr[offset + 12]] + byteToHex[arr[offset + 13]] + byteToHex[arr[offset + 14]] + byteToHex[arr[offset + 15]];
-}
-
-function stringify(arr, offset = 0) {
-  const uuid = unsafeStringify(arr, offset); // Consistency check for valid UUID.  If this throws, it's likely due to one
-  // of the following:
-  // - One or more input array values don't map to a hex octet (leading to
-  // "undefined" in the uuid)
-  // - Invalid input values for the RFC `version` or `variant` fields
-
-  if (!(0,_validate_js__WEBPACK_IMPORTED_MODULE_0__["default"])(uuid)) {
-    throw TypeError('Stringified UUID is invalid');
-  }
-
-  return uuid;
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (stringify);
-
-/***/ }),
-
-/***/ "../node_modules/uuid/dist/esm-browser/v4.js":
-/*!***************************************************!*\
-  !*** ../node_modules/uuid/dist/esm-browser/v4.js ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _native_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./native.js */ "../node_modules/uuid/dist/esm-browser/native.js");
-/* harmony import */ var _rng_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rng.js */ "../node_modules/uuid/dist/esm-browser/rng.js");
-/* harmony import */ var _stringify_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./stringify.js */ "../node_modules/uuid/dist/esm-browser/stringify.js");
-
-
-
-
-function v4(options, buf, offset) {
-  if (_native_js__WEBPACK_IMPORTED_MODULE_0__["default"].randomUUID && !buf && !options) {
-    return _native_js__WEBPACK_IMPORTED_MODULE_0__["default"].randomUUID();
-  }
-
-  options = options || {};
-  const rnds = options.random || (options.rng || _rng_js__WEBPACK_IMPORTED_MODULE_1__["default"])(); // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
-
-  rnds[6] = rnds[6] & 0x0f | 0x40;
-  rnds[8] = rnds[8] & 0x3f | 0x80; // Copy bytes to buffer, if provided
-
-  if (buf) {
-    offset = offset || 0;
-
-    for (let i = 0; i < 16; ++i) {
-      buf[offset + i] = rnds[i];
-    }
-
-    return buf;
-  }
-
-  return (0,_stringify_js__WEBPACK_IMPORTED_MODULE_2__.unsafeStringify)(rnds);
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (v4);
-
-/***/ }),
-
-/***/ "../node_modules/uuid/dist/esm-browser/validate.js":
-/*!*********************************************************!*\
-  !*** ../node_modules/uuid/dist/esm-browser/validate.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _regex_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./regex.js */ "../node_modules/uuid/dist/esm-browser/regex.js");
-
-
-function validate(uuid) {
-  return typeof uuid === 'string' && _regex_js__WEBPACK_IMPORTED_MODULE_0__["default"].test(uuid);
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (validate);
 
 /***/ }),
 
@@ -25080,6 +24024,910 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!*****************************************************************************!*\
+  !*** ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \*****************************************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+var stylesInDOM = [];
+
+function getIndexByIdentifier(identifier) {
+  var result = -1;
+
+  for (var i = 0; i < stylesInDOM.length; i++) {
+    if (stylesInDOM[i].identifier === identifier) {
+      result = i;
+      break;
+    }
+  }
+
+  return result;
+}
+
+function modulesToDom(list, options) {
+  var idCountMap = {};
+  var identifiers = [];
+
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var count = idCountMap[id] || 0;
+    var identifier = "".concat(id, " ").concat(count);
+    idCountMap[id] = count + 1;
+    var indexByIdentifier = getIndexByIdentifier(identifier);
+    var obj = {
+      css: item[1],
+      media: item[2],
+      sourceMap: item[3],
+      supports: item[4],
+      layer: item[5]
+    };
+
+    if (indexByIdentifier !== -1) {
+      stylesInDOM[indexByIdentifier].references++;
+      stylesInDOM[indexByIdentifier].updater(obj);
+    } else {
+      var updater = addElementStyle(obj, options);
+      options.byIndex = i;
+      stylesInDOM.splice(i, 0, {
+        identifier: identifier,
+        updater: updater,
+        references: 1
+      });
+    }
+
+    identifiers.push(identifier);
+  }
+
+  return identifiers;
+}
+
+function addElementStyle(obj, options) {
+  var api = options.domAPI(options);
+  api.update(obj);
+
+  var updater = function updater(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap && newObj.supports === obj.supports && newObj.layer === obj.layer) {
+        return;
+      }
+
+      api.update(obj = newObj);
+    } else {
+      api.remove();
+    }
+  };
+
+  return updater;
+}
+
+module.exports = function (list, options) {
+  options = options || {};
+  list = list || [];
+  var lastIdentifiers = modulesToDom(list, options);
+  return function update(newList) {
+    newList = newList || [];
+
+    for (var i = 0; i < lastIdentifiers.length; i++) {
+      var identifier = lastIdentifiers[i];
+      var index = getIndexByIdentifier(identifier);
+      stylesInDOM[index].references--;
+    }
+
+    var newLastIdentifiers = modulesToDom(newList, options);
+
+    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
+      var _identifier = lastIdentifiers[_i];
+
+      var _index = getIndexByIdentifier(_identifier);
+
+      if (stylesInDOM[_index].references === 0) {
+        stylesInDOM[_index].updater();
+
+        stylesInDOM.splice(_index, 1);
+      }
+    }
+
+    lastIdentifiers = newLastIdentifiers;
+  };
+};
+
+/***/ }),
+
+/***/ "../node_modules/style-loader/dist/runtime/insertBySelector.js":
+/*!*********************************************************************!*\
+  !*** ../node_modules/style-loader/dist/runtime/insertBySelector.js ***!
+  \*********************************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+var memo = {};
+/* istanbul ignore next  */
+
+function getTarget(target) {
+  if (typeof memo[target] === "undefined") {
+    var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
+
+    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+      try {
+        // This will throw an exception if access to iframe is blocked
+        // due to cross-origin restrictions
+        styleTarget = styleTarget.contentDocument.head;
+      } catch (e) {
+        // istanbul ignore next
+        styleTarget = null;
+      }
+    }
+
+    memo[target] = styleTarget;
+  }
+
+  return memo[target];
+}
+/* istanbul ignore next  */
+
+
+function insertBySelector(insert, style) {
+  var target = getTarget(insert);
+
+  if (!target) {
+    throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+  }
+
+  target.appendChild(style);
+}
+
+module.exports = insertBySelector;
+
+/***/ }),
+
+/***/ "../node_modules/style-loader/dist/runtime/insertStyleElement.js":
+/*!***********************************************************************!*\
+  !*** ../node_modules/style-loader/dist/runtime/insertStyleElement.js ***!
+  \***********************************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function insertStyleElement(options) {
+  var element = document.createElement("style");
+  options.setAttributes(element, options.attributes);
+  options.insert(element, options.options);
+  return element;
+}
+
+module.exports = insertStyleElement;
+
+/***/ }),
+
+/***/ "../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js":
+/*!***********************************************************************************!*\
+  !*** ../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js ***!
+  \***********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function setAttributesWithoutAttributes(styleElement) {
+  var nonce =  true ? __webpack_require__.nc : 0;
+
+  if (nonce) {
+    styleElement.setAttribute("nonce", nonce);
+  }
+}
+
+module.exports = setAttributesWithoutAttributes;
+
+/***/ }),
+
+/***/ "../node_modules/style-loader/dist/runtime/styleDomAPI.js":
+/*!****************************************************************!*\
+  !*** ../node_modules/style-loader/dist/runtime/styleDomAPI.js ***!
+  \****************************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function apply(styleElement, options, obj) {
+  var css = "";
+
+  if (obj.supports) {
+    css += "@supports (".concat(obj.supports, ") {");
+  }
+
+  if (obj.media) {
+    css += "@media ".concat(obj.media, " {");
+  }
+
+  var needLayer = typeof obj.layer !== "undefined";
+
+  if (needLayer) {
+    css += "@layer".concat(obj.layer.length > 0 ? " ".concat(obj.layer) : "", " {");
+  }
+
+  css += obj.css;
+
+  if (needLayer) {
+    css += "}";
+  }
+
+  if (obj.media) {
+    css += "}";
+  }
+
+  if (obj.supports) {
+    css += "}";
+  }
+
+  var sourceMap = obj.sourceMap;
+
+  if (sourceMap && typeof btoa !== "undefined") {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  } // For old IE
+
+  /* istanbul ignore if  */
+
+
+  options.styleTagTransform(css, styleElement, options.options);
+}
+
+function removeStyleElement(styleElement) {
+  // istanbul ignore if
+  if (styleElement.parentNode === null) {
+    return false;
+  }
+
+  styleElement.parentNode.removeChild(styleElement);
+}
+/* istanbul ignore next  */
+
+
+function domAPI(options) {
+  var styleElement = options.insertStyleElement(options);
+  return {
+    update: function update(obj) {
+      apply(styleElement, options, obj);
+    },
+    remove: function remove() {
+      removeStyleElement(styleElement);
+    }
+  };
+}
+
+module.exports = domAPI;
+
+/***/ }),
+
+/***/ "../node_modules/style-loader/dist/runtime/styleTagTransform.js":
+/*!**********************************************************************!*\
+  !*** ../node_modules/style-loader/dist/runtime/styleTagTransform.js ***!
+  \**********************************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function styleTagTransform(css, styleElement) {
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = css;
+  } else {
+    while (styleElement.firstChild) {
+      styleElement.removeChild(styleElement.firstChild);
+    }
+
+    styleElement.appendChild(document.createTextNode(css));
+  }
+}
+
+module.exports = styleTagTransform;
+
+/***/ }),
+
+/***/ "./scripts/buff.ts":
+/*!*************************!*\
+  !*** ./scripts/buff.ts ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "checkBuff": () => (/* binding */ checkBuff),
+/* harmony export */   "getBuff": () => (/* binding */ getBuff),
+/* harmony export */   "loadBuffImages": () => (/* binding */ loadBuffImages),
+/* harmony export */   "setBuffTime": () => (/* binding */ setBuffTime)
+/* harmony export */ });
+/* harmony import */ var _image_reader_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./image-reader.js */ "./scripts/image-reader.js");
+/* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "../node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _buff_registry_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./buff-registry.js */ "./scripts/buff-registry.js");
+
+
+
+
+let imageBufferMap = new Map();
+async function loadBuffImages() {
+    imageBufferMap = new Map();
+    let id = 1;
+    for (const buff of _buff_registry_js__WEBPACK_IMPORTED_MODULE_3__.buffRegistry) {
+        const entries = [];
+        for (const dataUrl of buff.images) {
+            const base64 = dataUrl.replace(/^data:[^;]+;base64,/, '');
+            const imgBuffer = await _alt1_base__WEBPACK_IMPORTED_MODULE_1__.ImageDetect.imageDataFromBase64(base64);
+            entries.push({ id: id++, name: buff.name, imgBuffer });
+        }
+        imageBufferMap.set(buff.name, entries);
+    }
+}
+function getBuff(img, buffName) {
+    var _a;
+    try {
+        const foundBuff = (_a = imageBufferMap.get(buffName)) !== null && _a !== void 0 ? _a : [];
+        let buffPosition;
+        for (let fb = 0; fb < foundBuff.length; fb++) {
+            buffPosition = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.getPosition(img, foundBuff[fb].imgBuffer, 0, 0, foundBuff[fb].imgBuffer.width, foundBuff[fb].imgBuffer.height);
+            if (buffPosition !== undefined) {
+                break;
+            }
+        }
+        if (buffPosition !== undefined) {
+            const buffer = img.toData(buffPosition.x, buffPosition.y, buffPosition.w, buffPosition.h);
+            const buff = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.readNumbers(buffer, buffName);
+            if (localStorage.debugMode === "true") {
+                console.log(buffName + ": " + (buff === null || buff === void 0 ? void 0 : buff.toString()));
+                _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
+            }
+            if (buff === undefined || buff === "") {
+                return undefined;
+            }
+            return Number(buff);
+        }
+    }
+    catch (ex) {
+        console.log(ex);
+    }
+    return undefined;
+}
+function checkBuff(img, selectedBuffs, buffTimers) {
+    for (let b = 0; b < selectedBuffs.length; b++) {
+        const buffTime = getBuff(img, selectedBuffs[b]);
+        setBuffTime(selectedBuffs[b], buffTime, buffTimers);
+    }
+}
+function setBuffTime(selectedBuff, buffTime, buffTimers) {
+    var _a;
+    const expireTime = buffTime !== undefined ? moment__WEBPACK_IMPORTED_MODULE_2__.utc(new Date()).add(buffTime, 's') : undefined;
+    const foundBuff = buffTimers.find(bt => bt.name === selectedBuff);
+    if (!foundBuff) {
+        buffTimers.push({ name: selectedBuff, expireTime, buffTime });
+    }
+    else if (foundBuff.expireTime !== undefined) {
+        if (expireTime !== undefined) {
+            const prevTime = (_a = foundBuff.buffTime) !== null && _a !== void 0 ? _a : 0;
+            if (buffTime < 60
+                || prevTime - buffTime === 60
+                || (prevTime < buffTime && selectedBuff !== "vulnBuff" && selectedBuff !== "smokeCloudBuff")
+                || foundBuff.expireTime < moment__WEBPACK_IMPORTED_MODULE_2__.utc(new Date())) {
+                foundBuff.buffTime = buffTime;
+                foundBuff.expireTime = expireTime;
+            }
+        }
+    }
+    else {
+        foundBuff.expireTime = expireTime;
+    }
+    if (localStorage.debug === "true") {
+        console.log(`${selectedBuff}: ${buffTime}`);
+    }
+}
+
+
+/***/ }),
+
+/***/ "./scripts/script.ts":
+/*!***************************!*\
+  !*** ./scripts/script.ts ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "loadImages": () => (/* binding */ loadImages),
+/* harmony export */   "start": () => (/* binding */ start),
+/* harmony export */   "test": () => (/* binding */ test),
+/* harmony export */   "updateSelections": () => (/* binding */ updateSelections),
+/* harmony export */   "warnings": () => (/* binding */ warnings)
+/* harmony export */ });
+/* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
+/* harmony import */ var _image_reader_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./image-reader.js */ "./scripts/image-reader.js");
+/* harmony import */ var _buff_ts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./buff.ts */ "./scripts/buff.ts");
+/* harmony import */ var _bar_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bar.js */ "./scripts/bar.js");
+/* harmony import */ var _nexus_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nexus.js */ "./scripts/nexus.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! moment */ "../node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../js/jquery.js */ "./js/jquery.js");
+/* harmony import */ var _js_jquery_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_jquery_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _buff_registry_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./buff-registry.js */ "./scripts/buff-registry.js");
+
+
+
+
+
+
+
+
+let selectedBuffs = [];
+let selectedBar = [];
+let buffTimers = [];
+let barStats = [];
+let expiredBuffs = [];
+let lowStats = [];
+let alertSound = null;
+const getAlertSound = () => {
+    if (!alertSound)
+        alertSound = new Audio("src/sounds/alert_1.mp3");
+    return alertSound;
+};
+let alertPlayed = false;
+let priorWarnings = new Set();
+let hasActiveWarnings = false;
+const barWarnings = [
+    { id: 1, name: "lowHealthBar", friendlyName: "Low Health", timeBuffer: false },
+    { id: 2, name: "lowPrayerBar", friendlyName: "Low Prayer", timeBuffer: false },
+    { id: 3, name: "lowFamiliarBar", friendlyName: "Low Familiar Health", timeBuffer: false },
+];
+let warnings = [...barWarnings, ..._buff_registry_js__WEBPACK_IMPORTED_MODULE_7__.buffRegistry]
+    .map((w, i) => ({ id: i + 1, name: w.name, friendlyName: w.friendlyName, timeBuffer: w.timeBuffer }));
+const warningsMap = new Map(warnings.map(w => [w.name, w]));
+// Pre-built set for O(1) skilling/combat classification
+const skillingBuffNames = new Set(_buff_registry_js__WEBPACK_IMPORTED_MODULE_7__.buffRegistry.filter(b => b.skilling).map(b => b.name));
+
+async function start() {
+    try {
+        await loadImages();
+        await updateSelections();
+        setTimeout(loopChecks, Number(localStorage.refreshRateSlider));
+    }
+    catch (ex) {
+        console.log(ex);
+    }
+}
+function loopChecks() {
+    try {
+        const buffOn = localStorage.buffOnOffSwitch === "true";
+        const skillingOn = localStorage.skillingOnOffSwitch === "true";
+        const nexusOn = localStorage.nexusOnOffSwitch === "true";
+        if (buffOn || skillingOn || nexusOn) {
+            try {
+                const img = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.captureHoldFullRs();
+                checkBuff(img, buffOn, skillingOn);
+                if (buffOn)
+                    checkBar(img);
+                if (nexusOn)
+                    checkNexus(img);
+            }
+            catch (ex) {
+                console.log(ex);
+            }
+            checkWarnings();
+        }
+        else {
+            if (hasActiveWarnings)
+                clearWarnings();
+        }
+    }
+    catch (ex) {
+        console.log(ex);
+    }
+    setTimeout(loopChecks, Number(localStorage.refreshRateSlider));
+}
+async function test(img) {
+    try {
+        await loadImages();
+        await updateSelections();
+        checkBuff(img, true, true);
+        checkBar(img);
+        checkNexus(img);
+        setInterval(checkWarnings, 1000);
+    }
+    catch (ex) {
+        console.log(ex);
+    }
+}
+async function loadImages() {
+    await _image_reader_js__WEBPACK_IMPORTED_MODULE_1__.loadImages();
+    await _buff_ts__WEBPACK_IMPORTED_MODULE_2__.loadBuffImages();
+    await _bar_js__WEBPACK_IMPORTED_MODULE_3__.loadBarImages();
+    await _nexus_js__WEBPACK_IMPORTED_MODULE_4__.loadNexusImages();
+}
+async function updateSelections() {
+    await updateBuffSettings();
+    await updateBarSettings();
+}
+const updateBuffSettings = async () => {
+    selectedBuffs = [];
+    for (let i = 0, len = localStorage.length; i < len; i++) {
+        const key = localStorage.key(i);
+        if (!key)
+            continue;
+        const value = localStorage[key];
+        if (key.includes("Buff") && value === "true") {
+            selectedBuffs.push(key);
+        }
+    }
+    // Remove timers for buffs that are no longer selected
+    buffTimers = buffTimers.filter(bt => selectedBuffs.includes(bt.name));
+};
+const updateBarSettings = async () => {
+    selectedBar = [];
+    for (let i = 0, len = localStorage.length; i < len; i++) {
+        const key = localStorage.key(i);
+        if (!key)
+            continue;
+        const value = localStorage[key];
+        if (key.includes("Bar") && value === "true") {
+            selectedBar.push(key);
+        }
+    }
+    barStats = barStats.filter(bs => selectedBar.includes(bs.name));
+};
+const checkBuff = (img, buffOn, skillingOn) => {
+    const activeBuffs = selectedBuffs.filter(name => skillingBuffNames.has(name) ? skillingOn : buffOn);
+    _buff_ts__WEBPACK_IMPORTED_MODULE_2__.checkBuff(img, activeBuffs, buffTimers);
+    if (localStorage.debugMode === "true") {
+        console.log(buffTimers);
+    }
+};
+const checkBar = (img) => {
+    _bar_js__WEBPACK_IMPORTED_MODULE_3__.checkBar(img, selectedBar, barStats);
+    if (localStorage.debugMode === "true") {
+        console.log(barStats);
+    }
+};
+const checkNexus = (img) => {
+    _nexus_js__WEBPACK_IMPORTED_MODULE_4__.checkNexus(img);
+};
+const checkWarnings = () => {
+    checkBuffTime();
+    checkLowStats();
+    displayWarnings();
+};
+const checkBuffTime = () => {
+    const buffOn = localStorage.buffOnOffSwitch === "true";
+    const skillingOn = localStorage.skillingOnOffSwitch === "true";
+    expiredBuffs = buffTimers.filter((bt) => {
+        // Skip if this buff's switch is currently off
+        if (skillingBuffNames.has(bt.name) ? !skillingOn : !buffOn)
+            return false;
+        const warning = warningsMap.get(bt.name);
+        const timeBuffer = warning === null || warning === void 0 ? void 0 : warning.timeBuffer;
+        if (timeBuffer === undefined) {
+            return false;
+        }
+        const currentTime = timeBuffer
+            ? moment__WEBPACK_IMPORTED_MODULE_5__.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds')
+            : moment__WEBPACK_IMPORTED_MODULE_5__.utc(new Date());
+        if (bt.expireTime === undefined || bt.expireTime < currentTime) {
+            if (bt.name === "excaliburBuff") {
+                const health = barStats.find(bs => bs.name === "lowHealthBar");
+                const excaliburThreshold = localStorage["excaliburSlider"];
+                return health !== undefined && health.value <= excaliburThreshold;
+            }
+            else if (bt.name === "ritualShardBuff") {
+                const prayer = barStats.find(bs => bs.name === "lowPrayerBar");
+                const ritualShardThreshold = localStorage["ritualShardSlider"];
+                return prayer !== undefined && prayer.value <= ritualShardThreshold;
+            }
+            else {
+                return true;
+            }
+        }
+        return false;
+    });
+};
+const checkLowStats = () => {
+    if (localStorage.buffOnOffSwitch !== "true") {
+        lowStats = [];
+        return;
+    }
+    lowStats = barStats.filter((bs) => {
+        const foundSetting = localStorage[bs.name.replace("Bar", "Slider")];
+        const selected = selectedBar.find(s => s === bs.name);
+        if (foundSetting && bs.value <= foundSetting && selected) {
+            if (bs.name === "lowPrayerBar") {
+                const w = warningsMap.get("lowPrayerBar");
+                if (w)
+                    w.friendlyName = bs.value <= 100 ? "LOW PRAYER!" : "Low Prayer";
+            }
+            if (bs.name === "lowFamiliarBar") {
+                const w = warningsMap.get("lowFamiliarBar");
+                if (w)
+                    w.friendlyName = bs.value <= 3000 ? "LOW FAMILIAR HEALTH!" : "Low Familiar Health";
+            }
+            return true;
+        }
+        return false;
+    });
+};
+const displayWarnings = () => {
+    try {
+        if (expiredBuffs.length > 0 || lowStats.length > 0) {
+            hasActiveWarnings = true;
+            // Build active-name set once — O(1) lookup below instead of O(n) .some()
+            const activeNames = new Set([
+                ...expiredBuffs.map(b => b.name),
+                ...lowStats.map(b => b.name),
+            ]);
+            // Single pass: partition warnings into needs/no-warning buckets
+            const needsWarning = [];
+            const noWarning = [];
+            for (const w of warnings) {
+                (activeNames.has(w.name) ? needsWarning : noWarning).push(w);
+            }
+            if (window.alt1 && localStorage.mouseTooltip !== "true") {
+                window.alt1.setTooltip("");
+            }
+            else if (window.alt1 && localStorage.mouseTooltip === "true") {
+                const topWarning = needsWarning.slice().sort((a, b) => a.id - b.id);
+                let warningText = "";
+                for (let w = 0; w < topWarning.length; w++) {
+                    if (w > 0)
+                        warningText += "\n";
+                    warningText += topWarning[w].friendlyName;
+                    if (!priorWarnings.has(topWarning[w].name)) {
+                        priorWarnings.add(topWarning[w].name);
+                        alertPlayed = false;
+                    }
+                }
+                window.alt1.setTooltip(warningText);
+            }
+            for (const w of needsWarning) {
+                const $label = _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("#" + w.name).closest("label");
+                if (localStorage.buffColor !== "true") {
+                    $label.removeClass("warning");
+                }
+                else {
+                    $label.addClass("warning");
+                }
+            }
+            for (const nw of noWarning) {
+                const $label = _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("#" + nw.name).closest("label");
+                $label.removeClass("warning");
+                priorWarnings.delete(nw.name);
+            }
+            if (!alertPlayed && localStorage.soundsOn === "true") {
+                const sound = getAlertSound();
+                sound.volume = Number(localStorage.soundVolumeSlider);
+                sound.play();
+                alertPlayed = true;
+            }
+        }
+        else {
+            if (hasActiveWarnings)
+                clearWarnings();
+        }
+    }
+    catch (ex) {
+        console.log(ex);
+    }
+};
+const clearWarnings = () => {
+    try {
+        if (window.alt1)
+            window.alt1.setTooltip("");
+        for (const w of warnings) {
+            const $label = _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("#" + w.name).closest("label");
+            $label.removeClass("warning");
+        }
+        alertPlayed = false;
+        priorWarnings = new Set();
+        hasActiveWarnings = false;
+    }
+    catch (ex) {
+        console.log(ex);
+    }
+};
+
+
+/***/ }),
+
+/***/ "../node_modules/uuid/dist/esm-browser/native.js":
+/*!*******************************************************!*\
+  !*** ../node_modules/uuid/dist/esm-browser/native.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const randomUUID = typeof crypto !== 'undefined' && crypto.randomUUID && crypto.randomUUID.bind(crypto);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  randomUUID
+});
+
+/***/ }),
+
+/***/ "../node_modules/uuid/dist/esm-browser/regex.js":
+/*!******************************************************!*\
+  !*** ../node_modules/uuid/dist/esm-browser/regex.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i);
+
+/***/ }),
+
+/***/ "../node_modules/uuid/dist/esm-browser/rng.js":
+/*!****************************************************!*\
+  !*** ../node_modules/uuid/dist/esm-browser/rng.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ rng)
+/* harmony export */ });
+// Unique ID creation requires a high quality random # generator. In the browser we therefore
+// require the crypto API and do not support built-in fallback to lower quality random number
+// generators (like Math.random()).
+let getRandomValues;
+const rnds8 = new Uint8Array(16);
+function rng() {
+  // lazy load so that environments that need to polyfill have a chance to do so
+  if (!getRandomValues) {
+    // getRandomValues needs to be invoked in a context where "this" is a Crypto implementation.
+    getRandomValues = typeof crypto !== 'undefined' && crypto.getRandomValues && crypto.getRandomValues.bind(crypto);
+
+    if (!getRandomValues) {
+      throw new Error('crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported');
+    }
+  }
+
+  return getRandomValues(rnds8);
+}
+
+/***/ }),
+
+/***/ "../node_modules/uuid/dist/esm-browser/stringify.js":
+/*!**********************************************************!*\
+  !*** ../node_modules/uuid/dist/esm-browser/stringify.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "unsafeStringify": () => (/* binding */ unsafeStringify)
+/* harmony export */ });
+/* harmony import */ var _validate_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validate.js */ "../node_modules/uuid/dist/esm-browser/validate.js");
+
+/**
+ * Convert array of 16 byte values to UUID string format of the form:
+ * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ */
+
+const byteToHex = [];
+
+for (let i = 0; i < 256; ++i) {
+  byteToHex.push((i + 0x100).toString(16).slice(1));
+}
+
+function unsafeStringify(arr, offset = 0) {
+  // Note: Be careful editing this code!  It's been tuned for performance
+  // and works in ways you may not expect. See https://github.com/uuidjs/uuid/pull/434
+  return (byteToHex[arr[offset + 0]] + byteToHex[arr[offset + 1]] + byteToHex[arr[offset + 2]] + byteToHex[arr[offset + 3]] + '-' + byteToHex[arr[offset + 4]] + byteToHex[arr[offset + 5]] + '-' + byteToHex[arr[offset + 6]] + byteToHex[arr[offset + 7]] + '-' + byteToHex[arr[offset + 8]] + byteToHex[arr[offset + 9]] + '-' + byteToHex[arr[offset + 10]] + byteToHex[arr[offset + 11]] + byteToHex[arr[offset + 12]] + byteToHex[arr[offset + 13]] + byteToHex[arr[offset + 14]] + byteToHex[arr[offset + 15]]).toLowerCase();
+}
+
+function stringify(arr, offset = 0) {
+  const uuid = unsafeStringify(arr, offset); // Consistency check for valid UUID.  If this throws, it's likely due to one
+  // of the following:
+  // - One or more input array values don't map to a hex octet (leading to
+  // "undefined" in the uuid)
+  // - Invalid input values for the RFC `version` or `variant` fields
+
+  if (!(0,_validate_js__WEBPACK_IMPORTED_MODULE_0__["default"])(uuid)) {
+    throw TypeError('Stringified UUID is invalid');
+  }
+
+  return uuid;
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (stringify);
+
+/***/ }),
+
+/***/ "../node_modules/uuid/dist/esm-browser/v4.js":
+/*!***************************************************!*\
+  !*** ../node_modules/uuid/dist/esm-browser/v4.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _native_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./native.js */ "../node_modules/uuid/dist/esm-browser/native.js");
+/* harmony import */ var _rng_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rng.js */ "../node_modules/uuid/dist/esm-browser/rng.js");
+/* harmony import */ var _stringify_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./stringify.js */ "../node_modules/uuid/dist/esm-browser/stringify.js");
+
+
+
+
+function v4(options, buf, offset) {
+  if (_native_js__WEBPACK_IMPORTED_MODULE_0__["default"].randomUUID && !buf && !options) {
+    return _native_js__WEBPACK_IMPORTED_MODULE_0__["default"].randomUUID();
+  }
+
+  options = options || {};
+  const rnds = options.random || (options.rng || _rng_js__WEBPACK_IMPORTED_MODULE_1__["default"])(); // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+
+  rnds[6] = rnds[6] & 0x0f | 0x40;
+  rnds[8] = rnds[8] & 0x3f | 0x80; // Copy bytes to buffer, if provided
+
+  if (buf) {
+    offset = offset || 0;
+
+    for (let i = 0; i < 16; ++i) {
+      buf[offset + i] = rnds[i];
+    }
+
+    return buf;
+  }
+
+  return (0,_stringify_js__WEBPACK_IMPORTED_MODULE_2__.unsafeStringify)(rnds);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (v4);
+
+/***/ }),
+
+/***/ "../node_modules/uuid/dist/esm-browser/validate.js":
+/*!*********************************************************!*\
+  !*** ../node_modules/uuid/dist/esm-browser/validate.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _regex_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./regex.js */ "../node_modules/uuid/dist/esm-browser/regex.js");
+
+
+function validate(uuid) {
+  return typeof uuid === 'string' && _regex_js__WEBPACK_IMPORTED_MODULE_0__["default"].test(uuid);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (validate);
+
+/***/ }),
+
 /***/ "./js/jquery.js":
 /*!**********************!*\
   !*** ./js/jquery.js ***!
@@ -25103,9 +24951,9 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   checkBar: () => (/* binding */ checkBar),
-/* harmony export */   getBar: () => (/* binding */ getBar),
-/* harmony export */   loadBarImages: () => (/* binding */ loadBarImages)
+/* harmony export */   "checkBar": () => (/* binding */ checkBar),
+/* harmony export */   "getBar": () => (/* binding */ getBar),
+/* harmony export */   "loadBarImages": () => (/* binding */ loadBarImages)
 /* harmony export */ });
 /* harmony import */ var _image_reader_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./image-reader.js */ "./scripts/image-reader.js");
 /* harmony import */ var _image_data_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./image-data.js */ "./scripts/image-data.js");
@@ -25203,7 +25051,7 @@ function checkBar(img, selectedBar, barStats) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   buffImagesData: () => (/* binding */ buffImagesData)
+/* harmony export */   "buffImagesData": () => (/* binding */ buffImagesData)
 /* harmony export */ });
 // AUTO-GENERATED by generate-buff-images.js — do not edit manually
 const buffImagesData = {
@@ -25233,7 +25081,7 @@ const buffImagesData = {
     "sumRenewBuff": ["iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuOWxu2j4AAAC2ZVhJZklJKgAIAAAABQAaAQUAAQAAAEoAAAAbAQUAAQAAAFIAAAAoAQMAAQAAAAIAAAAxAQIAEAAAAFoAAABphwQAAQAAAGoAAAAAAAAA8nYBAOgDAADydgEA6AMAAFBhaW50Lk5FVCA1LjEuOQADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlAAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAAArIfcnPEIHlAAAATJJREFUSEvt1b9Kw0AAx/Hv9YqNVXJJaklTWv/g5GaXoosPoItzn0B0cFF8Ame3Lu4+jSB1cxAnEVwsqFBpLud+ILlKyJTPmPzgC4HcidE4MZREjMaJuTt9E/YL2/XV0Mx+NF/fc25uH3P3ttE4MTX74V82+z7bG4qtdZ+Lk91/fQ3nmDGGVGvSVKN1Rqi8hYPOMa0z0tSQavicKQaDA3uSyyl2fnZpHp6HPL3u8/K+x9zs4KvAnuVyivlhCz8Iaa76LHke1AQf06k9y+UUC5QiilpEUQulApabK0wm9/Ysl1MsbifEax26nR69bp+4HSNl3Z7lcoqBwBiQUiLrdWRNsvCP5hrzmh4Nr4GQgizTABwdHtuzfGUdVwudIEWoYoWoYoWoYoWoYoUoNSbKumIAfgEyCUu3MMdKegAAAABJRU5ErkJggg=="],
     "superheatBuff": ["iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMTGKCBbOAAAAuGVYSWZJSSoACAAAAAUAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAMQECABEAAABaAAAAaYcEAAEAAABsAAAAAAAAAGAAAAABAAAAYAAAAAEAAABQYWludC5ORVQgNS4xLjExAAADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlgAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAAAGNdRzso9yOwAAAPhJREFUSEvt1TFLgkEcx/HvPT7n86j1EGKSRIiGidTcEAji3htw6xWEo1NzW5NLSFNvxa0pHKK2psbEMAyff/vBEzdcz3Tf8fjBZ7o7NZo2hLzKCxtNGxKYh/+Zx5zkMSd5jMerY/m+r8n7Q1feJh2ZX7fkbHAhvWHf+gWyxu5eq2zDQ3QhZvegSL0ccqq+kNTasseWlRIvixXJUUjxJAKtuDlfk5rDP7LGlMDtU4ygiap19tsxzW6J5GdtTjOzxpYbYSF78CHoWpmg0yRQMB5+mtPMrLE4gC2K2bMi3STonTYSFbjsJ+Y0O/+fuchjTvKYk1RelxrgFxTtPvm5PwlYAAAAAElFTkSuQmCC"],
     "torstolBuff": ["iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMTGKCBbOAAAAuGVYSWZJSSoACAAAAAUAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAMQECABEAAABaAAAAaYcEAAEAAABsAAAAAAAAAGAAAAABAAAAYAAAAAEAAABQYWludC5ORVQgNS4xLjExAAADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlgAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAAAGNdRzso9yOwAAAJpJREFUSEvt1DEKwkAQheG3LokEVhElrEu2VUgTxFJvkoPlfN5AU0jIEjP2AcViXETmLweGr3uqbhwhVrGwunE0mx6/mWAsCcaSYCz9Drb0K9ocD7T1ntx+R9YXpBJNpsxJZwnpLCVT5h9v61tsvA5YVxXaELA4n9B2PQprkd6BMTwwdwbd5TZ9e52sPkeCsSQYS/+LqVhzBQBPvA0pk/EVNc8AAAAASUVORK5CYII="],
-    "vulnBuff": ["iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABrUlEQVQ4T2M8w8Dwn4GKgBFkoAkDAyM1zASZRT8DJ0w59v/4/j0MD29eY/j57QXDH77/DNx/JBnk1bUYwjMjGIJc1DB8heHC89ef/zfUlCTJ++dv//hvqMoB1oNiIMgwPnY+BmUlbpIM/PT+z/+7b/4wgAzFcOG9+9/+KylykWQgsh6skXLg2OX/1uZa8Ej//PEzw8dP3xg+fGdkUJYQZeDkQ9i3/+ARBjcne7gAhoFVuSv+t02OIMmFZcnT/3fNzcQMwxUrb4ITeES4OkkGglKDhKgwWB+GC0GSBTlWcAPj0tr/c7/4yfCOlQkeBCvX1qFYiKwHw8Cbtz7+lxTlZnjz4RfDo+d3GRYtPsQwb3o2hotB4SwvJcwgzC/GwCfIgjsMG9s3/q+v9Ecx4Pffv/9BEcPLzwt25cf3HxlERITgapIyp/2fNz0LMwxB6Wn+nD0M+aUeJIXhxO4d/119TBm0NIUJhyExBQYoMmERiTUdEpv99hw6/19ZTpxBUUEKdxiiuwiUCxgZPzDIyIqDpZ48fsnAz8fFICQkgDVY6Ft8ERN+6GrgLiRHMy49AJTC5vEf1NJpAAAAAElFTkSuQmCC"],
+    "vulnBuff": ["iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABFUExURcwAAIiUymJQfj06WB4xQTAvP6q318bF9vLu+dzm98DFz/v9/Nfb4M/T2Lq+wYOCr4CHk6Kb1mBnh+3q6GltnMzK0QAAAPc4lN4AAAAXdFJOU/////////////////////////////8A5kDmXgAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAIBJREFUKFN9j9sSgyAMRBFrCQTrpS3//6luAqIOtucB2DOZzWDuSQ1/ZWf7x9DbpwaVTp8FBJEXl8jdTPq9MzAzxZFwvRBVTjpSmLNclpIVJJ0UuVqgcu8kHySjPBLOo5PfzHJ/sqTLIoTaWamd35wF+UiWwEdmJ1tAlWd+yQZjNiejGOFMjajaAAAAAElFTkSuQmCC"],
     "weaponPoisonBuff": ["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"],
 };
 
@@ -25249,139 +25097,37 @@ const buffImagesData = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   buffRegistry: () => (/* binding */ buffRegistry)
+/* harmony export */   "buffRegistry": () => (/* binding */ buffRegistry)
 /* harmony export */ });
 /* harmony import */ var _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./buff-images-data.js */ "./scripts/buff-images-data.js");
 
 
 const buffRegistry = [
     // Combat buffs
-    { name: "overloadBuff",      friendlyName: "Overload",           timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["overloadBuff"] },
-    { name: "animateDeadBuff",   friendlyName: "Animate Dead",       timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["animateDeadBuff"] },
-    { name: "excaliburBuff",     friendlyName: "Excalibur",          timeBuffer: false, skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["excaliburBuff"] },
-    { name: "prayerRenewalBuff", friendlyName: "Prayer Renewal",     timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["prayerRenewalBuff"] },
-    { name: "ritualShardBuff",   friendlyName: "Ritual Shard",       timeBuffer: false, skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["ritualShardBuff"] },
-    { name: "weaponPoisonBuff",  friendlyName: "Weapon Poison",      timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["weaponPoisonBuff"] },
-    { name: "antifireBuff",      friendlyName: "Antifire",           timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["antifireBuff"] },
-    { name: "aggressionBuff",    friendlyName: "Aggression",         timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["aggressionBuff"] },
-    { name: "sumRenewBuff",      friendlyName: "Summon Renew",       timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["sumRenewBuff"] },
-    { name: "bookBuff",          friendlyName: "Book",               timeBuffer: false, skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["bookBuff"] },
-    { name: "vulnBuff",          friendlyName: "Vulnerability",      timeBuffer: false, skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["vulnBuff"] },
-    { name: "smokeCloudBuff",    friendlyName: "Smoke Cloud",        timeBuffer: false, skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["smokeCloudBuff"] },
-    { name: "darknessBuff",      friendlyName: "Darkness",           timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["darknessBuff"] },
-    { name: "penanceBuff",       friendlyName: "Penance",            timeBuffer: false, skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["penanceBuff"] },
-    { name: "quickPrayerBuff",   friendlyName: "Quick Prayer",       timeBuffer: false, skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["quickPrayerBuff"] },
+    { name: "overloadBuff",      friendlyName: "Overload",           timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.overloadBuff },
+    { name: "animateDeadBuff",   friendlyName: "Animate Dead",       timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.animateDeadBuff },
+    { name: "excaliburBuff",     friendlyName: "Excalibur",          timeBuffer: false, skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.excaliburBuff },
+    { name: "prayerRenewalBuff", friendlyName: "Prayer Renewal",     timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.prayerRenewalBuff },
+    { name: "ritualShardBuff",   friendlyName: "Ritual Shard",       timeBuffer: false, skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.ritualShardBuff },
+    { name: "weaponPoisonBuff",  friendlyName: "Weapon Poison",      timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.weaponPoisonBuff },
+    { name: "antifireBuff",      friendlyName: "Antifire",           timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.antifireBuff },
+    { name: "aggressionBuff",    friendlyName: "Aggression",         timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.aggressionBuff },
+    { name: "sumRenewBuff",      friendlyName: "Summon Renew",       timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.sumRenewBuff },
+    { name: "bookBuff",          friendlyName: "Book",               timeBuffer: false, skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.bookBuff },
+    { name: "vulnBuff",          friendlyName: "Vulnerability",      timeBuffer: false, skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.vulnBuff },
+    { name: "smokeCloudBuff",    friendlyName: "Smoke Cloud",        timeBuffer: false, skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.smokeCloudBuff },
+    { name: "darknessBuff",      friendlyName: "Darkness",           timeBuffer: true,  skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.darknessBuff },
+    { name: "penanceBuff",       friendlyName: "Penance",            timeBuffer: false, skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.penanceBuff },
+    { name: "quickPrayerBuff",   friendlyName: "Quick Prayer",       timeBuffer: false, skilling: false, images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.quickPrayerBuff },
     // Skilling buffs
-    { name: "crystalMaskBuff",   friendlyName: "Crystal Mask",       timeBuffer: true,  skilling: true,  images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["crystalMaskBuff"] },
-    { name: "lightFormBuff",     friendlyName: "Light Form",         timeBuffer: false, skilling: true,  images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["lightFormBuff"] },
-    { name: "perfectPlusBuff",   friendlyName: "Perfect Plus",       timeBuffer: true,  skilling: true,  images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["perfectPlusBuff"] },
-    { name: "superheatBuff",     friendlyName: "Superheat",          timeBuffer: false, skilling: true,  images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["superheatBuff"] },
-    { name: "torstolBuff",       friendlyName: "Torstol Sticks",     timeBuffer: false, skilling: true,  images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["torstolBuff"] },
-    { name: "clanBuff",          friendlyName: "Clan Boost",         timeBuffer: false, skilling: true,  images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["clanBuff"] },
-    { name: "farmJujuBuff",      friendlyName: "Farm Juju",          timeBuffer: true,  skilling: true,  images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData["farmJujuBuff"] },
+    { name: "crystalMaskBuff",   friendlyName: "Crystal Mask",       timeBuffer: true,  skilling: true,  images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.crystalMaskBuff },
+    { name: "lightFormBuff",     friendlyName: "Light Form",         timeBuffer: false, skilling: true,  images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.lightFormBuff },
+    { name: "perfectPlusBuff",   friendlyName: "Perfect Plus",       timeBuffer: true,  skilling: true,  images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.perfectPlusBuff },
+    { name: "superheatBuff",     friendlyName: "Superheat",          timeBuffer: false, skilling: true,  images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.superheatBuff },
+    { name: "torstolBuff",       friendlyName: "Torstol Sticks",     timeBuffer: false, skilling: true,  images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.torstolBuff },
+    { name: "clanBuff",          friendlyName: "Clan Boost",         timeBuffer: false, skilling: true,  images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.clanBuff },
+    { name: "farmJujuBuff",      friendlyName: "Farm Juju",          timeBuffer: true,  skilling: true,  images: _buff_images_data_js__WEBPACK_IMPORTED_MODULE_0__.buffImagesData.farmJujuBuff },
 ];
-
-
-/***/ }),
-
-/***/ "./scripts/buff.ts":
-/*!*************************!*\
-  !*** ./scripts/buff.ts ***!
-  \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   checkBuff: () => (/* binding */ checkBuff),
-/* harmony export */   getBuff: () => (/* binding */ getBuff),
-/* harmony export */   loadBuffImages: () => (/* binding */ loadBuffImages),
-/* harmony export */   setBuffTime: () => (/* binding */ setBuffTime)
-/* harmony export */ });
-/* harmony import */ var _image_reader_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./image-reader.js */ "./scripts/image-reader.js");
-/* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "../node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _buff_registry_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./buff-registry.js */ "./scripts/buff-registry.js");
-
-
-
-
-let imageBufferMap = new Map();
-async function loadBuffImages() {
-    imageBufferMap = new Map();
-    let id = 1;
-    for (const buff of _buff_registry_js__WEBPACK_IMPORTED_MODULE_3__.buffRegistry) {
-        const entries = [];
-        for (const dataUrl of buff.images) {
-            const base64 = dataUrl.replace(/^data:[^;]+;base64,/, '');
-            const imgBuffer = await _alt1_base__WEBPACK_IMPORTED_MODULE_1__.ImageDetect.imageDataFromBase64(base64);
-            entries.push({ id: id++, name: buff.name, imgBuffer });
-        }
-        imageBufferMap.set(buff.name, entries);
-    }
-}
-function getBuff(img, buffName) {
-    var _a;
-    try {
-        const foundBuff = (_a = imageBufferMap.get(buffName)) !== null && _a !== void 0 ? _a : [];
-        let buffPosition;
-        for (let fb = 0; fb < foundBuff.length; fb++) {
-            buffPosition = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.getPosition(img, foundBuff[fb].imgBuffer, 0, 0, foundBuff[fb].imgBuffer.width, foundBuff[fb].imgBuffer.height);
-            if (buffPosition !== undefined) {
-                break;
-            }
-        }
-        if (buffPosition !== undefined) {
-            const buffer = img.toData(buffPosition.x, buffPosition.y, buffPosition.w, buffPosition.h);
-            const buff = _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.readNumbers(buffer, buffName);
-            if (localStorage.debugMode === "true") {
-                console.log(buffName + ": " + (buff === null || buff === void 0 ? void 0 : buff.toString()));
-                _image_reader_js__WEBPACK_IMPORTED_MODULE_0__.outputImage(buffer);
-            }
-            if (buff === undefined || buff === "") {
-                return undefined;
-            }
-            return Number(buff);
-        }
-    }
-    catch (ex) {
-        console.log(ex);
-    }
-    return undefined;
-}
-function checkBuff(img, selectedBuffs, buffTimers) {
-    for (let b = 0; b < selectedBuffs.length; b++) {
-        const buffTime = getBuff(img, selectedBuffs[b]);
-        setBuffTime(selectedBuffs[b], buffTime, buffTimers);
-    }
-}
-function setBuffTime(selectedBuff, buffTime, buffTimers) {
-    var _a;
-    const expireTime = buffTime !== undefined ? moment__WEBPACK_IMPORTED_MODULE_2__.utc(new Date()).add(buffTime, 's') : undefined;
-    const foundBuff = buffTimers.find(bt => bt.name === selectedBuff);
-    if (!foundBuff) {
-        buffTimers.push({ name: selectedBuff, expireTime, buffTime });
-    }
-    else if (foundBuff.expireTime !== undefined) {
-        if (expireTime !== undefined) {
-            const prevTime = (_a = foundBuff.buffTime) !== null && _a !== void 0 ? _a : 0;
-            if (buffTime < 60
-                || prevTime - buffTime === 60
-                || (prevTime < buffTime && selectedBuff !== "vulnBuff" && selectedBuff !== "smokeCloudBuff")
-                || foundBuff.expireTime < moment__WEBPACK_IMPORTED_MODULE_2__.utc(new Date())) {
-                foundBuff.buffTime = buffTime;
-                foundBuff.expireTime = expireTime;
-            }
-        }
-    }
-    else {
-        foundBuff.expireTime = expireTime;
-    }
-    if (localStorage.debug === "true") {
-        console.log(`${selectedBuff}: ${buffTime}`);
-    }
-}
 
 
 /***/ }),
@@ -25395,9 +25141,9 @@ function setBuffTime(selectedBuff, buffTime, buffTimers) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getBarImages: () => (/* binding */ getBarImages),
-/* harmony export */   getNexusImages: () => (/* binding */ getNexusImages),
-/* harmony export */   getNumberImages: () => (/* binding */ getNumberImages)
+/* harmony export */   "getBarImages": () => (/* binding */ getBarImages),
+/* harmony export */   "getNexusImages": () => (/* binding */ getNexusImages),
+/* harmony export */   "getNumberImages": () => (/* binding */ getNumberImages)
 /* harmony export */ });
 let numberImages = {
     100: [
@@ -25456,13 +25202,13 @@ function getNexusImages() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   checkPixelMatch: () => (/* binding */ checkPixelMatch),
-/* harmony export */   generateMatchingImage: () => (/* binding */ generateMatchingImage),
-/* harmony export */   getPosition: () => (/* binding */ getPosition),
-/* harmony export */   imageToBase64: () => (/* binding */ imageToBase64),
-/* harmony export */   loadImages: () => (/* binding */ loadImages),
-/* harmony export */   outputImage: () => (/* binding */ outputImage),
-/* harmony export */   readNumbers: () => (/* binding */ readNumbers)
+/* harmony export */   "checkPixelMatch": () => (/* binding */ checkPixelMatch),
+/* harmony export */   "generateMatchingImage": () => (/* binding */ generateMatchingImage),
+/* harmony export */   "getPosition": () => (/* binding */ getPosition),
+/* harmony export */   "imageToBase64": () => (/* binding */ imageToBase64),
+/* harmony export */   "loadImages": () => (/* binding */ loadImages),
+/* harmony export */   "outputImage": () => (/* binding */ outputImage),
+/* harmony export */   "readNumbers": () => (/* binding */ readNumbers)
 /* harmony export */ });
 /* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
 /* harmony import */ var _alt1_base_dist_imagedetect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @alt1/base/dist/imagedetect */ "../node_modules/@alt1/base/dist/imagedetect.js");
@@ -25874,8 +25620,8 @@ function imageToBase64(image) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   checkNexus: () => (/* binding */ checkNexus),
-/* harmony export */   loadNexusImages: () => (/* binding */ loadNexusImages)
+/* harmony export */   "checkNexus": () => (/* binding */ checkNexus),
+/* harmony export */   "loadNexusImages": () => (/* binding */ loadNexusImages)
 /* harmony export */ });
 /* harmony import */ var _image_reader_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./image-reader.js */ "./scripts/image-reader.js");
 /* harmony import */ var _image_data_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./image-data.js */ "./scripts/image-data.js");
@@ -26028,314 +25774,6 @@ function checkNexus(img) {
 
 /***/ }),
 
-/***/ "./scripts/script.ts":
-/*!***************************!*\
-  !*** ./scripts/script.ts ***!
-  \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   loadImages: () => (/* binding */ loadImages),
-/* harmony export */   start: () => (/* binding */ start),
-/* harmony export */   test: () => (/* binding */ test),
-/* harmony export */   updateSelections: () => (/* binding */ updateSelections),
-/* harmony export */   warnings: () => (/* binding */ warnings)
-/* harmony export */ });
-/* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
-/* harmony import */ var _image_reader_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./image-reader.js */ "./scripts/image-reader.js");
-/* harmony import */ var _buff_ts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./buff.ts */ "./scripts/buff.ts");
-/* harmony import */ var _bar_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bar.js */ "./scripts/bar.js");
-/* harmony import */ var _nexus_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nexus.js */ "./scripts/nexus.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! moment */ "../node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../js/jquery.js */ "./js/jquery.js");
-/* harmony import */ var _js_jquery_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_jquery_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _buff_registry_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./buff-registry.js */ "./scripts/buff-registry.js");
-
-
-
-
-
-
-
-
-let selectedBuffs = [];
-let selectedBar = [];
-let buffTimers = [];
-let barStats = [];
-let expiredBuffs = [];
-let lowStats = [];
-let alertSound = null;
-const getAlertSound = () => {
-    if (!alertSound)
-        alertSound = new Audio("src/sounds/alert_1.mp3");
-    return alertSound;
-};
-let alertPlayed = false;
-let priorWarnings = new Set();
-let hasActiveWarnings = false;
-const barWarnings = [
-    { id: 1, name: "lowHealthBar", friendlyName: "Low Health", timeBuffer: false },
-    { id: 2, name: "lowPrayerBar", friendlyName: "Low Prayer", timeBuffer: false },
-    { id: 3, name: "lowFamiliarBar", friendlyName: "Low Familiar Health", timeBuffer: false },
-];
-let warnings = [...barWarnings, ..._buff_registry_js__WEBPACK_IMPORTED_MODULE_7__.buffRegistry]
-    .map((w, i) => ({ id: i + 1, name: w.name, friendlyName: w.friendlyName, timeBuffer: w.timeBuffer }));
-const warningsMap = new Map(warnings.map(w => [w.name, w]));
-// Pre-built set for O(1) skilling/combat classification
-const skillingBuffNames = new Set(_buff_registry_js__WEBPACK_IMPORTED_MODULE_7__.buffRegistry.filter(b => b.skilling).map(b => b.name));
-
-async function start() {
-    try {
-        await loadImages();
-        await updateSelections();
-        setTimeout(loopChecks, Number(localStorage.refreshRateSlider));
-    }
-    catch (ex) {
-        console.log(ex);
-    }
-}
-function loopChecks() {
-    try {
-        const buffOn = localStorage.buffOnOffSwitch === "true";
-        const skillingOn = localStorage.skillingOnOffSwitch === "true";
-        const nexusOn = localStorage.nexusOnOffSwitch === "true";
-        if (buffOn || skillingOn || nexusOn) {
-            try {
-                const img = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.captureHoldFullRs();
-                checkBuff(img, buffOn, skillingOn);
-                if (buffOn)
-                    checkBar(img);
-                if (nexusOn)
-                    checkNexus(img);
-            }
-            catch (ex) {
-                console.log(ex);
-            }
-            checkWarnings();
-        }
-        else {
-            if (hasActiveWarnings)
-                clearWarnings();
-        }
-    }
-    catch (ex) {
-        console.log(ex);
-    }
-    setTimeout(loopChecks, Number(localStorage.refreshRateSlider));
-}
-async function test(img) {
-    try {
-        await loadImages();
-        await updateSelections();
-        checkBuff(img, true, true);
-        checkBar(img);
-        checkNexus(img);
-        setInterval(checkWarnings, 1000);
-    }
-    catch (ex) {
-        console.log(ex);
-    }
-}
-async function loadImages() {
-    await _image_reader_js__WEBPACK_IMPORTED_MODULE_1__.loadImages();
-    await _buff_ts__WEBPACK_IMPORTED_MODULE_2__.loadBuffImages();
-    await _bar_js__WEBPACK_IMPORTED_MODULE_3__.loadBarImages();
-    await _nexus_js__WEBPACK_IMPORTED_MODULE_4__.loadNexusImages();
-}
-async function updateSelections() {
-    await updateBuffSettings();
-    await updateBarSettings();
-}
-const updateBuffSettings = async () => {
-    selectedBuffs = [];
-    for (let i = 0, len = localStorage.length; i < len; i++) {
-        const key = localStorage.key(i);
-        if (!key)
-            continue;
-        const value = localStorage[key];
-        if (key.includes("Buff") && value === "true") {
-            selectedBuffs.push(key);
-        }
-    }
-    // Remove timers for buffs that are no longer selected
-    buffTimers = buffTimers.filter(bt => selectedBuffs.includes(bt.name));
-};
-const updateBarSettings = async () => {
-    selectedBar = [];
-    for (let i = 0, len = localStorage.length; i < len; i++) {
-        const key = localStorage.key(i);
-        if (!key)
-            continue;
-        const value = localStorage[key];
-        if (key.includes("Bar") && value === "true") {
-            selectedBar.push(key);
-        }
-    }
-    barStats = barStats.filter(bs => selectedBar.includes(bs.name));
-};
-const checkBuff = (img, buffOn, skillingOn) => {
-    const activeBuffs = selectedBuffs.filter(name => skillingBuffNames.has(name) ? skillingOn : buffOn);
-    _buff_ts__WEBPACK_IMPORTED_MODULE_2__.checkBuff(img, activeBuffs, buffTimers);
-    if (localStorage.debugMode === "true") {
-        console.log(buffTimers);
-    }
-};
-const checkBar = (img) => {
-    _bar_js__WEBPACK_IMPORTED_MODULE_3__.checkBar(img, selectedBar, barStats);
-    if (localStorage.debugMode === "true") {
-        console.log(barStats);
-    }
-};
-const checkNexus = (img) => {
-    _nexus_js__WEBPACK_IMPORTED_MODULE_4__.checkNexus(img);
-};
-const checkWarnings = () => {
-    checkBuffTime();
-    checkLowStats();
-    displayWarnings();
-};
-const checkBuffTime = () => {
-    const buffOn = localStorage.buffOnOffSwitch === "true";
-    const skillingOn = localStorage.skillingOnOffSwitch === "true";
-    expiredBuffs = buffTimers.filter((bt) => {
-        // Skip if this buff's switch is currently off
-        if (skillingBuffNames.has(bt.name) ? !skillingOn : !buffOn)
-            return false;
-        const warning = warningsMap.get(bt.name);
-        const timeBuffer = warning === null || warning === void 0 ? void 0 : warning.timeBuffer;
-        if (timeBuffer === undefined) {
-            return false;
-        }
-        const currentTime = timeBuffer
-            ? moment__WEBPACK_IMPORTED_MODULE_5__.utc(new Date()).add(localStorage.timeBufferSlider, 'seconds')
-            : moment__WEBPACK_IMPORTED_MODULE_5__.utc(new Date());
-        if (bt.expireTime === undefined || bt.expireTime < currentTime) {
-            if (bt.name === "excaliburBuff") {
-                const health = barStats.find(bs => bs.name === "lowHealthBar");
-                const excaliburThreshold = localStorage["excaliburSlider"];
-                return health !== undefined && health.value <= excaliburThreshold;
-            }
-            else if (bt.name === "ritualShardBuff") {
-                const prayer = barStats.find(bs => bs.name === "lowPrayerBar");
-                const ritualShardThreshold = localStorage["ritualShardSlider"];
-                return prayer !== undefined && prayer.value <= ritualShardThreshold;
-            }
-            else {
-                return true;
-            }
-        }
-        return false;
-    });
-};
-const checkLowStats = () => {
-    if (localStorage.buffOnOffSwitch !== "true") {
-        lowStats = [];
-        return;
-    }
-    lowStats = barStats.filter((bs) => {
-        const foundSetting = localStorage[bs.name.replace("Bar", "Slider")];
-        const selected = selectedBar.find(s => s === bs.name);
-        if (foundSetting && bs.value <= foundSetting && selected) {
-            if (bs.name === "lowPrayerBar") {
-                const w = warningsMap.get("lowPrayerBar");
-                if (w)
-                    w.friendlyName = bs.value <= 100 ? "LOW PRAYER!" : "Low Prayer";
-            }
-            if (bs.name === "lowFamiliarBar") {
-                const w = warningsMap.get("lowFamiliarBar");
-                if (w)
-                    w.friendlyName = bs.value <= 3000 ? "LOW FAMILIAR HEALTH!" : "Low Familiar Health";
-            }
-            return true;
-        }
-        return false;
-    });
-};
-const displayWarnings = () => {
-    try {
-        if (expiredBuffs.length > 0 || lowStats.length > 0) {
-            hasActiveWarnings = true;
-            // Build active-name set once — O(1) lookup below instead of O(n) .some()
-            const activeNames = new Set([
-                ...expiredBuffs.map(b => b.name),
-                ...lowStats.map(b => b.name),
-            ]);
-            // Single pass: partition warnings into needs/no-warning buckets
-            const needsWarning = [];
-            const noWarning = [];
-            for (const w of warnings) {
-                (activeNames.has(w.name) ? needsWarning : noWarning).push(w);
-            }
-            if (window.alt1 && localStorage.mouseTooltip !== "true") {
-                window.alt1.setTooltip("");
-            }
-            else if (window.alt1 && localStorage.mouseTooltip === "true") {
-                const topWarning = needsWarning.slice().sort((a, b) => a.id - b.id);
-                let warningText = "";
-                for (let w = 0; w < topWarning.length; w++) {
-                    if (w > 0)
-                        warningText += "\n";
-                    warningText += topWarning[w].friendlyName;
-                    if (!priorWarnings.has(topWarning[w].name)) {
-                        priorWarnings.add(topWarning[w].name);
-                        alertPlayed = false;
-                    }
-                }
-                window.alt1.setTooltip(warningText);
-            }
-            for (const w of needsWarning) {
-                const $label = _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("#" + w.name).closest("label");
-                if (localStorage.buffColor !== "true") {
-                    $label.removeClass("warning");
-                }
-                else {
-                    $label.addClass("warning");
-                }
-            }
-            for (const nw of noWarning) {
-                const $label = _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("#" + nw.name).closest("label");
-                $label.removeClass("warning");
-                priorWarnings.delete(nw.name);
-            }
-            if (!alertPlayed && localStorage.soundsOn === "true") {
-                const sound = getAlertSound();
-                sound.volume = Number(localStorage.soundVolumeSlider);
-                sound.play();
-                alertPlayed = true;
-            }
-        }
-        else {
-            if (hasActiveWarnings)
-                clearWarnings();
-        }
-    }
-    catch (ex) {
-        console.log(ex);
-    }
-};
-const clearWarnings = () => {
-    try {
-        if (window.alt1)
-            window.alt1.setTooltip("");
-        for (const w of warnings) {
-            const $label = _js_jquery_js__WEBPACK_IMPORTED_MODULE_6__("#" + w.name).closest("label");
-            $label.removeClass("warning");
-        }
-        alertPlayed = false;
-        priorWarnings = new Set();
-        hasActiveWarnings = false;
-    }
-    catch (ex) {
-        console.log(ex);
-    }
-};
-
-
-/***/ }),
-
 /***/ "data:font/opentype;base64,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":
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** data:font/opentype;base64,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 ***!
@@ -26447,20 +25885,17 @@ module.exports = "data:font/opentype;base64,d09GRk9UVE8AAIM0AAwAAAAAr4QAAAAAAAAA
 /******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
 /******/ 		var document = __webpack_require__.g.document;
 /******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
-/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
 /******/ 			if (!scriptUrl) {
 /******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) {
-/******/ 					var i = scripts.length - 1;
-/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
-/******/ 				}
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
 /******/ 			}
 /******/ 		}
 /******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
 /******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
 /******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/^blob:/, "").replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
 /******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
@@ -26497,7 +25932,7 @@ module.exports = "data:font/opentype;base64,d09GRk9UVE8AAIM0AAwAAAAAr4QAAAAAAAAA
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
 /*!******************!*\
@@ -26505,7 +25940,7 @@ var __webpack_exports__ = {};
   \******************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   readFile: () => (/* binding */ readFile)
+/* harmony export */   "readFile": () => (/* binding */ readFile)
 /* harmony export */ });
 /* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
 /* harmony import */ var _css_nis_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/nis.css */ "./css/nis.css");
@@ -26514,8 +25949,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_jquery_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_jquery_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _scripts_script_ts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/script.ts */ "./scripts/script.ts");
 /* harmony import */ var _scripts_image_reader_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/image-reader.js */ "./scripts/image-reader.js");
-/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! uuid */ "../node_modules/uuid/dist/esm-browser/v4.js");
-/* harmony import */ var _scripts_buff_registry_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./scripts/buff-registry.js */ "./scripts/buff-registry.js");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! uuid */ "../node_modules/uuid/dist/esm-browser/v4.js");
+/* harmony import */ var _scripts_buff_registry_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./scripts/buff-registry.js */ "./scripts/buff-registry.js");
 
 
 
@@ -26551,10 +25986,10 @@ let defaultSettings = [
     { name: "lowHealthBar", value: "false" },
     { name: "lowPrayerBar", value: "false" },
     { name: "lowFamiliarBar", value: "false" },
-    ..._scripts_buff_registry_js__WEBPACK_IMPORTED_MODULE_7__.buffRegistry.map((b) => ({ name: b.name, value: "false" })),
+    ..._scripts_buff_registry_js__WEBPACK_IMPORTED_MODULE_6__.buffRegistry.map((b) => ({ name: b.name, value: "false" })),
     { name: "savedPresets", value: "[]" },
 ];
-let presetId = (0,uuid__WEBPACK_IMPORTED_MODULE_6__["default"])();
+let presetId = (0,uuid__WEBPACK_IMPORTED_MODULE_7__["default"])();
 let savedPresets = [];
 const buffPresets = document.getElementById('buffPresets');
 const skillingPresets = document.getElementById('skillingPresets');
@@ -26562,7 +25997,7 @@ function syncDropdowns(source, target) {
     target.value = source.value; // Update target value
 }
 function renderSkillingTab() {
-    const skillingBuffs = _scripts_buff_registry_js__WEBPACK_IMPORTED_MODULE_7__.buffRegistry.filter((b) => b.skilling);
+    const skillingBuffs = _scripts_buff_registry_js__WEBPACK_IMPORTED_MODULE_6__.buffRegistry.filter((b) => b.skilling);
     let rows = '';
     for (let i = 0; i < skillingBuffs.length; i += 2) {
         const left = skillingBuffs[i];
@@ -26585,7 +26020,7 @@ function renderBuffPresets() {
         { name: "lowPrayerBar", friendlyName: "Low Prayer" },
         { name: "lowFamiliarBar", friendlyName: "Low Familiar" },
     ];
-    const all = [...barItems, ..._scripts_buff_registry_js__WEBPACK_IMPORTED_MODULE_7__.buffRegistry];
+    const all = [...barItems, ..._scripts_buff_registry_js__WEBPACK_IMPORTED_MODULE_6__.buffRegistry];
     const half = Math.ceil(all.length / 2);
     const makeLabel = (item) => `<label class="form-presets-label" for="${item.name}Preset">` +
         `<input class="presetOption" type="checkbox" id="${item.name}Preset" />${item.friendlyName}` +
@@ -26715,7 +26150,7 @@ _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(document).on("change", ".sync-switch"
     });
 });
 let newPreset = () => {
-    presetId = (0,uuid__WEBPACK_IMPORTED_MODULE_6__["default"])();
+    presetId = (0,uuid__WEBPACK_IMPORTED_MODULE_7__["default"])();
     _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__("#presetName")[0].value = "";
     let options = _js_jquery_js__WEBPACK_IMPORTED_MODULE_3__(".presetOption");
     for (let o = 0; o < options.length; o++) {
