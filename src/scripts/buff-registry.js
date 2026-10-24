@@ -17,6 +17,7 @@ export const buffRegistry = [
     { name: "darknessBuff",      friendlyName: "Darkness",           timeBuffer: true,  skilling: false, images: buffImagesData["darknessBuff"] },
     { name: "penanceBuff",       friendlyName: "Penance",            timeBuffer: false, skilling: false, images: buffImagesData["penanceBuff"] },
     { name: "quickPrayerBuff",   friendlyName: "Quick Prayer",       timeBuffer: false, skilling: false, images: buffImagesData["quickPrayerBuff"] },
+    { name: "antisanguineBuff",  friendlyName: "Antisanguine",       timeBuffer: true,  skilling: false, images: buffImagesData["antisanguine"] },
     // Skilling buffs
     { name: "crystalMaskBuff",   friendlyName: "Crystal Mask",       timeBuffer: true,  skilling: true,  images: buffImagesData["crystalMaskBuff"] },
     { name: "lightFormBuff",     friendlyName: "Light Form",         timeBuffer: false, skilling: true,  images: buffImagesData["lightFormBuff"] },
